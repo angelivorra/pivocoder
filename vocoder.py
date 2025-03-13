@@ -3,6 +3,7 @@ import subprocess
 import signal
 import sys
 import time
+from rtmidi.midiutil import open_midiinput
 
 # Comando para arrancar jackd
 JACKD_CMD = [
@@ -11,7 +12,7 @@ JACKD_CMD = [
     "-R",
     "-P", "95",
     "-d", "alsa",
-    "-d", "hw:pisound",
+    "-d", "hw:pisound", #"hw:4,0", 
     "-r", "48000",
     "-p", "128",
     "-n", "2",
@@ -24,6 +25,11 @@ JACKD_CMD = [
 jackd_process = None
 alsa_in_process = None
 carla_process = None
+recording_process = None
+current_preset = 1
+
+def monitor_midi(port_name):
+    """Monitorea las señales MIDI y cambia el preset de Carla si se detecta un mensaje específico."""
 
 def get_usb_audio_device():
     """Parsea la salida de 'arecord -l' para obtener el dispositivo USB Audio Device."""
@@ -72,16 +78,17 @@ def start_alsa_in():
         )
     print(f"alsa_in arrancado con PID: {alsa_in_process.pid}")
 
+
 def start_carla():
-    """Función para arrancar Carla en modo headless."""
-    global carla_process
-    print("Arrancando Carla...")
+    """Función para arrancar Carla en modo headless con un preset específico."""
+    global carla_process, current_preset
+    preset_path = "/home/patch/pivocoder/prueba_completa_02.carxp"
+    print(f"Arrancando Carla con preset: {preset_path}...")
     carla_cmd = [
         "/usr/bin/carla",
         "--no-ui",  # Modo headless (sin interfaz gráfica)
-        "--load", 
-        "lv2",
-        "http://kunz.corrupt.ch/products/tal-vocoder"  # Ruta al proyecto de Carla
+        "--load-preset", 
+        preset_path  # Ruta al preset de Carla
     ]
     carla_process = subprocess.Popen(carla_cmd)
     print(f"Carla arrancada con PID: {carla_process.pid}")
@@ -104,10 +111,17 @@ def connect_ports():
     subprocess.run(["jack_connect", "pisound:midi/capture_1", "Carla:midi_in"])
     print("Conectado pisound:midi/capture_1 a Carla:midi_in")
 
-def stop_processes():
-    """Función para detener jackd, alsa_in y Carla."""
-    global jackd_process, alsa_in_process, carla_process
+def start_recording():
+    """Función para capturar la salida de audio de jack y guardarla en test.wav."""
+    global recording_process
+    print("Iniciando captura de audio en test.wav...")
+    # Se asume que jack_capture está instalado y configurado
+    recording_process = subprocess.Popen(["jack_capture", "-f", "test.wav"])
+    print(f"Captura iniciada con PID: {recording_process.pid}")
 
+def stop_processes():
+    """Función para detener jackd, alsa_in, Carla y la captura de audio."""
+    global jackd_process, alsa_in_process, carla_process, recording_process
     # Detener Carla
     if carla_process:
         print("Deteniendo Carla...")
@@ -144,6 +158,29 @@ def stop_processes():
         print("jackd detenido.")
         jackd_process = None
 
+    # Detener captura de audio
+    if recording_process:
+        print("Deteniendo captura de audio...")
+        recording_process.terminate()
+        try:
+            recording_process.wait(timeout=5)
+        except subprocess.TimeoutExpired:
+            print("La captura no respondió a SIGTERM, enviando SIGKILL...")
+            recording_process.kill()
+        print("Captura de audio detenida.")
+        recording_process = None
+
+class MidiInputHandler(object):
+    def __init__(self, port):
+        self.port = port
+        self._wallclock = time.time()
+
+    def __call__(self, event, data=None):
+        message, deltatime = event
+        self._wallclock += deltatime
+        print("[%s] @%0.6f %r" % (self.port, self._wallclock, message))
+
+
 def handle_signal(signum, frame):
     """Manejador de señales para detener los procesos al recibir SIGTERM o SIGINT."""
     print(f"Señal {signum} recibida, deteniendo procesos...")
@@ -164,17 +201,14 @@ if __name__ == "__main__":
     # Arrancar alsa_in
     start_alsa_in()
 
-    # Esperar un momento para que alsa_in se estabilice
-    time.sleep(2)
+    # Arrancar Carla
+    
+    #start_carla()
+    
 
-    # # Arrancar Carla
-    # start_carla()
-
-    # # Esperar un momento para que Carla se estabilice
-    # time.sleep(2)
-
-    # # Conectar los puertos de audio y MIDI
-    # connect_ports()
+    # Iniciar la captura de audio a test.wav solo si se pasó el argumento "graba"
+    if len(sys.argv) > 1 and sys.argv[1].lower() == "graba":
+        start_recording()
 
     # Mantener el script en ejecución
     try:

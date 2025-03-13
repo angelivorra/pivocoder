@@ -171,7 +171,7 @@
     <Index>21</Index>
     <Name>CHORUS</Name>
     <Symbol>chorus</Symbol>
-    <Value>0</Value>
+    <Value>1</Value>
    </Parameter>
 
    <Parameter>
@@ -264,13 +264,13 @@
     <Value>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 
-&lt;tal curprogram=&quot;0&quot; version=&quot;1&quot;&gt;
+&lt;tal curprogram=&quot;1&quot; version=&quot;1&quot;&gt;
   &lt;programs&gt;
     &lt;program programname=&quot;B Voice Robot Harmonic&quot; volume=&quot;0.52000004053115844727&quot;
              harmonics=&quot;0.72400003671646118164&quot; noisevolume=&quot;0&quot; pulsevolume=&quot;0&quot;
              sawvolume=&quot;0.78800004720687866211&quot; suboscvolume=&quot;0.5960000157356262207&quot;
              osctranspose=&quot;0.60000002384185791016&quot; polymode=&quot;1&quot; portamento=&quot;0&quot;
-             tune=&quot;0.5&quot; inputmode=&quot;0&quot; chorus=&quot;0&quot; enveloperelease=&quot;0.34000000357627868652&quot;
+             tune=&quot;0.5&quot; inputmode=&quot;0&quot; chorus=&quot;1&quot; enveloperelease=&quot;0.34000000357627868652&quot;
              oscsync=&quot;0&quot; pulsetune=&quot;0.5&quot; sawtune=&quot;0&quot; pulsefinetune=&quot;0.44000002741813659668&quot;
              sawfinetune=&quot;0.54000002145767211914&quot; esserintensity=&quot;0.40800002217292785645&quot;
              vocoderband00=&quot;0.5&quot; vocoderband01=&quot;0.5&quot; vocoderband02=&quot;0.5&quot; vocoderband03=&quot;0.5&quot;
@@ -286,7 +286,7 @@
 
  <ExternalPatchbay>
   <Connection>
-   <Source>system:midi_capture_3</Source>
+   <Source>system:midi_capture_2</Source>
    <Target>Carla:Tal-Vocoder-II:events-in</Target>
   </Connection>
   <Connection>
@@ -302,25 +302,17 @@
    <Target>system:playback_1</Target>
   </Connection>
   <Connection>
-   <Source>Carla:Tal-Vocoder-II:Audio Output 1</Source>
-   <Target>jack_capture:input1</Target>
-  </Connection>
-  <Connection>
    <Source>Carla:Tal-Vocoder-II:Audio Output 2</Source>
    <Target>system:playback_2</Target>
   </Connection>
-  <Connection>
-   <Source>Carla:Tal-Vocoder-II:Audio Output 2</Source>
-   <Target>jack_capture:input2</Target>
-  </Connection>
   <Positions>
-   <Position x1="1309" y1="1193">
+   <Position x1="1719" y1="1262">
     <Name>Carla</Name>
    </Position>
-   <Position x1="1157" y1="1137" x2="1672" y2="1144">
+   <Position x1="1391" y1="1139" x2="2220" y2="1267">
     <Name>system</Name>
    </Position>
-   <Position x1="1160" y1="1438">
+   <Position x1="1426" y1="1436">
     <Name>usb_mic</Name>
    </Position>
   </Positions>
