@@ -38,63 +38,63 @@
     <Index>2</Index>
     <Name>volume</Name>
     <Symbol>volume</Symbol>
-    <Value>0.444000035524368</Value>
+    <Value>0.368000030517578</Value>
    </Parameter>
 
    <Parameter>
     <Index>3</Index>
     <Name>filtertype</Name>
     <Symbol>filtertype</Symbol>
-    <Value>0.272727280855179</Value>
+    <Value>0</Value>
    </Parameter>
 
    <Parameter>
     <Index>4</Index>
     <Name>cutoff</Name>
     <Symbol>cutoff</Symbol>
-    <Value>0.136000007390976</Value>
+    <Value>0.752000033855438</Value>
    </Parameter>
 
    <Parameter>
     <Index>5</Index>
     <Name>resonance</Name>
     <Symbol>resonance</Symbol>
-    <Value>0.836000025272369</Value>
+    <Value>0</Value>
    </Parameter>
 
    <Parameter>
     <Index>6</Index>
     <Name>keyfollow</Name>
     <Symbol>keyfollow</Symbol>
-    <Value>1</Value>
+    <Value>0</Value>
    </Parameter>
 
    <Parameter>
     <Index>7</Index>
     <Name>filtercontour</Name>
     <Symbol>filtercontour</Symbol>
-    <Value>0.776000022888184</Value>
+    <Value>0.5</Value>
    </Parameter>
 
    <Parameter>
     <Index>8</Index>
     <Name>filterattack</Name>
     <Symbol>filterattack</Symbol>
-    <Value>0.560000002384186</Value>
+    <Value>0</Value>
    </Parameter>
 
    <Parameter>
     <Index>9</Index>
     <Name>filterdecay</Name>
     <Symbol>filterdecay</Symbol>
-    <Value>0.336000025272369</Value>
+    <Value>0</Value>
    </Parameter>
 
    <Parameter>
     <Index>10</Index>
     <Name>filtersustain</Name>
     <Symbol>filtersustain</Symbol>
-    <Value>0</Value>
+    <Value>1</Value>
    </Parameter>
 
    <Parameter>
@@ -136,14 +136,14 @@
     <Index>16</Index>
     <Name>osc1volume</Name>
     <Symbol>osc1volume</Symbol>
-    <Value>0.664000034332275</Value>
+    <Value>0.708000004291534</Value>
    </Parameter>
 
    <Parameter>
     <Index>17</Index>
     <Name>osc2volume</Name>
     <Symbol>osc2volume</Symbol>
-    <Value>0.660000026226044</Value>
+    <Value>0.724000036716461</Value>
    </Parameter>
 
    <Parameter>
@@ -164,28 +164,28 @@
     <Index>20</Index>
     <Name>osc1tune</Name>
     <Symbol>osc1tune</Symbol>
-    <Value>0</Value>
+    <Value>0.50600004196167</Value>
    </Parameter>
 
    <Parameter>
     <Index>21</Index>
     <Name>osc2tune</Name>
     <Symbol>osc2tune</Symbol>
-    <Value>0.340000003576279</Value>
+    <Value>0.38400000333786</Value>
    </Parameter>
 
    <Parameter>
     <Index>22</Index>
     <Name>osc1finetune</Name>
     <Symbol>osc1finetune</Symbol>
-    <Value>0.504000008106232</Value>
+    <Value>0.5</Value>
    </Parameter>
 
    <Parameter>
     <Index>23</Index>
     <Name>osc2finetune</Name>
     <Symbol>osc2finetune</Symbol>
-    <Value>0.504000008106232</Value>
+    <Value>0.5</Value>
    </Parameter>
 
    <Parameter>
@@ -199,7 +199,7 @@
     <Index>25</Index>
     <Name>osc2waveform</Name>
     <Symbol>osc2waveform</Symbol>
-    <Value>0</Value>
+    <Value>0.25</Value>
    </Parameter>
 
    <Parameter>
@@ -213,7 +213,7 @@
     <Index>27</Index>
     <Name>lfo1waveform</Name>
     <Symbol>lfo1waveform</Symbol>
-    <Value>0.608000040054321</Value>
+    <Value>0</Value>
    </Parameter>
 
    <Parameter>
@@ -227,28 +227,28 @@
     <Index>29</Index>
     <Name>lfo1rate</Name>
     <Symbol>lfo1rate</Symbol>
-    <Value>0.552000045776367</Value>
+    <Value>0</Value>
    </Parameter>
 
    <Parameter>
     <Index>30</Index>
     <Name>lfo2rate</Name>
     <Symbol>lfo2rate</Symbol>
-    <Value>0.176000013947487</Value>
+    <Value>0</Value>
    </Parameter>
 
    <Parameter>
     <Index>31</Index>
     <Name>lfo1amount</Name>
     <Symbol>lfo1amount</Symbol>
-    <Value>0.812000036239624</Value>
+    <Value>0.5</Value>
    </Parameter>
 
    <Parameter>
     <Index>32</Index>
     <Name>lfo2amount</Name>
     <Symbol>lfo2amount</Symbol>
-    <Value>0.744000017642975</Value>
+    <Value>0.5</Value>
    </Parameter>
 
    <Parameter>
@@ -262,7 +262,7 @@
     <Index>34</Index>
     <Name>lfo2destination</Name>
     <Symbol>lfo2destination</Symbol>
-    <Value>0.142857149243355</Value>
+    <Value>0</Value>
    </Parameter>
 
    <Parameter>
@@ -297,7 +297,7 @@
     <Index>39</Index>
     <Name>osc1pw</Name>
     <Symbol>osc1pw</Symbol>
-    <Value>0.112000003457069</Value>
+    <Value>0.5</Value>
    </Parameter>
 
    <Parameter>
@@ -311,7 +311,7 @@
     <Index>41</Index>
     <Name>transpose</Name>
     <Symbol>transpose</Symbol>
-    <Value>0.716000020503998</Value>
+    <Value>0.5</Value>
    </Parameter>
 
    <Parameter>
@@ -367,7 +367,7 @@
     <Index>49</Index>
     <Name>lfo2keytrigger</Name>
     <Symbol>lfo2keytrigger</Symbol>
-    <Value>1</Value>
+    <Value>0</Value>
    </Parameter>
 
    <Parameter>
@@ -416,21 +416,21 @@
     <Index>56</Index>
     <Name>pitchwheelcutoff</Name>
     <Symbol>pitchwheelcutoff</Symbol>
-    <Value>0.184000015258789</Value>
+    <Value>0</Value>
    </Parameter>
 
    <Parameter>
     <Index>57</Index>
     <Name>pitchwheelpitch</Name>
     <Symbol>pitchwheelpitch</Symbol>
-    <Value>0</Value>
+    <Value>0.167000010609627</Value>
    </Parameter>
 
    <Parameter>
     <Index>58</Index>
     <Name>ringmodulation</Name>
     <Symbol>ringmodulation</Symbol>
-    <Value>0.532000005245209</Value>
+    <Value>0</Value>
    </Parameter>
 
    <Parameter>
@@ -493,7 +493,7 @@
     <Index>67</Index>
     <Name>highpass</Name>
     <Symbol>highpass</Symbol>
-    <Value>0.352000027894974</Value>
+    <Value>0</Value>
    </Parameter>
 
    <Parameter>
@@ -598,21 +598,21 @@
     <Index>82</Index>
     <Name>filterdrive</Name>
     <Symbol>filterdrive</Symbol>
-    <Value>0.648000001907349</Value>
+    <Value>0</Value>
    </Parameter>
 
    <Parameter>
     <Index>83</Index>
     <Name>delaywet</Name>
     <Symbol>delaywet</Symbol>
-    <Value>0</Value>
+    <Value>1</Value>
    </Parameter>
 
    <Parameter>
     <Index>84</Index>
     <Name>delaytime</Name>
     <Symbol>delaytime</Symbol>
-    <Value>0.22800001502037</Value>
+    <Value>0.00400000018998981</Value>
    </Parameter>
 
    <Parameter>
@@ -654,7 +654,7 @@
     <Index>90</Index>
     <Name>delayfeedback</Name>
     <Symbol>delayfeedback</Symbol>
-    <Value>0.196000009775162</Value>
+    <Value>0</Value>
    </Parameter>
 
    <Parameter>
@@ -672,42 +672,50 @@
    </Parameter>
 
    <CustomData>
+    <Type>http://kxstudio.sf.net/ns/carla/property</Type>
+    <Key>CarlaSkinIsCompacted</Key>
+    <Value>false</Value>
+   </CustomData>
+
+   <CustomData>
     <Type>http://lv2plug.in/ns/ext/atom#String</Type>
     <Key>urn:juce:stateString</Key>
     <Value>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 
-&lt;tal curprogram=&quot;156&quot; version=&quot;1.6999999999999999556&quot;&gt;
+&lt;tal curprogram=&quot;152&quot; version=&quot;1.6999999999999999556&quot;&gt;
   &lt;programs&gt;
-    &lt;program programname=&quot;LD Aggggggro TAL&quot; volume=&quot;0.44400003552436828613&quot;
-             filtertype=&quot;0.27272728085517883301&quot; cutoff=&quot;0.13600000739097595215&quot;
-             resonance=&quot;0.83600002527236938477&quot; osc1volume=&quot;0.66400003433227539062&quot;
-             osc2volume=&quot;0.66000002622604370117&quot; osc3volume=&quot;0&quot; osc1waveform=&quot;0.5&quot;
-             osc2waveform=&quot;0&quot; oscsync=&quot;0&quot; oscmastertune=&quot;0.5&quot; osc1tune=&quot;0&quot;
-             osc2tune=&quot;0.34000000357627868652&quot; osc1finetune=&quot;0.50400000810623168945&quot;
-             osc2finetune=&quot;0.50400000810623168945&quot; portamento=&quot;0&quot; keyfollow=&quot;1&quot;
-             filtercontour=&quot;0.77600002288818359375&quot; filterattack=&quot;0.56000000238418579102&quot;
-             filterdecay=&quot;0.33600002527236938477&quot; filtersustain=&quot;0&quot; filterrelease=&quot;0&quot;
-             ampattack=&quot;0&quot; ampdecay=&quot;0&quot; ampsustain=&quot;1&quot; amprelease=&quot;0&quot; voices=&quot;0&quot;
-             portamentomode=&quot;0&quot; lfo1waveform=&quot;0.60800004005432128906&quot; lfo2waveform=&quot;0&quot;
-             lfo1rate=&quot;0.5520000457763671875&quot; lfo2rate=&quot;0.17600001394748687744&quot;
-             lfo1amount=&quot;0.81200003623962402344&quot; lfo2amount=&quot;0.74400001764297485352&quot;
-             lfo1destination=&quot;0&quot; lfo2destination=&quot;0.14285714924335479736&quot;
-             lfo1phase=&quot;0&quot; lfo2phase=&quot;0&quot; osc1pw=&quot;0.11200000345706939697&quot; osc2fm=&quot;0&quot;
-             osc1phase=&quot;0.5&quot; osc2phase=&quot;0&quot; transpose=&quot;0.71600002050399780273&quot;
-             freeadattack=&quot;0&quot; freeaddecay=&quot;0&quot; freeadamount=&quot;0&quot; freeaddestination=&quot;0&quot;
-             lfo1sync=&quot;0&quot; lfo1keytrigger=&quot;0&quot; lfo2sync=&quot;0&quot; lfo2keytrigger=&quot;1&quot;
-             velocityvolume=&quot;0&quot; velocitycontour=&quot;0&quot; velocitycutoff=&quot;0&quot; pitchwheelcutoff=&quot;0.1840000152587890625&quot;
-             pitchwheelpitch=&quot;0&quot; highpass=&quot;0.35200002789497375488&quot; detune=&quot;0&quot;
-             vintagenoise=&quot;0&quot; ringmodulation=&quot;0.53200000524520874023&quot; chorus1enable=&quot;0&quot;
+    &lt;program programname=&quot;LD 3D Game Boy TAL&quot; volume=&quot;0.368000030517578125&quot;
+             filtertype=&quot;0&quot; cutoff=&quot;0.75200003385543823242&quot; resonance=&quot;0&quot;
+             osc1volume=&quot;0.70800000429153442383&quot; osc2volume=&quot;0.72400003671646118164&quot;
+             osc3volume=&quot;0&quot; osc1waveform=&quot;0.5&quot; osc2waveform=&quot;0.25&quot; oscsync=&quot;0&quot;
+             oscmastertune=&quot;0.5&quot; osc1tune=&quot;0.50600004196166992188&quot; osc2tune=&quot;0.38400000333786010742&quot;
+             osc1finetune=&quot;0.5&quot; osc2finetune=&quot;0.5&quot; portamento=&quot;0&quot; keyfollow=&quot;0&quot;
+             filtercontour=&quot;0.5&quot; filterattack=&quot;0&quot; filterdecay=&quot;0&quot; filtersustain=&quot;1&quot;
+             filterrelease=&quot;0&quot; ampattack=&quot;0&quot; ampdecay=&quot;0&quot; ampsustain=&quot;1&quot; amprelease=&quot;0&quot;
+             voices=&quot;0&quot; portamentomode=&quot;0&quot; lfo1waveform=&quot;0&quot; lfo2waveform=&quot;0&quot;
+             lfo1rate=&quot;0&quot; lfo2rate=&quot;0&quot; lfo1amount=&quot;0.5&quot; lfo2amount=&quot;0.5&quot; lfo1destination=&quot;0&quot;
+             lfo2destination=&quot;0&quot; lfo1phase=&quot;0&quot; lfo2phase=&quot;0&quot; osc1pw=&quot;0.5&quot;
+             osc2fm=&quot;0&quot; osc1phase=&quot;0.5&quot; osc2phase=&quot;0&quot; transpose=&quot;0.5&quot; freeadattack=&quot;0&quot;
+             freeaddecay=&quot;0&quot; freeadamount=&quot;0&quot; freeaddestination=&quot;0&quot; lfo1sync=&quot;0&quot;
+             lfo1keytrigger=&quot;0&quot; lfo2sync=&quot;0&quot; lfo2keytrigger=&quot;0&quot; velocityvolume=&quot;0&quot;
+             velocitycontour=&quot;0&quot; velocitycutoff=&quot;0&quot; pitchwheelcutoff=&quot;0&quot; pitchwheelpitch=&quot;0.16700001060962677002&quot;
+             highpass=&quot;0&quot; detune=&quot;0&quot; vintagenoise=&quot;0&quot; ringmodulation=&quot;0&quot; chorus1enable=&quot;0&quot;
              chorus2enable=&quot;0&quot; reverbwet=&quot;0&quot; reverbdecay=&quot;0.5&quot; reverbpredelay=&quot;0&quot;
-             reverbhighcut=&quot;0&quot; reverblowcut=&quot;1&quot; oscbitcrusher=&quot;1&quot; filterdrive=&quot;0.64800000190734863281&quot;
-             delaywet=&quot;0&quot; delaytime=&quot;0.2280000150203704834&quot; delaysync=&quot;0&quot;
+             reverbhighcut=&quot;0&quot; reverblowcut=&quot;1&quot; oscbitcrusher=&quot;1&quot; filterdrive=&quot;0&quot;
+             delaywet=&quot;1&quot; delaytime=&quot;0.0040000001899898052216&quot; delaysync=&quot;0&quot;
              delayfactorl=&quot;1&quot; delayfactorr=&quot;0&quot; delayhighshelf=&quot;0&quot; delaylowshelf=&quot;0&quot;
-             delayfeedback=&quot;0.19600000977516174316&quot; envelopeeditordest1=&quot;0&quot;
-             envelopeeditorspeed=&quot;0&quot; envelopeeditoramount=&quot;0&quot; envelopeoneshot=&quot;0&quot;
-             envelopefixtempo=&quot;0&quot; tab1open=&quot;1&quot; tab2open=&quot;0&quot; tab3open=&quot;0&quot; tab4open=&quot;1&quot;&gt;
-      &lt;splinePoints/&gt;
+             delayfeedback=&quot;0&quot; envelopeeditordest1=&quot;0&quot; envelopeeditorspeed=&quot;0&quot;
+             envelopeeditoramount=&quot;0&quot; envelopeoneshot=&quot;0&quot; envelopefixtempo=&quot;0&quot;
+             tab1open=&quot;1&quot; tab2open=&quot;0&quot; tab3open=&quot;0&quot; tab4open=&quot;1&quot;&gt;
+      &lt;splinePoints&gt;
+        &lt;splinePoint isStartPoint=&quot;1&quot; isEndPoint=&quot;0&quot; centerPointX=&quot;0&quot; centerPointY=&quot;0.5&quot;
+                     controlPointLeftX=&quot;0&quot; controlPointLeftY=&quot;0.5&quot; controlPointRightX=&quot;0.10000000149011611938&quot;
+                     controlPointRightY=&quot;0.5&quot;/&gt;
+        &lt;splinePoint isStartPoint=&quot;0&quot; isEndPoint=&quot;1&quot; centerPointX=&quot;1&quot; centerPointY=&quot;0.5&quot;
+                     controlPointLeftX=&quot;0.89999997615814208984&quot; controlPointLeftY=&quot;0.5&quot;
+                     controlPointRightX=&quot;1&quot; controlPointRightY=&quot;0.5&quot;/&gt;
+      &lt;/splinePoints&gt;
     &lt;/program&gt;
   &lt;/programs&gt;
 &lt;/tal&gt;
@@ -731,13 +739,13 @@
    <Target>system:playback_2</Target>
   </Connection>
   <Positions>
-   <Position x1="1421" y1="1222">
+   <Position x1="1517" y1="1283">
     <Name>Carla</Name>
    </Position>
-   <Position x1="1157" y1="1137" x2="1919" y2="1288">
+   <Position x1="1323" y1="1227" x2="1924" y2="1274">
     <Name>system</Name>
    </Position>
-   <Position x1="1160" y1="1438">
+   <Position x1="1289" y1="1506">
     <Name>usb_mic</Name>
    </Position>
   </Positions>
