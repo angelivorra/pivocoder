@@ -243,7 +243,7 @@
     <Index>3</Index>
     <Name>HARMONICS</Name>
     <Symbol>harmonics</Symbol>
-    <Value>0.888000071048737</Value>
+    <Value>1</Value>
    </Parameter>
 
    <Parameter>
@@ -278,7 +278,7 @@
     <Index>8</Index>
     <Name>OSCTRANSPOSE</Name>
     <Symbol>osctranspose</Symbol>
-    <Value>0.432000011205673</Value>
+    <Value>0.216000005602837</Value>
    </Parameter>
 
    <Parameter>
@@ -306,28 +306,28 @@
     <Index>12</Index>
     <Name>SAWTUNE</Name>
     <Symbol>sawtune</Symbol>
-    <Value>0.540000021457672</Value>
+    <Value>0.53600001335144</Value>
    </Parameter>
 
    <Parameter>
     <Index>13</Index>
     <Name>PULSEFINETUNE</Name>
     <Symbol>pulsefinetune</Symbol>
-    <Value>0.452000021934509</Value>
+    <Value>0.52400004863739</Value>
    </Parameter>
 
    <Parameter>
     <Index>14</Index>
     <Name>SAWFINETUNE</Name>
     <Symbol>sawfinetune</Symbol>
-    <Value>0.520000040531158</Value>
+    <Value>0.564000010490417</Value>
    </Parameter>
 
    <Parameter>
     <Index>15</Index>
     <Name>ESSERINTENSITY</Name>
     <Symbol>esserintensity</Symbol>
-    <Value>0.0280000008642673</Value>
+    <Value>0</Value>
    </Parameter>
 
    <Parameter>
@@ -341,14 +341,14 @@
     <Index>17</Index>
     <Name>PORTAMENTO</Name>
     <Symbol>portamento</Symbol>
-    <Value>0.804000020027161</Value>
+    <Value>0.320000022649765</Value>
    </Parameter>
 
    <Parameter>
     <Index>18</Index>
     <Name>TAL_TUNE</Name>
     <Symbol>tal_tune</Symbol>
-    <Value>0.508000016212463</Value>
+    <Value>0.5</Value>
    </Parameter>
 
    <Parameter>
@@ -376,7 +376,7 @@
     <Index>22</Index>
     <Name>ENVELOPERELEASE</Name>
     <Symbol>enveloperelease</Symbol>
-    <Value>0.392000019550323</Value>
+    <Value>0.204000011086464</Value>
    </Parameter>
 
    <Parameter>
@@ -465,18 +465,18 @@
 &lt;tal curprogram=&quot;0&quot; version=&quot;1&quot;&gt;
   &lt;programs&gt;
     &lt;program programname=&quot;A Voice Robot 1&quot; volume=&quot;0.50400000810623168945&quot;
-             harmonics=&quot;0.88800007104873657227&quot; noisevolume=&quot;0&quot; pulsevolume=&quot;0.38400000333786010742&quot;
-             sawvolume=&quot;1&quot; suboscvolume=&quot;1&quot; osctranspose=&quot;0.43200001120567321777&quot;
-             polymode=&quot;1&quot; portamento=&quot;0.80400002002716064453&quot; tune=&quot;0.50800001621246337891&quot;
-             inputmode=&quot;0&quot; chorus=&quot;1&quot; enveloperelease=&quot;0.39200001955032348633&quot;
-             oscsync=&quot;0&quot; pulsetune=&quot;0.50800001621246337891&quot; sawtune=&quot;0.54000002145767211914&quot;
-             pulsefinetune=&quot;0.45200002193450927734&quot; sawfinetune=&quot;0.52000004053115844727&quot;
-             esserintensity=&quot;0.028000000864267349243&quot; vocoderband00=&quot;0.46800002455711364746&quot;
-             vocoderband01=&quot;0.47200003266334533691&quot; vocoderband02=&quot;0.46400001645088195801&quot;
-             vocoderband03=&quot;0.44800001382827758789&quot; vocoderband04=&quot;0.44800001382827758789&quot;
-             vocoderband05=&quot;0.46400001645088195801&quot; vocoderband06=&quot;0.47600001096725463867&quot;
-             vocoderband07=&quot;0.49200001358985900879&quot; vocoderband08=&quot;0.48800003528594970703&quot;
-             vocoderband09=&quot;0.46400001645088195801&quot; vocoderband10=&quot;0.48000001907348632812&quot;/&gt;
+             harmonics=&quot;1&quot; noisevolume=&quot;0&quot; pulsevolume=&quot;0.38400000333786010742&quot;
+             sawvolume=&quot;1&quot; suboscvolume=&quot;1&quot; osctranspose=&quot;0.21600000560283660889&quot;
+             polymode=&quot;1&quot; portamento=&quot;0.32000002264976501465&quot; tune=&quot;0.5&quot; inputmode=&quot;0&quot;
+             chorus=&quot;1&quot; enveloperelease=&quot;0.20400001108646392822&quot; oscsync=&quot;0&quot;
+             pulsetune=&quot;0.50800001621246337891&quot; sawtune=&quot;0.53600001335144042969&quot;
+             pulsefinetune=&quot;0.52400004863739013672&quot; sawfinetune=&quot;0.56400001049041748047&quot;
+             esserintensity=&quot;0&quot; vocoderband00=&quot;0.46800002455711364746&quot; vocoderband01=&quot;0.47200003266334533691&quot;
+             vocoderband02=&quot;0.46400001645088195801&quot; vocoderband03=&quot;0.44800001382827758789&quot;
+             vocoderband04=&quot;0.44800001382827758789&quot; vocoderband05=&quot;0.46400001645088195801&quot;
+             vocoderband06=&quot;0.47600001096725463867&quot; vocoderband07=&quot;0.49200001358985900879&quot;
+             vocoderband08=&quot;0.48800003528594970703&quot; vocoderband09=&quot;0.46400001645088195801&quot;
+             vocoderband10=&quot;0.48000001907348632812&quot;/&gt;
   &lt;/programs&gt;
 &lt;/tal&gt;
 
@@ -507,7 +507,7 @@
    <Target>Carla:Tal-Vocoder-II:Audio Input 2</Target>
   </Connection>
   <Positions>
-   <Position x1="1457" y1="1317">
+   <Position x1="1458" y1="1271">
     <Name>Carla</Name>
    </Position>
    <Position x1="1157" y1="1137" x2="1909" y2="1266">

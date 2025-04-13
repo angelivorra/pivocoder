@@ -14,57 +14,94 @@
   <BeatsPerMinute>120</BeatsPerMinute>
  </Transport>
 
- <!-- 3 Band EQ -->
+ <!-- Calf Limiter -->
  <Plugin>
   <Info>
-   <Type>INTERNAL</Type>
-   <Name>3 Band EQ</Name>
-   <Label>3bandeq</Label>
+   <Type>LV2</Type>
+   <Name>Calf Limiter</Name>
+   <URI>http://calf.sourceforge.net/plugins/Limiter</URI>
   </Info>
 
   <Data>
    <Active>Yes</Active>
    <ControlChannel>1</ControlChannel>
-   <Options>0x4</Options>
+   <Options>0x3f1</Options>
 
    <Parameter>
     <Index>0</Index>
-    <Name>Low</Name>
-    <Value>13.1368417739868</Value>
+    <Name>Bypass</Name>
+    <Symbol>bypass</Symbol>
+    <Value>0</Value>
    </Parameter>
 
    <Parameter>
     <Index>1</Index>
-    <Name>Mid</Name>
-    <Value>0</Value>
+    <Name>Input Gain</Name>
+    <Symbol>level_in</Symbol>
+    <Value>1</Value>
    </Parameter>
 
    <Parameter>
     <Index>2</Index>
-    <Name>High</Name>
-    <Value>-9.09473705291748</Value>
+    <Name>Output Gain</Name>
+    <Symbol>level_out</Symbol>
+    <Value>1</Value>
    </Parameter>
 
    <Parameter>
-    <Index>3</Index>
-    <Name>Master</Name>
-    <Value>0</Value>
+    <Index>11</Index>
+    <Name>Limit</Name>
+    <Symbol>limit</Symbol>
+    <Value>1</Value>
    </Parameter>
 
    <Parameter>
-    <Index>4</Index>
-    <Name>Low-Mid Freq</Name>
-    <Value>220</Value>
+    <Index>12</Index>
+    <Name>Lookahead</Name>
+    <Symbol>attack</Symbol>
+    <Value>5</Value>
    </Parameter>
 
    <Parameter>
-    <Index>5</Index>
-    <Name>Mid-High Freq</Name>
-    <Value>2000</Value>
+    <Index>13</Index>
+    <Name>Release</Name>
+    <Symbol>release</Symbol>
+    <Value>50</Value>
    </Parameter>
 
-   <CurrentMidiBank>1</CurrentMidiBank>
-   <CurrentMidiProgram>1</CurrentMidiProgram>
+   <Parameter>
+    <Index>15</Index>
+    <Name>ASC</Name>
+    <Symbol>asc</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>17</Index>
+    <Name>ASC Level</Name>
+    <Symbol>asc_coeff</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>18</Index>
+    <Name>Oversampling</Name>
+    <Symbol>oversampling</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>19</Index>
+    <Name>Auto-level</Name>
+    <Symbol>auto_level</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <CustomData>
+    <Type>http://kxstudio.sf.net/ns/carla/property</Type>
+    <Key>CarlaSkinIsCompacted</Key>
+    <Value>false</Value>
+   </CustomData>
   </Data>
  </Plugin>
 
@@ -1095,6 +1132,181 @@
     <Symbol>KEY1_HIGH</Symbol>
     <Value>127</Value>
    </Parameter>
+
+   <CustomData>
+    <Type>http://kxstudio.sf.net/ns/carla/property</Type>
+    <Key>CarlaSkinIsCompacted</Key>
+    <Value>false</Value>
+   </CustomData>
+  </Data>
+ </Plugin>
+
+ <!-- x42-Autotune -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>x42-Autotune</Name>
+   <URI>http://gareus.org/oss/lv2/fat1</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <Volume>0.3754817</Volume>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x3f1</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Mode</Name>
+    <Symbol>mode</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Filter Channel</Name>
+    <Symbol>channelf</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>Tuning</Name>
+    <Symbol>tuning</Symbol>
+    <Value>480</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>3</Index>
+    <Name>Bias</Name>
+    <Symbol>bias</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>4</Index>
+    <Name>Filter</Name>
+    <Symbol>filter</Symbol>
+    <Value>0.0200000032782555</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>5</Index>
+    <Name>Correction</Name>
+    <Symbol>corr</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>6</Index>
+    <Name>Offset</Name>
+    <Symbol>offset</Symbol>
+    <Value>-4.4703483581543e-08</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>7</Index>
+    <Name>Pitch Bend Range</Name>
+    <Symbol>bendrange</Symbol>
+    <Value>2</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>8</Index>
+    <Name>Fast Correction</Name>
+    <Symbol>fastmode</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>9</Index>
+    <Name>C</Name>
+    <Symbol>m00</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>10</Index>
+    <Name>C#</Name>
+    <Symbol>m01</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>11</Index>
+    <Name>D</Name>
+    <Symbol>m02</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>12</Index>
+    <Name>D#</Name>
+    <Symbol>m03</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>13</Index>
+    <Name>E</Name>
+    <Symbol>m04</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>14</Index>
+    <Name>F</Name>
+    <Symbol>m05</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>15</Index>
+    <Name>F#</Name>
+    <Symbol>m06</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>16</Index>
+    <Name>G</Name>
+    <Symbol>m07</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>17</Index>
+    <Name>G#</Name>
+    <Symbol>m08</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>18</Index>
+    <Name>A</Name>
+    <Symbol>m09</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>19</Index>
+    <Name>A#</Name>
+    <Symbol>m10</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>20</Index>
+    <Name>B</Name>
+    <Symbol>m11</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <CustomData>
+    <Type>http://kxstudio.sf.net/ns/carla/property</Type>
+    <Key>CarlaSkinIsCompacted</Key>
+    <Value>false</Value>
+   </CustomData>
   </Data>
  </Plugin>
 
@@ -1129,7 +1341,7 @@
     <Index>3</Index>
     <Name>HARMONICS</Name>
     <Symbol>harmonics</Symbol>
-    <Value>0</Value>
+    <Value>0.724000036716461</Value>
    </Parameter>
 
    <Parameter>
@@ -1164,7 +1376,7 @@
     <Index>8</Index>
     <Name>OSCTRANSPOSE</Name>
     <Symbol>osctranspose</Symbol>
-    <Value>0.312000006437302</Value>
+    <Value>0.600000023841858</Value>
    </Parameter>
 
    <Parameter>
@@ -1192,7 +1404,7 @@
     <Index>12</Index>
     <Name>SAWTUNE</Name>
     <Symbol>sawtune</Symbol>
-    <Value>0.616000056266785</Value>
+    <Value>0</Value>
    </Parameter>
 
    <Parameter>
@@ -1213,7 +1425,7 @@
     <Index>15</Index>
     <Name>ESSERINTENSITY</Name>
     <Symbol>esserintensity</Symbol>
-    <Value>0.65200001001358</Value>
+    <Value>1</Value>
    </Parameter>
 
    <Parameter>
@@ -1227,7 +1439,7 @@
     <Index>17</Index>
     <Name>PORTAMENTO</Name>
     <Symbol>portamento</Symbol>
-    <Value>0.596000015735626</Value>
+    <Value>0</Value>
    </Parameter>
 
    <Parameter>
@@ -1262,7 +1474,7 @@
     <Index>22</Index>
     <Name>ENVELOPERELEASE</Name>
     <Symbol>enveloperelease</Symbol>
-    <Value>0.128000006079674</Value>
+    <Value>0.340000003576279</Value>
    </Parameter>
 
    <Parameter>
@@ -1343,23 +1555,29 @@
    </Parameter>
 
    <CustomData>
+    <Type>http://kxstudio.sf.net/ns/carla/property</Type>
+    <Key>CarlaSkinIsCompacted</Key>
+    <Value>false</Value>
+   </CustomData>
+
+   <CustomData>
     <Type>http://lv2plug.in/ns/ext/atom#String</Type>
     <Key>urn:juce:stateString</Key>
     <Value>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 
-&lt;tal curprogram=&quot;0&quot; version=&quot;1&quot;&gt;
+&lt;tal curprogram=&quot;1&quot; version=&quot;1&quot;&gt;
   &lt;programs&gt;
     &lt;program programname=&quot;B Voice Robot Harmonic&quot; volume=&quot;0.52000004053115844727&quot;
-             harmonics=&quot;0&quot; noisevolume=&quot;0&quot; pulsevolume=&quot;0&quot; sawvolume=&quot;0.78800004720687866211&quot;
-             suboscvolume=&quot;0.5960000157356262207&quot; osctranspose=&quot;0.31200000643730163574&quot;
-             polymode=&quot;1&quot; portamento=&quot;0.5960000157356262207&quot; tune=&quot;0.5&quot; inputmode=&quot;1&quot;
-             chorus=&quot;1&quot; enveloperelease=&quot;0.12800000607967376709&quot; oscsync=&quot;0&quot;
-             pulsetune=&quot;0.5&quot; sawtune=&quot;0.61600005626678466797&quot; pulsefinetune=&quot;0.44000002741813659668&quot;
-             sawfinetune=&quot;0.54000002145767211914&quot; esserintensity=&quot;0.65200001001358032227&quot;
-             vocoderband00=&quot;0.5&quot; vocoderband01=&quot;0.5&quot; vocoderband02=&quot;0.5&quot; vocoderband03=&quot;0.5&quot;
-             vocoderband04=&quot;0.5&quot; vocoderband05=&quot;0.5&quot; vocoderband06=&quot;0.5&quot; vocoderband07=&quot;0.5&quot;
-             vocoderband08=&quot;0.5&quot; vocoderband09=&quot;0.5&quot; vocoderband10=&quot;0.5&quot;/&gt;
+             harmonics=&quot;0.72400003671646118164&quot; noisevolume=&quot;0&quot; pulsevolume=&quot;0&quot;
+             sawvolume=&quot;0.78800004720687866211&quot; suboscvolume=&quot;0.5960000157356262207&quot;
+             osctranspose=&quot;0.60000002384185791016&quot; polymode=&quot;1&quot; portamento=&quot;0&quot;
+             tune=&quot;0.5&quot; inputmode=&quot;1&quot; chorus=&quot;1&quot; enveloperelease=&quot;0.34000000357627868652&quot;
+             oscsync=&quot;0&quot; pulsetune=&quot;0.5&quot; sawtune=&quot;0&quot; pulsefinetune=&quot;0.44000002741813659668&quot;
+             sawfinetune=&quot;0.54000002145767211914&quot; esserintensity=&quot;1&quot; vocoderband00=&quot;0.5&quot;
+             vocoderband01=&quot;0.5&quot; vocoderband02=&quot;0.5&quot; vocoderband03=&quot;0.5&quot; vocoderband04=&quot;0.5&quot;
+             vocoderband05=&quot;0.5&quot; vocoderband06=&quot;0.5&quot; vocoderband07=&quot;0.5&quot; vocoderband08=&quot;0.5&quot;
+             vocoderband09=&quot;0.5&quot; vocoderband10=&quot;0.5&quot;/&gt;
   &lt;/programs&gt;
 &lt;/tal&gt;
 
@@ -1368,57 +1586,102 @@
   </Data>
  </Plugin>
 
- <!-- 3 Band EQ -->
+ <!-- Calf Reverb -->
  <Plugin>
   <Info>
-   <Type>INTERNAL</Type>
-   <Name>3 Band EQ (2)</Name>
-   <Label>3bandeq</Label>
+   <Type>LV2</Type>
+   <Name>Calf Reverb</Name>
+   <URI>http://calf.sourceforge.net/plugins/Reverb</URI>
   </Info>
 
   <Data>
    <Active>Yes</Active>
    <ControlChannel>1</ControlChannel>
-   <Options>0x4</Options>
-
-   <Parameter>
-    <Index>0</Index>
-    <Name>Low</Name>
-    <Value>10.6105251312256</Value>
-   </Parameter>
-
-   <Parameter>
-    <Index>1</Index>
-    <Name>Mid</Name>
-    <Value>0</Value>
-   </Parameter>
-
-   <Parameter>
-    <Index>2</Index>
-    <Name>High</Name>
-    <Value>12.1263160705566</Value>
-   </Parameter>
+   <Options>0x3f1</Options>
 
    <Parameter>
     <Index>3</Index>
-    <Name>Master</Name>
-    <Value>0</Value>
+    <Name>Decay time</Name>
+    <Symbol>decay_time</Symbol>
+    <Value>1.5</Value>
    </Parameter>
 
    <Parameter>
     <Index>4</Index>
-    <Name>Low-Mid Freq</Name>
-    <Value>220</Value>
+    <Name>High Frq Damp</Name>
+    <Symbol>hf_damp</Symbol>
+    <Value>5000</Value>
    </Parameter>
 
    <Parameter>
     <Index>5</Index>
-    <Name>Mid-High Freq</Name>
-    <Value>2000</Value>
+    <Name>Room size</Name>
+    <Symbol>room_size</Symbol>
+    <Value>2</Value>
    </Parameter>
 
-   <CurrentMidiBank>1</CurrentMidiBank>
-   <CurrentMidiProgram>1</CurrentMidiProgram>
+   <Parameter>
+    <Index>6</Index>
+    <Name>Diffusion</Name>
+    <Symbol>diffusion</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>7</Index>
+    <Name>Wet Amount</Name>
+    <Symbol>amount</Symbol>
+    <Value>0.25</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>8</Index>
+    <Name>Dry Amount</Name>
+    <Symbol>dry</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>9</Index>
+    <Name>Pre Delay</Name>
+    <Symbol>predelay</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>10</Index>
+    <Name>Bass Cut</Name>
+    <Symbol>bass_cut</Symbol>
+    <Value>300</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>11</Index>
+    <Name>Treble Cut</Name>
+    <Symbol>treble_cut</Symbol>
+    <Value>5000</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>12</Index>
+    <Name>Active</Name>
+    <Symbol>on</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>13</Index>
+    <Name>Input Gain</Name>
+    <Symbol>level_in</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>14</Index>
+    <Name>Output Gain</Name>
+    <Symbol>level_out</Symbol>
+    <Value>1</Value>
+   </Parameter>
   </Data>
  </Plugin>
 
@@ -1428,45 +1691,57 @@
    <Target>Carla:synthv1:events-in</Target>
   </Connection>
   <Connection>
-   <Source>usb_mic:capture_1</Source>
-   <Target>Carla:Tal-Vocoder-II:Audio Input 2</Target>
+   <Source>system:midi_capture_2</Source>
+   <Target>Carla:x42-Autotune:events-in</Target>
   </Connection>
   <Connection>
-   <Source>Carla:3 Band EQ:output_1</Source>
-   <Target>Carla:Tal-Vocoder-II:Audio Input 1</Target>
+   <Source>usb_mic:capture_1</Source>
+   <Target>Carla:Calf Limiter:In L</Target>
+  </Connection>
+  <Connection>
+   <Source>usb_mic:capture_1</Source>
+   <Target>Carla:Calf Limiter:In R</Target>
   </Connection>
   <Connection>
    <Source>Carla:synthv1:Audio Out L</Source>
-   <Target>Carla:3 Band EQ:input_1</Target>
+   <Target>Carla:Tal-Vocoder-II:Audio Input 1</Target>
   </Connection>
   <Connection>
-   <Source>Carla:synthv1:Audio Out R</Source>
-   <Target>Carla:3 Band EQ:input_2</Target>
+   <Source>Carla:x42-Autotune:Output</Source>
+   <Target>Carla:Calf Reverb:In L</Target>
   </Connection>
   <Connection>
    <Source>Carla:Tal-Vocoder-II:Audio Output 1</Source>
-   <Target>Carla:3 Band EQ (2):input_1</Target>
+   <Target>Carla:Calf Reverb:In L</Target>
   </Connection>
   <Connection>
    <Source>Carla:Tal-Vocoder-II:Audio Output 2</Source>
-   <Target>Carla:3 Band EQ (2):input_2</Target>
+   <Target>Carla:Calf Reverb:In R</Target>
   </Connection>
   <Connection>
-   <Source>Carla:3 Band EQ (2):output_1</Source>
+   <Source>Carla:Calf Limiter:Out L</Source>
+   <Target>Carla:Tal-Vocoder-II:Audio Input 2</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla:Calf Limiter:Out L</Source>
+   <Target>Carla:x42-Autotune:Input</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla:Calf Reverb:Out L</Source>
    <Target>system:playback_1</Target>
   </Connection>
   <Connection>
-   <Source>Carla:3 Band EQ (2):output_2</Source>
+   <Source>Carla:Calf Reverb:Out R</Source>
    <Target>system:playback_2</Target>
   </Connection>
   <Positions>
-   <Position x1="1535" y1="1135">
+   <Position x1="1568" y1="1090">
     <Name>Carla</Name>
    </Position>
-   <Position x1="1285" y1="1100" x2="2081" y2="1122">
+   <Position x1="1285" y1="1100" x2="2122" y2="1167">
     <Name>system</Name>
    </Position>
-   <Position x1="1309" y1="1349">
+   <Position x1="1278" y1="1398">
     <Name>usb_mic</Name>
    </Position>
   </Positions>

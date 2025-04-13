@@ -1,3 +1,4 @@
+import os
 import re
 import subprocess
 import signal
@@ -14,7 +15,7 @@ JACKD_CMD = [
     "-P", "95",
     "-d", "alsa",
     "-d", "hw:pisound", #"hw:4,0", 
-    "-r", "48000",
+    "-r", "44100",
     "-p", "128",
     "-n", "2",
     "-X", "seq",
@@ -57,19 +58,19 @@ def change_carla_preset(program_number):
             start_carla(current_preset)
 
 def get_usb_audio_device():
-    """Parsea la salida de 'arecord -l' para obtener el dispositivo USB Audio Device."""
+    """Parsea la salida de 'arecord -l' para obtener el dispositivo USB Composite Device."""
     try:
         output = subprocess.check_output(["arecord", "-l"], text=True)
     except subprocess.CalledProcessError:
         print("Error al ejecutar arecord -l; usando dispositivo por defecto hw:3,0")
         return "hw:3,0"
     for line in output.splitlines():
-        if "USB Audio Device" in line:
+        if "USB Composite Device" in line:
             match = re.search(r'card (\d+):', line)
             if match:
                 card_id = match.group(1)
                 return f"hw:{card_id},0"
-    print("No se encontró 'USB Audio Device'; usando dispositivo por defecto hw:3,0")
+    print("No se encontró 'USB Composite Device'; usando dispositivo por defecto hw:3,0")
     return "hw:3,0"
 
 def start_jackd():
@@ -117,7 +118,7 @@ def start_alsa_in():
         "alsa_in",
         "-d", device,  # Dispositivo de entrada (tarjeta USB)
         "-j", "usb_mic",  # Nombre de los puertos en JACK
-        "-r", "48000",    # Tasa de muestreo (debe coincidir con jackd)
+        "-r", "44100",    # Tasa de muestreo (debe coincidir con jackd)
         "-p", "128",      # Tamaño del buffer (debe coincidir con jackd)
         "-c", "1"         # Número de canales (1 para mono, 2 para estéreo)
     ]
@@ -151,22 +152,27 @@ def start_carla(program_number):
     global carla_process, current_preset
     preset_path = f"/home/patch/pivocoder/program{program_number}.carxp"
     print(f"Arrancando Carla con preset: {preset_path}...")
-    carla_cmd = [
-        "carla",
-        "-n",  # Modo headless (sin interfaz gráfica)        
-        preset_path  # Ruta al preset de Carla
-    ]
-    carla_process = subprocess.Popen(carla_cmd)
-    # Wait one second for Carla to initialize
-    time.sleep(1)
 
-    # Check if the process is still running
-    if carla_process.poll() is None:  # None means the process is still running
-        flash_led(LED_OK)
-    else:
-        print(f"Error: Carla failed to start properly with return code {carla_process.returncode}")
+    os.environ["QT_QPA_PLATFORM"] = "offscreen"
+    carla_cmd = ["carla", "-n", preset_path]
+    carla_process = subprocess.Popen(carla_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+
+    # Esperar hasta 10 segundos para que Carla se inicialice
+    timeout = 10
+    start_time = time.time()
+    while carla_process.poll() is None and (time.time() - start_time) < timeout:
+        time.sleep(0.1)
+
+    if carla_process.poll() is not None:
+        print(f"Error: Carla no se inicializó correctamente. Código: {carla_process.returncode}")
+        print(f"Salida de Carla: {carla_process.stdout.read().decode()}")
+        print(f"Errores de Carla: {carla_process.stderr.read().decode()}")
         flash_led(LED_ERROR)
+        return False
+
+    flash_led(LED_OK)
     print(f"Carla arrancada con PID: {carla_process.pid}")
+    return True
 
 def start_recording():
     """Función para capturar la salida de audio de jack y guardarla en test.wav."""
@@ -231,7 +237,7 @@ def handle_signal(signum, frame):
     """Manejador de señales para detener los procesos al recibir SIGTERM o SIGINT."""
     print(f"Señal {signum} recibida, deteniendo procesos...")
     stop_processes()
-    sys.exit(0)
+    sys.exit(0 if signum == signal.SIGTERM else 1)
 
 
 def get_pisound_midi_port():
@@ -257,13 +263,18 @@ def get_pisound_midi_port():
 def monitor_midi():
     """Monitorea el puerto MIDI y imprime mensajes que no sean de clock."""
     try:
-        with mido.open_input(get_pisound_midi_port()) as port:
+        port_name = get_pisound_midi_port()
+        if port_name is None:
+            print("No se pudo encontrar un puerto MIDI válido.")
+            return
+
+        print(f"Intentando abrir el puerto MIDI: {port_name}")
+        with mido.open_input(port_name) as port:
+            print(f"Puerto MIDI abierto: {port}")
             for msg in port:
                 if msg.type == 'program_change':
-                    print(f"MIDI message: {msg.program}")
+                    print(f"Mensaje MIDI recibido: {msg.program}")
                     change_carla_preset(msg.program)
-                # if msg.type != 'clock':
-                #     print(f"MIDI message: {msg}")
     except Exception as e:
         print("Error al monitorizar MIDI:", e)
         flash_led(LED_ERROR)
@@ -289,9 +300,9 @@ if __name__ == "__main__":
 
     time.sleep(1)
 
-    # Iniciar monitorización de MIDI en un hilo
-    midi_thread = threading.Thread(target=monitor_midi, daemon=True)
-    midi_thread.start()  
+    # # Iniciar monitorización de MIDI en un hilo
+    # midi_thread = threading.Thread(target=monitor_midi, daemon=True)
+    # midi_thread.start()  
     
     flash_led(LED_OK)
 
