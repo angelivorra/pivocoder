@@ -10,17 +10,17 @@ import mido
 # Comando para arrancar jackd
 JACKD_CMD = [
     "jackd",
-    "-t", "2000",
-    "-R",
-    "-P", "95",
+    "-t", "2000",    # Tiempo de espera para mensajes (ms)
+    "-R",            # Modo realtime (importante)
+    "-P", "95",      # Prioridad alta (95 es casi máximo)
     "-d", "alsa",
-    "-d", "hw:pisound", #"hw:4,0", 
-    "-r", "44100",
-    "-p", "128",
-    "-n", "2",
-    "-X", "seq",
-    "-s",
-    "-S"
+    "-d", "hw:pisound",  # ¿Usas una Pisound? Asegúrate de que es la mejor opción vs "hw:1"
+    "-r", "48000",   # Sample rate (puedes probar 48000 si la interfaz lo soporta)
+    "-p", "128",     # Buffer pequeño (latencia ~5-10 ms)
+    "-n", "2",       # Número de periodos (2 es óptimo para baja latencia)
+    "-X", "seq",     # Soporte MIDI ALSA
+    "-s",            # Silenciar mensajes no críticos
+    "-S"             # Evita que otros dispositivos usen ALSA
 ]
 
 # Variables para almacenar los procesos
@@ -118,7 +118,7 @@ def start_alsa_in():
         "alsa_in",
         "-d", device,  # Dispositivo de entrada (tarjeta USB)
         "-j", "usb_mic",  # Nombre de los puertos en JACK
-        "-r", "44100",    # Tasa de muestreo (debe coincidir con jackd)
+        "-r", "48000",    # Tasa de muestreo (debe coincidir con jackd)
         "-p", "128",      # Tamaño del buffer (debe coincidir con jackd)
         "-c", "1"         # Número de canales (1 para mono, 2 para estéreo)
     ]
@@ -281,6 +281,7 @@ def monitor_midi():
         stop_processes()
         sys.exit(1)
 
+
 if __name__ == "__main__":
     # Configurar manejadores de señales
     signal.signal(signal.SIGTERM, handle_signal)
@@ -297,16 +298,13 @@ if __name__ == "__main__":
 
     # Arrancar alsa_in
     start_alsa_in()
-
     time.sleep(1)
 
-    # # Iniciar monitorización de MIDI en un hilo
+    # Iniciar monitorización de MIDI en un hilo si lo necesitas
     # midi_thread = threading.Thread(target=monitor_midi, daemon=True)
     # midi_thread.start()  
-    
-    flash_led(LED_OK)
 
-    #pisound:pisound MIDI PS-1HPT6W6 32:0
+    flash_led(LED_OK)
 
     # Iniciar la captura de audio a test.wav solo si se pasó el argumento "graba"
     if len(sys.argv) > 1 and sys.argv[1].lower() == "graba":

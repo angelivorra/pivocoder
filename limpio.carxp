@@ -1,0 +1,1335 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE CARLA-PROJECT>
+<CARLA-PROJECT VERSION='2.5'>
+ <EngineSettings>
+  <ForceStereo>false</ForceStereo>
+  <PreferPluginBridges>false</PreferPluginBridges>
+  <PreferUiBridges>true</PreferUiBridges>
+  <UIsAlwaysOnTop>false</UIsAlwaysOnTop>
+  <MaxParameters>200</MaxParameters>
+  <UIBridgesTimeout>4000</UIBridgesTimeout>
+ </EngineSettings>
+
+ <Transport>
+  <BeatsPerMinute>120</BeatsPerMinute>
+ </Transport>
+
+ <!-- Noize Mak3r -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>Noize Mak3r</Name>
+   <URI>http://kunz.corrupt.ch/products/tal-noisemaker</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <Volume>0.4711044</Volume>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x3f0</Options>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>unused</Name>
+    <Symbol>unused</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>volume</Name>
+    <Symbol>volume</Symbol>
+    <Value>0.352000027894974</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>3</Index>
+    <Name>filtertype</Name>
+    <Symbol>filtertype</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>4</Index>
+    <Name>cutoff</Name>
+    <Symbol>cutoff</Symbol>
+    <Value>0.368000030517578</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>5</Index>
+    <Name>resonance</Name>
+    <Symbol>resonance</Symbol>
+    <Value>0.348000019788742</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>6</Index>
+    <Name>keyfollow</Name>
+    <Symbol>keyfollow</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>7</Index>
+    <Name>filtercontour</Name>
+    <Symbol>filtercontour</Symbol>
+    <Value>0.796000063419342</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>8</Index>
+    <Name>filterattack</Name>
+    <Symbol>filterattack</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>9</Index>
+    <Name>filterdecay</Name>
+    <Symbol>filterdecay</Symbol>
+    <Value>0.53600001335144</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>10</Index>
+    <Name>filtersustain</Name>
+    <Symbol>filtersustain</Symbol>
+    <Value>0.100000001490116</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>11</Index>
+    <Name>filterrelease</Name>
+    <Symbol>filterrelease</Symbol>
+    <Value>0.248000010848045</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>12</Index>
+    <Name>ampattack</Name>
+    <Symbol>ampattack</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>13</Index>
+    <Name>ampdecay</Name>
+    <Symbol>ampdecay</Symbol>
+    <Value>0.740000009536743</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>14</Index>
+    <Name>ampsustain</Name>
+    <Symbol>ampsustain</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>15</Index>
+    <Name>amprelease</Name>
+    <Symbol>amprelease</Symbol>
+    <Value>0.316000014543533</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>16</Index>
+    <Name>osc1volume</Name>
+    <Symbol>osc1volume</Symbol>
+    <Value>0.772000014781952</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>17</Index>
+    <Name>osc2volume</Name>
+    <Symbol>osc2volume</Symbol>
+    <Value>0.724000036716461</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>18</Index>
+    <Name>osc3volume</Name>
+    <Symbol>osc3volume</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>19</Index>
+    <Name>oscmastertune</Name>
+    <Symbol>oscmastertune</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>20</Index>
+    <Name>osc1tune</Name>
+    <Symbol>osc1tune</Symbol>
+    <Value>0.50600004196167</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>21</Index>
+    <Name>osc2tune</Name>
+    <Symbol>osc2tune</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>22</Index>
+    <Name>osc1finetune</Name>
+    <Symbol>osc1finetune</Symbol>
+    <Value>0.46000000834465</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>23</Index>
+    <Name>osc2finetune</Name>
+    <Symbol>osc2finetune</Symbol>
+    <Value>0.548000037670135</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>24</Index>
+    <Name>osc1waveform</Name>
+    <Symbol>osc1waveform</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>25</Index>
+    <Name>osc2waveform</Name>
+    <Symbol>osc2waveform</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>26</Index>
+    <Name>oscsync</Name>
+    <Symbol>oscsync</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>27</Index>
+    <Name>lfo1waveform</Name>
+    <Symbol>lfo1waveform</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>28</Index>
+    <Name>lfo2waveform</Name>
+    <Symbol>lfo2waveform</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>29</Index>
+    <Name>lfo1rate</Name>
+    <Symbol>lfo1rate</Symbol>
+    <Value>0.544000029563904</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>30</Index>
+    <Name>lfo2rate</Name>
+    <Symbol>lfo2rate</Symbol>
+    <Value>0.520000040531158</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>31</Index>
+    <Name>lfo1amount</Name>
+    <Symbol>lfo1amount</Symbol>
+    <Value>0.596000015735626</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>32</Index>
+    <Name>lfo2amount</Name>
+    <Symbol>lfo2amount</Symbol>
+    <Value>0.404000014066696</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>33</Index>
+    <Name>lfo1destination</Name>
+    <Symbol>lfo1destination</Symbol>
+    <Value>0.28571429848671</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>34</Index>
+    <Name>lfo2destination</Name>
+    <Symbol>lfo2destination</Symbol>
+    <Value>0.428571432828903</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>35</Index>
+    <Name>lfo1phase</Name>
+    <Symbol>lfo1phase</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>36</Index>
+    <Name>lfo2phase</Name>
+    <Symbol>lfo2phase</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>37</Index>
+    <Name>osc2fm</Name>
+    <Symbol>osc2fm</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>38</Index>
+    <Name>osc2phase</Name>
+    <Symbol>osc2phase</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>39</Index>
+    <Name>osc1pw</Name>
+    <Symbol>osc1pw</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>40</Index>
+    <Name>osc1phase</Name>
+    <Symbol>osc1phase</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>41</Index>
+    <Name>transpose</Name>
+    <Symbol>transpose</Symbol>
+    <Value>0.584000051021576</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>42</Index>
+    <Name>freeadattack</Name>
+    <Symbol>freeadattack</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>43</Index>
+    <Name>freeaddecay</Name>
+    <Symbol>freeaddecay</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>44</Index>
+    <Name>freeadamount</Name>
+    <Symbol>freeadamount</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>45</Index>
+    <Name>freeaddestination</Name>
+    <Symbol>freeaddestination</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>46</Index>
+    <Name>lfo1sync</Name>
+    <Symbol>lfo1sync</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>47</Index>
+    <Name>lfo1keytrigger</Name>
+    <Symbol>lfo1keytrigger</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>48</Index>
+    <Name>lfo2sync</Name>
+    <Symbol>lfo2sync</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>49</Index>
+    <Name>lfo2keytrigger</Name>
+    <Symbol>lfo2keytrigger</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>50</Index>
+    <Name>portamento</Name>
+    <Symbol>portamento</Symbol>
+    <Value>0.0920000076293945</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>51</Index>
+    <Name>portamentomode</Name>
+    <Symbol>portamentomode</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>52</Index>
+    <Name>voices</Name>
+    <Symbol>voices</Symbol>
+    <Value>0.600000023841858</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>53</Index>
+    <Name>velocityvolume</Name>
+    <Symbol>velocityvolume</Symbol>
+    <Value>0.508000016212463</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>54</Index>
+    <Name>velocitycontour</Name>
+    <Symbol>velocitycontour</Symbol>
+    <Value>0.724000036716461</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>55</Index>
+    <Name>velocitycutoff</Name>
+    <Symbol>velocitycutoff</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>56</Index>
+    <Name>pitchwheelcutoff</Name>
+    <Symbol>pitchwheelcutoff</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>57</Index>
+    <Name>pitchwheelpitch</Name>
+    <Symbol>pitchwheelpitch</Symbol>
+    <Value>0.168000012636185</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>58</Index>
+    <Name>ringmodulation</Name>
+    <Symbol>ringmodulation</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>59</Index>
+    <Name>chorus1enable</Name>
+    <Symbol>chorus1enable</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>60</Index>
+    <Name>chorus2enable</Name>
+    <Symbol>chorus2enable</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>61</Index>
+    <Name>reverbwet</Name>
+    <Symbol>reverbwet</Symbol>
+    <Value>0.584000051021576</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>62</Index>
+    <Name>reverbdecay</Name>
+    <Symbol>reverbdecay</Symbol>
+    <Value>0.480000019073486</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>63</Index>
+    <Name>reverbpredelay</Name>
+    <Symbol>reverbpredelay</Symbol>
+    <Value>0.492000013589859</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>64</Index>
+    <Name>reverbhighcut</Name>
+    <Symbol>reverbhighcut</Symbol>
+    <Value>0.580000042915344</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>65</Index>
+    <Name>reverblowcut</Name>
+    <Symbol>reverblowcut</Symbol>
+    <Value>0.564000010490417</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>66</Index>
+    <Name>oscbitcrusher</Name>
+    <Symbol>oscbitcrusher</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>67</Index>
+    <Name>highpass</Name>
+    <Symbol>highpass</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>68</Index>
+    <Name>detune</Name>
+    <Symbol>detune</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>69</Index>
+    <Name>vintagenoise</Name>
+    <Symbol>vintagenoise</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>70</Index>
+    <Name>Port 70</Name>
+    <Symbol>lv2_port_70</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>71</Index>
+    <Name>unused</Name>
+    <Symbol>unused_2</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>72</Index>
+    <Name>envelopeeditordest1</Name>
+    <Symbol>envelopeeditordest1</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>73</Index>
+    <Name>envelopeeditorspeed</Name>
+    <Symbol>envelopeeditorspeed</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>74</Index>
+    <Name>envelopeeditoramount</Name>
+    <Symbol>envelopeeditoramount</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>75</Index>
+    <Name>envelopeoneshot</Name>
+    <Symbol>envelopeoneshot</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>76</Index>
+    <Name>envelopefixtempo</Name>
+    <Symbol>envelopefixtempo</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>77</Index>
+    <Name>Port 77</Name>
+    <Symbol>lv2_port_77</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>78</Index>
+    <Name>Port 78</Name>
+    <Symbol>lv2_port_78</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>79</Index>
+    <Name>Port 79</Name>
+    <Symbol>lv2_port_79</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>80</Index>
+    <Name>Port 80</Name>
+    <Symbol>lv2_port_80</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>81</Index>
+    <Name>Port 81</Name>
+    <Symbol>lv2_port_81</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>82</Index>
+    <Name>filterdrive</Name>
+    <Symbol>filterdrive</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>83</Index>
+    <Name>delaywet</Name>
+    <Symbol>delaywet</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>84</Index>
+    <Name>delaytime</Name>
+    <Symbol>delaytime</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>85</Index>
+    <Name>delaysync</Name>
+    <Symbol>delaysync</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>86</Index>
+    <Name>delayfactorl</Name>
+    <Symbol>delayfactorl</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>87</Index>
+    <Name>delayfactorr</Name>
+    <Symbol>delayfactorr</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>88</Index>
+    <Name>delayhighshelf</Name>
+    <Symbol>delayhighshelf</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>89</Index>
+    <Name>delaylowshelf</Name>
+    <Symbol>delaylowshelf</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>90</Index>
+    <Name>delayfeedback</Name>
+    <Symbol>delayfeedback</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>91</Index>
+    <Name>Port 91</Name>
+    <Symbol>lv2_port_91</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>92</Index>
+    <Name>Port 92</Name>
+    <Symbol>lv2_port_92</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:juce:stateString</Key>
+    <Value>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+
+&lt;tal curprogram=&quot;0&quot; version=&quot;1.6999999999999999556&quot;&gt;
+  &lt;programs&gt;
+    &lt;program programname=&quot;KB Screetcher TUC&quot; volume=&quot;0.35200002789497375488&quot;
+             filtertype=&quot;0&quot; cutoff=&quot;0.368000030517578125&quot; resonance=&quot;0.34800001978874206543&quot;
+             osc1volume=&quot;0.7720000147819519043&quot; osc2volume=&quot;0.72400003671646118164&quot;
+             osc3volume=&quot;0&quot; osc1waveform=&quot;0&quot; osc2waveform=&quot;0&quot; oscsync=&quot;0&quot;
+             oscmastertune=&quot;0.5&quot; osc1tune=&quot;0.50600004196166992188&quot; osc2tune=&quot;0.5&quot;
+             osc1finetune=&quot;0.46000000834465026855&quot; osc2finetune=&quot;0.54800003767013549805&quot;
+             portamento=&quot;0.09200000762939453125&quot; keyfollow=&quot;0&quot; filtercontour=&quot;0.79600006341934204102&quot;
+             filterattack=&quot;0&quot; filterdecay=&quot;0.53600001335144042969&quot; filtersustain=&quot;0.10000000149011611938&quot;
+             filterrelease=&quot;0.24800001084804534912&quot; ampattack=&quot;0&quot; ampdecay=&quot;0.74000000953674316406&quot;
+             ampsustain=&quot;0&quot; amprelease=&quot;0.3160000145435333252&quot; voices=&quot;0.60000002384185791016&quot;
+             portamentomode=&quot;0&quot; lfo1waveform=&quot;0&quot; lfo2waveform=&quot;0&quot; lfo1rate=&quot;0.54400002956390380859&quot;
+             lfo2rate=&quot;0.52000004053115844727&quot; lfo1amount=&quot;0.5960000157356262207&quot;
+             lfo2amount=&quot;0.40400001406669616699&quot; lfo1destination=&quot;0.28571429848670959473&quot;
+             lfo2destination=&quot;0.42857143282890319824&quot; lfo1phase=&quot;0&quot; lfo2phase=&quot;0&quot;
+             osc1pw=&quot;0.5&quot; osc2fm=&quot;0&quot; osc1phase=&quot;0.5&quot; osc2phase=&quot;0&quot; transpose=&quot;0.58400005102157592773&quot;
+             freeadattack=&quot;0&quot; freeaddecay=&quot;0&quot; freeadamount=&quot;0&quot; freeaddestination=&quot;0&quot;
+             lfo1sync=&quot;0&quot; lfo1keytrigger=&quot;1&quot; lfo2sync=&quot;0&quot; lfo2keytrigger=&quot;1&quot;
+             velocityvolume=&quot;0.50800001621246337891&quot; velocitycontour=&quot;0.72400003671646118164&quot;
+             velocitycutoff=&quot;0&quot; pitchwheelcutoff=&quot;0&quot; pitchwheelpitch=&quot;0.16800001263618469238&quot;
+             highpass=&quot;0&quot; detune=&quot;0&quot; vintagenoise=&quot;0&quot; ringmodulation=&quot;0&quot; chorus1enable=&quot;0&quot;
+             chorus2enable=&quot;1&quot; reverbwet=&quot;0.58400005102157592773&quot; reverbdecay=&quot;0.48000001907348632812&quot;
+             reverbpredelay=&quot;0.49200001358985900879&quot; reverbhighcut=&quot;0.58000004291534423828&quot;
+             reverblowcut=&quot;0.56400001049041748047&quot; oscbitcrusher=&quot;1&quot; filterdrive=&quot;0&quot;
+             delaywet=&quot;0&quot; delaytime=&quot;0.5&quot; delaysync=&quot;0&quot; delayfactorl=&quot;0&quot; delayfactorr=&quot;0&quot;
+             delayhighshelf=&quot;0&quot; delaylowshelf=&quot;0&quot; delayfeedback=&quot;0.5&quot; envelopeeditordest1=&quot;0&quot;
+             envelopeeditorspeed=&quot;0&quot; envelopeeditoramount=&quot;0&quot; envelopeoneshot=&quot;0&quot;
+             envelopefixtempo=&quot;0&quot; tab1open=&quot;1&quot; tab2open=&quot;0&quot; tab3open=&quot;0&quot; tab4open=&quot;1&quot;&gt;
+      &lt;splinePoints&gt;
+        &lt;splinePoint isStartPoint=&quot;1&quot; isEndPoint=&quot;0&quot; centerPointX=&quot;0&quot; centerPointY=&quot;0.5&quot;
+                     controlPointLeftX=&quot;0&quot; controlPointLeftY=&quot;0.5&quot; controlPointRightX=&quot;0.10000000149011611938&quot;
+                     controlPointRightY=&quot;0.5&quot;/&gt;
+        &lt;splinePoint isStartPoint=&quot;0&quot; isEndPoint=&quot;1&quot; centerPointX=&quot;1&quot; centerPointY=&quot;0.5&quot;
+                     controlPointLeftX=&quot;0.89999997615814208984&quot; controlPointLeftY=&quot;0.5&quot;
+                     controlPointRightX=&quot;1&quot; controlPointRightY=&quot;0.5&quot;/&gt;
+      &lt;/splinePoints&gt;
+    &lt;/program&gt;
+  &lt;/programs&gt;
+&lt;/tal&gt;
+
+    </Value>
+   </CustomData>
+  </Data>
+ </Plugin>
+
+ <!-- x42-comp - Dynamic Compressor Mono -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>x42-comp - Dynamic Compressor Mono</Name>
+   <URI>http://gareus.org/oss/lv2/darc#mono</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <Volume>0.7074655</Volume>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x0</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Enable</Name>
+    <Symbol>enable</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Hold</Name>
+    <Symbol>hold</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>Input Gain</Name>
+    <Symbol>inputgain</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>3</Index>
+    <Name>Threshold</Name>
+    <Symbol>threshold</Symbol>
+    <Value>-30</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>4</Index>
+    <Name>Ratio</Name>
+    <Symbol>Ratio</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>5</Index>
+    <Name>Attack Time</Name>
+    <Symbol>attack</Symbol>
+    <Value>0.00999999977648258</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>6</Index>
+    <Name>Release Time</Name>
+    <Symbol>release</Symbol>
+    <Value>0.300000011920929</Value>
+   </Parameter>
+  </Data>
+ </Plugin>
+
+ <!-- x42-Autotune -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>x42-Autotune</Name>
+   <URI>http://gareus.org/oss/lv2/fat1</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <Volume>0.3956362</Volume>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x3f1</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Mode</Name>
+    <Symbol>mode</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Filter Channel</Name>
+    <Symbol>channelf</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>Tuning</Name>
+    <Symbol>tuning</Symbol>
+    <Value>440</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>3</Index>
+    <Name>Bias</Name>
+    <Symbol>bias</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>4</Index>
+    <Name>Filter</Name>
+    <Symbol>filter</Symbol>
+    <Value>0.100000001490116</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>5</Index>
+    <Name>Correction</Name>
+    <Symbol>corr</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>6</Index>
+    <Name>Offset</Name>
+    <Symbol>offset</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>7</Index>
+    <Name>Pitch Bend Range</Name>
+    <Symbol>bendrange</Symbol>
+    <Value>2</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>8</Index>
+    <Name>Fast Correction</Name>
+    <Symbol>fastmode</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>9</Index>
+    <Name>C</Name>
+    <Symbol>m00</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>10</Index>
+    <Name>C#</Name>
+    <Symbol>m01</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>11</Index>
+    <Name>D</Name>
+    <Symbol>m02</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>12</Index>
+    <Name>D#</Name>
+    <Symbol>m03</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>13</Index>
+    <Name>E</Name>
+    <Symbol>m04</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>14</Index>
+    <Name>F</Name>
+    <Symbol>m05</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>15</Index>
+    <Name>F#</Name>
+    <Symbol>m06</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>16</Index>
+    <Name>G</Name>
+    <Symbol>m07</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>17</Index>
+    <Name>G#</Name>
+    <Symbol>m08</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>18</Index>
+    <Name>A</Name>
+    <Symbol>m09</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>19</Index>
+    <Name>A#</Name>
+    <Symbol>m10</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>20</Index>
+    <Name>B</Name>
+    <Symbol>m11</Symbol>
+    <Value>1</Value>
+   </Parameter>
+  </Data>
+ </Plugin>
+
+ <!-- Tal-Vocoder-II -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>Tal-Vocoder-II</Name>
+   <URI>http://kunz.corrupt.ch/products/tal-vocoder</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <Volume>1.187718</Volume>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x3f0</Options>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>unused</Name>
+    <Symbol>unused</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>TAL_VOLUME</Name>
+    <Symbol>tal_volume</Symbol>
+    <Value>0.504000008106232</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>3</Index>
+    <Name>HARMONICS</Name>
+    <Symbol>harmonics</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>4</Index>
+    <Name>NOISEVOLUME</Name>
+    <Symbol>noisevolume</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>5</Index>
+    <Name>PULSEVOLUME</Name>
+    <Symbol>pulsevolume</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>6</Index>
+    <Name>SAWVOLUME</Name>
+    <Symbol>sawvolume</Symbol>
+    <Value>0.976000070571899</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>7</Index>
+    <Name>SUBOSCVOLUME</Name>
+    <Symbol>suboscvolume</Symbol>
+    <Value>0.556000053882599</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>8</Index>
+    <Name>OSCTRANSPOSE</Name>
+    <Symbol>osctranspose</Symbol>
+    <Value>0.252000004053116</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>9</Index>
+    <Name>SUBOSCOCTAVE</Name>
+    <Symbol>suboscoctave</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>10</Index>
+    <Name>OSCSYNC</Name>
+    <Symbol>oscsync</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>11</Index>
+    <Name>PULSETUNE</Name>
+    <Symbol>pulsetune</Symbol>
+    <Value>0.508000016212463</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>12</Index>
+    <Name>SAWTUNE</Name>
+    <Symbol>sawtune</Symbol>
+    <Value>0.540000021457672</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>13</Index>
+    <Name>PULSEFINETUNE</Name>
+    <Symbol>pulsefinetune</Symbol>
+    <Value>0.52400004863739</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>14</Index>
+    <Name>SAWFINETUNE</Name>
+    <Symbol>sawfinetune</Symbol>
+    <Value>0.520000040531158</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>15</Index>
+    <Name>ESSERINTENSITY</Name>
+    <Symbol>esserintensity</Symbol>
+    <Value>0.587999999523163</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>16</Index>
+    <Name>POLYMODE</Name>
+    <Symbol>polymode</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>17</Index>
+    <Name>PORTAMENTO</Name>
+    <Symbol>portamento</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>18</Index>
+    <Name>TAL_TUNE</Name>
+    <Symbol>tal_tune</Symbol>
+    <Value>0.508000016212463</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>19</Index>
+    <Name>PANIC</Name>
+    <Symbol>panic</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>20</Index>
+    <Name>INPUTMODE</Name>
+    <Symbol>inputmode</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>21</Index>
+    <Name>CHORUS</Name>
+    <Symbol>chorus</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>22</Index>
+    <Name>ENVELOPERELEASE</Name>
+    <Symbol>enveloperelease</Symbol>
+    <Value>0.392000019550323</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>23</Index>
+    <Name>VOCODERBAND00</Name>
+    <Symbol>vocoderband00</Symbol>
+    <Value>0.468000024557114</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>24</Index>
+    <Name>VOCODERBAND01</Name>
+    <Symbol>vocoderband01</Symbol>
+    <Value>0.472000032663345</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>25</Index>
+    <Name>VOCODERBAND02</Name>
+    <Symbol>vocoderband02</Symbol>
+    <Value>0.464000016450882</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>26</Index>
+    <Name>VOCODERBAND03</Name>
+    <Symbol>vocoderband03</Symbol>
+    <Value>0.448000013828278</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>27</Index>
+    <Name>VOCODERBAND04</Name>
+    <Symbol>vocoderband04</Symbol>
+    <Value>0.448000013828278</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>28</Index>
+    <Name>VOCODERBAND05</Name>
+    <Symbol>vocoderband05</Symbol>
+    <Value>0.464000016450882</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>29</Index>
+    <Name>VOCODERBAND06</Name>
+    <Symbol>vocoderband06</Symbol>
+    <Value>0.476000010967255</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>30</Index>
+    <Name>VOCODERBAND07</Name>
+    <Symbol>vocoderband07</Symbol>
+    <Value>0.492000013589859</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>31</Index>
+    <Name>VOCODERBAND08</Name>
+    <Symbol>vocoderband08</Symbol>
+    <Value>0.48800003528595</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>32</Index>
+    <Name>VOCODERBAND09</Name>
+    <Symbol>vocoderband09</Symbol>
+    <Value>0.464000016450882</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>33</Index>
+    <Name>VOCODERBAND10</Name>
+    <Symbol>vocoderband10</Symbol>
+    <Value>0.480000019073486</Value>
+   </Parameter>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:juce:stateString</Key>
+    <Value>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+
+&lt;tal curprogram=&quot;0&quot; version=&quot;1&quot;&gt;
+  &lt;programs&gt;
+    &lt;program programname=&quot;A Voice Robot 1&quot; volume=&quot;0.50400000810623168945&quot;
+             harmonics=&quot;0&quot; noisevolume=&quot;0&quot; pulsevolume=&quot;0&quot; sawvolume=&quot;0.97600007057189941406&quot;
+             suboscvolume=&quot;0.55600005388259887695&quot; osctranspose=&quot;0.25200000405311584473&quot;
+             polymode=&quot;1&quot; portamento=&quot;0&quot; tune=&quot;0.50800001621246337891&quot; inputmode=&quot;0&quot;
+             chorus=&quot;1&quot; enveloperelease=&quot;0.39200001955032348633&quot; oscsync=&quot;0&quot;
+             pulsetune=&quot;0.50800001621246337891&quot; sawtune=&quot;0.54000002145767211914&quot;
+             pulsefinetune=&quot;0.52400004863739013672&quot; sawfinetune=&quot;0.52000004053115844727&quot;
+             esserintensity=&quot;0.5879999995231628418&quot; vocoderband00=&quot;0.46800002455711364746&quot;
+             vocoderband01=&quot;0.47200003266334533691&quot; vocoderband02=&quot;0.46400001645088195801&quot;
+             vocoderband03=&quot;0.44800001382827758789&quot; vocoderband04=&quot;0.44800001382827758789&quot;
+             vocoderband05=&quot;0.46400001645088195801&quot; vocoderband06=&quot;0.47600001096725463867&quot;
+             vocoderband07=&quot;0.49200001358985900879&quot; vocoderband08=&quot;0.48800003528594970703&quot;
+             vocoderband09=&quot;0.46400001645088195801&quot; vocoderband10=&quot;0.48000001907348632812&quot;/&gt;
+  &lt;/programs&gt;
+&lt;/tal&gt;
+
+    </Value>
+   </CustomData>
+  </Data>
+ </Plugin>
+
+ <Patchbay>
+  <Connection>
+   <Source>Midi Input:Capture 1</Source>
+   <Target>Noize Mak3r:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>Noize Mak3r:Audio Output 1</Source>
+   <Target>Audio Output:Left</Target>
+  </Connection>
+  <Connection>
+   <Source>Noize Mak3r:Audio Output 2</Source>
+   <Target>Audio Output:Right</Target>
+  </Connection>
+  <Connection>
+   <Source>Audio Input:Left</Source>
+   <Target>x42-comp - Dynamic Compressor Mono:In</Target>
+  </Connection>
+  <Connection>
+   <Source>Audio Input:Left</Source>
+   <Target>x42-Autotune:Input</Target>
+  </Connection>
+  <Connection>
+   <Source>x42-Autotune:Output</Source>
+   <Target>Audio Output:Left</Target>
+  </Connection>
+  <Connection>
+   <Source>Midi Input:Capture 1</Source>
+   <Target>x42-Autotune:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>x42-Autotune:Output</Source>
+   <Target>Audio Output:Right</Target>
+  </Connection>
+  <Connection>
+   <Source>x42-comp - Dynamic Compressor Mono:Out</Source>
+   <Target>Tal-Vocoder-II:Audio Input 1</Target>
+  </Connection>
+  <Connection>
+   <Source>Midi Input:Capture 1</Source>
+   <Target>Tal-Vocoder-II:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>Tal-Vocoder-II:Audio Output 1</Source>
+   <Target>Audio Output:Left</Target>
+  </Connection>
+  <Connection>
+   <Source>Tal-Vocoder-II:Audio Output 2</Source>
+   <Target>Audio Output:Right</Target>
+  </Connection>
+  <Positions>
+   <Position x1="1747" y1="1263" pluginId="3">
+    <Name>Tal-Vocoder-II</Name>
+   </Position>
+   <Position x1="1618" y1="1047" pluginId="2">
+    <Name>x42-Autotune</Name>
+   </Position>
+   <Position x1="1392" y1="1178" pluginId="1">
+    <Name>x42-comp - Dynamic Compressor Mono</Name>
+   </Position>
+   <Position x1="1445" y1="895" pluginId="0">
+    <Name>Noize Mak3r</Name>
+   </Position>
+   <Position x1="1478" y1="1245" x2="2194" y2="1246">
+    <Name>Midi Output</Name>
+   </Position>
+   <Position x1="1151" y1="1295">
+    <Name>Midi Input</Name>
+   </Position>
+   <Position x1="1283" y1="1024" x2="2169" y2="938">
+    <Name>Audio Output</Name>
+   </Position>
+   <Position x1="1171" y1="1045">
+    <Name>Audio Input</Name>
+   </Position>
+  </Positions>
+ </Patchbay>
+
+ <ExternalPatchbay>
+  <Connection>
+   <Source>system:midi_capture_2</Source>
+   <Target>Carla:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>usb_mic:capture_1</Source>
+   <Target>Carla:audio-in1</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla:audio-out1</Source>
+   <Target>system:playback_1</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla:audio-out2</Source>
+   <Target>system:playback_2</Target>
+  </Connection>
+  <Positions>
+   <Position x1="1626" y1="1088">
+    <Name>Carla</Name>
+   </Position>
+   <Position x1="1283" y1="1024" x2="1852" y2="1101">
+    <Name>system</Name>
+   </Position>
+   <Position x1="1294" y1="1239">
+    <Name>usb_mic</Name>
+   </Position>
+  </Positions>
+ </ExternalPatchbay>
+</CARLA-PROJECT>
