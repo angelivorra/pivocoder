@@ -1,0 +1,196 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE CARLA-PROJECT>
+<CARLA-PROJECT VERSION='2.5'>
+ <EngineSettings>
+  <ForceStereo>false</ForceStereo>
+  <PreferPluginBridges>false</PreferPluginBridges>
+  <PreferUiBridges>true</PreferUiBridges>
+  <UIsAlwaysOnTop>false</UIsAlwaysOnTop>
+  <MaxParameters>200</MaxParameters>
+  <UIBridgesTimeout>4000</UIBridgesTimeout>
+ </EngineSettings>
+
+ <Transport>
+  <BeatsPerMinute>120</BeatsPerMinute>
+ </Transport>
+
+ <!-- MDA RingMod -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>MDA RingMod</Name>
+   <URI>http://drobilla.net/plugins/mda/RingMod</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x0</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Freq</Name>
+    <Symbol>freq</Symbol>
+    <Value>0.501425564289093</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Fine</Name>
+    <Symbol>fine</Symbol>
+    <Value>0.145708277821541</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>Feedback</Name>
+    <Symbol>feedback</Symbol>
+    <Value>1</Value>
+   </Parameter>
+  </Data>
+ </Plugin>
+
+ <!-- Invada Compressor (mono) -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>Invada Compressor (mono)</Name>
+   <URI>http://invadarecords.com/plugins/lv2/compressor/mono</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x0</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Bypass</Name>
+    <Symbol>bypass</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>RMS</Name>
+    <Symbol>rms</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>Attack</Name>
+    <Symbol>attack</Symbol>
+    <Value>0.0149999996647239</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>3</Index>
+    <Name>Release</Name>
+    <Symbol>release</Symbol>
+    <Value>0.0500000007450581</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>4</Index>
+    <Name>Threshold</Name>
+    <Symbol>threshold</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>5</Index>
+    <Name>Ratio</Name>
+    <Symbol>ratio</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>6</Index>
+    <Name>Gain</Name>
+    <Symbol>gain</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>7</Index>
+    <Name>Soft Clip</Name>
+    <Symbol>noClip</Symbol>
+    <Value>1</Value>
+   </Parameter>
+  </Data>
+ </Plugin>
+
+ <Patchbay>
+  <Connection>
+   <Source>MDA RingMod:Left Out</Source>
+   <Target>Audio Output:Left</Target>
+  </Connection>
+  <Connection>
+   <Source>MDA RingMod:Right Out</Source>
+   <Target>Audio Output:Right</Target>
+  </Connection>
+  <Connection>
+   <Source>Audio Input:Left</Source>
+   <Target>Invada Compressor (mono):In</Target>
+  </Connection>
+  <Connection>
+   <Source>Invada Compressor (mono):Out</Source>
+   <Target>MDA RingMod:Left In</Target>
+  </Connection>
+  <Connection>
+   <Source>Invada Compressor (mono):Out</Source>
+   <Target>MDA RingMod:Right In</Target>
+  </Connection>
+  <Positions>
+   <Position x1="1349" y1="1031" pluginId="1">
+    <Name>Invada Compressor (mono)</Name>
+   </Position>
+   <Position x1="1626" y1="981" pluginId="0">
+    <Name>MDA RingMod</Name>
+   </Position>
+   <Position x1="1462" y1="1229" x2="2065" y2="1282">
+    <Name>Midi Output</Name>
+   </Position>
+   <Position x1="1174" y1="1254">
+    <Name>Midi Input</Name>
+   </Position>
+   <Position x1="1264" y1="943" x2="2155" y2="973">
+    <Name>Audio Output</Name>
+   </Position>
+   <Position x1="1194" y1="993">
+    <Name>Audio Input</Name>
+   </Position>
+  </Positions>
+ </Patchbay>
+
+ <ExternalPatchbay>
+  <Connection>
+   <Source>system:midi_capture_2</Source>
+   <Target>Carla:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>usb_mic:capture_1</Source>
+   <Target>Carla:audio-in1</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla:audio-out1</Source>
+   <Target>system:playback_1</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla:audio-out2</Source>
+   <Target>system:playback_2</Target>
+  </Connection>
+  <Positions>
+   <Position x1="1504" y1="994">
+    <Name>Carla</Name>
+   </Position>
+   <Position x1="1264" y1="943" x2="1838" y2="1086">
+    <Name>system</Name>
+   </Position>
+   <Position x1="1320" y1="1201">
+    <Name>usb_mic</Name>
+   </Position>
+  </Positions>
+ </ExternalPatchbay>
+</CARLA-PROJECT>

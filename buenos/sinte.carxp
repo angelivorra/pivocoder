@@ -1,0 +1,4681 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE CARLA-PROJECT>
+<CARLA-PROJECT VERSION='2.5'>
+ <EngineSettings>
+  <ForceStereo>false</ForceStereo>
+  <PreferPluginBridges>false</PreferPluginBridges>
+  <PreferUiBridges>true</PreferUiBridges>
+  <UIsAlwaysOnTop>false</UIsAlwaysOnTop>
+  <MaxParameters>200</MaxParameters>
+  <UIBridgesTimeout>4000</UIBridgesTimeout>
+ </EngineSettings>
+
+ <Transport>
+  <BeatsPerMinute>120</BeatsPerMinute>
+ </Transport>
+
+ <!-- Surge -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>Surge</Name>
+   <URI>https://surge-synthesizer.github.io/lv2/surge</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x3f0</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Macro 1: -</Name>
+    <Symbol>meta_cc1</Symbol>
+    <Value>0.164161920547485</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Macro 2: -</Name>
+    <Symbol>meta_cc2</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>Macro 3: -</Name>
+    <Symbol>meta_cc3</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>3</Index>
+    <Name>Macro 4: -</Name>
+    <Symbol>meta_cc4</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>4</Index>
+    <Name>Macro 5: -</Name>
+    <Symbol>meta_cc5</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>5</Index>
+    <Name>Macro 6: -</Name>
+    <Symbol>meta_cc6</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>6</Index>
+    <Name>Macro 7: -</Name>
+    <Symbol>meta_cc7</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>7</Index>
+    <Name>Macro 8: -</Name>
+    <Symbol>meta_cc8</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>8</Index>
+    <Name>FX Bypass</Name>
+    <Symbol>fx_bypass</Symbol>
+    <Value>0.00499999988824129</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>9</Index>
+    <Name>FX A1 FX Type</Name>
+    <Symbol>fx1_type</Symbol>
+    <Value>0.0811538472771645</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>10</Index>
+    <Name>FX A1 Param 1</Name>
+    <Symbol>fx1_p0</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>11</Index>
+    <Name>FX A1 Param 2</Name>
+    <Symbol>fx1_p1</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>12</Index>
+    <Name>FX A1 Param 3</Name>
+    <Symbol>fx1_p2</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>13</Index>
+    <Name>FX A1 Param 4</Name>
+    <Symbol>fx1_p3</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>14</Index>
+    <Name>FX A1 Param 5</Name>
+    <Symbol>fx1_p4</Symbol>
+    <Value>0.205055087804794</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>15</Index>
+    <Name>FX A1 Param 6</Name>
+    <Symbol>fx1_p5</Symbol>
+    <Value>0.768090605735779</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>16</Index>
+    <Name>FX A1 Param 7</Name>
+    <Symbol>fx1_p6</Symbol>
+    <Value>0.547768115997314</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>17</Index>
+    <Name>FX A1 Param 8</Name>
+    <Symbol>fx1_p7</Symbol>
+    <Value>0.238392993807793</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>18</Index>
+    <Name>FX A1 Param 9</Name>
+    <Symbol>fx1_p8</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>19</Index>
+    <Name>FX A1 Param 10</Name>
+    <Symbol>fx1_p9</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>20</Index>
+    <Name>FX A1 Param 11</Name>
+    <Symbol>fx1_p10</Symbol>
+    <Value>0.416070997714996</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>21</Index>
+    <Name>FX A1 Param 12</Name>
+    <Symbol>fx1_p11</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>22</Index>
+    <Name>FX A2 FX Type</Name>
+    <Symbol>fx2_type</Symbol>
+    <Value>0.00499999988824129</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>23</Index>
+    <Name>FX A2 Param 1</Name>
+    <Symbol>fx2_p0</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>24</Index>
+    <Name>FX A2 Param 2</Name>
+    <Symbol>fx2_p1</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>25</Index>
+    <Name>FX A2 Param 3</Name>
+    <Symbol>fx2_p2</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>26</Index>
+    <Name>FX A2 Param 4</Name>
+    <Symbol>fx2_p3</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>27</Index>
+    <Name>FX A2 Param 5</Name>
+    <Symbol>fx2_p4</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>28</Index>
+    <Name>FX A2 Param 6</Name>
+    <Symbol>fx2_p5</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>29</Index>
+    <Name>FX A2 Param 7</Name>
+    <Symbol>fx2_p6</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>30</Index>
+    <Name>FX A2 Param 8</Name>
+    <Symbol>fx2_p7</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>31</Index>
+    <Name>FX A2 Param 9</Name>
+    <Symbol>fx2_p8</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>32</Index>
+    <Name>FX A2 Param 10</Name>
+    <Symbol>fx2_p9</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>33</Index>
+    <Name>FX A2 Param 11</Name>
+    <Symbol>fx2_p10</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>34</Index>
+    <Name>FX A2 Param 12</Name>
+    <Symbol>fx2_p11</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>35</Index>
+    <Name>FX B1 FX Type</Name>
+    <Symbol>fx3_type</Symbol>
+    <Value>0.00499999988824129</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>36</Index>
+    <Name>FX B1 Param 1</Name>
+    <Symbol>fx3_p0</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>37</Index>
+    <Name>FX B1 Param 2</Name>
+    <Symbol>fx3_p1</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>38</Index>
+    <Name>FX B1 Param 3</Name>
+    <Symbol>fx3_p2</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>39</Index>
+    <Name>FX B1 Param 4</Name>
+    <Symbol>fx3_p3</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>40</Index>
+    <Name>FX B1 Param 5</Name>
+    <Symbol>fx3_p4</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>41</Index>
+    <Name>FX B1 Param 6</Name>
+    <Symbol>fx3_p5</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>42</Index>
+    <Name>FX B1 Param 7</Name>
+    <Symbol>fx3_p6</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>43</Index>
+    <Name>FX B1 Param 8</Name>
+    <Symbol>fx3_p7</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>44</Index>
+    <Name>FX B1 Param 9</Name>
+    <Symbol>fx3_p8</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>45</Index>
+    <Name>FX B1 Param 10</Name>
+    <Symbol>fx3_p9</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>46</Index>
+    <Name>FX B1 Param 11</Name>
+    <Symbol>fx3_p10</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>47</Index>
+    <Name>FX B1 Param 12</Name>
+    <Symbol>fx3_p11</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>48</Index>
+    <Name>FX B2 FX Type</Name>
+    <Symbol>fx4_type</Symbol>
+    <Value>0.00499999988824129</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>49</Index>
+    <Name>FX B2 Param 1</Name>
+    <Symbol>fx4_p0</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>50</Index>
+    <Name>FX B2 Param 2</Name>
+    <Symbol>fx4_p1</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>51</Index>
+    <Name>FX B2 Param 3</Name>
+    <Symbol>fx4_p2</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>52</Index>
+    <Name>FX B2 Param 4</Name>
+    <Symbol>fx4_p3</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>53</Index>
+    <Name>FX B2 Param 5</Name>
+    <Symbol>fx4_p4</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>54</Index>
+    <Name>FX B2 Param 6</Name>
+    <Symbol>fx4_p5</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>55</Index>
+    <Name>FX B2 Param 7</Name>
+    <Symbol>fx4_p6</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>56</Index>
+    <Name>FX B2 Param 8</Name>
+    <Symbol>fx4_p7</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>57</Index>
+    <Name>FX B2 Param 9</Name>
+    <Symbol>fx4_p8</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>58</Index>
+    <Name>FX B2 Param 10</Name>
+    <Symbol>fx4_p9</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>59</Index>
+    <Name>FX B2 Param 11</Name>
+    <Symbol>fx4_p10</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>60</Index>
+    <Name>FX B2 Param 12</Name>
+    <Symbol>fx4_p11</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>61</Index>
+    <Name>FX S1 FX Type</Name>
+    <Symbol>fx5_type</Symbol>
+    <Value>0.0811538472771645</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>62</Index>
+    <Name>FX S1 Param 1</Name>
+    <Symbol>fx5_p0</Symbol>
+    <Value>0.538461565971375</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>63</Index>
+    <Name>FX S1 Param 2</Name>
+    <Symbol>fx5_p1</Symbol>
+    <Value>0.461538463830948</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>64</Index>
+    <Name>FX S1 Param 3</Name>
+    <Symbol>fx5_p2</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>65</Index>
+    <Name>FX S1 Param 4</Name>
+    <Symbol>fx5_p3</Symbol>
+    <Value>0.811607003211975</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>66</Index>
+    <Name>FX S1 Param 5</Name>
+    <Symbol>fx5_p4</Symbol>
+    <Value>0.288131952285767</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>67</Index>
+    <Name>FX S1 Param 6</Name>
+    <Symbol>fx5_p5</Symbol>
+    <Value>0.756345987319946</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>68</Index>
+    <Name>FX S1 Param 7</Name>
+    <Symbol>fx5_p6</Symbol>
+    <Value>0.363783568143845</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>69</Index>
+    <Name>FX S1 Param 8</Name>
+    <Symbol>fx5_p7</Symbol>
+    <Value>0.0803570002317429</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>70</Index>
+    <Name>FX S1 Param 9</Name>
+    <Symbol>fx5_p8</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>71</Index>
+    <Name>FX S1 Param 10</Name>
+    <Symbol>fx5_p9</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>72</Index>
+    <Name>FX S1 Param 11</Name>
+    <Symbol>fx5_p10</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>73</Index>
+    <Name>FX S1 Param 12</Name>
+    <Symbol>fx5_p11</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>74</Index>
+    <Name>FX S2 FX Type</Name>
+    <Symbol>fx6_type</Symbol>
+    <Value>0.00499999988824129</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>75</Index>
+    <Name>FX S2 Param 1</Name>
+    <Symbol>fx6_p0</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>76</Index>
+    <Name>FX S2 Param 2</Name>
+    <Symbol>fx6_p1</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>77</Index>
+    <Name>FX S2 Param 3</Name>
+    <Symbol>fx6_p2</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>78</Index>
+    <Name>FX S2 Param 4</Name>
+    <Symbol>fx6_p3</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>79</Index>
+    <Name>FX S2 Param 5</Name>
+    <Symbol>fx6_p4</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>80</Index>
+    <Name>FX S2 Param 6</Name>
+    <Symbol>fx6_p5</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>81</Index>
+    <Name>FX S2 Param 7</Name>
+    <Symbol>fx6_p6</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>82</Index>
+    <Name>FX S2 Param 8</Name>
+    <Symbol>fx6_p7</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>83</Index>
+    <Name>FX S2 Param 9</Name>
+    <Symbol>fx6_p8</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>84</Index>
+    <Name>FX S2 Param 10</Name>
+    <Symbol>fx6_p9</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>85</Index>
+    <Name>FX S2 Param 11</Name>
+    <Symbol>fx6_p10</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>86</Index>
+    <Name>FX S2 Param 12</Name>
+    <Symbol>fx6_p11</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>87</Index>
+    <Name>FX M1 FX Type</Name>
+    <Symbol>fx7_type</Symbol>
+    <Value>0.00499999988824129</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>88</Index>
+    <Name>FX M1 Param 1</Name>
+    <Symbol>fx7_p0</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>89</Index>
+    <Name>FX M1 Param 2</Name>
+    <Symbol>fx7_p1</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>90</Index>
+    <Name>FX M1 Param 3</Name>
+    <Symbol>fx7_p2</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>91</Index>
+    <Name>FX M1 Param 4</Name>
+    <Symbol>fx7_p3</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>92</Index>
+    <Name>FX M1 Param 5</Name>
+    <Symbol>fx7_p4</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>93</Index>
+    <Name>FX M1 Param 6</Name>
+    <Symbol>fx7_p5</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>94</Index>
+    <Name>FX M1 Param 7</Name>
+    <Symbol>fx7_p6</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>95</Index>
+    <Name>FX M1 Param 8</Name>
+    <Symbol>fx7_p7</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>96</Index>
+    <Name>FX M1 Param 9</Name>
+    <Symbol>fx7_p8</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>97</Index>
+    <Name>FX M1 Param 10</Name>
+    <Symbol>fx7_p9</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>98</Index>
+    <Name>FX M1 Param 11</Name>
+    <Symbol>fx7_p10</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>99</Index>
+    <Name>FX M1 Param 12</Name>
+    <Symbol>fx7_p11</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>100</Index>
+    <Name>FX M2 FX Type</Name>
+    <Symbol>fx8_type</Symbol>
+    <Value>0.00499999988824129</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>101</Index>
+    <Name>FX M2 Param 1</Name>
+    <Symbol>fx8_p0</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>102</Index>
+    <Name>FX M2 Param 2</Name>
+    <Symbol>fx8_p1</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>103</Index>
+    <Name>FX M2 Param 3</Name>
+    <Symbol>fx8_p2</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>104</Index>
+    <Name>FX M2 Param 4</Name>
+    <Symbol>fx8_p3</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>105</Index>
+    <Name>FX M2 Param 5</Name>
+    <Symbol>fx8_p4</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>106</Index>
+    <Name>FX M2 Param 6</Name>
+    <Symbol>fx8_p5</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>107</Index>
+    <Name>FX M2 Param 7</Name>
+    <Symbol>fx8_p6</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>108</Index>
+    <Name>FX M2 Param 8</Name>
+    <Symbol>fx8_p7</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>109</Index>
+    <Name>FX M2 Param 9</Name>
+    <Symbol>fx8_p8</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>110</Index>
+    <Name>FX M2 Param 10</Name>
+    <Symbol>fx8_p9</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>111</Index>
+    <Name>FX M2 Param 11</Name>
+    <Symbol>fx8_p10</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>112</Index>
+    <Name>FX M2 Param 12</Name>
+    <Symbol>fx8_p11</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>113</Index>
+    <Name>A Octave</Name>
+    <Symbol>a_octave</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>114</Index>
+    <Name>A Pitch</Name>
+    <Symbol>a_pitch</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>115</Index>
+    <Name>A Portamento</Name>
+    <Symbol>a_portamento</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>116</Index>
+    <Name>A Osc 1 Type</Name>
+    <Symbol>a_osc1_type</Symbol>
+    <Value>0.00499999988824129</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>117</Index>
+    <Name>A Osc 1 Octave</Name>
+    <Symbol>a_osc1_octave</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>118</Index>
+    <Name>A Osc 1 Pitch</Name>
+    <Symbol>a_osc1_pitch</Symbol>
+    <Value>0.50013393163681</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>119</Index>
+    <Name>A Osc 1 Shape</Name>
+    <Symbol>a_osc1_param0</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>120</Index>
+    <Name>A Osc 1 Width</Name>
+    <Symbol>a_osc1_param1</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>121</Index>
+    <Name>A Osc 1 Sub Osc Width</Name>
+    <Symbol>a_osc1_param2</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>122</Index>
+    <Name>A Osc 1 Main&lt;&gt;Sub Mix</Name>
+    <Symbol>a_osc1_param3</Symbol>
+    <Value>0.508929014205933</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>123</Index>
+    <Name>A Osc 1 Sync</Name>
+    <Symbol>a_osc1_param4</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>124</Index>
+    <Name>A Osc 1 Unison Detune</Name>
+    <Symbol>a_osc1_param5</Symbol>
+    <Value>0.0294640008360147</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>125</Index>
+    <Name>A Osc 1 Unison Voices</Name>
+    <Symbol>a_osc1_param6</Symbol>
+    <Value>0.00499999988824129</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>126</Index>
+    <Name>A Osc 1 Keytrack</Name>
+    <Symbol>a_osc1_keytrack</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>127</Index>
+    <Name>A Osc 1 Retrigger</Name>
+    <Symbol>a_osc1_retrigger</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>128</Index>
+    <Name>A Osc 2 Type</Name>
+    <Symbol>a_osc2_type</Symbol>
+    <Value>0.00499999988824129</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>129</Index>
+    <Name>A Osc 2 Octave</Name>
+    <Symbol>a_osc2_octave</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>130</Index>
+    <Name>A Osc 2 Pitch</Name>
+    <Symbol>a_osc2_pitch</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>131</Index>
+    <Name>A Osc 2 Shape</Name>
+    <Symbol>a_osc2_param0</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>132</Index>
+    <Name>A Osc 2 Width</Name>
+    <Symbol>a_osc2_param1</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>133</Index>
+    <Name>A Osc 2 Sub Osc Width</Name>
+    <Symbol>a_osc2_param2</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>134</Index>
+    <Name>A Osc 2 Main&lt;&gt;Sub Mix</Name>
+    <Symbol>a_osc2_param3</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>135</Index>
+    <Name>A Osc 2 Sync</Name>
+    <Symbol>a_osc2_param4</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>136</Index>
+    <Name>A Osc 2 Unison Detune</Name>
+    <Symbol>a_osc2_param5</Symbol>
+    <Value>0.150000005960464</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>137</Index>
+    <Name>A Osc 2 Unison Voices</Name>
+    <Symbol>a_osc2_param6</Symbol>
+    <Value>0.00499999988824129</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>138</Index>
+    <Name>A Osc 2 Keytrack</Name>
+    <Symbol>a_osc2_keytrack</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>139</Index>
+    <Name>A Osc 2 Retrigger</Name>
+    <Symbol>a_osc2_retrigger</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>140</Index>
+    <Name>A Osc 3 Type</Name>
+    <Symbol>a_osc3_type</Symbol>
+    <Value>0.00499999988824129</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>141</Index>
+    <Name>A Osc 3 Octave</Name>
+    <Symbol>a_osc3_octave</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>142</Index>
+    <Name>A Osc 3 Pitch</Name>
+    <Symbol>a_osc3_pitch</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>143</Index>
+    <Name>A Osc 3 Shape</Name>
+    <Symbol>a_osc3_param0</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>144</Index>
+    <Name>A Osc 3 Width</Name>
+    <Symbol>a_osc3_param1</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>145</Index>
+    <Name>A Osc 3 Sub Osc Width</Name>
+    <Symbol>a_osc3_param2</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>146</Index>
+    <Name>A Osc 3 Main&lt;&gt;Sub Mix</Name>
+    <Symbol>a_osc3_param3</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>147</Index>
+    <Name>A Osc 3 Sync</Name>
+    <Symbol>a_osc3_param4</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>148</Index>
+    <Name>A Osc 3 Unison Detune</Name>
+    <Symbol>a_osc3_param5</Symbol>
+    <Value>0.200000002980232</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>149</Index>
+    <Name>A Osc 3 Unison Voices</Name>
+    <Symbol>a_osc3_param6</Symbol>
+    <Value>0.00499999988824129</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>150</Index>
+    <Name>A Osc 3 Keytrack</Name>
+    <Symbol>a_osc3_keytrack</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>151</Index>
+    <Name>A Osc 3 Retrigger</Name>
+    <Symbol>a_osc3_retrigger</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>152</Index>
+    <Name>A Play Mode</Name>
+    <Symbol>a_polymode</Symbol>
+    <Value>0.00499999988824129</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>153</Index>
+    <Name>A FM Routing</Name>
+    <Symbol>a_fm_switch</Symbol>
+    <Value>0.00499999988824129</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>154</Index>
+    <Name>A FM Depth</Name>
+    <Symbol>a_fm_depth</Symbol>
+    <Value>0.333333343267441</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>155</Index>
+    <Name>A Osc Drift</Name>
+    <Symbol>a_drift</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>156</Index>
+    <Name>A Noise Color</Name>
+    <Symbol>a_noisecol</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>157</Index>
+    <Name>A Keytrack Root Key</Name>
+    <Symbol>a_ktrkroot</Symbol>
+    <Value>0.47271654009819</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>158</Index>
+    <Name>A Volume</Name>
+    <Symbol>a_volume</Symbol>
+    <Value>0.691963016986847</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>159</Index>
+    <Name>A Pan</Name>
+    <Symbol>a_pan</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>160</Index>
+    <Name>A Width</Name>
+    <Symbol>a_pan2</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>161</Index>
+    <Name>A Send FX 1 Level</Name>
+    <Symbol>a_send_fx_1</Symbol>
+    <Value>0.394850701093674</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>162</Index>
+    <Name>A Send FX 2 Level</Name>
+    <Symbol>a_send_fx_2</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>163</Index>
+    <Name>A Osc 1 Level</Name>
+    <Symbol>a_level_o1</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>164</Index>
+    <Name>A Osc 1 Mute</Name>
+    <Symbol>a_mute_o1</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>165</Index>
+    <Name>A Osc 1 Solo</Name>
+    <Symbol>a_solo_o1</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>166</Index>
+    <Name>A Osc 1 Route</Name>
+    <Symbol>a_route_o1</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>167</Index>
+    <Name>A Osc 2 Level</Name>
+    <Symbol>a_level_o2</Symbol>
+    <Value>0.787500023841858</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>168</Index>
+    <Name>A Osc 2 Mute</Name>
+    <Symbol>a_mute_o2</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>169</Index>
+    <Name>A Osc 2 Solo</Name>
+    <Symbol>a_solo_o2</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>170</Index>
+    <Name>A Osc 2 Route</Name>
+    <Symbol>a_route_o2</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>171</Index>
+    <Name>A Osc 3 Level</Name>
+    <Symbol>a_level_o3</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>172</Index>
+    <Name>A Osc 3 Mute</Name>
+    <Symbol>a_mute_o3</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>173</Index>
+    <Name>A Osc 3 Solo</Name>
+    <Symbol>a_solo_o3</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>174</Index>
+    <Name>A Osc 3 Route</Name>
+    <Symbol>a_route_o3</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>175</Index>
+    <Name>A Ring Modulation 1x2 Level</Name>
+    <Symbol>a_level_ring12</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>176</Index>
+    <Name>A Ring Modulation 1x2 Mute</Name>
+    <Symbol>a_mute_ring12</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>177</Index>
+    <Name>A Ring Modulation 1x2 Solo</Name>
+    <Symbol>a_solo_ring12</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>178</Index>
+    <Name>A Ring Modulation 1x2 Route</Name>
+    <Symbol>a_route_ring12</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>179</Index>
+    <Name>A Ring Modulation 2x3 Level</Name>
+    <Symbol>a_level_ring23</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>180</Index>
+    <Name>A Ring Modulation 2x3 Mute</Name>
+    <Symbol>a_mute_ring23</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>181</Index>
+    <Name>A Ring Modulation 2x3 Solo</Name>
+    <Symbol>a_solo_ring23</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>182</Index>
+    <Name>A Ring Modulation 2x3 Route</Name>
+    <Symbol>a_route_ring23</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>183</Index>
+    <Name>A Noise Level</Name>
+    <Symbol>a_level_noise</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>184</Index>
+    <Name>A Noise Mute</Name>
+    <Symbol>a_mute_noise</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>185</Index>
+    <Name>A Noise Solo</Name>
+    <Symbol>a_solo_noise</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>186</Index>
+    <Name>A Noise Route</Name>
+    <Symbol>a_route_noise</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>187</Index>
+    <Name>A Pre-Filter Gain</Name>
+    <Symbol>a_level_pfg</Symbol>
+    <Value>0.612500071525574</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>188</Index>
+    <Name>A Pitch Bend Up Range</Name>
+    <Symbol>a_pbrange_up</Symbol>
+    <Value>0.293749988079071</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>189</Index>
+    <Name>A Pitch Bend Down Range</Name>
+    <Symbol>a_pbrange_dn</Symbol>
+    <Value>0.293749988079071</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>190</Index>
+    <Name>A VCA Gain</Name>
+    <Symbol>a_vca_level</Symbol>
+    <Value>0.537500023841858</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>191</Index>
+    <Name>A Velocity &gt; VCA Gain</Name>
+    <Symbol>a_vca_velsense</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>192</Index>
+    <Name>A Feedback</Name>
+    <Symbol>a_feedback</Symbol>
+    <Value>0.957142472267151</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>193</Index>
+    <Name>A Filter Configuration</Name>
+    <Symbol>a_fb_config</Symbol>
+    <Value>0.146428570151329</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>194</Index>
+    <Name>A Filter Balance</Name>
+    <Symbol>a_f_balance</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>195</Index>
+    <Name>A Highpass</Name>
+    <Symbol>a_lowcut</Symbol>
+    <Value>0.338571578264236</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>196</Index>
+    <Name>A Waveshaper Type</Name>
+    <Symbol>a_ws_type</Symbol>
+    <Value>0.00499999988824129</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>197</Index>
+    <Name>A Waveshaper Drive</Name>
+    <Symbol>a_ws_drive</Symbol>
+    <Value>0.135714218020439</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>198</Index>
+    <Name>A Filter 1 Type</Name>
+    <Symbol>a_filter1_type</Symbol>
+    <Value>0.224999994039536</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>199</Index>
+    <Name>A Filter 1 Subtype</Name>
+    <Symbol>a_filter1_subtype</Symbol>
+    <Value>0.00499999988824129</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>200</Index>
+    <Name>A Filter 1 Cutoff</Name>
+    <Symbol>a_filter1_cutoff</Symbol>
+    <Value>0.33317306637764</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>201</Index>
+    <Name>A Filter 1 Resonance</Name>
+    <Symbol>a_filter1_resonance</Symbol>
+    <Value>0.162474006414413</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>202</Index>
+    <Name>A Filter 1 FEG Mod Amount</Name>
+    <Symbol>a_filter1_envmod</Symbol>
+    <Value>0.577678620815277</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>203</Index>
+    <Name>A Filter 1 Keytrack</Name>
+    <Symbol>a_filter1_keytrack</Symbol>
+    <Value>0.783928990364075</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>204</Index>
+    <Name>A Filter 2 Type</Name>
+    <Symbol>a_filter2_type</Symbol>
+    <Value>0.00499999988824129</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>205</Index>
+    <Name>A Filter 2 Subtype</Name>
+    <Symbol>a_filter2_subtype</Symbol>
+    <Value>0.00499999988824129</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>206</Index>
+    <Name>A Filter 2 Cutoff</Name>
+    <Symbol>a_filter2_cutoff</Symbol>
+    <Value>0.484615385532379</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>207</Index>
+    <Name>A Filter 2 Offset Mode</Name>
+    <Symbol>a_f2_cf_is_offset</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>208</Index>
+    <Name>A Filter 2 Resonance</Name>
+    <Symbol>a_filter2_resonance</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>209</Index>
+    <Name>A Link Resonance</Name>
+    <Symbol>a_f2_link_resonance</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>210</Index>
+    <Name>A Filter 2 FEG Mod Amount</Name>
+    <Symbol>a_filter2_envmod</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>211</Index>
+    <Name>A Filter 2 Keytrack</Name>
+    <Symbol>a_filter2_keytrack</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>212</Index>
+    <Name>A AEG Attack</Name>
+    <Symbol>a_env1_attack</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>213</Index>
+    <Name>A AEG Attack Shape</Name>
+    <Symbol>a_env1_attack_shape</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>214</Index>
+    <Name>A AEG Decay</Name>
+    <Symbol>a_env1_decay</Symbol>
+    <Value>0.615384638309479</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>215</Index>
+    <Name>A AEG Decay Shape</Name>
+    <Symbol>a_env1_decay_shape</Symbol>
+    <Value>0.00499999988824129</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>216</Index>
+    <Name>A AEG Sustain</Name>
+    <Symbol>a_env1_sustain</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>217</Index>
+    <Name>A AEG Release</Name>
+    <Symbol>a_env1_release</Symbol>
+    <Value>0.0964286178350449</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>218</Index>
+    <Name>A AEG Release Shape</Name>
+    <Symbol>a_env1_release_shape</Symbol>
+    <Value>0.995000004768372</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>219</Index>
+    <Name>A AEG Envelope Mode</Name>
+    <Symbol>a_env1_mode</Symbol>
+    <Value>0.00499999988824129</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>220</Index>
+    <Name>A FEG Attack</Name>
+    <Symbol>a_env2_attack</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>221</Index>
+    <Name>A FEG Attack Shape</Name>
+    <Symbol>a_env2_attack_shape</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>222</Index>
+    <Name>A FEG Decay</Name>
+    <Symbol>a_env2_decay</Symbol>
+    <Value>0.772252917289734</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>223</Index>
+    <Name>A FEG Decay Shape</Name>
+    <Symbol>a_env2_decay_shape</Symbol>
+    <Value>0.00499999988824129</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>224</Index>
+    <Name>A FEG Sustain</Name>
+    <Symbol>a_env2_sustain</Symbol>
+    <Value>0.171427994966507</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>225</Index>
+    <Name>A FEG Release</Name>
+    <Symbol>a_env2_release</Symbol>
+    <Value>0.461538463830948</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>226</Index>
+    <Name>A FEG Release Shape</Name>
+    <Symbol>a_env2_release_shape</Symbol>
+    <Value>0.00499999988824129</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>227</Index>
+    <Name>A FEG Envelope Mode</Name>
+    <Symbol>a_env2_mode</Symbol>
+    <Value>0.00499999988824129</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>228</Index>
+    <Name>A LFO 1 Shape</Name>
+    <Symbol>a_lfo0_shape</Symbol>
+    <Value>0.00499999988824129</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>229</Index>
+    <Name>A LFO 1 Rate</Name>
+    <Symbol>a_lfo0_rate</Symbol>
+    <Value>0.4375</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>230</Index>
+    <Name>A LFO 1 Phase / Shuffle</Name>
+    <Symbol>a_lfo0_phase</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>231</Index>
+    <Name>A LFO 1 Amplitude</Name>
+    <Symbol>a_lfo0_magnitude</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>232</Index>
+    <Name>A LFO 1 Deform</Name>
+    <Symbol>a_lfo0_deform</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>233</Index>
+    <Name>A LFO 1 Trigger Mode</Name>
+    <Symbol>a_lfo0_trigmode</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>234</Index>
+    <Name>A LFO 1 Unipolar</Name>
+    <Symbol>a_lfo0_unipolar</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>235</Index>
+    <Name>A LFO 1 Delay</Name>
+    <Symbol>a_lfo0_delay</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>236</Index>
+    <Name>A LFO 1 Attack</Name>
+    <Symbol>a_lfo0_attack</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>237</Index>
+    <Name>A LFO 1 Hold</Name>
+    <Symbol>a_lfo0_hold</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>238</Index>
+    <Name>A LFO 1 Decay</Name>
+    <Symbol>a_lfo0_decay</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>239</Index>
+    <Name>A LFO 1 Sustain</Name>
+    <Symbol>a_lfo0_sustain</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>240</Index>
+    <Name>A LFO 1 Release</Name>
+    <Symbol>a_lfo0_release</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>241</Index>
+    <Name>A LFO 2 Shape</Name>
+    <Symbol>a_lfo1_shape</Symbol>
+    <Value>0.00499999988824129</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>242</Index>
+    <Name>A LFO 2 Rate</Name>
+    <Symbol>a_lfo1_rate</Symbol>
+    <Value>0.4375</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>243</Index>
+    <Name>A LFO 2 Phase / Shuffle</Name>
+    <Symbol>a_lfo1_phase</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>244</Index>
+    <Name>A LFO 2 Amplitude</Name>
+    <Symbol>a_lfo1_magnitude</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>245</Index>
+    <Name>A LFO 2 Deform</Name>
+    <Symbol>a_lfo1_deform</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>246</Index>
+    <Name>A LFO 2 Trigger Mode</Name>
+    <Symbol>a_lfo1_trigmode</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>247</Index>
+    <Name>A LFO 2 Unipolar</Name>
+    <Symbol>a_lfo1_unipolar</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>248</Index>
+    <Name>A LFO 2 Delay</Name>
+    <Symbol>a_lfo1_delay</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>249</Index>
+    <Name>A LFO 2 Attack</Name>
+    <Symbol>a_lfo1_attack</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>250</Index>
+    <Name>A LFO 2 Hold</Name>
+    <Symbol>a_lfo1_hold</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>251</Index>
+    <Name>A LFO 2 Decay</Name>
+    <Symbol>a_lfo1_decay</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>252</Index>
+    <Name>A LFO 2 Sustain</Name>
+    <Symbol>a_lfo1_sustain</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>253</Index>
+    <Name>A LFO 2 Release</Name>
+    <Symbol>a_lfo1_release</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>254</Index>
+    <Name>A LFO 3 Shape</Name>
+    <Symbol>a_lfo2_shape</Symbol>
+    <Value>0.00499999988824129</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>255</Index>
+    <Name>A LFO 3 Rate</Name>
+    <Symbol>a_lfo2_rate</Symbol>
+    <Value>0.4375</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>256</Index>
+    <Name>A LFO 3 Phase / Shuffle</Name>
+    <Symbol>a_lfo2_phase</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>257</Index>
+    <Name>A LFO 3 Amplitude</Name>
+    <Symbol>a_lfo2_magnitude</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>258</Index>
+    <Name>A LFO 3 Deform</Name>
+    <Symbol>a_lfo2_deform</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>259</Index>
+    <Name>A LFO 3 Trigger Mode</Name>
+    <Symbol>a_lfo2_trigmode</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>260</Index>
+    <Name>A LFO 3 Unipolar</Name>
+    <Symbol>a_lfo2_unipolar</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>261</Index>
+    <Name>A LFO 3 Delay</Name>
+    <Symbol>a_lfo2_delay</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>262</Index>
+    <Name>A LFO 3 Attack</Name>
+    <Symbol>a_lfo2_attack</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>263</Index>
+    <Name>A LFO 3 Hold</Name>
+    <Symbol>a_lfo2_hold</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>264</Index>
+    <Name>A LFO 3 Decay</Name>
+    <Symbol>a_lfo2_decay</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>265</Index>
+    <Name>A LFO 3 Sustain</Name>
+    <Symbol>a_lfo2_sustain</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>266</Index>
+    <Name>A LFO 3 Release</Name>
+    <Symbol>a_lfo2_release</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>267</Index>
+    <Name>A LFO 4 Shape</Name>
+    <Symbol>a_lfo3_shape</Symbol>
+    <Value>0.00499999988824129</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>268</Index>
+    <Name>A LFO 4 Rate</Name>
+    <Symbol>a_lfo3_rate</Symbol>
+    <Value>0.4375</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>269</Index>
+    <Name>A LFO 4 Phase / Shuffle</Name>
+    <Symbol>a_lfo3_phase</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>270</Index>
+    <Name>A LFO 4 Amplitude</Name>
+    <Symbol>a_lfo3_magnitude</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>271</Index>
+    <Name>A LFO 4 Deform</Name>
+    <Symbol>a_lfo3_deform</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>272</Index>
+    <Name>A LFO 4 Trigger Mode</Name>
+    <Symbol>a_lfo3_trigmode</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>273</Index>
+    <Name>A LFO 4 Unipolar</Name>
+    <Symbol>a_lfo3_unipolar</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>274</Index>
+    <Name>A LFO 4 Delay</Name>
+    <Symbol>a_lfo3_delay</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>275</Index>
+    <Name>A LFO 4 Attack</Name>
+    <Symbol>a_lfo3_attack</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>276</Index>
+    <Name>A LFO 4 Hold</Name>
+    <Symbol>a_lfo3_hold</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>277</Index>
+    <Name>A LFO 4 Decay</Name>
+    <Symbol>a_lfo3_decay</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>278</Index>
+    <Name>A LFO 4 Sustain</Name>
+    <Symbol>a_lfo3_sustain</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>279</Index>
+    <Name>A LFO 4 Release</Name>
+    <Symbol>a_lfo3_release</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>280</Index>
+    <Name>A LFO 5 Shape</Name>
+    <Symbol>a_lfo4_shape</Symbol>
+    <Value>0.00499999988824129</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>281</Index>
+    <Name>A LFO 5 Rate</Name>
+    <Symbol>a_lfo4_rate</Symbol>
+    <Value>0.4375</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>282</Index>
+    <Name>A LFO 5 Phase / Shuffle</Name>
+    <Symbol>a_lfo4_phase</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>283</Index>
+    <Name>A LFO 5 Amplitude</Name>
+    <Symbol>a_lfo4_magnitude</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>284</Index>
+    <Name>A LFO 5 Deform</Name>
+    <Symbol>a_lfo4_deform</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>285</Index>
+    <Name>A LFO 5 Trigger Mode</Name>
+    <Symbol>a_lfo4_trigmode</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>286</Index>
+    <Name>A LFO 5 Unipolar</Name>
+    <Symbol>a_lfo4_unipolar</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>287</Index>
+    <Name>A LFO 5 Delay</Name>
+    <Symbol>a_lfo4_delay</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>288</Index>
+    <Name>A LFO 5 Attack</Name>
+    <Symbol>a_lfo4_attack</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>289</Index>
+    <Name>A LFO 5 Hold</Name>
+    <Symbol>a_lfo4_hold</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>290</Index>
+    <Name>A LFO 5 Decay</Name>
+    <Symbol>a_lfo4_decay</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>291</Index>
+    <Name>A LFO 5 Sustain</Name>
+    <Symbol>a_lfo4_sustain</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>292</Index>
+    <Name>A LFO 5 Release</Name>
+    <Symbol>a_lfo4_release</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>293</Index>
+    <Name>A LFO 6 Shape</Name>
+    <Symbol>a_lfo5_shape</Symbol>
+    <Value>0.00499999988824129</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>294</Index>
+    <Name>A LFO 6 Rate</Name>
+    <Symbol>a_lfo5_rate</Symbol>
+    <Value>0.4375</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>295</Index>
+    <Name>A LFO 6 Phase / Shuffle</Name>
+    <Symbol>a_lfo5_phase</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>296</Index>
+    <Name>A LFO 6 Amplitude</Name>
+    <Symbol>a_lfo5_magnitude</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>297</Index>
+    <Name>A LFO 6 Deform</Name>
+    <Symbol>a_lfo5_deform</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>298</Index>
+    <Name>A LFO 6 Trigger Mode</Name>
+    <Symbol>a_lfo5_trigmode</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>299</Index>
+    <Name>A LFO 6 Unipolar</Name>
+    <Symbol>a_lfo5_unipolar</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>300</Index>
+    <Name>A LFO 6 Delay</Name>
+    <Symbol>a_lfo5_delay</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>301</Index>
+    <Name>A LFO 6 Attack</Name>
+    <Symbol>a_lfo5_attack</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>302</Index>
+    <Name>A LFO 6 Hold</Name>
+    <Symbol>a_lfo5_hold</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>303</Index>
+    <Name>A LFO 6 Decay</Name>
+    <Symbol>a_lfo5_decay</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>304</Index>
+    <Name>A LFO 6 Sustain</Name>
+    <Symbol>a_lfo5_sustain</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>305</Index>
+    <Name>A LFO 6 Release</Name>
+    <Symbol>a_lfo5_release</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>306</Index>
+    <Name>A Scene LFO 1 Shape</Name>
+    <Symbol>a_lfo6_shape</Symbol>
+    <Value>0.146428570151329</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>307</Index>
+    <Name>A Scene LFO 1 Rate</Name>
+    <Symbol>a_lfo6_rate</Symbol>
+    <Value>0.423437297344208</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>308</Index>
+    <Name>A Scene LFO 1 Phase / Shuffle</Name>
+    <Symbol>a_lfo6_phase</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>309</Index>
+    <Name>A Scene LFO 1 Amplitude</Name>
+    <Symbol>a_lfo6_magnitude</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>310</Index>
+    <Name>A Scene LFO 1 Deform</Name>
+    <Symbol>a_lfo6_deform</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>311</Index>
+    <Name>A Scene LFO 1 Trigger Mode</Name>
+    <Symbol>a_lfo6_trigmode</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>312</Index>
+    <Name>A Scene LFO 1 Unipolar</Name>
+    <Symbol>a_lfo6_unipolar</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>313</Index>
+    <Name>A Scene LFO 1 Delay</Name>
+    <Symbol>a_lfo6_delay</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>314</Index>
+    <Name>A Scene LFO 1 Attack</Name>
+    <Symbol>a_lfo6_attack</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>315</Index>
+    <Name>A Scene LFO 1 Hold</Name>
+    <Symbol>a_lfo6_hold</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>316</Index>
+    <Name>A Scene LFO 1 Decay</Name>
+    <Symbol>a_lfo6_decay</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>317</Index>
+    <Name>A Scene LFO 1 Sustain</Name>
+    <Symbol>a_lfo6_sustain</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>318</Index>
+    <Name>A Scene LFO 1 Release</Name>
+    <Symbol>a_lfo6_release</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>319</Index>
+    <Name>A Scene LFO 2 Shape</Name>
+    <Symbol>a_lfo7_shape</Symbol>
+    <Value>0.00499999988824129</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>320</Index>
+    <Name>A Scene LFO 2 Rate</Name>
+    <Symbol>a_lfo7_rate</Symbol>
+    <Value>0.4375</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>321</Index>
+    <Name>A Scene LFO 2 Phase / Shuffle</Name>
+    <Symbol>a_lfo7_phase</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>322</Index>
+    <Name>A Scene LFO 2 Amplitude</Name>
+    <Symbol>a_lfo7_magnitude</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>323</Index>
+    <Name>A Scene LFO 2 Deform</Name>
+    <Symbol>a_lfo7_deform</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>324</Index>
+    <Name>A Scene LFO 2 Trigger Mode</Name>
+    <Symbol>a_lfo7_trigmode</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>325</Index>
+    <Name>A Scene LFO 2 Unipolar</Name>
+    <Symbol>a_lfo7_unipolar</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>326</Index>
+    <Name>A Scene LFO 2 Delay</Name>
+    <Symbol>a_lfo7_delay</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>327</Index>
+    <Name>A Scene LFO 2 Attack</Name>
+    <Symbol>a_lfo7_attack</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>328</Index>
+    <Name>A Scene LFO 2 Hold</Name>
+    <Symbol>a_lfo7_hold</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>329</Index>
+    <Name>A Scene LFO 2 Decay</Name>
+    <Symbol>a_lfo7_decay</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>330</Index>
+    <Name>A Scene LFO 2 Sustain</Name>
+    <Symbol>a_lfo7_sustain</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>331</Index>
+    <Name>A Scene LFO 2 Release</Name>
+    <Symbol>a_lfo7_release</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>332</Index>
+    <Name>A Scene LFO 3 Shape</Name>
+    <Symbol>a_lfo8_shape</Symbol>
+    <Value>0.00499999988824129</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>333</Index>
+    <Name>A Scene LFO 3 Rate</Name>
+    <Symbol>a_lfo8_rate</Symbol>
+    <Value>0.4375</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>334</Index>
+    <Name>A Scene LFO 3 Phase / Shuffle</Name>
+    <Symbol>a_lfo8_phase</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>335</Index>
+    <Name>A Scene LFO 3 Amplitude</Name>
+    <Symbol>a_lfo8_magnitude</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>336</Index>
+    <Name>A Scene LFO 3 Deform</Name>
+    <Symbol>a_lfo8_deform</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>337</Index>
+    <Name>A Scene LFO 3 Trigger Mode</Name>
+    <Symbol>a_lfo8_trigmode</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>338</Index>
+    <Name>A Scene LFO 3 Unipolar</Name>
+    <Symbol>a_lfo8_unipolar</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>339</Index>
+    <Name>A Scene LFO 3 Delay</Name>
+    <Symbol>a_lfo8_delay</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>340</Index>
+    <Name>A Scene LFO 3 Attack</Name>
+    <Symbol>a_lfo8_attack</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>341</Index>
+    <Name>A Scene LFO 3 Hold</Name>
+    <Symbol>a_lfo8_hold</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>342</Index>
+    <Name>A Scene LFO 3 Decay</Name>
+    <Symbol>a_lfo8_decay</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>343</Index>
+    <Name>A Scene LFO 3 Sustain</Name>
+    <Symbol>a_lfo8_sustain</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>344</Index>
+    <Name>A Scene LFO 3 Release</Name>
+    <Symbol>a_lfo8_release</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>345</Index>
+    <Name>A Scene LFO 4 Shape</Name>
+    <Symbol>a_lfo9_shape</Symbol>
+    <Value>0.00499999988824129</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>346</Index>
+    <Name>A Scene LFO 4 Rate</Name>
+    <Symbol>a_lfo9_rate</Symbol>
+    <Value>0.4375</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>347</Index>
+    <Name>A Scene LFO 4 Phase / Shuffle</Name>
+    <Symbol>a_lfo9_phase</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>348</Index>
+    <Name>A Scene LFO 4 Amplitude</Name>
+    <Symbol>a_lfo9_magnitude</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>349</Index>
+    <Name>A Scene LFO 4 Deform</Name>
+    <Symbol>a_lfo9_deform</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>350</Index>
+    <Name>A Scene LFO 4 Trigger Mode</Name>
+    <Symbol>a_lfo9_trigmode</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>351</Index>
+    <Name>A Scene LFO 4 Unipolar</Name>
+    <Symbol>a_lfo9_unipolar</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>352</Index>
+    <Name>A Scene LFO 4 Delay</Name>
+    <Symbol>a_lfo9_delay</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>353</Index>
+    <Name>A Scene LFO 4 Attack</Name>
+    <Symbol>a_lfo9_attack</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>354</Index>
+    <Name>A Scene LFO 4 Hold</Name>
+    <Symbol>a_lfo9_hold</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>355</Index>
+    <Name>A Scene LFO 4 Decay</Name>
+    <Symbol>a_lfo9_decay</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>356</Index>
+    <Name>A Scene LFO 4 Sustain</Name>
+    <Symbol>a_lfo9_sustain</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>357</Index>
+    <Name>A Scene LFO 4 Release</Name>
+    <Symbol>a_lfo9_release</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>358</Index>
+    <Name>A Scene LFO 5 Shape</Name>
+    <Symbol>a_lfo10_shape</Symbol>
+    <Value>0.00499999988824129</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>359</Index>
+    <Name>A Scene LFO 5 Rate</Name>
+    <Symbol>a_lfo10_rate</Symbol>
+    <Value>0.4375</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>360</Index>
+    <Name>A Scene LFO 5 Phase / Shuffle</Name>
+    <Symbol>a_lfo10_phase</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>361</Index>
+    <Name>A Scene LFO 5 Amplitude</Name>
+    <Symbol>a_lfo10_magnitude</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>362</Index>
+    <Name>A Scene LFO 5 Deform</Name>
+    <Symbol>a_lfo10_deform</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>363</Index>
+    <Name>A Scene LFO 5 Trigger Mode</Name>
+    <Symbol>a_lfo10_trigmode</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>364</Index>
+    <Name>A Scene LFO 5 Unipolar</Name>
+    <Symbol>a_lfo10_unipolar</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>365</Index>
+    <Name>A Scene LFO 5 Delay</Name>
+    <Symbol>a_lfo10_delay</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>366</Index>
+    <Name>A Scene LFO 5 Attack</Name>
+    <Symbol>a_lfo10_attack</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>367</Index>
+    <Name>A Scene LFO 5 Hold</Name>
+    <Symbol>a_lfo10_hold</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>368</Index>
+    <Name>A Scene LFO 5 Decay</Name>
+    <Symbol>a_lfo10_decay</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>369</Index>
+    <Name>A Scene LFO 5 Sustain</Name>
+    <Symbol>a_lfo10_sustain</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>370</Index>
+    <Name>A Scene LFO 5 Release</Name>
+    <Symbol>a_lfo10_release</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>371</Index>
+    <Name>A Scene LFO 6 Shape</Name>
+    <Symbol>a_lfo11_shape</Symbol>
+    <Value>0.00499999988824129</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>372</Index>
+    <Name>A Scene LFO 6 Rate</Name>
+    <Symbol>a_lfo11_rate</Symbol>
+    <Value>0.4375</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>373</Index>
+    <Name>A Scene LFO 6 Phase / Shuffle</Name>
+    <Symbol>a_lfo11_phase</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>374</Index>
+    <Name>A Scene LFO 6 Amplitude</Name>
+    <Symbol>a_lfo11_magnitude</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>375</Index>
+    <Name>A Scene LFO 6 Deform</Name>
+    <Symbol>a_lfo11_deform</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>376</Index>
+    <Name>A Scene LFO 6 Trigger Mode</Name>
+    <Symbol>a_lfo11_trigmode</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>377</Index>
+    <Name>A Scene LFO 6 Unipolar</Name>
+    <Symbol>a_lfo11_unipolar</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>378</Index>
+    <Name>A Scene LFO 6 Delay</Name>
+    <Symbol>a_lfo11_delay</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>379</Index>
+    <Name>A Scene LFO 6 Attack</Name>
+    <Symbol>a_lfo11_attack</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>380</Index>
+    <Name>A Scene LFO 6 Hold</Name>
+    <Symbol>a_lfo11_hold</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>381</Index>
+    <Name>A Scene LFO 6 Decay</Name>
+    <Symbol>a_lfo11_decay</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>382</Index>
+    <Name>A Scene LFO 6 Sustain</Name>
+    <Symbol>a_lfo11_sustain</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>383</Index>
+    <Name>A Scene LFO 6 Release</Name>
+    <Symbol>a_lfo11_release</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>384</Index>
+    <Name>B Octave</Name>
+    <Symbol>b_octave</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>385</Index>
+    <Name>B Pitch</Name>
+    <Symbol>b_pitch</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>386</Index>
+    <Name>B Portamento</Name>
+    <Symbol>b_portamento</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>387</Index>
+    <Name>B Osc 1 Type</Name>
+    <Symbol>b_osc1_type</Symbol>
+    <Value>0.00499999988824129</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>388</Index>
+    <Name>B Osc 1 Octave</Name>
+    <Symbol>b_osc1_octave</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>389</Index>
+    <Name>B Osc 1 Pitch</Name>
+    <Symbol>b_osc1_pitch</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>390</Index>
+    <Name>B Osc 1 Shape</Name>
+    <Symbol>b_osc1_param0</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>391</Index>
+    <Name>B Osc 1 Width</Name>
+    <Symbol>b_osc1_param1</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>392</Index>
+    <Name>B Osc 1 Sub Osc Width</Name>
+    <Symbol>b_osc1_param2</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>393</Index>
+    <Name>B Osc 1 Main&lt;&gt;Sub Mix</Name>
+    <Symbol>b_osc1_param3</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>394</Index>
+    <Name>B Osc 1 Sync</Name>
+    <Symbol>b_osc1_param4</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>395</Index>
+    <Name>B Osc 1 Unison Detune</Name>
+    <Symbol>b_osc1_param5</Symbol>
+    <Value>0.200000002980232</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>396</Index>
+    <Name>B Osc 1 Unison Voices</Name>
+    <Symbol>b_osc1_param6</Symbol>
+    <Value>0.00499999988824129</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>397</Index>
+    <Name>B Osc 1 Keytrack</Name>
+    <Symbol>b_osc1_keytrack</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>398</Index>
+    <Name>B Osc 1 Retrigger</Name>
+    <Symbol>b_osc1_retrigger</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>399</Index>
+    <Name>B Osc 2 Type</Name>
+    <Symbol>b_osc2_type</Symbol>
+    <Value>0.00499999988824129</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>400</Index>
+    <Name>B Osc 2 Octave</Name>
+    <Symbol>b_osc2_octave</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>401</Index>
+    <Name>B Osc 2 Pitch</Name>
+    <Symbol>b_osc2_pitch</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>402</Index>
+    <Name>B Osc 2 Shape</Name>
+    <Symbol>b_osc2_param0</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>403</Index>
+    <Name>B Osc 2 Width</Name>
+    <Symbol>b_osc2_param1</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>404</Index>
+    <Name>B Osc 2 Sub Osc Width</Name>
+    <Symbol>b_osc2_param2</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>405</Index>
+    <Name>B Osc 2 Main&lt;&gt;Sub Mix</Name>
+    <Symbol>b_osc2_param3</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>406</Index>
+    <Name>B Osc 2 Sync</Name>
+    <Symbol>b_osc2_param4</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>407</Index>
+    <Name>B Osc 2 Unison Detune</Name>
+    <Symbol>b_osc2_param5</Symbol>
+    <Value>0.200000002980232</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>408</Index>
+    <Name>B Osc 2 Unison Voices</Name>
+    <Symbol>b_osc2_param6</Symbol>
+    <Value>0.00499999988824129</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>409</Index>
+    <Name>B Osc 2 Keytrack</Name>
+    <Symbol>b_osc2_keytrack</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>410</Index>
+    <Name>B Osc 2 Retrigger</Name>
+    <Symbol>b_osc2_retrigger</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>411</Index>
+    <Name>B Osc 3 Type</Name>
+    <Symbol>b_osc3_type</Symbol>
+    <Value>0.00499999988824129</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>412</Index>
+    <Name>B Osc 3 Octave</Name>
+    <Symbol>b_osc3_octave</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>413</Index>
+    <Name>B Osc 3 Pitch</Name>
+    <Symbol>b_osc3_pitch</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>414</Index>
+    <Name>B Osc 3 Shape</Name>
+    <Symbol>b_osc3_param0</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>415</Index>
+    <Name>B Osc 3 Width</Name>
+    <Symbol>b_osc3_param1</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>416</Index>
+    <Name>B Osc 3 Sub Osc Width</Name>
+    <Symbol>b_osc3_param2</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>417</Index>
+    <Name>B Osc 3 Main&lt;&gt;Sub Mix</Name>
+    <Symbol>b_osc3_param3</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>418</Index>
+    <Name>B Osc 3 Sync</Name>
+    <Symbol>b_osc3_param4</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>419</Index>
+    <Name>B Osc 3 Unison Detune</Name>
+    <Symbol>b_osc3_param5</Symbol>
+    <Value>0.200000002980232</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>420</Index>
+    <Name>B Osc 3 Unison Voices</Name>
+    <Symbol>b_osc3_param6</Symbol>
+    <Value>0.00499999988824129</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>421</Index>
+    <Name>B Osc 3 Keytrack</Name>
+    <Symbol>b_osc3_keytrack</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>422</Index>
+    <Name>B Osc 3 Retrigger</Name>
+    <Symbol>b_osc3_retrigger</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>423</Index>
+    <Name>B Play Mode</Name>
+    <Symbol>b_polymode</Symbol>
+    <Value>0.00499999988824129</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>424</Index>
+    <Name>B FM Routing</Name>
+    <Symbol>b_fm_switch</Symbol>
+    <Value>0.00499999988824129</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>425</Index>
+    <Name>B FM Depth</Name>
+    <Symbol>b_fm_depth</Symbol>
+    <Value>0.333333343267441</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>426</Index>
+    <Name>B Osc Drift</Name>
+    <Symbol>b_drift</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>427</Index>
+    <Name>B Noise Color</Name>
+    <Symbol>b_noisecol</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>428</Index>
+    <Name>B Keytrack Root Key</Name>
+    <Symbol>b_ktrkroot</Symbol>
+    <Value>0.47271654009819</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>429</Index>
+    <Name>B Volume</Name>
+    <Symbol>b_volume</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>430</Index>
+    <Name>B Pan</Name>
+    <Symbol>b_pan</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>431</Index>
+    <Name>B Width</Name>
+    <Symbol>b_pan2</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>432</Index>
+    <Name>B Send FX 1 Level</Name>
+    <Symbol>b_send_fx_1</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>433</Index>
+    <Name>B Send FX 2 Level</Name>
+    <Symbol>b_send_fx_2</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>434</Index>
+    <Name>B Osc 1 Level</Name>
+    <Symbol>b_level_o1</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>435</Index>
+    <Name>B Osc 1 Mute</Name>
+    <Symbol>b_mute_o1</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>436</Index>
+    <Name>B Osc 1 Solo</Name>
+    <Symbol>b_solo_o1</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>437</Index>
+    <Name>B Osc 1 Route</Name>
+    <Symbol>b_route_o1</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>438</Index>
+    <Name>B Osc 2 Level</Name>
+    <Symbol>b_level_o2</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>439</Index>
+    <Name>B Osc 2 Mute</Name>
+    <Symbol>b_mute_o2</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>440</Index>
+    <Name>B Osc 2 Solo</Name>
+    <Symbol>b_solo_o2</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>441</Index>
+    <Name>B Osc 2 Route</Name>
+    <Symbol>b_route_o2</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>442</Index>
+    <Name>B Osc 3 Level</Name>
+    <Symbol>b_level_o3</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>443</Index>
+    <Name>B Osc 3 Mute</Name>
+    <Symbol>b_mute_o3</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>444</Index>
+    <Name>B Osc 3 Solo</Name>
+    <Symbol>b_solo_o3</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>445</Index>
+    <Name>B Osc 3 Route</Name>
+    <Symbol>b_route_o3</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>446</Index>
+    <Name>B Ring Modulation 1x2 Level</Name>
+    <Symbol>b_level_ring12</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>447</Index>
+    <Name>B Ring Modulation 1x2 Mute</Name>
+    <Symbol>b_mute_ring12</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>448</Index>
+    <Name>B Ring Modulation 1x2 Solo</Name>
+    <Symbol>b_solo_ring12</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>449</Index>
+    <Name>B Ring Modulation 1x2 Route</Name>
+    <Symbol>b_route_ring12</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>450</Index>
+    <Name>B Ring Modulation 2x3 Level</Name>
+    <Symbol>b_level_ring23</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>451</Index>
+    <Name>B Ring Modulation 2x3 Mute</Name>
+    <Symbol>b_mute_ring23</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>452</Index>
+    <Name>B Ring Modulation 2x3 Solo</Name>
+    <Symbol>b_solo_ring23</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>453</Index>
+    <Name>B Ring Modulation 2x3 Route</Name>
+    <Symbol>b_route_ring23</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>454</Index>
+    <Name>B Noise Level</Name>
+    <Symbol>b_level_noise</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>455</Index>
+    <Name>B Noise Mute</Name>
+    <Symbol>b_mute_noise</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>456</Index>
+    <Name>B Noise Solo</Name>
+    <Symbol>b_solo_noise</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>457</Index>
+    <Name>B Noise Route</Name>
+    <Symbol>b_route_noise</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>458</Index>
+    <Name>B Pre-Filter Gain</Name>
+    <Symbol>b_level_pfg</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>459</Index>
+    <Name>B Pitch Bend Up Range</Name>
+    <Symbol>b_pbrange_up</Symbol>
+    <Value>0.0874999985098839</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>460</Index>
+    <Name>B Pitch Bend Down Range</Name>
+    <Symbol>b_pbrange_dn</Symbol>
+    <Value>0.0874999985098839</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>461</Index>
+    <Name>B VCA Gain</Name>
+    <Symbol>b_vca_level</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>462</Index>
+    <Name>B Velocity &gt; VCA Gain</Name>
+    <Symbol>b_vca_velsense</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>463</Index>
+    <Name>B Feedback</Name>
+    <Symbol>b_feedback</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>464</Index>
+    <Name>B Filter Configuration</Name>
+    <Symbol>b_fb_config</Symbol>
+    <Value>0.00499999988824129</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>465</Index>
+    <Name>B Filter Balance</Name>
+    <Symbol>b_f_balance</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>466</Index>
+    <Name>B Highpass</Name>
+    <Symbol>b_lowcut</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>467</Index>
+    <Name>B Waveshaper Type</Name>
+    <Symbol>b_ws_type</Symbol>
+    <Value>0.00499999988824129</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>468</Index>
+    <Name>B Waveshaper Drive</Name>
+    <Symbol>b_ws_drive</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>469</Index>
+    <Name>B Filter 1 Type</Name>
+    <Symbol>b_filter1_type</Symbol>
+    <Value>0.00499999988824129</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>470</Index>
+    <Name>B Filter 1 Subtype</Name>
+    <Symbol>b_filter1_subtype</Symbol>
+    <Value>0.00499999988824129</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>471</Index>
+    <Name>B Filter 1 Cutoff</Name>
+    <Symbol>b_filter1_cutoff</Symbol>
+    <Value>0.484615385532379</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>472</Index>
+    <Name>B Filter 1 Resonance</Name>
+    <Symbol>b_filter1_resonance</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>473</Index>
+    <Name>B Filter 1 FEG Mod Amount</Name>
+    <Symbol>b_filter1_envmod</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>474</Index>
+    <Name>B Filter 1 Keytrack</Name>
+    <Symbol>b_filter1_keytrack</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>475</Index>
+    <Name>B Filter 2 Type</Name>
+    <Symbol>b_filter2_type</Symbol>
+    <Value>0.00499999988824129</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>476</Index>
+    <Name>B Filter 2 Subtype</Name>
+    <Symbol>b_filter2_subtype</Symbol>
+    <Value>0.00499999988824129</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>477</Index>
+    <Name>B Filter 2 Cutoff</Name>
+    <Symbol>b_filter2_cutoff</Symbol>
+    <Value>0.484615385532379</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>478</Index>
+    <Name>B Filter 2 Offset Mode</Name>
+    <Symbol>b_f2_cf_is_offset</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>479</Index>
+    <Name>B Filter 2 Resonance</Name>
+    <Symbol>b_filter2_resonance</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>480</Index>
+    <Name>B Link Resonance</Name>
+    <Symbol>b_f2_link_resonance</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>481</Index>
+    <Name>B Filter 2 FEG Mod Amount</Name>
+    <Symbol>b_filter2_envmod</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>482</Index>
+    <Name>B Filter 2 Keytrack</Name>
+    <Symbol>b_filter2_keytrack</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>483</Index>
+    <Name>B AEG Attack</Name>
+    <Symbol>b_env1_attack</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>484</Index>
+    <Name>B AEG Attack Shape</Name>
+    <Symbol>b_env1_attack_shape</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>485</Index>
+    <Name>B AEG Decay</Name>
+    <Symbol>b_env1_decay</Symbol>
+    <Value>0.615384638309479</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>486</Index>
+    <Name>B AEG Decay Shape</Name>
+    <Symbol>b_env1_decay_shape</Symbol>
+    <Value>0.00499999988824129</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>487</Index>
+    <Name>B AEG Sustain</Name>
+    <Symbol>b_env1_sustain</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>488</Index>
+    <Name>B AEG Release</Name>
+    <Symbol>b_env1_release</Symbol>
+    <Value>0.230769231915474</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>489</Index>
+    <Name>B AEG Release Shape</Name>
+    <Symbol>b_env1_release_shape</Symbol>
+    <Value>0.995000004768372</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>490</Index>
+    <Name>B AEG Envelope Mode</Name>
+    <Symbol>b_env1_mode</Symbol>
+    <Value>0.00499999988824129</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>491</Index>
+    <Name>B FEG Attack</Name>
+    <Symbol>b_env2_attack</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>492</Index>
+    <Name>B FEG Attack Shape</Name>
+    <Symbol>b_env2_attack_shape</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>493</Index>
+    <Name>B FEG Decay</Name>
+    <Symbol>b_env2_decay</Symbol>
+    <Value>0.461538463830948</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>494</Index>
+    <Name>B FEG Decay Shape</Name>
+    <Symbol>b_env2_decay_shape</Symbol>
+    <Value>0.00499999988824129</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>495</Index>
+    <Name>B FEG Sustain</Name>
+    <Symbol>b_env2_sustain</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>496</Index>
+    <Name>B FEG Release</Name>
+    <Symbol>b_env2_release</Symbol>
+    <Value>0.461538463830948</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>497</Index>
+    <Name>B FEG Release Shape</Name>
+    <Symbol>b_env2_release_shape</Symbol>
+    <Value>0.00499999988824129</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>498</Index>
+    <Name>B FEG Envelope Mode</Name>
+    <Symbol>b_env2_mode</Symbol>
+    <Value>0.00499999988824129</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>499</Index>
+    <Name>B LFO 1 Shape</Name>
+    <Symbol>b_lfo0_shape</Symbol>
+    <Value>0.00499999988824129</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>500</Index>
+    <Name>B LFO 1 Rate</Name>
+    <Symbol>b_lfo0_rate</Symbol>
+    <Value>0.4375</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>501</Index>
+    <Name>B LFO 1 Phase / Shuffle</Name>
+    <Symbol>b_lfo0_phase</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>502</Index>
+    <Name>B LFO 1 Amplitude</Name>
+    <Symbol>b_lfo0_magnitude</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>503</Index>
+    <Name>B LFO 1 Deform</Name>
+    <Symbol>b_lfo0_deform</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>504</Index>
+    <Name>B LFO 1 Trigger Mode</Name>
+    <Symbol>b_lfo0_trigmode</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>505</Index>
+    <Name>B LFO 1 Unipolar</Name>
+    <Symbol>b_lfo0_unipolar</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>506</Index>
+    <Name>B LFO 1 Delay</Name>
+    <Symbol>b_lfo0_delay</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>507</Index>
+    <Name>B LFO 1 Attack</Name>
+    <Symbol>b_lfo0_attack</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>508</Index>
+    <Name>B LFO 1 Hold</Name>
+    <Symbol>b_lfo0_hold</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>509</Index>
+    <Name>B LFO 1 Decay</Name>
+    <Symbol>b_lfo0_decay</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>510</Index>
+    <Name>B LFO 1 Sustain</Name>
+    <Symbol>b_lfo0_sustain</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>511</Index>
+    <Name>B LFO 1 Release</Name>
+    <Symbol>b_lfo0_release</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>512</Index>
+    <Name>B LFO 2 Shape</Name>
+    <Symbol>b_lfo1_shape</Symbol>
+    <Value>0.00499999988824129</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>513</Index>
+    <Name>B LFO 2 Rate</Name>
+    <Symbol>b_lfo1_rate</Symbol>
+    <Value>0.4375</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>514</Index>
+    <Name>B LFO 2 Phase / Shuffle</Name>
+    <Symbol>b_lfo1_phase</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>515</Index>
+    <Name>B LFO 2 Amplitude</Name>
+    <Symbol>b_lfo1_magnitude</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>516</Index>
+    <Name>B LFO 2 Deform</Name>
+    <Symbol>b_lfo1_deform</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>517</Index>
+    <Name>B LFO 2 Trigger Mode</Name>
+    <Symbol>b_lfo1_trigmode</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>518</Index>
+    <Name>B LFO 2 Unipolar</Name>
+    <Symbol>b_lfo1_unipolar</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>519</Index>
+    <Name>B LFO 2 Delay</Name>
+    <Symbol>b_lfo1_delay</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>520</Index>
+    <Name>B LFO 2 Attack</Name>
+    <Symbol>b_lfo1_attack</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>521</Index>
+    <Name>B LFO 2 Hold</Name>
+    <Symbol>b_lfo1_hold</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>522</Index>
+    <Name>B LFO 2 Decay</Name>
+    <Symbol>b_lfo1_decay</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>523</Index>
+    <Name>B LFO 2 Sustain</Name>
+    <Symbol>b_lfo1_sustain</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>524</Index>
+    <Name>B LFO 2 Release</Name>
+    <Symbol>b_lfo1_release</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>525</Index>
+    <Name>B LFO 3 Shape</Name>
+    <Symbol>b_lfo2_shape</Symbol>
+    <Value>0.00499999988824129</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>526</Index>
+    <Name>B LFO 3 Rate</Name>
+    <Symbol>b_lfo2_rate</Symbol>
+    <Value>0.4375</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>527</Index>
+    <Name>B LFO 3 Phase / Shuffle</Name>
+    <Symbol>b_lfo2_phase</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>528</Index>
+    <Name>B LFO 3 Amplitude</Name>
+    <Symbol>b_lfo2_magnitude</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>529</Index>
+    <Name>B LFO 3 Deform</Name>
+    <Symbol>b_lfo2_deform</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>530</Index>
+    <Name>B LFO 3 Trigger Mode</Name>
+    <Symbol>b_lfo2_trigmode</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>531</Index>
+    <Name>B LFO 3 Unipolar</Name>
+    <Symbol>b_lfo2_unipolar</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>532</Index>
+    <Name>B LFO 3 Delay</Name>
+    <Symbol>b_lfo2_delay</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>533</Index>
+    <Name>B LFO 3 Attack</Name>
+    <Symbol>b_lfo2_attack</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>534</Index>
+    <Name>B LFO 3 Hold</Name>
+    <Symbol>b_lfo2_hold</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>535</Index>
+    <Name>B LFO 3 Decay</Name>
+    <Symbol>b_lfo2_decay</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>536</Index>
+    <Name>B LFO 3 Sustain</Name>
+    <Symbol>b_lfo2_sustain</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>537</Index>
+    <Name>B LFO 3 Release</Name>
+    <Symbol>b_lfo2_release</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>538</Index>
+    <Name>B LFO 4 Shape</Name>
+    <Symbol>b_lfo3_shape</Symbol>
+    <Value>0.00499999988824129</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>539</Index>
+    <Name>B LFO 4 Rate</Name>
+    <Symbol>b_lfo3_rate</Symbol>
+    <Value>0.4375</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>540</Index>
+    <Name>B LFO 4 Phase / Shuffle</Name>
+    <Symbol>b_lfo3_phase</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>541</Index>
+    <Name>B LFO 4 Amplitude</Name>
+    <Symbol>b_lfo3_magnitude</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>542</Index>
+    <Name>B LFO 4 Deform</Name>
+    <Symbol>b_lfo3_deform</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>543</Index>
+    <Name>B LFO 4 Trigger Mode</Name>
+    <Symbol>b_lfo3_trigmode</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>544</Index>
+    <Name>B LFO 4 Unipolar</Name>
+    <Symbol>b_lfo3_unipolar</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>545</Index>
+    <Name>B LFO 4 Delay</Name>
+    <Symbol>b_lfo3_delay</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>546</Index>
+    <Name>B LFO 4 Attack</Name>
+    <Symbol>b_lfo3_attack</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>547</Index>
+    <Name>B LFO 4 Hold</Name>
+    <Symbol>b_lfo3_hold</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>548</Index>
+    <Name>B LFO 4 Decay</Name>
+    <Symbol>b_lfo3_decay</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>549</Index>
+    <Name>B LFO 4 Sustain</Name>
+    <Symbol>b_lfo3_sustain</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>550</Index>
+    <Name>B LFO 4 Release</Name>
+    <Symbol>b_lfo3_release</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>551</Index>
+    <Name>B LFO 5 Shape</Name>
+    <Symbol>b_lfo4_shape</Symbol>
+    <Value>0.00499999988824129</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>552</Index>
+    <Name>B LFO 5 Rate</Name>
+    <Symbol>b_lfo4_rate</Symbol>
+    <Value>0.4375</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>553</Index>
+    <Name>B LFO 5 Phase / Shuffle</Name>
+    <Symbol>b_lfo4_phase</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>554</Index>
+    <Name>B LFO 5 Amplitude</Name>
+    <Symbol>b_lfo4_magnitude</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>555</Index>
+    <Name>B LFO 5 Deform</Name>
+    <Symbol>b_lfo4_deform</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>556</Index>
+    <Name>B LFO 5 Trigger Mode</Name>
+    <Symbol>b_lfo4_trigmode</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>557</Index>
+    <Name>B LFO 5 Unipolar</Name>
+    <Symbol>b_lfo4_unipolar</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>558</Index>
+    <Name>B LFO 5 Delay</Name>
+    <Symbol>b_lfo4_delay</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>559</Index>
+    <Name>B LFO 5 Attack</Name>
+    <Symbol>b_lfo4_attack</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>560</Index>
+    <Name>B LFO 5 Hold</Name>
+    <Symbol>b_lfo4_hold</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>561</Index>
+    <Name>B LFO 5 Decay</Name>
+    <Symbol>b_lfo4_decay</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>562</Index>
+    <Name>B LFO 5 Sustain</Name>
+    <Symbol>b_lfo4_sustain</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>563</Index>
+    <Name>B LFO 5 Release</Name>
+    <Symbol>b_lfo4_release</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>564</Index>
+    <Name>B LFO 6 Shape</Name>
+    <Symbol>b_lfo5_shape</Symbol>
+    <Value>0.00499999988824129</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>565</Index>
+    <Name>B LFO 6 Rate</Name>
+    <Symbol>b_lfo5_rate</Symbol>
+    <Value>0.4375</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>566</Index>
+    <Name>B LFO 6 Phase / Shuffle</Name>
+    <Symbol>b_lfo5_phase</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>567</Index>
+    <Name>B LFO 6 Amplitude</Name>
+    <Symbol>b_lfo5_magnitude</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>568</Index>
+    <Name>B LFO 6 Deform</Name>
+    <Symbol>b_lfo5_deform</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>569</Index>
+    <Name>B LFO 6 Trigger Mode</Name>
+    <Symbol>b_lfo5_trigmode</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>570</Index>
+    <Name>B LFO 6 Unipolar</Name>
+    <Symbol>b_lfo5_unipolar</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>571</Index>
+    <Name>B LFO 6 Delay</Name>
+    <Symbol>b_lfo5_delay</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>572</Index>
+    <Name>B LFO 6 Attack</Name>
+    <Symbol>b_lfo5_attack</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>573</Index>
+    <Name>B LFO 6 Hold</Name>
+    <Symbol>b_lfo5_hold</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>574</Index>
+    <Name>B LFO 6 Decay</Name>
+    <Symbol>b_lfo5_decay</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>575</Index>
+    <Name>B LFO 6 Sustain</Name>
+    <Symbol>b_lfo5_sustain</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>576</Index>
+    <Name>B LFO 6 Release</Name>
+    <Symbol>b_lfo5_release</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>577</Index>
+    <Name>B Scene LFO 1 Shape</Name>
+    <Symbol>b_lfo6_shape</Symbol>
+    <Value>0.00499999988824129</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>578</Index>
+    <Name>B Scene LFO 1 Rate</Name>
+    <Symbol>b_lfo6_rate</Symbol>
+    <Value>0.4375</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>579</Index>
+    <Name>B Scene LFO 1 Phase / Shuffle</Name>
+    <Symbol>b_lfo6_phase</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>580</Index>
+    <Name>B Scene LFO 1 Amplitude</Name>
+    <Symbol>b_lfo6_magnitude</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>581</Index>
+    <Name>B Scene LFO 1 Deform</Name>
+    <Symbol>b_lfo6_deform</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>582</Index>
+    <Name>B Scene LFO 1 Trigger Mode</Name>
+    <Symbol>b_lfo6_trigmode</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>583</Index>
+    <Name>B Scene LFO 1 Unipolar</Name>
+    <Symbol>b_lfo6_unipolar</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>584</Index>
+    <Name>B Scene LFO 1 Delay</Name>
+    <Symbol>b_lfo6_delay</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>585</Index>
+    <Name>B Scene LFO 1 Attack</Name>
+    <Symbol>b_lfo6_attack</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>586</Index>
+    <Name>B Scene LFO 1 Hold</Name>
+    <Symbol>b_lfo6_hold</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>587</Index>
+    <Name>B Scene LFO 1 Decay</Name>
+    <Symbol>b_lfo6_decay</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>588</Index>
+    <Name>B Scene LFO 1 Sustain</Name>
+    <Symbol>b_lfo6_sustain</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>589</Index>
+    <Name>B Scene LFO 1 Release</Name>
+    <Symbol>b_lfo6_release</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>590</Index>
+    <Name>B Scene LFO 2 Shape</Name>
+    <Symbol>b_lfo7_shape</Symbol>
+    <Value>0.00499999988824129</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>591</Index>
+    <Name>B Scene LFO 2 Rate</Name>
+    <Symbol>b_lfo7_rate</Symbol>
+    <Value>0.4375</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>592</Index>
+    <Name>B Scene LFO 2 Phase / Shuffle</Name>
+    <Symbol>b_lfo7_phase</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>593</Index>
+    <Name>B Scene LFO 2 Amplitude</Name>
+    <Symbol>b_lfo7_magnitude</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>594</Index>
+    <Name>B Scene LFO 2 Deform</Name>
+    <Symbol>b_lfo7_deform</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>595</Index>
+    <Name>B Scene LFO 2 Trigger Mode</Name>
+    <Symbol>b_lfo7_trigmode</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>596</Index>
+    <Name>B Scene LFO 2 Unipolar</Name>
+    <Symbol>b_lfo7_unipolar</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>597</Index>
+    <Name>B Scene LFO 2 Delay</Name>
+    <Symbol>b_lfo7_delay</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>598</Index>
+    <Name>B Scene LFO 2 Attack</Name>
+    <Symbol>b_lfo7_attack</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>599</Index>
+    <Name>B Scene LFO 2 Hold</Name>
+    <Symbol>b_lfo7_hold</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>600</Index>
+    <Name>B Scene LFO 2 Decay</Name>
+    <Symbol>b_lfo7_decay</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>601</Index>
+    <Name>B Scene LFO 2 Sustain</Name>
+    <Symbol>b_lfo7_sustain</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>602</Index>
+    <Name>B Scene LFO 2 Release</Name>
+    <Symbol>b_lfo7_release</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>603</Index>
+    <Name>B Scene LFO 3 Shape</Name>
+    <Symbol>b_lfo8_shape</Symbol>
+    <Value>0.00499999988824129</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>604</Index>
+    <Name>B Scene LFO 3 Rate</Name>
+    <Symbol>b_lfo8_rate</Symbol>
+    <Value>0.4375</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>605</Index>
+    <Name>B Scene LFO 3 Phase / Shuffle</Name>
+    <Symbol>b_lfo8_phase</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>606</Index>
+    <Name>B Scene LFO 3 Amplitude</Name>
+    <Symbol>b_lfo8_magnitude</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>607</Index>
+    <Name>B Scene LFO 3 Deform</Name>
+    <Symbol>b_lfo8_deform</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>608</Index>
+    <Name>B Scene LFO 3 Trigger Mode</Name>
+    <Symbol>b_lfo8_trigmode</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>609</Index>
+    <Name>B Scene LFO 3 Unipolar</Name>
+    <Symbol>b_lfo8_unipolar</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>610</Index>
+    <Name>B Scene LFO 3 Delay</Name>
+    <Symbol>b_lfo8_delay</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>611</Index>
+    <Name>B Scene LFO 3 Attack</Name>
+    <Symbol>b_lfo8_attack</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>612</Index>
+    <Name>B Scene LFO 3 Hold</Name>
+    <Symbol>b_lfo8_hold</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>613</Index>
+    <Name>B Scene LFO 3 Decay</Name>
+    <Symbol>b_lfo8_decay</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>614</Index>
+    <Name>B Scene LFO 3 Sustain</Name>
+    <Symbol>b_lfo8_sustain</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>615</Index>
+    <Name>B Scene LFO 3 Release</Name>
+    <Symbol>b_lfo8_release</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>616</Index>
+    <Name>B Scene LFO 4 Shape</Name>
+    <Symbol>b_lfo9_shape</Symbol>
+    <Value>0.00499999988824129</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>617</Index>
+    <Name>B Scene LFO 4 Rate</Name>
+    <Symbol>b_lfo9_rate</Symbol>
+    <Value>0.4375</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>618</Index>
+    <Name>B Scene LFO 4 Phase / Shuffle</Name>
+    <Symbol>b_lfo9_phase</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>619</Index>
+    <Name>B Scene LFO 4 Amplitude</Name>
+    <Symbol>b_lfo9_magnitude</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>620</Index>
+    <Name>B Scene LFO 4 Deform</Name>
+    <Symbol>b_lfo9_deform</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>621</Index>
+    <Name>B Scene LFO 4 Trigger Mode</Name>
+    <Symbol>b_lfo9_trigmode</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>622</Index>
+    <Name>B Scene LFO 4 Unipolar</Name>
+    <Symbol>b_lfo9_unipolar</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>623</Index>
+    <Name>B Scene LFO 4 Delay</Name>
+    <Symbol>b_lfo9_delay</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>624</Index>
+    <Name>B Scene LFO 4 Attack</Name>
+    <Symbol>b_lfo9_attack</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>625</Index>
+    <Name>B Scene LFO 4 Hold</Name>
+    <Symbol>b_lfo9_hold</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>626</Index>
+    <Name>B Scene LFO 4 Decay</Name>
+    <Symbol>b_lfo9_decay</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>627</Index>
+    <Name>B Scene LFO 4 Sustain</Name>
+    <Symbol>b_lfo9_sustain</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>628</Index>
+    <Name>B Scene LFO 4 Release</Name>
+    <Symbol>b_lfo9_release</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>629</Index>
+    <Name>B Scene LFO 5 Shape</Name>
+    <Symbol>b_lfo10_shape</Symbol>
+    <Value>0.00499999988824129</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>630</Index>
+    <Name>B Scene LFO 5 Rate</Name>
+    <Symbol>b_lfo10_rate</Symbol>
+    <Value>0.4375</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>631</Index>
+    <Name>B Scene LFO 5 Phase / Shuffle</Name>
+    <Symbol>b_lfo10_phase</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>632</Index>
+    <Name>B Scene LFO 5 Amplitude</Name>
+    <Symbol>b_lfo10_magnitude</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>633</Index>
+    <Name>B Scene LFO 5 Deform</Name>
+    <Symbol>b_lfo10_deform</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>634</Index>
+    <Name>B Scene LFO 5 Trigger Mode</Name>
+    <Symbol>b_lfo10_trigmode</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>635</Index>
+    <Name>B Scene LFO 5 Unipolar</Name>
+    <Symbol>b_lfo10_unipolar</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>636</Index>
+    <Name>B Scene LFO 5 Delay</Name>
+    <Symbol>b_lfo10_delay</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>637</Index>
+    <Name>B Scene LFO 5 Attack</Name>
+    <Symbol>b_lfo10_attack</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>638</Index>
+    <Name>B Scene LFO 5 Hold</Name>
+    <Symbol>b_lfo10_hold</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>639</Index>
+    <Name>B Scene LFO 5 Decay</Name>
+    <Symbol>b_lfo10_decay</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>640</Index>
+    <Name>B Scene LFO 5 Sustain</Name>
+    <Symbol>b_lfo10_sustain</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>641</Index>
+    <Name>B Scene LFO 5 Release</Name>
+    <Symbol>b_lfo10_release</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>642</Index>
+    <Name>B Scene LFO 6 Shape</Name>
+    <Symbol>b_lfo11_shape</Symbol>
+    <Value>0.00499999988824129</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>643</Index>
+    <Name>B Scene LFO 6 Rate</Name>
+    <Symbol>b_lfo11_rate</Symbol>
+    <Value>0.4375</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>644</Index>
+    <Name>B Scene LFO 6 Phase / Shuffle</Name>
+    <Symbol>b_lfo11_phase</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>645</Index>
+    <Name>B Scene LFO 6 Amplitude</Name>
+    <Symbol>b_lfo11_magnitude</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>646</Index>
+    <Name>B Scene LFO 6 Deform</Name>
+    <Symbol>b_lfo11_deform</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>647</Index>
+    <Name>B Scene LFO 6 Trigger Mode</Name>
+    <Symbol>b_lfo11_trigmode</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>648</Index>
+    <Name>B Scene LFO 6 Unipolar</Name>
+    <Symbol>b_lfo11_unipolar</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>649</Index>
+    <Name>B Scene LFO 6 Delay</Name>
+    <Symbol>b_lfo11_delay</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>650</Index>
+    <Name>B Scene LFO 6 Attack</Name>
+    <Symbol>b_lfo11_attack</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>651</Index>
+    <Name>B Scene LFO 6 Hold</Name>
+    <Symbol>b_lfo11_hold</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>652</Index>
+    <Name>B Scene LFO 6 Decay</Name>
+    <Symbol>b_lfo11_decay</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>653</Index>
+    <Name>B Scene LFO 6 Sustain</Name>
+    <Symbol>b_lfo11_sustain</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>654</Index>
+    <Name>B Scene LFO 6 Release</Name>
+    <Symbol>b_lfo11_release</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>655</Index>
+    <Name>Character</Name>
+    <Symbol>character</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#Chunk</Type>
+    <Key>https://surge-synthesizer.github.io/lv2/surge#PatchData</Key>
+    <Value>
+c3ViM6VjAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8P3htbCB2ZXJzaW9uPSIxLjAiIGVuY29kaW5nPSJVVEYtOCIgc3RhbmRhbG9uZT0ieWVzIiA/PjxwYXRjaCByZXZpc2lvbj0iMTMiPjxtZXRhIG5hbWU9IjE4MDQiIGNhdGVnb3J5PSJQb2x5c3ludGhzIiBjb21tZW50PSIiIGF1dGhvcj0iQ2xhZXMiIC8+PHBhcmFtZXRlcnM+PHZvbHVtZV9GWDEgdHlwZT0iMiIgdmFsdWU9IjAuNzE2MDcyIiAvPjx2b2x1bWVfRlgyIHR5cGU9IjIiIHZhbHVlPSIxLjAwMDAwMCIgLz48dm9sdW1lIHR5cGU9IjIiIHZhbHVlPSIwLjAwMDAwMCIgLz48c2NlbmVfYWN0aXZlIHR5cGU9IjAiIHZhbHVlPSIwIiAvPjxzY2VuZW1vZGUgdHlwZT0iMCIgdmFsdWU9IjAiIC8+PHNwbGl0a2V5IHR5cGU9IjAiIHZhbHVlPSI2MCIgLz48ZnhfZGlzYWJsZSB0eXBlPSIwIiB2YWx1ZT0iMCIgLz48cG9seWxpbWl0IHR5cGU9IjAiIHZhbHVlPSI4IiAvPjxmeF9ieXBhc3MgdHlwZT0iMCIgdmFsdWU9IjAiIC8+PGZ4MV90eXBlIHR5cGU9IjAiIHZhbHVlPSIxIiAvPjxmeDFfcDAgdHlwZT0iMiIgdmFsdWU9Ii04LjAwMDAwMCIgLz48ZngxX3AxIHR5cGU9IjIiIHZhbHVlPSItOC4wMDAwMDAiIC8+PGZ4MV9wMiB0eXBlPSIyIiB2YWx1ZT0iMC4wMDAwMDAiIC8+PGZ4MV9wMyB0eXBlPSIyIiB2YWx1ZT0iMC4wMDAwMDAiIC8+PGZ4MV9wNCB0eXBlPSIyIiB2YWx1ZT0iLTMzLjM0MjgzOCIgLz48ZngxX3A1IHR5cGU9IjIiIHZhbHVlPSIzOS44NTE3ODAiIC8+PGZ4MV9wNiB0eXBlPSIyIiB2YWx1ZT0iMS43NjQyOTAiIC8+PGZ4MV9wNyB0eXBlPSIyIiB2YWx1ZT0iMC40NzY3ODYiIC8+PGZ4MV9wOCB0eXBlPSIyIiB2YWx1ZT0iMC4wMDAwMDAiIC8+PGZ4MV9wOSB0eXBlPSIwIiB2YWx1ZT0iMCIgLz48ZngxX3AxMCB0eXBlPSIyIiB2YWx1ZT0iMC40MTYwNzEiIC8+PGZ4MV9wMTEgdHlwZT0iMiIgdmFsdWU9IjAuMDAwMDAwIiAvPjxmeDVfdHlwZSB0eXBlPSIwIiB2YWx1ZT0iMSIgLz48Zng1X3AwIHR5cGU9IjIiIHZhbHVlPSItMS4wMDAwMDAiIHRlbXBvc3luYz0iMSIgLz48Zng1X3AxIHR5cGU9IjIiIHZhbHVlPSItMi4wMDAwMDAiIHRlbXBvc3luYz0iMSIgLz48Zng1X3AyIHR5cGU9IjIiIHZhbHVlPSIwLjAwMDAwMCIgLz48Zng1X3AzIHR5cGU9IjIiIHZhbHVlPSIwLjgxMTYwNyIgLz48Zng1X3A0IHR5cGU9IjIiIHZhbHVlPSItMjIuNTQyODQ3IiAvPjxmeDVfcDUgdHlwZT0iMiIgdmFsdWU9IjM4LjMyNDk3OCIgLz48Zng1X3A2IHR5cGU9IjIiIHZhbHVlPSItMS4xNzk0NjMiIC8+PGZ4NV9wNyB0eXBlPSIyIiB2YWx1ZT0iMC4xNjA3MTQiIC8+PGZ4NV9wOCB0eXBlPSIyIiB2YWx1ZT0iMC4wMDAwMDAiIC8+PGZ4NV9wOSB0eXBlPSIwIiB2YWx1ZT0iMCIgLz48Zng1X3AxMCB0eXBlPSIyIiB2YWx1ZT0iMS4wMDAwMDAiIC8+PGZ4NV9wMTEgdHlwZT0iMiIgdmFsdWU9IjAuMDAwMDAwIiAvPjxhX29jdGF2ZSB0eXBlPSIwIiB2YWx1ZT0iMCIgLz48YV9waXRjaCB0eXBlPSIyIiB2YWx1ZT0iMC4wMDAwMDAiIC8+PGFfcG9ydGFtZW50byB0eXBlPSIyIiB2YWx1ZT0iLTguMDAwMDAwIiBwb3J0YV9jb25zdF9yYXRlPSIwIiBwb3J0YV9nbGlzcz0iMCIgcG9ydGFfcmV0cmlnZ2VyPSIwIiBwb3J0YV9jdXJ2ZT0iMCIgLz48YV9vc2MxX3R5cGUgdHlwZT0iMCIgdmFsdWU9IjAiIC8+PGFfb3NjMV9vY3RhdmUgdHlwZT0iMCIgdmFsdWU9IjAiIC8+PGFfb3NjMV9waXRjaCB0eXBlPSIyIiB2YWx1ZT0iMC4wMDE4NzUiIC8+PGFfb3NjMV9wYXJhbTAgdHlwZT0iMiIgdmFsdWU9IjAuMDAwMDAwIiAvPjxhX29zYzFfcGFyYW0xIHR5cGU9IjIiIHZhbHVlPSIwLjUwMDAwMCIgLz48YV9vc2MxX3BhcmFtMiB0eXBlPSIyIiB2YWx1ZT0iMC41MDAwMDAiIC8+PGFfb3NjMV9wYXJhbTMgdHlwZT0iMiIgdmFsdWU9IjAuNTA4OTI5IiAvPjxhX29zYzFfcGFyYW00IHR5cGU9IjIiIHZhbHVlPSIwLjAwMDAwMCIgLz48YV9vc2MxX3BhcmFtNSB0eXBlPSIyIiB2YWx1ZT0iMC4wMjk0NjQiIC8+PGFfb3NjMV9wYXJhbTYgdHlwZT0iMCIgdmFsdWU9IjEiIC8+PGFfb3NjMV9rZXl0cmFjayB0eXBlPSIwIiB2YWx1ZT0iMSIgLz48YV9vc2MxX3JldHJpZ2dlciB0eXBlPSIwIiB2YWx1ZT0iMSIgLz48YV9vc2MyX3R5cGUgdHlwZT0iMCIgdmFsdWU9IjAiIC8+PGFfb3NjMl9vY3RhdmUgdHlwZT0iMCIgdmFsdWU9IjAiIC8+PGFfb3NjMl9waXRjaCB0eXBlPSIyIiB2YWx1ZT0iMC4wMDAwMDAiIC8+PGFfb3NjMl9wYXJhbTAgdHlwZT0iMiIgdmFsdWU9Ii0xLjAwMDAwMCIgLz48YV9vc2MyX3BhcmFtMSB0eXBlPSIyIiB2YWx1ZT0iMC41MDAwMDAiPjxtb2Ryb3V0aW5nIHNvdXJjZT0iMjMiIGRlcHRoPSIwLjM2MTYwNyIgLz48L2Ffb3NjMl9wYXJhbTE+PGFfb3NjMl9wYXJhbTIgdHlwZT0iMiIgdmFsdWU9IjAuNTAwMDAwIiAvPjxhX29zYzJfcGFyYW0zIHR5cGU9IjIiIHZhbHVlPSIwLjAwMDAwMCIgLz48YV9vc2MyX3BhcmFtNCB0eXBlPSIyIiB2YWx1ZT0iMC4wMDAwMDAiIC8+PGFfb3NjMl9wYXJhbTUgdHlwZT0iMiIgdmFsdWU9IjAuMTUwMDAwIiAvPjxhX29zYzJfcGFyYW02IHR5cGU9IjAiIHZhbHVlPSIxIiAvPjxhX29zYzJfa2V5dHJhY2sgdHlwZT0iMCIgdmFsdWU9IjEiIC8+PGFfb3NjMl9yZXRyaWdnZXIgdHlwZT0iMCIgdmFsdWU9IjEiIC8+PGFfb3NjM190eXBlIHR5cGU9IjAiIHZhbHVlPSIwIiAvPjxhX29zYzNfb2N0YXZlIHR5cGU9IjAiIHZhbHVlPSIwIiAvPjxhX29zYzNfcGl0Y2ggdHlwZT0iMiIgdmFsdWU9IjAuMDAwMDAwIiAvPjxhX29zYzNfcGFyYW0wIHR5cGU9IjIiIHZhbHVlPSIwLjAwMDAwMCIgLz48YV9vc2MzX3BhcmFtMSB0eXBlPSIyIiB2YWx1ZT0iMC41MDAwMDAiIC8+PGFfb3NjM19wYXJhbTIgdHlwZT0iMiIgdmFsdWU9IjAuNTAwMDAwIiAvPjxhX29zYzNfcGFyYW0zIHR5cGU9IjIiIHZhbHVlPSIwLjAwMDAwMCIgLz48YV9vc2MzX3BhcmFtNCB0eXBlPSIyIiB2YWx1ZT0iMC4wMDAwMDAiIC8+PGFfb3NjM19wYXJhbTUgdHlwZT0iMiIgdmFsdWU9IjAuMjAwMDAwIiAvPjxhX29zYzNfcGFyYW02IHR5cGU9IjAiIHZhbHVlPSIxIiAvPjxhX29zYzNfa2V5dHJhY2sgdHlwZT0iMCIgdmFsdWU9IjEiIC8+PGFfb3NjM19yZXRyaWdnZXIgdHlwZT0iMCIgdmFsdWU9IjAiIC8+PGFfcG9seW1vZGUgdHlwZT0iMCIgdmFsdWU9IjAiIC8+PGFfZm1fc3dpdGNoIHR5cGU9IjAiIHZhbHVlPSIwIiAvPjxhX2ZtX2RlcHRoIHR5cGU9IjIiIHZhbHVlPSItMjQuMDAwMDAwIiAvPjxhX2RyaWZ0IHR5cGU9IjIiIHZhbHVlPSIwLjAwMDAwMCIgLz48YV9ub2lzZWNvbCB0eXBlPSIyIiB2YWx1ZT0iMC4wMDAwMDAiIC8+PGFfa3Rya3Jvb3QgdHlwZT0iMCIgdmFsdWU9IjYwIiAvPjxhX3ZvbHVtZSB0eXBlPSIyIiB2YWx1ZT0iMC42OTE5NjMiIC8+PGFfcGFuIHR5cGU9IjIiIHZhbHVlPSIwLjAwMDAwMCIgLz48YV9wYW4yIHR5cGU9IjIiIHZhbHVlPSIwLjAwMDAwMCIgLz48YV9zZW5kX2Z4XzEgdHlwZT0iMiIgdmFsdWU9IjAuNjI2Nzg2IiAvPjxhX3NlbmRfZnhfMiB0eXBlPSIyIiB2YWx1ZT0iMC4wMDAwMDAiIC8+PGFfbGV2ZWxfbzEgdHlwZT0iMiIgdmFsdWU9IjEuMDAwMDAwIiAvPjxhX211dGVfbzEgdHlwZT0iMCIgdmFsdWU9IjAiIC8+PGFfc29sb19vMSB0eXBlPSIwIiB2YWx1ZT0iMCIgLz48YV9yb3V0ZV9vMSB0eXBlPSIwIiB2YWx1ZT0iMSIgLz48YV9sZXZlbF9vMiB0eXBlPSIyIiB2YWx1ZT0iMC43ODc1MDAiIC8+PGFfbXV0ZV9vMiB0eXBlPSIwIiB2YWx1ZT0iMCIgLz48YV9zb2xvX28yIHR5cGU9IjAiIHZhbHVlPSIwIiAvPjxhX3JvdXRlX28yIHR5cGU9IjAiIHZhbHVlPSIxIiAvPjxhX2xldmVsX28zIHR5cGU9IjIiIHZhbHVlPSIxLjAwMDAwMCIgLz48YV9tdXRlX28zIHR5cGU9IjAiIHZhbHVlPSIxIiAvPjxhX3NvbG9fbzMgdHlwZT0iMCIgdmFsdWU9IjAiIC8+PGFfcm91dGVfbzMgdHlwZT0iMCIgdmFsdWU9IjEiIC8+PGFfbGV2ZWxfcmluZzEyIHR5cGU9IjIiIHZhbHVlPSIxLjAwMDAwMCIgLz48YV9tdXRlX3JpbmcxMiB0eXBlPSIwIiB2YWx1ZT0iMSIgLz48YV9zb2xvX3JpbmcxMiB0eXBlPSIwIiB2YWx1ZT0iMCIgLz48YV9yb3V0ZV9yaW5nMTIgdHlwZT0iMCIgdmFsdWU9IjEiIC8+PGFfbGV2ZWxfcmluZzIzIHR5cGU9IjIiIHZhbHVlPSIxLjAwMDAwMCIgLz48YV9tdXRlX3JpbmcyMyB0eXBlPSIwIiB2YWx1ZT0iMSIgLz48YV9zb2xvX3JpbmcyMyB0eXBlPSIwIiB2YWx1ZT0iMCIgLz48YV9yb3V0ZV9yaW5nMjMgdHlwZT0iMCIgdmFsdWU9IjEiIC8+PGFfbGV2ZWxfbm9pc2UgdHlwZT0iMiIgdmFsdWU9IjEuMDAwMDAwIiAvPjxhX211dGVfbm9pc2UgdHlwZT0iMCIgdmFsdWU9IjEiIC8+PGFfc29sb19ub2lzZSB0eXBlPSIwIiB2YWx1ZT0iMCIgLz48YV9yb3V0ZV9ub2lzZSB0eXBlPSIwIiB2YWx1ZT0iMSIgLz48YV9sZXZlbF9wZmcgdHlwZT0iMiIgdmFsdWU9IjEwLjgwMDAwNyIgLz48YV9wYnJhbmdlX3VwIHR5cGU9IjAiIHZhbHVlPSI3IiAvPjxhX3BicmFuZ2VfZG4gdHlwZT0iMCIgdmFsdWU9IjciIC8+PGFfdmNhX2xldmVsIHR5cGU9IjIiIHZhbHVlPSIzLjYwMDAwMiIgLz48YV92Y2FfdmVsc2Vuc2UgdHlwZT0iMiIgdmFsdWU9IjAuMDAwMDAwIiAvPjxhX2ZlZWRiYWNrIHR5cGU9IjIiIHZhbHVlPSIwLjkxNDI4NSI+PG1vZHJvdXRpbmcgc291cmNlPSI2IiBkZXB0aD0iLTAuOTEwNzE1IiAvPjwvYV9mZWVkYmFjaz48YV9mYl9jb25maWcgdHlwZT0iMCIgdmFsdWU9IjEiIC8+PGFfZl9iYWxhbmNlIHR5cGU9IjIiIHZhbHVlPSIwLjAwMDAwMCIgLz48YV9sb3djdXQgdHlwZT0iMiIgdmFsdWU9Ii00Mi41NDQyNzMiIC8+PGFfd3NfdHlwZSB0eXBlPSIwIiB2YWx1ZT0iMCIgLz48YV93c19kcml2ZSB0eXBlPSIyIiB2YWx1ZT0iLTE3LjQ4NTcxOCIgLz48YV9maWx0ZXIxX3R5cGUgdHlwZT0iMCIgdmFsdWU9IjIiIC8+PGFfZmlsdGVyMV9zdWJ0eXBlIHR5cGU9IjAiIHZhbHVlPSIwIiAvPjxhX2ZpbHRlcjFfY3V0b2ZmIHR5cGU9IjIiIHZhbHVlPSItMTYuNjg3NTAyIj48bW9kcm91dGluZyBzb3VyY2U9IjYiIGRlcHRoPSItMTEuNDc1MDA3IiAvPjxtb2Ryb3V0aW5nIHNvdXJjZT0iNSIgZGVwdGg9IjcuMDg3NTAyIiAvPjxtb2Ryb3V0aW5nIHNvdXJjZT0iNyIgZGVwdGg9IjQwLjM5Mjg2NCIgLz48bW9kcm91dGluZyBzb3VyY2U9IjEiIGRlcHRoPSI0Mi41MjUwMDkiIC8+PC9hX2ZpbHRlcjFfY3V0b2ZmPjxhX2ZpbHRlcjFfcmVzb25hbmNlIHR5cGU9IjIiIHZhbHVlPSIwLjE2MjQ3NCI+PG1vZHJvdXRpbmcgc291cmNlPSI2IiBkZXB0aD0iMC42MjQxMDciIC8+PC9hX2ZpbHRlcjFfcmVzb25hbmNlPjxhX2ZpbHRlcjFfZW52bW9kIHR5cGU9IjIiIHZhbHVlPSIxNC45MTQyOTUiPjxtb2Ryb3V0aW5nIHNvdXJjZT0iMSIgZGVwdGg9IjQxLjY1NzE1MCIgLz48L2FfZmlsdGVyMV9lbnZtb2Q+PGFfZmlsdGVyMV9rZXl0cmFjayB0eXBlPSIyIiB2YWx1ZT0iMC41Njc4NTgiIC8+PGFfZmlsdGVyMl90eXBlIHR5cGU9IjAiIHZhbHVlPSIwIiAvPjxhX2ZpbHRlcjJfc3VidHlwZSB0eXBlPSIwIiB2YWx1ZT0iMCIgLz48YV9maWx0ZXIyX2N1dG9mZiB0eXBlPSIyIiB2YWx1ZT0iMy4wMDAwMDAiIC8+PGFfZjJfY2ZfaXNfb2Zmc2V0IHR5cGU9IjAiIHZhbHVlPSIwIiAvPjxhX2ZpbHRlcjJfcmVzb25hbmNlIHR5cGU9IjIiIHZhbHVlPSIwLjAwMDAwMCIgLz48YV9mMl9saW5rX3Jlc29uYW5jZSB0eXBlPSIwIiB2YWx1ZT0iMCIgLz48YV9maWx0ZXIyX2Vudm1vZCB0eXBlPSIyIiB2YWx1ZT0iMC4wMDAwMDAiIC8+PGFfZmlsdGVyMl9rZXl0cmFjayB0eXBlPSIyIiB2YWx1ZT0iMC4wMDAwMDAiIC8+PGFfZW52MV9hdHRhY2sgdHlwZT0iMiIgdmFsdWU9Ii04LjAwMDAwMCIgLz48YV9lbnYxX2F0dGFja19zaGFwZSB0eXBlPSIwIiB2YWx1ZT0iMSIgLz48YV9lbnYxX2RlY2F5IHR5cGU9IjIiIHZhbHVlPSIwLjAwMDAwMCIgLz48YV9lbnYxX2RlY2F5X3NoYXBlIHR5cGU9IjAiIHZhbHVlPSIwIiAvPjxhX2VudjFfc3VzdGFpbiB0eXBlPSIyIiB2YWx1ZT0iMS4wMDAwMDAiIC8+PGFfZW52MV9yZWxlYXNlIHR5cGU9IjIiIHZhbHVlPSItNi43NDY0MjgiIC8+PGFfZW52MV9yZWxlYXNlX3NoYXBlIHR5cGU9IjAiIHZhbHVlPSIyIiAvPjxhX2VudjFfbW9kZSB0eXBlPSIwIiB2YWx1ZT0iMCIgLz48YV9lbnYyX2F0dGFjayB0eXBlPSIyIiB2YWx1ZT0iLTguMDAwMDAwIiAvPjxhX2VudjJfYXR0YWNrX3NoYXBlIHR5cGU9IjAiIHZhbHVlPSIxIiAvPjxhX2VudjJfZGVjYXkgdHlwZT0iMiIgdmFsdWU9IjIuMDM5Mjg4IiAvPjxhX2VudjJfZGVjYXlfc2hhcGUgdHlwZT0iMCIgdmFsdWU9IjAiIC8+PGFfZW52Ml9zdXN0YWluIHR5cGU9IjIiIHZhbHVlPSIwLjE3MTQyOCIgLz48YV9lbnYyX3JlbGVhc2UgdHlwZT0iMiIgdmFsdWU9Ii0yLjAwMDAwMCIgLz48YV9lbnYyX3JlbGVhc2Vfc2hhcGUgdHlwZT0iMCIgdmFsdWU9IjAiIC8+PGFfZW52Ml9tb2RlIHR5cGU9IjAiIHZhbHVlPSIwIiAvPjxhX2xmbzBfc2hhcGUgdHlwZT0iMCIgdmFsdWU9IjAiIC8+PGFfbGZvMF9yYXRlIHR5cGU9IjIiIHZhbHVlPSIwLjAwMDAwMCIgZGVhY3RpdmF0ZWQ9IjAiIC8+PGFfbGZvMF9waGFzZSB0eXBlPSIyIiB2YWx1ZT0iMC4wMDAwMDAiIC8+PGFfbGZvMF9tYWduaXR1ZGUgdHlwZT0iMiIgdmFsdWU9IjEuMDAwMDAwIiAvPjxhX2xmbzBfZGVmb3JtIHR5cGU9IjIiIHZhbHVlPSIwLjAwMDAwMCIgLz48YV9sZm8wX3RyaWdtb2RlIHR5cGU9IjAiIHZhbHVlPSIxIiAvPjxhX2xmbzBfdW5pcG9sYXIgdHlwZT0iMCIgdmFsdWU9IjAiIC8+PGFfbGZvMF9kZWxheSB0eXBlPSIyIiB2YWx1ZT0iLTguMDAwMDAwIiAvPjxhX2xmbzBfYXR0YWNrIHR5cGU9IjIiIHZhbHVlPSItOC4wMDAwMDAiIC8+PGFfbGZvMF9ob2xkIHR5cGU9IjIiIHZhbHVlPSItOC4wMDAwMDAiIC8+PGFfbGZvMF9kZWNheSB0eXBlPSIyIiB2YWx1ZT0iNS4wMDAwMDAiIC8+PGFfbGZvMF9zdXN0YWluIHR5cGU9IjIiIHZhbHVlPSIxLjAwMDAwMCIgLz48YV9sZm8wX3JlbGVhc2UgdHlwZT0iMiIgdmFsdWU9IjUuMDAwMDAwIiAvPjxhX2xmbzFfc2hhcGUgdHlwZT0iMCIgdmFsdWU9IjAiIC8+PGFfbGZvMV9yYXRlIHR5cGU9IjIiIHZhbHVlPSIwLjAwMDAwMCIgZGVhY3RpdmF0ZWQ9IjAiIC8+PGFfbGZvMV9waGFzZSB0eXBlPSIyIiB2YWx1ZT0iMC4wMDAwMDAiIC8+PGFfbGZvMV9tYWduaXR1ZGUgdHlwZT0iMiIgdmFsdWU9IjEuMDAwMDAwIiAvPjxhX2xmbzFfZGVmb3JtIHR5cGU9IjIiIHZhbHVlPSIwLjAwMDAwMCIgLz48YV9sZm8xX3RyaWdtb2RlIHR5cGU9IjAiIHZhbHVlPSIxIiAvPjxhX2xmbzFfdW5pcG9sYXIgdHlwZT0iMCIgdmFsdWU9IjAiIC8+PGFfbGZvMV9kZWxheSB0eXBlPSIyIiB2YWx1ZT0iLTguMDAwMDAwIiAvPjxhX2xmbzFfYXR0YWNrIHR5cGU9IjIiIHZhbHVlPSItOC4wMDAwMDAiIC8+PGFfbGZvMV9ob2xkIHR5cGU9IjIiIHZhbHVlPSItOC4wMDAwMDAiIC8+PGFfbGZvMV9kZWNheSB0eXBlPSIyIiB2YWx1ZT0iNS4wMDAwMDAiIC8+PGFfbGZvMV9zdXN0YWluIHR5cGU9IjIiIHZhbHVlPSIxLjAwMDAwMCIgLz48YV9sZm8xX3JlbGVhc2UgdHlwZT0iMiIgdmFsdWU9IjUuMDAwMDAwIiAvPjxhX2xmbzJfc2hhcGUgdHlwZT0iMCIgdmFsdWU9IjAiIC8+PGFfbGZvMl9yYXRlIHR5cGU9IjIiIHZhbHVlPSIwLjAwMDAwMCIgZGVhY3RpdmF0ZWQ9IjAiIC8+PGFfbGZvMl9waGFzZSB0eXBlPSIyIiB2YWx1ZT0iMC4wMDAwMDAiIC8+PGFfbGZvMl9tYWduaXR1ZGUgdHlwZT0iMiIgdmFsdWU9IjEuMDAwMDAwIiAvPjxhX2xmbzJfZGVmb3JtIHR5cGU9IjIiIHZhbHVlPSIwLjAwMDAwMCIgLz48YV9sZm8yX3RyaWdtb2RlIHR5cGU9IjAiIHZhbHVlPSIxIiAvPjxhX2xmbzJfdW5pcG9sYXIgdHlwZT0iMCIgdmFsdWU9IjAiIC8+PGFfbGZvMl9kZWxheSB0eXBlPSIyIiB2YWx1ZT0iLTguMDAwMDAwIiAvPjxhX2xmbzJfYXR0YWNrIHR5cGU9IjIiIHZhbHVlPSItOC4wMDAwMDAiIC8+PGFfbGZvMl9ob2xkIHR5cGU9IjIiIHZhbHVlPSItOC4wMDAwMDAiIC8+PGFfbGZvMl9kZWNheSB0eXBlPSIyIiB2YWx1ZT0iNS4wMDAwMDAiIC8+PGFfbGZvMl9zdXN0YWluIHR5cGU9IjIiIHZhbHVlPSIxLjAwMDAwMCIgLz48YV9sZm8yX3JlbGVhc2UgdHlwZT0iMiIgdmFsdWU9IjUuMDAwMDAwIiAvPjxhX2xmbzNfc2hhcGUgdHlwZT0iMCIgdmFsdWU9IjAiIC8+PGFfbGZvM19yYXRlIHR5cGU9IjIiIHZhbHVlPSIwLjAwMDAwMCIgZGVhY3RpdmF0ZWQ9IjAiIC8+PGFfbGZvM19waGFzZSB0eXBlPSIyIiB2YWx1ZT0iMC4wMDAwMDAiIC8+PGFfbGZvM19tYWduaXR1ZGUgdHlwZT0iMiIgdmFsdWU9IjEuMDAwMDAwIiAvPjxhX2xmbzNfZGVmb3JtIHR5cGU9IjIiIHZhbHVlPSIwLjAwMDAwMCIgLz48YV9sZm8zX3RyaWdtb2RlIHR5cGU9IjAiIHZhbHVlPSIxIiAvPjxhX2xmbzNfdW5pcG9sYXIgdHlwZT0iMCIgdmFsdWU9IjAiIC8+PGFfbGZvM19kZWxheSB0eXBlPSIyIiB2YWx1ZT0iLTguMDAwMDAwIiAvPjxhX2xmbzNfYXR0YWNrIHR5cGU9IjIiIHZhbHVlPSItOC4wMDAwMDAiIC8+PGFfbGZvM19ob2xkIHR5cGU9IjIiIHZhbHVlPSItOC4wMDAwMDAiIC8+PGFfbGZvM19kZWNheSB0eXBlPSIyIiB2YWx1ZT0iNS4wMDAwMDAiIC8+PGFfbGZvM19zdXN0YWluIHR5cGU9IjIiIHZhbHVlPSIxLjAwMDAwMCIgLz48YV9sZm8zX3JlbGVhc2UgdHlwZT0iMiIgdmFsdWU9IjUuMDAwMDAwIiAvPjxhX2xmbzRfc2hhcGUgdHlwZT0iMCIgdmFsdWU9IjAiIC8+PGFfbGZvNF9yYXRlIHR5cGU9IjIiIHZhbHVlPSIwLjAwMDAwMCIgZGVhY3RpdmF0ZWQ9IjAiIC8+PGFfbGZvNF9waGFzZSB0eXBlPSIyIiB2YWx1ZT0iMC4wMDAwMDAiIC8+PGFfbGZvNF9tYWduaXR1ZGUgdHlwZT0iMiIgdmFsdWU9IjEuMDAwMDAwIiAvPjxhX2xmbzRfZGVmb3JtIHR5cGU9IjIiIHZhbHVlPSIwLjAwMDAwMCIgLz48YV9sZm80X3RyaWdtb2RlIHR5cGU9IjAiIHZhbHVlPSIxIiAvPjxhX2xmbzRfdW5pcG9sYXIgdHlwZT0iMCIgdmFsdWU9IjAiIC8+PGFfbGZvNF9kZWxheSB0eXBlPSIyIiB2YWx1ZT0iLTguMDAwMDAwIiAvPjxhX2xmbzRfYXR0YWNrIHR5cGU9IjIiIHZhbHVlPSItOC4wMDAwMDAiIC8+PGFfbGZvNF9ob2xkIHR5cGU9IjIiIHZhbHVlPSItOC4wMDAwMDAiIC8+PGFfbGZvNF9kZWNheSB0eXBlPSIyIiB2YWx1ZT0iNS4wMDAwMDAiIC8+PGFfbGZvNF9zdXN0YWluIHR5cGU9IjIiIHZhbHVlPSIxLjAwMDAwMCIgLz48YV9sZm80X3JlbGVhc2UgdHlwZT0iMiIgdmFsdWU9IjUuMDAwMDAwIiAvPjxhX2xmbzVfc2hhcGUgdHlwZT0iMCIgdmFsdWU9IjAiIC8+PGFfbGZvNV9yYXRlIHR5cGU9IjIiIHZhbHVlPSIwLjAwMDAwMCIgZGVhY3RpdmF0ZWQ9IjAiIC8+PGFfbGZvNV9waGFzZSB0eXBlPSIyIiB2YWx1ZT0iMC4wMDAwMDAiIC8+PGFfbGZvNV9tYWduaXR1ZGUgdHlwZT0iMiIgdmFsdWU9IjEuMDAwMDAwIiAvPjxhX2xmbzVfZGVmb3JtIHR5cGU9IjIiIHZhbHVlPSIwLjAwMDAwMCIgLz48YV9sZm81X3RyaWdtb2RlIHR5cGU9IjAiIHZhbHVlPSIxIiAvPjxhX2xmbzVfdW5pcG9sYXIgdHlwZT0iMCIgdmFsdWU9IjAiIC8+PGFfbGZvNV9kZWxheSB0eXBlPSIyIiB2YWx1ZT0iLTguMDAwMDAwIiAvPjxhX2xmbzVfYXR0YWNrIHR5cGU9IjIiIHZhbHVlPSItOC4wMDAwMDAiIC8+PGFfbGZvNV9ob2xkIHR5cGU9IjIiIHZhbHVlPSItOC4wMDAwMDAiIC8+PGFfbGZvNV9kZWNheSB0eXBlPSIyIiB2YWx1ZT0iNS4wMDAwMDAiIC8+PGFfbGZvNV9zdXN0YWluIHR5cGU9IjIiIHZhbHVlPSIxLjAwMDAwMCIgLz48YV9sZm81X3JlbGVhc2UgdHlwZT0iMiIgdmFsdWU9IjUuMDAwMDAwIiAvPjxhX2xmbzZfc2hhcGUgdHlwZT0iMCIgdmFsdWU9IjEiIC8+PGFfbGZvNl9yYXRlIHR5cGU9IjIiIHZhbHVlPSItMC4yMjUwMDMiIGRlYWN0aXZhdGVkPSIwIiAvPjxhX2xmbzZfcGhhc2UgdHlwZT0iMiIgdmFsdWU9IjAuMDAwMDAwIiAvPjxhX2xmbzZfbWFnbml0dWRlIHR5cGU9IjIiIHZhbHVlPSIxLjAwMDAwMCIgLz48YV9sZm82X2RlZm9ybSB0eXBlPSIyIiB2YWx1ZT0iMC4wMDAwMDAiIC8+PGFfbGZvNl90cmlnbW9kZSB0eXBlPSIwIiB2YWx1ZT0iMSIgLz48YV9sZm82X3VuaXBvbGFyIHR5cGU9IjAiIHZhbHVlPSIwIiAvPjxhX2xmbzZfZGVsYXkgdHlwZT0iMiIgdmFsdWU9Ii04LjAwMDAwMCIgLz48YV9sZm82X2F0dGFjayB0eXBlPSIyIiB2YWx1ZT0iLTguMDAwMDAwIiAvPjxhX2xmbzZfaG9sZCB0eXBlPSIyIiB2YWx1ZT0iLTguMDAwMDAwIiAvPjxhX2xmbzZfZGVjYXkgdHlwZT0iMiIgdmFsdWU9IjUuMDAwMDAwIiAvPjxhX2xmbzZfc3VzdGFpbiB0eXBlPSIyIiB2YWx1ZT0iMS4wMDAwMDAiIC8+PGFfbGZvNl9yZWxlYXNlIHR5cGU9IjIiIHZhbHVlPSI1LjAwMDAwMCIgLz48YV9sZm83X3NoYXBlIHR5cGU9IjAiIHZhbHVlPSIwIiAvPjxhX2xmbzdfcmF0ZSB0eXBlPSIyIiB2YWx1ZT0iMC4wMDAwMDAiIGRlYWN0aXZhdGVkPSIwIiAvPjxhX2xmbzdfcGhhc2UgdHlwZT0iMiIgdmFsdWU9IjAuMDAwMDAwIiAvPjxhX2xmbzdfbWFnbml0dWRlIHR5cGU9IjIiIHZhbHVlPSIxLjAwMDAwMCIgLz48YV9sZm83X2RlZm9ybSB0eXBlPSIyIiB2YWx1ZT0iMC4wMDAwMDAiIC8+PGFfbGZvN190cmlnbW9kZSB0eXBlPSIwIiB2YWx1ZT0iMSIgLz48YV9sZm83X3VuaXBvbGFyIHR5cGU9IjAiIHZhbHVlPSIwIiAvPjxhX2xmbzdfZGVsYXkgdHlwZT0iMiIgdmFsdWU9Ii04LjAwMDAwMCIgLz48YV9sZm83X2F0dGFjayB0eXBlPSIyIiB2YWx1ZT0iLTguMDAwMDAwIiAvPjxhX2xmbzdfaG9sZCB0eXBlPSIyIiB2YWx1ZT0iLTguMDAwMDAwIiAvPjxhX2xmbzdfZGVjYXkgdHlwZT0iMiIgdmFsdWU9IjUuMDAwMDAwIiAvPjxhX2xmbzdfc3VzdGFpbiB0eXBlPSIyIiB2YWx1ZT0iMS4wMDAwMDAiIC8+PGFfbGZvN19yZWxlYXNlIHR5cGU9IjIiIHZhbHVlPSI1LjAwMDAwMCIgLz48YV9sZm84X3NoYXBlIHR5cGU9IjAiIHZhbHVlPSIwIiAvPjxhX2xmbzhfcmF0ZSB0eXBlPSIyIiB2YWx1ZT0iMC4wMDAwMDAiIGRlYWN0aXZhdGVkPSIwIiAvPjxhX2xmbzhfcGhhc2UgdHlwZT0iMiIgdmFsdWU9IjAuMDAwMDAwIiAvPjxhX2xmbzhfbWFnbml0dWRlIHR5cGU9IjIiIHZhbHVlPSIxLjAwMDAwMCIgLz48YV9sZm84X2RlZm9ybSB0eXBlPSIyIiB2YWx1ZT0iMC4wMDAwMDAiIC8+PGFfbGZvOF90cmlnbW9kZSB0eXBlPSIwIiB2YWx1ZT0iMSIgLz48YV9sZm84X3VuaXBvbGFyIHR5cGU9IjAiIHZhbHVlPSIwIiAvPjxhX2xmbzhfZGVsYXkgdHlwZT0iMiIgdmFsdWU9Ii04LjAwMDAwMCIgLz48YV9sZm84X2F0dGFjayB0eXBlPSIyIiB2YWx1ZT0iLTguMDAwMDAwIiAvPjxhX2xmbzhfaG9sZCB0eXBlPSIyIiB2YWx1ZT0iLTguMDAwMDAwIiAvPjxhX2xmbzhfZGVjYXkgdHlwZT0iMiIgdmFsdWU9IjUuMDAwMDAwIiAvPjxhX2xmbzhfc3VzdGFpbiB0eXBlPSIyIiB2YWx1ZT0iMS4wMDAwMDAiIC8+PGFfbGZvOF9yZWxlYXNlIHR5cGU9IjIiIHZhbHVlPSI1LjAwMDAwMCIgLz48YV9sZm85X3NoYXBlIHR5cGU9IjAiIHZhbHVlPSIwIiAvPjxhX2xmbzlfcmF0ZSB0eXBlPSIyIiB2YWx1ZT0iMC4wMDAwMDAiIGRlYWN0aXZhdGVkPSIwIiAvPjxhX2xmbzlfcGhhc2UgdHlwZT0iMiIgdmFsdWU9IjAuMDAwMDAwIiAvPjxhX2xmbzlfbWFnbml0dWRlIHR5cGU9IjIiIHZhbHVlPSIxLjAwMDAwMCIgLz48YV9sZm85X2RlZm9ybSB0eXBlPSIyIiB2YWx1ZT0iMC4wMDAwMDAiIC8+PGFfbGZvOV90cmlnbW9kZSB0eXBlPSIwIiB2YWx1ZT0iMSIgLz48YV9sZm85X3VuaXBvbGFyIHR5cGU9IjAiIHZhbHVlPSIwIiAvPjxhX2xmbzlfZGVsYXkgdHlwZT0iMiIgdmFsdWU9Ii04LjAwMDAwMCIgLz48YV9sZm85X2F0dGFjayB0eXBlPSIyIiB2YWx1ZT0iLTguMDAwMDAwIiAvPjxhX2xmbzlfaG9sZCB0eXBlPSIyIiB2YWx1ZT0iLTguMDAwMDAwIiAvPjxhX2xmbzlfZGVjYXkgdHlwZT0iMiIgdmFsdWU9IjUuMDAwMDAwIiAvPjxhX2xmbzlfc3VzdGFpbiB0eXBlPSIyIiB2YWx1ZT0iMS4wMDAwMDAiIC8+PGFfbGZvOV9yZWxlYXNlIHR5cGU9IjIiIHZhbHVlPSI1LjAwMDAwMCIgLz48YV9sZm8xMF9zaGFwZSB0eXBlPSIwIiB2YWx1ZT0iMCIgLz48YV9sZm8xMF9yYXRlIHR5cGU9IjIiIHZhbHVlPSIwLjAwMDAwMCIgZGVhY3RpdmF0ZWQ9IjAiIC8+PGFfbGZvMTBfcGhhc2UgdHlwZT0iMiIgdmFsdWU9IjAuMDAwMDAwIiAvPjxhX2xmbzEwX21hZ25pdHVkZSB0eXBlPSIyIiB2YWx1ZT0iMS4wMDAwMDAiIC8+PGFfbGZvMTBfZGVmb3JtIHR5cGU9IjIiIHZhbHVlPSIwLjAwMDAwMCIgLz48YV9sZm8xMF90cmlnbW9kZSB0eXBlPSIwIiB2YWx1ZT0iMSIgLz48YV9sZm8xMF91bmlwb2xhciB0eXBlPSIwIiB2YWx1ZT0iMCIgLz48YV9sZm8xMF9kZWxheSB0eXBlPSIyIiB2YWx1ZT0iLTguMDAwMDAwIiAvPjxhX2xmbzEwX2F0dGFjayB0eXBlPSIyIiB2YWx1ZT0iLTguMDAwMDAwIiAvPjxhX2xmbzEwX2hvbGQgdHlwZT0iMiIgdmFsdWU9Ii04LjAwMDAwMCIgLz48YV9sZm8xMF9kZWNheSB0eXBlPSIyIiB2YWx1ZT0iNS4wMDAwMDAiIC8+PGFfbGZvMTBfc3VzdGFpbiB0eXBlPSIyIiB2YWx1ZT0iMS4wMDAwMDAiIC8+PGFfbGZvMTBfcmVsZWFzZSB0eXBlPSIyIiB2YWx1ZT0iNS4wMDAwMDAiIC8+PGFfbGZvMTFfc2hhcGUgdHlwZT0iMCIgdmFsdWU9IjAiIC8+PGFfbGZvMTFfcmF0ZSB0eXBlPSIyIiB2YWx1ZT0iMC4wMDAwMDAiIGRlYWN0aXZhdGVkPSIwIiAvPjxhX2xmbzExX3BoYXNlIHR5cGU9IjIiIHZhbHVlPSIwLjAwMDAwMCIgLz48YV9sZm8xMV9tYWduaXR1ZGUgdHlwZT0iMiIgdmFsdWU9IjEuMDAwMDAwIiAvPjxhX2xmbzExX2RlZm9ybSB0eXBlPSIyIiB2YWx1ZT0iMC4wMDAwMDAiIC8+PGFfbGZvMTFfdHJpZ21vZGUgdHlwZT0iMCIgdmFsdWU9IjEiIC8+PGFfbGZvMTFfdW5pcG9sYXIgdHlwZT0iMCIgdmFsdWU9IjAiIC8+PGFfbGZvMTFfZGVsYXkgdHlwZT0iMiIgdmFsdWU9Ii04LjAwMDAwMCIgLz48YV9sZm8xMV9hdHRhY2sgdHlwZT0iMiIgdmFsdWU9Ii04LjAwMDAwMCIgLz48YV9sZm8xMV9ob2xkIHR5cGU9IjIiIHZhbHVlPSItOC4wMDAwMDAiIC8+PGFfbGZvMTFfZGVjYXkgdHlwZT0iMiIgdmFsdWU9IjUuMDAwMDAwIiAvPjxhX2xmbzExX3N1c3RhaW4gdHlwZT0iMiIgdmFsdWU9IjEuMDAwMDAwIiAvPjxhX2xmbzExX3JlbGVhc2UgdHlwZT0iMiIgdmFsdWU9IjUuMDAwMDAwIiAvPjxiX29jdGF2ZSB0eXBlPSIwIiB2YWx1ZT0iMCIgLz48Yl9waXRjaCB0eXBlPSIyIiB2YWx1ZT0iMC4wMDAwMDAiIC8+PGJfcG9ydGFtZW50byB0eXBlPSIyIiB2YWx1ZT0iLTguMDAwMDAwIiBwb3J0YV9jb25zdF9yYXRlPSIwIiBwb3J0YV9nbGlzcz0iMCIgcG9ydGFfcmV0cmlnZ2VyPSIwIiBwb3J0YV9jdXJ2ZT0iMCIgLz48Yl9vc2MxX3R5cGUgdHlwZT0iMCIgdmFsdWU9IjAiIC8+PGJfb3NjMV9vY3RhdmUgdHlwZT0iMCIgdmFsdWU9IjAiIC8+PGJfb3NjMV9waXRjaCB0eXBlPSIyIiB2YWx1ZT0iMC4wMDAwMDAiIC8+PGJfb3NjMV9wYXJhbTAgdHlwZT0iMiIgdmFsdWU9IjAuMDAwMDAwIiAvPjxiX29zYzFfcGFyYW0xIHR5cGU9IjIiIHZhbHVlPSIwLjUwMDAwMCIgLz48Yl9vc2MxX3BhcmFtMiB0eXBlPSIyIiB2YWx1ZT0iMC41MDAwMDAiIC8+PGJfb3NjMV9wYXJhbTMgdHlwZT0iMiIgdmFsdWU9IjAuMDAwMDAwIiAvPjxiX29zYzFfcGFyYW00IHR5cGU9IjIiIHZhbHVlPSIwLjAwMDAwMCIgLz48Yl9vc2MxX3BhcmFtNSB0eXBlPSIyIiB2YWx1ZT0iMC4yMDAwMDAiIC8+PGJfb3NjMV9wYXJhbTYgdHlwZT0iMCIgdmFsdWU9IjEiIC8+PGJfb3NjMV9rZXl0cmFjayB0eXBlPSIwIiB2YWx1ZT0iMSIgLz48Yl9vc2MxX3JldHJpZ2dlciB0eXBlPSIwIiB2YWx1ZT0iMCIgLz48Yl9vc2MyX3R5cGUgdHlwZT0iMCIgdmFsdWU9IjAiIC8+PGJfb3NjMl9vY3RhdmUgdHlwZT0iMCIgdmFsdWU9IjAiIC8+PGJfb3NjMl9waXRjaCB0eXBlPSIyIiB2YWx1ZT0iMC4wMDAwMDAiIC8+PGJfb3NjMl9wYXJhbTAgdHlwZT0iMiIgdmFsdWU9IjAuMDAwMDAwIiAvPjxiX29zYzJfcGFyYW0xIHR5cGU9IjIiIHZhbHVlPSIwLjUwMDAwMCIgLz48Yl9vc2MyX3BhcmFtMiB0eXBlPSIyIiB2YWx1ZT0iMC41MDAwMDAiIC8+PGJfb3NjMl9wYXJhbTMgdHlwZT0iMiIgdmFsdWU9IjAuMDAwMDAwIiAvPjxiX29zYzJfcGFyYW00IHR5cGU9IjIiIHZhbHVlPSIwLjAwMDAwMCIgLz48Yl9vc2MyX3BhcmFtNSB0eXBlPSIyIiB2YWx1ZT0iMC4yMDAwMDAiIC8+PGJfb3NjMl9wYXJhbTYgdHlwZT0iMCIgdmFsdWU9IjEiIC8+PGJfb3NjMl9rZXl0cmFjayB0eXBlPSIwIiB2YWx1ZT0iMSIgLz48Yl9vc2MyX3JldHJpZ2dlciB0eXBlPSIwIiB2YWx1ZT0iMCIgLz48Yl9vc2MzX3R5cGUgdHlwZT0iMCIgdmFsdWU9IjAiIC8+PGJfb3NjM19vY3RhdmUgdHlwZT0iMCIgdmFsdWU9IjAiIC8+PGJfb3NjM19waXRjaCB0eXBlPSIyIiB2YWx1ZT0iMC4wMDAwMDAiIC8+PGJfb3NjM19wYXJhbTAgdHlwZT0iMiIgdmFsdWU9IjAuMDAwMDAwIiAvPjxiX29zYzNfcGFyYW0xIHR5cGU9IjIiIHZhbHVlPSIwLjUwMDAwMCIgLz48Yl9vc2MzX3BhcmFtMiB0eXBlPSIyIiB2YWx1ZT0iMC41MDAwMDAiIC8+PGJfb3NjM19wYXJhbTMgdHlwZT0iMiIgdmFsdWU9IjAuMDAwMDAwIiAvPjxiX29zYzNfcGFyYW00IHR5cGU9IjIiIHZhbHVlPSIwLjAwMDAwMCIgLz48Yl9vc2MzX3BhcmFtNSB0eXBlPSIyIiB2YWx1ZT0iMC4yMDAwMDAiIC8+PGJfb3NjM19wYXJhbTYgdHlwZT0iMCIgdmFsdWU9IjEiIC8+PGJfb3NjM19rZXl0cmFjayB0eXBlPSIwIiB2YWx1ZT0iMSIgLz48Yl9vc2MzX3JldHJpZ2dlciB0eXBlPSIwIiB2YWx1ZT0iMCIgLz48Yl9wb2x5bW9kZSB0eXBlPSIwIiB2YWx1ZT0iMCIgLz48Yl9mbV9zd2l0Y2ggdHlwZT0iMCIgdmFsdWU9IjAiIC8+PGJfZm1fZGVwdGggdHlwZT0iMiIgdmFsdWU9Ii0yNC4wMDAwMDAiIC8+PGJfZHJpZnQgdHlwZT0iMiIgdmFsdWU9IjAuMDAwMDAwIiAvPjxiX25vaXNlY29sIHR5cGU9IjIiIHZhbHVlPSIwLjAwMDAwMCIgLz48Yl9rdHJrcm9vdCB0eXBlPSIwIiB2YWx1ZT0iNjAiIC8+PGJfdm9sdW1lIHR5cGU9IjIiIHZhbHVlPSIxLjAwMDAwMCIgLz48Yl9wYW4gdHlwZT0iMiIgdmFsdWU9IjAuMDAwMDAwIiAvPjxiX3BhbjIgdHlwZT0iMiIgdmFsdWU9IjAuMDAwMDAwIiAvPjxiX3NlbmRfZnhfMSB0eXBlPSIyIiB2YWx1ZT0iMC4wMDAwMDAiIC8+PGJfc2VuZF9meF8yIHR5cGU9IjIiIHZhbHVlPSIwLjAwMDAwMCIgLz48Yl9sZXZlbF9vMSB0eXBlPSIyIiB2YWx1ZT0iMS4wMDAwMDAiIC8+PGJfbXV0ZV9vMSB0eXBlPSIwIiB2YWx1ZT0iMCIgLz48Yl9zb2xvX28xIHR5cGU9IjAiIHZhbHVlPSIwIiAvPjxiX3JvdXRlX28xIHR5cGU9IjAiIHZhbHVlPSIxIiAvPjxiX2xldmVsX28yIHR5cGU9IjIiIHZhbHVlPSIxLjAwMDAwMCIgLz48Yl9tdXRlX28yIHR5cGU9IjAiIHZhbHVlPSIxIiAvPjxiX3NvbG9fbzIgdHlwZT0iMCIgdmFsdWU9IjAiIC8+PGJfcm91dGVfbzIgdHlwZT0iMCIgdmFsdWU9IjEiIC8+PGJfbGV2ZWxfbzMgdHlwZT0iMiIgdmFsdWU9IjEuMDAwMDAwIiAvPjxiX211dGVfbzMgdHlwZT0iMCIgdmFsdWU9IjEiIC8+PGJfc29sb19vMyB0eXBlPSIwIiB2YWx1ZT0iMCIgLz48Yl9yb3V0ZV9vMyB0eXBlPSIwIiB2YWx1ZT0iMSIgLz48Yl9sZXZlbF9yaW5nMTIgdHlwZT0iMiIgdmFsdWU9IjEuMDAwMDAwIiAvPjxiX211dGVfcmluZzEyIHR5cGU9IjAiIHZhbHVlPSIxIiAvPjxiX3NvbG9fcmluZzEyIHR5cGU9IjAiIHZhbHVlPSIwIiAvPjxiX3JvdXRlX3JpbmcxMiB0eXBlPSIwIiB2YWx1ZT0iMSIgLz48Yl9sZXZlbF9yaW5nMjMgdHlwZT0iMiIgdmFsdWU9IjEuMDAwMDAwIiAvPjxiX211dGVfcmluZzIzIHR5cGU9IjAiIHZhbHVlPSIxIiAvPjxiX3NvbG9fcmluZzIzIHR5cGU9IjAiIHZhbHVlPSIwIiAvPjxiX3JvdXRlX3JpbmcyMyB0eXBlPSIwIiB2YWx1ZT0iMSIgLz48Yl9sZXZlbF9ub2lzZSB0eXBlPSIyIiB2YWx1ZT0iMS4wMDAwMDAiIC8+PGJfbXV0ZV9ub2lzZSB0eXBlPSIwIiB2YWx1ZT0iMSIgLz48Yl9zb2xvX25vaXNlIHR5cGU9IjAiIHZhbHVlPSIwIiAvPjxiX3JvdXRlX25vaXNlIHR5cGU9IjAiIHZhbHVlPSIxIiAvPjxiX2xldmVsX3BmZyB0eXBlPSIyIiB2YWx1ZT0iMC4wMDAwMDAiIC8+PGJfcGJyYW5nZV91cCB0eXBlPSIwIiB2YWx1ZT0iMiIgLz48Yl9wYnJhbmdlX2RuIHR5cGU9IjAiIHZhbHVlPSIyIiAvPjxiX3ZjYV9sZXZlbCB0eXBlPSIyIiB2YWx1ZT0iMC4wMDAwMDAiIC8+PGJfdmNhX3ZlbHNlbnNlIHR5cGU9IjIiIHZhbHVlPSIwLjAwMDAwMCIgLz48Yl9mZWVkYmFjayB0eXBlPSIyIiB2YWx1ZT0iMC4wMDAwMDAiIC8+PGJfZmJfY29uZmlnIHR5cGU9IjAiIHZhbHVlPSIwIiAvPjxiX2ZfYmFsYW5jZSB0eXBlPSIyIiB2YWx1ZT0iMC4wMDAwMDAiIC8+PGJfbG93Y3V0IHR5cGU9IjIiIHZhbHVlPSItNzIuMDAwMDAwIiAvPjxiX3dzX3R5cGUgdHlwZT0iMCIgdmFsdWU9IjAiIC8+PGJfd3NfZHJpdmUgdHlwZT0iMiIgdmFsdWU9IjAuMDAwMDAwIiAvPjxiX2ZpbHRlcjFfdHlwZSB0eXBlPSIwIiB2YWx1ZT0iMCIgLz48Yl9maWx0ZXIxX3N1YnR5cGUgdHlwZT0iMCIgdmFsdWU9IjAiIC8+PGJfZmlsdGVyMV9jdXRvZmYgdHlwZT0iMiIgdmFsdWU9IjMuMDAwMDAwIiAvPjxiX2ZpbHRlcjFfcmVzb25hbmNlIHR5cGU9IjIiIHZhbHVlPSIwLjAwMDAwMCIgLz48Yl9maWx0ZXIxX2Vudm1vZCB0eXBlPSIyIiB2YWx1ZT0iMC4wMDAwMDAiIC8+PGJfZmlsdGVyMV9rZXl0cmFjayB0eXBlPSIyIiB2YWx1ZT0iMC4wMDAwMDAiIC8+PGJfZmlsdGVyMl90eXBlIHR5cGU9IjAiIHZhbHVlPSIwIiAvPjxiX2ZpbHRlcjJfc3VidHlwZSB0eXBlPSIwIiB2YWx1ZT0iMCIgLz48Yl9maWx0ZXIyX2N1dG9mZiB0eXBlPSIyIiB2YWx1ZT0iMy4wMDAwMDAiIC8+PGJfZjJfY2ZfaXNfb2Zmc2V0IHR5cGU9IjAiIHZhbHVlPSIwIiAvPjxiX2ZpbHRlcjJfcmVzb25hbmNlIHR5cGU9IjIiIHZhbHVlPSIwLjAwMDAwMCIgLz48Yl9mMl9saW5rX3Jlc29uYW5jZSB0eXBlPSIwIiB2YWx1ZT0iMCIgLz48Yl9maWx0ZXIyX2Vudm1vZCB0eXBlPSIyIiB2YWx1ZT0iMC4wMDAwMDAiIC8+PGJfZmlsdGVyMl9rZXl0cmFjayB0eXBlPSIyIiB2YWx1ZT0iMC4wMDAwMDAiIC8+PGJfZW52MV9hdHRhY2sgdHlwZT0iMiIgdmFsdWU9Ii04LjAwMDAwMCIgLz48Yl9lbnYxX2F0dGFja19zaGFwZSB0eXBlPSIwIiB2YWx1ZT0iMSIgLz48Yl9lbnYxX2RlY2F5IHR5cGU9IjIiIHZhbHVlPSIwLjAwMDAwMCIgLz48Yl9lbnYxX2RlY2F5X3NoYXBlIHR5cGU9IjAiIHZhbHVlPSIwIiAvPjxiX2VudjFfc3VzdGFpbiB0eXBlPSIyIiB2YWx1ZT0iMS4wMDAwMDAiIC8+PGJfZW52MV9yZWxlYXNlIHR5cGU9IjIiIHZhbHVlPSItNS4wMDAwMDAiIC8+PGJfZW52MV9yZWxlYXNlX3NoYXBlIHR5cGU9IjAiIHZhbHVlPSIyIiAvPjxiX2VudjFfbW9kZSB0eXBlPSIwIiB2YWx1ZT0iMCIgLz48Yl9lbnYyX2F0dGFjayB0eXBlPSIyIiB2YWx1ZT0iLTguMDAwMDAwIiAvPjxiX2VudjJfYXR0YWNrX3NoYXBlIHR5cGU9IjAiIHZhbHVlPSIxIiAvPjxiX2VudjJfZGVjYXkgdHlwZT0iMiIgdmFsdWU9Ii0yLjAwMDAwMCIgLz48Yl9lbnYyX2RlY2F5X3NoYXBlIHR5cGU9IjAiIHZhbHVlPSIwIiAvPjxiX2VudjJfc3VzdGFpbiB0eXBlPSIyIiB2YWx1ZT0iMC4wMDAwMDAiIC8+PGJfZW52Ml9yZWxlYXNlIHR5cGU9IjIiIHZhbHVlPSItMi4wMDAwMDAiIC8+PGJfZW52Ml9yZWxlYXNlX3NoYXBlIHR5cGU9IjAiIHZhbHVlPSIwIiAvPjxiX2VudjJfbW9kZSB0eXBlPSIwIiB2YWx1ZT0iMCIgLz48Yl9sZm8wX3NoYXBlIHR5cGU9IjAiIHZhbHVlPSIwIiAvPjxiX2xmbzBfcmF0ZSB0eXBlPSIyIiB2YWx1ZT0iMC4wMDAwMDAiIGRlYWN0aXZhdGVkPSIwIiAvPjxiX2xmbzBfcGhhc2UgdHlwZT0iMiIgdmFsdWU9IjAuMDAwMDAwIiAvPjxiX2xmbzBfbWFnbml0dWRlIHR5cGU9IjIiIHZhbHVlPSIxLjAwMDAwMCIgLz48Yl9sZm8wX2RlZm9ybSB0eXBlPSIyIiB2YWx1ZT0iMC4wMDAwMDAiIC8+PGJfbGZvMF90cmlnbW9kZSB0eXBlPSIwIiB2YWx1ZT0iMSIgLz48Yl9sZm8wX3VuaXBvbGFyIHR5cGU9IjAiIHZhbHVlPSIwIiAvPjxiX2xmbzBfZGVsYXkgdHlwZT0iMiIgdmFsdWU9Ii04LjAwMDAwMCIgLz48Yl9sZm8wX2F0dGFjayB0eXBlPSIyIiB2YWx1ZT0iLTguMDAwMDAwIiAvPjxiX2xmbzBfaG9sZCB0eXBlPSIyIiB2YWx1ZT0iLTguMDAwMDAwIiAvPjxiX2xmbzBfZGVjYXkgdHlwZT0iMiIgdmFsdWU9IjUuMDAwMDAwIiAvPjxiX2xmbzBfc3VzdGFpbiB0eXBlPSIyIiB2YWx1ZT0iMS4wMDAwMDAiIC8+PGJfbGZvMF9yZWxlYXNlIHR5cGU9IjIiIHZhbHVlPSI1LjAwMDAwMCIgLz48Yl9sZm8xX3NoYXBlIHR5cGU9IjAiIHZhbHVlPSIwIiAvPjxiX2xmbzFfcmF0ZSB0eXBlPSIyIiB2YWx1ZT0iMC4wMDAwMDAiIGRlYWN0aXZhdGVkPSIwIiAvPjxiX2xmbzFfcGhhc2UgdHlwZT0iMiIgdmFsdWU9IjAuMDAwMDAwIiAvPjxiX2xmbzFfbWFnbml0dWRlIHR5cGU9IjIiIHZhbHVlPSIxLjAwMDAwMCIgLz48Yl9sZm8xX2RlZm9ybSB0eXBlPSIyIiB2YWx1ZT0iMC4wMDAwMDAiIC8+PGJfbGZvMV90cmlnbW9kZSB0eXBlPSIwIiB2YWx1ZT0iMSIgLz48Yl9sZm8xX3VuaXBvbGFyIHR5cGU9IjAiIHZhbHVlPSIwIiAvPjxiX2xmbzFfZGVsYXkgdHlwZT0iMiIgdmFsdWU9Ii04LjAwMDAwMCIgLz48Yl9sZm8xX2F0dGFjayB0eXBlPSIyIiB2YWx1ZT0iLTguMDAwMDAwIiAvPjxiX2xmbzFfaG9sZCB0eXBlPSIyIiB2YWx1ZT0iLTguMDAwMDAwIiAvPjxiX2xmbzFfZGVjYXkgdHlwZT0iMiIgdmFsdWU9IjUuMDAwMDAwIiAvPjxiX2xmbzFfc3VzdGFpbiB0eXBlPSIyIiB2YWx1ZT0iMS4wMDAwMDAiIC8+PGJfbGZvMV9yZWxlYXNlIHR5cGU9IjIiIHZhbHVlPSI1LjAwMDAwMCIgLz48Yl9sZm8yX3NoYXBlIHR5cGU9IjAiIHZhbHVlPSIwIiAvPjxiX2xmbzJfcmF0ZSB0eXBlPSIyIiB2YWx1ZT0iMC4wMDAwMDAiIGRlYWN0aXZhdGVkPSIwIiAvPjxiX2xmbzJfcGhhc2UgdHlwZT0iMiIgdmFsdWU9IjAuMDAwMDAwIiAvPjxiX2xmbzJfbWFnbml0dWRlIHR5cGU9IjIiIHZhbHVlPSIxLjAwMDAwMCIgLz48Yl9sZm8yX2RlZm9ybSB0eXBlPSIyIiB2YWx1ZT0iMC4wMDAwMDAiIC8+PGJfbGZvMl90cmlnbW9kZSB0eXBlPSIwIiB2YWx1ZT0iMSIgLz48Yl9sZm8yX3VuaXBvbGFyIHR5cGU9IjAiIHZhbHVlPSIwIiAvPjxiX2xmbzJfZGVsYXkgdHlwZT0iMiIgdmFsdWU9Ii04LjAwMDAwMCIgLz48Yl9sZm8yX2F0dGFjayB0eXBlPSIyIiB2YWx1ZT0iLTguMDAwMDAwIiAvPjxiX2xmbzJfaG9sZCB0eXBlPSIyIiB2YWx1ZT0iLTguMDAwMDAwIiAvPjxiX2xmbzJfZGVjYXkgdHlwZT0iMiIgdmFsdWU9IjUuMDAwMDAwIiAvPjxiX2xmbzJfc3VzdGFpbiB0eXBlPSIyIiB2YWx1ZT0iMS4wMDAwMDAiIC8+PGJfbGZvMl9yZWxlYXNlIHR5cGU9IjIiIHZhbHVlPSI1LjAwMDAwMCIgLz48Yl9sZm8zX3NoYXBlIHR5cGU9IjAiIHZhbHVlPSIwIiAvPjxiX2xmbzNfcmF0ZSB0eXBlPSIyIiB2YWx1ZT0iMC4wMDAwMDAiIGRlYWN0aXZhdGVkPSIwIiAvPjxiX2xmbzNfcGhhc2UgdHlwZT0iMiIgdmFsdWU9IjAuMDAwMDAwIiAvPjxiX2xmbzNfbWFnbml0dWRlIHR5cGU9IjIiIHZhbHVlPSIxLjAwMDAwMCIgLz48Yl9sZm8zX2RlZm9ybSB0eXBlPSIyIiB2YWx1ZT0iMC4wMDAwMDAiIC8+PGJfbGZvM190cmlnbW9kZSB0eXBlPSIwIiB2YWx1ZT0iMSIgLz48Yl9sZm8zX3VuaXBvbGFyIHR5cGU9IjAiIHZhbHVlPSIwIiAvPjxiX2xmbzNfZGVsYXkgdHlwZT0iMiIgdmFsdWU9Ii04LjAwMDAwMCIgLz48Yl9sZm8zX2F0dGFjayB0eXBlPSIyIiB2YWx1ZT0iLTguMDAwMDAwIiAvPjxiX2xmbzNfaG9sZCB0eXBlPSIyIiB2YWx1ZT0iLTguMDAwMDAwIiAvPjxiX2xmbzNfZGVjYXkgdHlwZT0iMiIgdmFsdWU9IjUuMDAwMDAwIiAvPjxiX2xmbzNfc3VzdGFpbiB0eXBlPSIyIiB2YWx1ZT0iMS4wMDAwMDAiIC8+PGJfbGZvM19yZWxlYXNlIHR5cGU9IjIiIHZhbHVlPSI1LjAwMDAwMCIgLz48Yl9sZm80X3NoYXBlIHR5cGU9IjAiIHZhbHVlPSIwIiAvPjxiX2xmbzRfcmF0ZSB0eXBlPSIyIiB2YWx1ZT0iMC4wMDAwMDAiIGRlYWN0aXZhdGVkPSIwIiAvPjxiX2xmbzRfcGhhc2UgdHlwZT0iMiIgdmFsdWU9IjAuMDAwMDAwIiAvPjxiX2xmbzRfbWFnbml0dWRlIHR5cGU9IjIiIHZhbHVlPSIxLjAwMDAwMCIgLz48Yl9sZm80X2RlZm9ybSB0eXBlPSIyIiB2YWx1ZT0iMC4wMDAwMDAiIC8+PGJfbGZvNF90cmlnbW9kZSB0eXBlPSIwIiB2YWx1ZT0iMSIgLz48Yl9sZm80X3VuaXBvbGFyIHR5cGU9IjAiIHZhbHVlPSIwIiAvPjxiX2xmbzRfZGVsYXkgdHlwZT0iMiIgdmFsdWU9Ii04LjAwMDAwMCIgLz48Yl9sZm80X2F0dGFjayB0eXBlPSIyIiB2YWx1ZT0iLTguMDAwMDAwIiAvPjxiX2xmbzRfaG9sZCB0eXBlPSIyIiB2YWx1ZT0iLTguMDAwMDAwIiAvPjxiX2xmbzRfZGVjYXkgdHlwZT0iMiIgdmFsdWU9IjUuMDAwMDAwIiAvPjxiX2xmbzRfc3VzdGFpbiB0eXBlPSIyIiB2YWx1ZT0iMS4wMDAwMDAiIC8+PGJfbGZvNF9yZWxlYXNlIHR5cGU9IjIiIHZhbHVlPSI1LjAwMDAwMCIgLz48Yl9sZm81X3NoYXBlIHR5cGU9IjAiIHZhbHVlPSIwIiAvPjxiX2xmbzVfcmF0ZSB0eXBlPSIyIiB2YWx1ZT0iMC4wMDAwMDAiIGRlYWN0aXZhdGVkPSIwIiAvPjxiX2xmbzVfcGhhc2UgdHlwZT0iMiIgdmFsdWU9IjAuMDAwMDAwIiAvPjxiX2xmbzVfbWFnbml0dWRlIHR5cGU9IjIiIHZhbHVlPSIxLjAwMDAwMCIgLz48Yl9sZm81X2RlZm9ybSB0eXBlPSIyIiB2YWx1ZT0iMC4wMDAwMDAiIC8+PGJfbGZvNV90cmlnbW9kZSB0eXBlPSIwIiB2YWx1ZT0iMSIgLz48Yl9sZm81X3VuaXBvbGFyIHR5cGU9IjAiIHZhbHVlPSIwIiAvPjxiX2xmbzVfZGVsYXkgdHlwZT0iMiIgdmFsdWU9Ii04LjAwMDAwMCIgLz48Yl9sZm81X2F0dGFjayB0eXBlPSIyIiB2YWx1ZT0iLTguMDAwMDAwIiAvPjxiX2xmbzVfaG9sZCB0eXBlPSIyIiB2YWx1ZT0iLTguMDAwMDAwIiAvPjxiX2xmbzVfZGVjYXkgdHlwZT0iMiIgdmFsdWU9IjUuMDAwMDAwIiAvPjxiX2xmbzVfc3VzdGFpbiB0eXBlPSIyIiB2YWx1ZT0iMS4wMDAwMDAiIC8+PGJfbGZvNV9yZWxlYXNlIHR5cGU9IjIiIHZhbHVlPSI1LjAwMDAwMCIgLz48Yl9sZm82X3NoYXBlIHR5cGU9IjAiIHZhbHVlPSIwIiAvPjxiX2xmbzZfcmF0ZSB0eXBlPSIyIiB2YWx1ZT0iMC4wMDAwMDAiIGRlYWN0aXZhdGVkPSIwIiAvPjxiX2xmbzZfcGhhc2UgdHlwZT0iMiIgdmFsdWU9IjAuMDAwMDAwIiAvPjxiX2xmbzZfbWFnbml0dWRlIHR5cGU9IjIiIHZhbHVlPSIxLjAwMDAwMCIgLz48Yl9sZm82X2RlZm9ybSB0eXBlPSIyIiB2YWx1ZT0iMC4wMDAwMDAiIC8+PGJfbGZvNl90cmlnbW9kZSB0eXBlPSIwIiB2YWx1ZT0iMSIgLz48Yl9sZm82X3VuaXBvbGFyIHR5cGU9IjAiIHZhbHVlPSIwIiAvPjxiX2xmbzZfZGVsYXkgdHlwZT0iMiIgdmFsdWU9Ii04LjAwMDAwMCIgLz48Yl9sZm82X2F0dGFjayB0eXBlPSIyIiB2YWx1ZT0iLTguMDAwMDAwIiAvPjxiX2xmbzZfaG9sZCB0eXBlPSIyIiB2YWx1ZT0iLTguMDAwMDAwIiAvPjxiX2xmbzZfZGVjYXkgdHlwZT0iMiIgdmFsdWU9IjUuMDAwMDAwIiAvPjxiX2xmbzZfc3VzdGFpbiB0eXBlPSIyIiB2YWx1ZT0iMS4wMDAwMDAiIC8+PGJfbGZvNl9yZWxlYXNlIHR5cGU9IjIiIHZhbHVlPSI1LjAwMDAwMCIgLz48Yl9sZm83X3NoYXBlIHR5cGU9IjAiIHZhbHVlPSIwIiAvPjxiX2xmbzdfcmF0ZSB0eXBlPSIyIiB2YWx1ZT0iMC4wMDAwMDAiIGRlYWN0aXZhdGVkPSIwIiAvPjxiX2xmbzdfcGhhc2UgdHlwZT0iMiIgdmFsdWU9IjAuMDAwMDAwIiAvPjxiX2xmbzdfbWFnbml0dWRlIHR5cGU9IjIiIHZhbHVlPSIxLjAwMDAwMCIgLz48Yl9sZm83X2RlZm9ybSB0eXBlPSIyIiB2YWx1ZT0iMC4wMDAwMDAiIC8+PGJfbGZvN190cmlnbW9kZSB0eXBlPSIwIiB2YWx1ZT0iMSIgLz48Yl9sZm83X3VuaXBvbGFyIHR5cGU9IjAiIHZhbHVlPSIwIiAvPjxiX2xmbzdfZGVsYXkgdHlwZT0iMiIgdmFsdWU9Ii04LjAwMDAwMCIgLz48Yl9sZm83X2F0dGFjayB0eXBlPSIyIiB2YWx1ZT0iLTguMDAwMDAwIiAvPjxiX2xmbzdfaG9sZCB0eXBlPSIyIiB2YWx1ZT0iLTguMDAwMDAwIiAvPjxiX2xmbzdfZGVjYXkgdHlwZT0iMiIgdmFsdWU9IjUuMDAwMDAwIiAvPjxiX2xmbzdfc3VzdGFpbiB0eXBlPSIyIiB2YWx1ZT0iMS4wMDAwMDAiIC8+PGJfbGZvN19yZWxlYXNlIHR5cGU9IjIiIHZhbHVlPSI1LjAwMDAwMCIgLz48Yl9sZm84X3NoYXBlIHR5cGU9IjAiIHZhbHVlPSIwIiAvPjxiX2xmbzhfcmF0ZSB0eXBlPSIyIiB2YWx1ZT0iMC4wMDAwMDAiIGRlYWN0aXZhdGVkPSIwIiAvPjxiX2xmbzhfcGhhc2UgdHlwZT0iMiIgdmFsdWU9IjAuMDAwMDAwIiAvPjxiX2xmbzhfbWFnbml0dWRlIHR5cGU9IjIiIHZhbHVlPSIxLjAwMDAwMCIgLz48Yl9sZm84X2RlZm9ybSB0eXBlPSIyIiB2YWx1ZT0iMC4wMDAwMDAiIC8+PGJfbGZvOF90cmlnbW9kZSB0eXBlPSIwIiB2YWx1ZT0iMSIgLz48Yl9sZm84X3VuaXBvbGFyIHR5cGU9IjAiIHZhbHVlPSIwIiAvPjxiX2xmbzhfZGVsYXkgdHlwZT0iMiIgdmFsdWU9Ii04LjAwMDAwMCIgLz48Yl9sZm84X2F0dGFjayB0eXBlPSIyIiB2YWx1ZT0iLTguMDAwMDAwIiAvPjxiX2xmbzhfaG9sZCB0eXBlPSIyIiB2YWx1ZT0iLTguMDAwMDAwIiAvPjxiX2xmbzhfZGVjYXkgdHlwZT0iMiIgdmFsdWU9IjUuMDAwMDAwIiAvPjxiX2xmbzhfc3VzdGFpbiB0eXBlPSIyIiB2YWx1ZT0iMS4wMDAwMDAiIC8+PGJfbGZvOF9yZWxlYXNlIHR5cGU9IjIiIHZhbHVlPSI1LjAwMDAwMCIgLz48Yl9sZm85X3NoYXBlIHR5cGU9IjAiIHZhbHVlPSIwIiAvPjxiX2xmbzlfcmF0ZSB0eXBlPSIyIiB2YWx1ZT0iMC4wMDAwMDAiIGRlYWN0aXZhdGVkPSIwIiAvPjxiX2xmbzlfcGhhc2UgdHlwZT0iMiIgdmFsdWU9IjAuMDAwMDAwIiAvPjxiX2xmbzlfbWFnbml0dWRlIHR5cGU9IjIiIHZhbHVlPSIxLjAwMDAwMCIgLz48Yl9sZm85X2RlZm9ybSB0eXBlPSIyIiB2YWx1ZT0iMC4wMDAwMDAiIC8+PGJfbGZvOV90cmlnbW9kZSB0eXBlPSIwIiB2YWx1ZT0iMSIgLz48Yl9sZm85X3VuaXBvbGFyIHR5cGU9IjAiIHZhbHVlPSIwIiAvPjxiX2xmbzlfZGVsYXkgdHlwZT0iMiIgdmFsdWU9Ii04LjAwMDAwMCIgLz48Yl9sZm85X2F0dGFjayB0eXBlPSIyIiB2YWx1ZT0iLTguMDAwMDAwIiAvPjxiX2xmbzlfaG9sZCB0eXBlPSIyIiB2YWx1ZT0iLTguMDAwMDAwIiAvPjxiX2xmbzlfZGVjYXkgdHlwZT0iMiIgdmFsdWU9IjUuMDAwMDAwIiAvPjxiX2xmbzlfc3VzdGFpbiB0eXBlPSIyIiB2YWx1ZT0iMS4wMDAwMDAiIC8+PGJfbGZvOV9yZWxlYXNlIHR5cGU9IjIiIHZhbHVlPSI1LjAwMDAwMCIgLz48Yl9sZm8xMF9zaGFwZSB0eXBlPSIwIiB2YWx1ZT0iMCIgLz48Yl9sZm8xMF9yYXRlIHR5cGU9IjIiIHZhbHVlPSIwLjAwMDAwMCIgZGVhY3RpdmF0ZWQ9IjAiIC8+PGJfbGZvMTBfcGhhc2UgdHlwZT0iMiIgdmFsdWU9IjAuMDAwMDAwIiAvPjxiX2xmbzEwX21hZ25pdHVkZSB0eXBlPSIyIiB2YWx1ZT0iMS4wMDAwMDAiIC8+PGJfbGZvMTBfZGVmb3JtIHR5cGU9IjIiIHZhbHVlPSIwLjAwMDAwMCIgLz48Yl9sZm8xMF90cmlnbW9kZSB0eXBlPSIwIiB2YWx1ZT0iMSIgLz48Yl9sZm8xMF91bmlwb2xhciB0eXBlPSIwIiB2YWx1ZT0iMCIgLz48Yl9sZm8xMF9kZWxheSB0eXBlPSIyIiB2YWx1ZT0iLTguMDAwMDAwIiAvPjxiX2xmbzEwX2F0dGFjayB0eXBlPSIyIiB2YWx1ZT0iLTguMDAwMDAwIiAvPjxiX2xmbzEwX2hvbGQgdHlwZT0iMiIgdmFsdWU9Ii04LjAwMDAwMCIgLz48Yl9sZm8xMF9kZWNheSB0eXBlPSIyIiB2YWx1ZT0iNS4wMDAwMDAiIC8+PGJfbGZvMTBfc3VzdGFpbiB0eXBlPSIyIiB2YWx1ZT0iMS4wMDAwMDAiIC8+PGJfbGZvMTBfcmVsZWFzZSB0eXBlPSIyIiB2YWx1ZT0iNS4wMDAwMDAiIC8+PGJfbGZvMTFfc2hhcGUgdHlwZT0iMCIgdmFsdWU9IjAiIC8+PGJfbGZvMTFfcmF0ZSB0eXBlPSIyIiB2YWx1ZT0iMC4wMDAwMDAiIGRlYWN0aXZhdGVkPSIwIiAvPjxiX2xmbzExX3BoYXNlIHR5cGU9IjIiIHZhbHVlPSIwLjAwMDAwMCIgLz48Yl9sZm8xMV9tYWduaXR1ZGUgdHlwZT0iMiIgdmFsdWU9IjEuMDAwMDAwIiAvPjxiX2xmbzExX2RlZm9ybSB0eXBlPSIyIiB2YWx1ZT0iMC4wMDAwMDAiIC8+PGJfbGZvMTFfdHJpZ21vZGUgdHlwZT0iMCIgdmFsdWU9IjEiIC8+PGJfbGZvMTFfdW5pcG9sYXIgdHlwZT0iMCIgdmFsdWU9IjAiIC8+PGJfbGZvMTFfZGVsYXkgdHlwZT0iMiIgdmFsdWU9Ii04LjAwMDAwMCIgLz48Yl9sZm8xMV9hdHRhY2sgdHlwZT0iMiIgdmFsdWU9Ii04LjAwMDAwMCIgLz48Yl9sZm8xMV9ob2xkIHR5cGU9IjIiIHZhbHVlPSItOC4wMDAwMDAiIC8+PGJfbGZvMTFfZGVjYXkgdHlwZT0iMiIgdmFsdWU9IjUuMDAwMDAwIiAvPjxiX2xmbzExX3N1c3RhaW4gdHlwZT0iMiIgdmFsdWU9IjEuMDAwMDAwIiAvPjxiX2xmbzExX3JlbGVhc2UgdHlwZT0iMiIgdmFsdWU9IjUuMDAwMDAwIiAvPjxjaGFyYWN0ZXIgdHlwZT0iMCIgdmFsdWU9IjEiIC8+PC9wYXJhbWV0ZXJzPjxleHRyYW9zY2RhdGEgLz48c3RlcHNlcXVlbmNlcyAvPjxjdXN0b21jb250cm9sbGVyPjxlbnRyeSBpPSIwIiBiaXBvbGFyPSIxIiB2PSItMC42NzE2NzYiIGxhYmVsPSJDdXRvZmYiIC8+PGVudHJ5IGk9IjEiIGJpcG9sYXI9IjAiIHY9IjAuMDAwMDAwIiBsYWJlbD0iLSIgLz48ZW50cnkgaT0iMiIgYmlwb2xhcj0iMCIgdj0iMC4wMDAwMDAiIGxhYmVsPSItIiAvPjxlbnRyeSBpPSIzIiBiaXBvbGFyPSIwIiB2PSIwLjAwMDAwMCIgbGFiZWw9Ii0iIC8+PGVudHJ5IGk9IjQiIGJpcG9sYXI9IjAiIHY9IjAuMDAwMDAwIiBsYWJlbD0iLSIgLz48ZW50cnkgaT0iNSIgYmlwb2xhcj0iMCIgdj0iMC4wMDAwMDAiIGxhYmVsPSItIiAvPjxlbnRyeSBpPSI2IiBiaXBvbGFyPSIwIiB2PSIwLjAwMDAwMCIgbGFiZWw9Ii0iIC8+PGVudHJ5IGk9IjciIGJpcG9sYXI9IjAiIHY9IjAuMDAwMDAwIiBsYWJlbD0iLSIgLz48L2N1c3RvbWNvbnRyb2xsZXI+PG1vZHdoZWVsIHMwPSIwLjAwMDAwMCIgczE9IjAuMDAwMDAwIiAvPjxkYXdFeHRyYVN0YXRlIHBvcHVsYXRlZD0iMSI+PGluc3RhbmNlWm9vbUZhY3RvciB2PSItMSIgLz48bXBlRW5hYmxlZCB2PSIwIiAvPjxtcGVQaXRjaEJlbmRSYW5nZSB2PSI0OCIgLz48aGFzVHVuaW5nIHY9IjAiIC8+PHR1bmluZ0NvbnRlbnRzIHY9IiIgLz48aGFzTWFwcGluZyB2PSIwIiAvPjxtYXBwaW5nQ29udGVudHMgdj0iIiAvPjxtaWRpY3RybF9tYXAgLz48Y3VzdG9tY29udHJvbF9tYXA+PGMgcD0iNyIgdj0iNDgiIC8+PGMgcD0iNiIgdj0iNDciIC8+PGMgcD0iNSIgdj0iNDYiIC8+PGMgcD0iNCIgdj0iNDUiIC8+PGMgcD0iMyIgdj0iNDQiIC8+PGMgcD0iMiIgdj0iNDMiIC8+PGMgcD0iMSIgdj0iNDIiIC8+PGMgcD0iMCIgdj0iNDEiIC8+PC9jdXN0b21jb250cm9sX21hcD48L2Rhd0V4dHJhU3RhdGU+PC9wYXRjaD4=
+    </Value>
+   </CustomData>
+  </Data>
+ </Plugin>
+
+ <Patchbay>
+  <Connection>
+   <Source>Midi Input:Capture 1</Source>
+   <Target>Surge:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>Surge:Audio output 1</Source>
+   <Target>Audio Output:Left</Target>
+  </Connection>
+  <Connection>
+   <Source>Surge:Audio output 2</Source>
+   <Target>Audio Output:Right</Target>
+  </Connection>
+  <Positions>
+   <Position x1="1342" y1="1025">
+    <Name>Audio Input</Name>
+   </Position>
+  </Positions>
+ </Patchbay>
+
+ <ExternalPatchbay>
+  <Connection>
+   <Source>system:midi_capture_2</Source>
+   <Target>Carla:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>usb_mic:capture_1</Source>
+   <Target>Carla:audio-in1</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla:audio-out1</Source>
+   <Target>system:playback_1</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla:audio-out2</Source>
+   <Target>system:playback_2</Target>
+  </Connection>
+  <Positions>
+   <Position x1="1644" y1="1036">
+    <Name>Carla</Name>
+   </Position>
+   <Position x1="1363" y1="919" x2="1951" y2="1001">
+    <Name>system</Name>
+   </Position>
+   <Position x1="1301" y1="1238">
+    <Name>usb_mic</Name>
+   </Position>
+  </Positions>
+ </ExternalPatchbay>
+</CARLA-PROJECT>
