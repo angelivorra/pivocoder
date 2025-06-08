@@ -152,7 +152,7 @@
 
   <Data>
    <Active>Yes</Active>
-   <Volume>0.2329307</Volume>
+   <Volume>0.6765922</Volume>
    <ControlChannel>1</ControlChannel>
    <Options>0x3f1</Options>
 
@@ -223,7 +223,7 @@
     <Index>9</Index>
     <Name>C</Name>
     <Symbol>m00</Symbol>
-    <Value>1</Value>
+    <Value>0</Value>
    </Parameter>
 
    <Parameter>
@@ -322,7 +322,12 @@
     <Index>0</Index>
     <Name>Freq</Name>
     <Symbol>freq</Symbol>
-    <Value>0.302013427019119</Value>
+    <MidiChannel>1</MidiChannel>
+    <MappedControlIndex>87</MappedControlIndex>
+    <MappedMinimum>0</MappedMinimum>
+    <MappedMaximum>1</MappedMaximum>
+    <MidiCC>87</MidiCC>
+    <Value>0.25984251499176</Value>
    </Parameter>
 
    <Parameter>
@@ -336,7 +341,12 @@
     <Index>2</Index>
     <Name>Feedback</Name>
     <Symbol>feedback</Symbol>
-    <Value>0.5</Value>
+    <MidiChannel>1</MidiChannel>
+    <MappedControlIndex>86</MappedControlIndex>
+    <MappedMinimum>0</MappedMinimum>
+    <MappedMaximum>1</MappedMaximum>
+    <MidiCC>86</MidiCC>
+    <Value>0.519685029983521</Value>
    </Parameter>
   </Data>
  </Plugin>
@@ -627,7 +637,7 @@
 
   <Data>
    <Active>Yes</Active>
-   <Volume>0.2542752</Volume>
+   <Volume>1.028586</Volume>
    <ControlChannel>1</ControlChannel>
    <Options>0x3f0</Options>
 
@@ -684,7 +694,12 @@
     <Index>8</Index>
     <Name>OSCTRANSPOSE</Name>
     <Symbol>osctranspose</Symbol>
-    <Value>0.800000011920929</Value>
+    <MidiChannel>1</MidiChannel>
+    <MappedControlIndex>90</MappedControlIndex>
+    <MappedMinimum>0</MappedMinimum>
+    <MappedMaximum>1</MappedMaximum>
+    <MidiCC>90</MidiCC>
+    <Value>0.401574790477753</Value>
    </Parameter>
 
    <Parameter>
@@ -782,7 +797,12 @@
     <Index>22</Index>
     <Name>ENVELOPERELEASE</Name>
     <Symbol>enveloperelease</Symbol>
-    <Value>0.392000019550323</Value>
+    <MidiChannel>1</MidiChannel>
+    <MappedControlIndex>89</MappedControlIndex>
+    <MappedMinimum>0</MappedMinimum>
+    <MappedMaximum>1</MappedMaximum>
+    <MidiCC>89</MidiCC>
+    <Value>0</Value>
    </Parameter>
 
    <Parameter>
@@ -872,9 +892,9 @@
   &lt;programs&gt;
     &lt;program programname=&quot;A Voice Robot 1&quot; volume=&quot;0.50400000810623168945&quot;
              harmonics=&quot;0&quot; noisevolume=&quot;0&quot; pulsevolume=&quot;0&quot; sawvolume=&quot;0.97600007057189941406&quot;
-             suboscvolume=&quot;0&quot; osctranspose=&quot;0.80000001192092895508&quot; polymode=&quot;1&quot;
+             suboscvolume=&quot;0&quot; osctranspose=&quot;0.40157479047775268555&quot; polymode=&quot;1&quot;
              portamento=&quot;0&quot; tune=&quot;0.50800001621246337891&quot; inputmode=&quot;0&quot; chorus=&quot;1&quot;
-             enveloperelease=&quot;0.39200001955032348633&quot; oscsync=&quot;0&quot; pulsetune=&quot;0.50800001621246337891&quot;
+             enveloperelease=&quot;0&quot; oscsync=&quot;0&quot; pulsetune=&quot;0.50800001621246337891&quot;
              sawtune=&quot;0.54000002145767211914&quot; pulsefinetune=&quot;0.50800001621246337891&quot;
              sawfinetune=&quot;0.52400004863739013672&quot; esserintensity=&quot;0.5879999995231628418&quot;
              vocoderband00=&quot;0.46800002455711364746&quot; vocoderband01=&quot;0.47200003266334533691&quot;
@@ -930,7 +950,7 @@
     <Index>3</Index>
     <Name>RT-mid</Name>
     <Symbol>rt_mid</Symbol>
-    <Value>2.75</Value>
+    <Value>4.75525188446045</Value>
    </Parameter>
 
    <Parameter>
@@ -972,7 +992,66 @@
     <Index>9</Index>
     <Name>Output mix</Name>
     <Symbol>out_mix</Symbol>
-    <Value>0.5</Value>
+    <MidiChannel>1</MidiChannel>
+    <MappedControlIndex>30</MappedControlIndex>
+    <MappedMinimum>0</MappedMinimum>
+    <MappedMaximum>1</MappedMaximum>
+    <MidiCC>30</MidiCC>
+    <Value>0</Value>
+   </Parameter>
+  </Data>
+ </Plugin>
+
+ <!-- Audio Gain (Mono) -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>Audio Gain (Mono)</Name>
+   <URI>http://kxstudio.sf.net/carla/plugins/audiogain</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x4</Options>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Gain</Name>
+    <Symbol>gain</Symbol>
+    <MidiChannel>1</MidiChannel>
+    <MappedControlIndex>14</MappedControlIndex>
+    <MappedMinimum>0</MappedMinimum>
+    <MappedMaximum>1</MappedMaximum>
+    <MidiCC>14</MidiCC>
+    <Value>0.519685029983521</Value>
+   </Parameter>
+  </Data>
+ </Plugin>
+
+ <!-- Audio Gain (Mono) -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>Audio Gain (Mono) (2)</Name>
+   <URI>http://kxstudio.sf.net/carla/plugins/audiogain</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x4</Options>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Gain</Name>
+    <Symbol>gain</Symbol>
+    <MidiChannel>1</MidiChannel>
+    <MappedControlIndex>15</MappedControlIndex>
+    <MappedMinimum>0</MappedMinimum>
+    <MappedMaximum>1</MappedMaximum>
+    <MidiCC>15</MidiCC>
+    <Value>0.913385808467865</Value>
    </Parameter>
   </Data>
  </Plugin>
@@ -991,16 +1070,8 @@
    <Target>x42-Autotune:events-in</Target>
   </Connection>
   <Connection>
-   <Source>MDA RingMod:Left Out</Source>
-   <Target>x42-eq - Parametric Equalizer Mono:In</Target>
-  </Connection>
-  <Connection>
    <Source>Audio Input:Left</Source>
    <Target>Tal-Vocoder-II:Audio Input 1</Target>
-  </Connection>
-  <Connection>
-   <Source>Tal-Vocoder-II:Audio Output 1</Source>
-   <Target>x42-eq - Parametric Equalizer Mono:In</Target>
   </Connection>
   <Connection>
    <Source>Midi Input:Capture 1</Source>
@@ -1022,38 +1093,76 @@
    <Source>reverb:Out L</Source>
    <Target>Audio Output:Left</Target>
   </Connection>
+  <Connection>
+   <Source>MDA RingMod:Left Out</Source>
+   <Target>Audio Gain (Mono):Audio Input 1</Target>
+  </Connection>
+  <Connection>
+   <Source>Audio Gain (Mono):Audio Output 1</Source>
+   <Target>x42-eq - Parametric Equalizer Mono:In</Target>
+  </Connection>
+  <Connection>
+   <Source>Midi Input:Capture 1</Source>
+   <Target>Audio Gain (Mono):events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>Tal-Vocoder-II:Audio Output 1</Source>
+   <Target>Audio Gain (Mono) (2):Audio Input 1</Target>
+  </Connection>
+  <Connection>
+   <Source>Audio Gain (Mono) (2):Audio Output 1</Source>
+   <Target>x42-eq - Parametric Equalizer Mono:In</Target>
+  </Connection>
+  <Connection>
+   <Source>Midi Input:Capture 1</Source>
+   <Target>Audio Gain (Mono) (2):events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>Midi Input:Capture 1</Source>
+   <Target>reverb:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>Midi Input:Capture 1</Source>
+   <Target>MDA RingMod:events-in</Target>
+  </Connection>
   <Positions>
-   <Position x1="2088" y1="1244" pluginId="6">
+   <Position x1="2193" y1="1002" pluginId="8">
+    <Name>Audio Gain (Mono) (2)</Name>
+   </Position>
+   <Position x1="2188" y1="1188" pluginId="7">
+    <Name>Audio Gain (Mono)</Name>
+   </Position>
+   <Position x1="2695" y1="1131" pluginId="6">
     <Name>reverb</Name>
    </Position>
-   <Position x1="1418" y1="1177" pluginId="5">
+   <Position x1="1497" y1="800" pluginId="5">
     <Name>Tal-Vocoder-II</Name>
    </Position>
-   <Position x1="1752" y1="1228" pluginId="4">
+   <Position x1="2415" y1="1129" pluginId="4">
     <Name>x42-eq - Parametric Equalizer Mono</Name>
    </Position>
-   <Position x1="2357" y1="972" pluginId="3">
+   <Position x1="2020" y1="1110" pluginId="3">
     <Name>MDA RingMod</Name>
    </Position>
-   <Position x1="1974" y1="989" pluginId="2">
+   <Position x1="1825" y1="1059" pluginId="2">
     <Name>x42-Autotune</Name>
    </Position>
-   <Position x1="1644" y1="979" pluginId="1">
+   <Position x1="1613" y1="1261" pluginId="1">
     <Name>x42-comp - Dynamic Compressor Mono</Name>
    </Position>
-   <Position x1="1249" y1="1014" pluginId="0">
+   <Position x1="1345" y1="1249" pluginId="0">
     <Name>ZamGate</Name>
    </Position>
    <Position x1="1456" y1="1203" x2="2260" y2="1382">
     <Name>Midi Output</Name>
    </Position>
-   <Position x1="1031" y1="896">
+   <Position x1="1130" y1="857">
     <Name>Midi Input</Name>
    </Position>
-   <Position x1="1373" y1="1290" x2="2376" y2="1227">
+   <Position x1="1373" y1="1290" x2="2829" y2="1044">
     <Name>Audio Output</Name>
    </Position>
-   <Position x1="1012" y1="1117">
+   <Position x1="1054" y1="1145">
     <Name>Audio Input</Name>
    </Position>
   </Positions>

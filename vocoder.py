@@ -260,27 +260,6 @@ def get_pisound_midi_port():
         return None
 
 
-def monitor_midi():
-    """Monitorea el puerto MIDI y imprime mensajes que no sean de clock."""
-    try:
-        port_name = get_pisound_midi_port()
-        if port_name is None:
-            print("No se pudo encontrar un puerto MIDI válido.")
-            return
-
-        print(f"Intentando abrir el puerto MIDI: {port_name}")
-        with mido.open_input(port_name) as port:
-            print(f"Puerto MIDI abierto: {port}")
-            for msg in port:
-                if msg.type == 'program_change':
-                    print(f"Mensaje MIDI recibido: {msg.program}")
-                    change_carla_preset(msg.program)
-    except Exception as e:
-        print("Error al monitorizar MIDI:", e)
-        flash_led(LED_ERROR)
-        stop_processes()
-        sys.exit(1)
-
 
 if __name__ == "__main__":
     # Configurar manejadores de señales
@@ -300,9 +279,6 @@ if __name__ == "__main__":
     start_alsa_in()
     time.sleep(1)
 
-    # Iniciar monitorización de MIDI en un hilo si lo necesitas
-    # midi_thread = threading.Thread(target=monitor_midi, daemon=True)
-    # midi_thread.start()  
 
     flash_led(LED_OK)
 
