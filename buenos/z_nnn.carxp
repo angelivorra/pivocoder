@@ -699,7 +699,7 @@
     <MappedMinimum>0</MappedMinimum>
     <MappedMaximum>1</MappedMaximum>
     <MidiCC>90</MidiCC>
-    <Value>0.401574790477753</Value>
+    <Value>0</Value>
    </Parameter>
 
    <Parameter>
@@ -892,17 +892,16 @@
   &lt;programs&gt;
     &lt;program programname=&quot;A Voice Robot 1&quot; volume=&quot;0.50400000810623168945&quot;
              harmonics=&quot;0&quot; noisevolume=&quot;0&quot; pulsevolume=&quot;0&quot; sawvolume=&quot;0.97600007057189941406&quot;
-             suboscvolume=&quot;0&quot; osctranspose=&quot;0.40157479047775268555&quot; polymode=&quot;1&quot;
-             portamento=&quot;0&quot; tune=&quot;0.50800001621246337891&quot; inputmode=&quot;0&quot; chorus=&quot;1&quot;
-             enveloperelease=&quot;0&quot; oscsync=&quot;0&quot; pulsetune=&quot;0.50800001621246337891&quot;
-             sawtune=&quot;0.54000002145767211914&quot; pulsefinetune=&quot;0.50800001621246337891&quot;
-             sawfinetune=&quot;0.52400004863739013672&quot; esserintensity=&quot;0.5879999995231628418&quot;
-             vocoderband00=&quot;0.46800002455711364746&quot; vocoderband01=&quot;0.47200003266334533691&quot;
-             vocoderband02=&quot;0.46400001645088195801&quot; vocoderband03=&quot;0.44800001382827758789&quot;
-             vocoderband04=&quot;0.44800001382827758789&quot; vocoderband05=&quot;0.46400001645088195801&quot;
-             vocoderband06=&quot;0.47600001096725463867&quot; vocoderband07=&quot;0.49200001358985900879&quot;
-             vocoderband08=&quot;0.48800003528594970703&quot; vocoderband09=&quot;0.46400001645088195801&quot;
-             vocoderband10=&quot;0.48000001907348632812&quot;/&gt;
+             suboscvolume=&quot;0&quot; osctranspose=&quot;0&quot; polymode=&quot;1&quot; portamento=&quot;0&quot;
+             tune=&quot;0.50800001621246337891&quot; inputmode=&quot;0&quot; chorus=&quot;1&quot; enveloperelease=&quot;0&quot;
+             oscsync=&quot;0&quot; pulsetune=&quot;0.50800001621246337891&quot; sawtune=&quot;0.54000002145767211914&quot;
+             pulsefinetune=&quot;0.50800001621246337891&quot; sawfinetune=&quot;0.52400004863739013672&quot;
+             esserintensity=&quot;0.5879999995231628418&quot; vocoderband00=&quot;0.46800002455711364746&quot;
+             vocoderband01=&quot;0.47200003266334533691&quot; vocoderband02=&quot;0.46400001645088195801&quot;
+             vocoderband03=&quot;0.44800001382827758789&quot; vocoderband04=&quot;0.44800001382827758789&quot;
+             vocoderband05=&quot;0.46400001645088195801&quot; vocoderband06=&quot;0.47600001096725463867&quot;
+             vocoderband07=&quot;0.49200001358985900879&quot; vocoderband08=&quot;0.48800003528594970703&quot;
+             vocoderband09=&quot;0.46400001645088195801&quot; vocoderband10=&quot;0.48000001907348632812&quot;/&gt;
   &lt;/programs&gt;
 &lt;/tal&gt;
 
@@ -997,7 +996,7 @@
     <MappedMinimum>0</MappedMinimum>
     <MappedMaximum>1</MappedMaximum>
     <MidiCC>30</MidiCC>
-    <Value>0</Value>
+    <Value>0.236220479011536</Value>
    </Parameter>
   </Data>
  </Plugin>
@@ -1024,7 +1023,7 @@
     <MappedMinimum>0</MappedMinimum>
     <MappedMaximum>1</MappedMaximum>
     <MidiCC>14</MidiCC>
-    <Value>0.519685029983521</Value>
+    <Value>0.842519700527191</Value>
    </Parameter>
   </Data>
  </Plugin>
@@ -1051,7 +1050,7 @@
     <MappedMinimum>0</MappedMinimum>
     <MappedMaximum>1</MappedMaximum>
     <MidiCC>15</MidiCC>
-    <Value>0.913385808467865</Value>
+    <Value>0.338582664728165</Value>
    </Parameter>
   </Data>
  </Plugin>

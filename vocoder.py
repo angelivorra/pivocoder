@@ -6,6 +6,8 @@ import sys
 import time
 import threading
 import mido
+import socket # Added for TCP server
+import queue # Added for message queue (optional, but good for decoupling)
 
 # Comando para arrancar jackd
 JACKD_CMD = [
@@ -29,6 +31,15 @@ alsa_in_process = None
 carla_process = None
 recording_process = None
 current_preset = 0
+
+# TCP Server related globals
+tcp_server_socket = None
+client_handler_threads = []
+server_running = True # Flag to control server loop
+tcp_server_started_event = threading.Event() # To signal server startup
+# Port for the TCP server, you can change this
+TCP_PORT = 12345
+TCP_HOST = '0.0.0.0' # Listen on all available interfaces
 
 
 LED_ERROR = 200
@@ -147,10 +158,10 @@ def flash_led(value):
     except subprocess.CalledProcessError as e:
         print(f"Error setting LED value: {e}")
 
-def start_carla(program_number):
+def start_carla():
     """Función para arrancar Carla en modo headless con un preset específico."""
     global carla_process, current_preset
-    preset_path = f"/home/patch/pivocoder/program{program_number}.carxp"
+    preset_path = f"/home/patch/pivocoder/buenos/z_nnn.carxp"
     print(f"Arrancando Carla con preset: {preset_path}...")
 
     os.environ["QT_QPA_PLATFORM"] = "offscreen"
@@ -182,9 +193,134 @@ def start_recording():
     recording_process = subprocess.Popen(["jack_capture", "-f", "test.wav"])
     print(f"Captura iniciada con PID: {recording_process.pid}")
 
+def handle_client_connection(client_socket, client_address):
+    """Handles an individual client connection."""
+    global server_running
+    print(f"TCP: Accepted connection from {client_address}")
+    try:
+        while server_running:
+            # Set a timeout for recv to periodically check server_running flag
+            client_socket.settimeout(1.0)
+            try:
+                data = client_socket.recv(1024)
+            except socket.timeout:
+                continue # No data received, loop back to check server_running
+            
+            if not data:
+                print(f"TCP: Client {client_address} disconnected gracefully.")
+                break
+            
+            message = data.decode().strip()
+            if not message: # Skip empty messages after strip
+                continue
+
+            print(f"TCP: Received from {client_address}: '{message}'")
+            
+
+            try:
+                program_number = int(message)
+                print(f"TCP: Parsed program number {program_number} from {client_address}")
+                # Consider validating program_number range if necessary
+                change_carla_preset(program_number)
+            except ValueError:
+                print(f"TCP: Invalid message from {client_address}: '{message}'. Expected an integer program number.")
+            except Exception as e:
+                print(f"TCP: Error processing message from {client_address} ('{message}'): {e}")
+
+    except ConnectionResetError:
+        print(f"TCP: Client {client_address} reset the connection.")
+    except socket.error as e:
+        if server_running: # Avoid error message if server is shutting down
+             print(f"TCP: Socket error with client {client_address}: {e}")
+    except Exception as e:
+        print(f"TCP: Unexpected error with client {client_address}: {e}")
+    finally:
+        print(f"TCP: Closing connection with {client_address}")
+        client_socket.close()
+        # Remove thread from list if it's being tracked for joining (optional)
+        # For daemon threads, this is less critical.
+
+def start_tcp_server(host=TCP_HOST, port=TCP_PORT):
+    """Starts the TCP server to listen for MIDI program changes."""
+    global tcp_server_socket, client_handler_threads, server_running, tcp_server_started_event
+    
+    server_running = True # Ensure flag is true at start
+    tcp_server_started_event.clear()
+
+    tcp_server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    tcp_server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+    
+    try:
+        tcp_server_socket.bind((host, port))
+        tcp_server_socket.listen(5) # Allow up to 5 queued connections
+        print(f"TCP server listening on {host}:{port}")
+        tcp_server_started_event.set() # Signal that bind and listen were successful
+    except OSError as e:
+        print(f"TCP: Error binding/listening on {host}:{port}: {e}")
+        flash_led(LED_ERROR)
+        if tcp_server_socket:
+            tcp_server_socket.close()
+            tcp_server_socket = None
+        return # Exit thread if bind fails
+
+    # Set a timeout for accept() so the loop can be interrupted by server_running flag
+    tcp_server_socket.settimeout(1.0) 
+
+    try:
+        while server_running:
+            try:
+                client_socket, client_address = tcp_server_socket.accept()
+                thread = threading.Thread(target=handle_client_connection, args=(client_socket, client_address))
+                thread.daemon = True # Allows main program to exit even if threads are running
+                thread.start()
+                client_handler_threads.append(thread) # Keep track if needed for explicit join later
+            except socket.timeout:
+                continue # Timeout allows checking server_running flag
+            except OSError as e:
+                if server_running: # Only print error if we weren't expecting to stop
+                    print(f"TCP: Error accepting connection: {e}")
+                break # Exit loop if socket error (e.g. closed by stop_processes)
+    except Exception as e:
+        if server_running:
+            print(f"TCP: Server loop error: {e}")
+    finally:
+        print("TCP: Server accept loop exiting.")
+        # Close any remaining client sockets (though client_handler_threads should do this)
+        # This part is tricky as client_handler_threads might still be running.
+        # Daemon threads and individual client socket closures are primary cleanup.
+        if tcp_server_socket:
+            tcp_server_socket.close()
+            tcp_server_socket = None
+        print("TCP: Server socket closed.")
+
+
 def stop_processes():
-    """Función para detener jackd, alsa_in, Carla y la captura de audio."""
+    """Función para detener jackd, alsa_in, Carla, la captura de audio y el servidor TCP."""
     global jackd_process, alsa_in_process, carla_process, recording_process
+    global tcp_server_socket, server_running, client_handler_threads
+
+    print("Stopping processes...")
+
+    # Stop TCP Server
+    print("TCP: Signaling server and client handlers to stop...")
+    server_running = False # Signal all server-related threads to stop
+
+    if tcp_server_socket:
+        print("TCP: Closing server socket...")
+        # Closing the server socket will cause accept() to raise an error,
+        # helping the server_thread to exit its loop if it's blocked there.
+        tcp_server_socket.close() 
+        tcp_server_socket = None 
+        # Note: client sockets are closed by their respective handler threads.
+
+    # Optionally, wait for client handler threads to finish
+    # This is complex if they are blocked on recv().
+    # Daemon threads will exit when the main program exits.
+    # The server_running flag and socket timeouts in handle_client_connection help.
+    # for thread in client_handler_threads:
+    #    if thread.is_alive():
+    #        thread.join(timeout=1.0) # Wait briefly
+
     # Detener Carla
     if carla_process:
         print("Deteniendo Carla...")
@@ -233,6 +369,9 @@ def stop_processes():
         print("Captura de audio detenida.")
         recording_process = None
 
+    print("All processes signaled to stop.")
+
+
 def handle_signal(signum, frame):
     """Manejador de señales para detener los procesos al recibir SIGTERM o SIGINT."""
     print(f"Señal {signum} recibida, deteniendo procesos...")
@@ -279,12 +418,25 @@ if __name__ == "__main__":
     start_alsa_in()
     time.sleep(1)
 
+    # Arrancar servidor TCP
+    print("Main: Starting TCP server thread...")
+    tcp_server_thread = threading.Thread(target=start_tcp_server, args=(TCP_HOST, TCP_PORT), daemon=True)
+    tcp_server_thread.start()
 
-    flash_led(LED_OK)
+    # Esperar a que el servidor TCP confirme el arranque (bind exitoso)
+    if not tcp_server_started_event.wait(timeout=5): # Espera hasta 5 segundos
+        print("Main: TCP server failed to start (bind error or timeout). Saliendo...")
+        flash_led(LED_ERROR)
+        stop_processes() # Limpiar lo que ya se haya arrancado
+        sys.exit(1)
+    else:
+        print(f"Main: TCP server started successfully on port {TCP_PORT}.")
 
-    # Iniciar la captura de audio a test.wav solo si se pasó el argumento "graba"
-    if len(sys.argv) > 1 and sys.argv[1].lower() == "graba":
+    if "graba" in [arg.lower() for arg in sys.argv]:
         start_recording()
+
+    if "carla" in [arg.lower() for arg in sys.argv]:
+        start_carla()
 
     # Mantener el script en ejecución
     try:
