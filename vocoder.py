@@ -215,17 +215,6 @@ def handle_client_connection(client_socket, client_address):
                 continue
 
             print(f"TCP: Received from {client_address}: '{message}'")
-            
-
-            try:
-                program_number = int(message)
-                print(f"TCP: Parsed program number {program_number} from {client_address}")
-                # Consider validating program_number range if necessary
-                change_carla_preset(program_number)
-            except ValueError:
-                print(f"TCP: Invalid message from {client_address}: '{message}'. Expected an integer program number.")
-            except Exception as e:
-                print(f"TCP: Error processing message from {client_address} ('{message}'): {e}")
 
     except ConnectionResetError:
         print(f"TCP: Client {client_address} reset the connection.")

@@ -14,70 +14,6 @@
   <BeatsPerMinute>120</BeatsPerMinute>
  </Transport>
 
- <!-- ZamGate -->
- <Plugin>
-  <Info>
-   <Type>LV2</Type>
-   <Name>ZamGate</Name>
-   <URI>urn:zamaudio:ZamGate</URI>
-  </Info>
-
-  <Data>
-   <Active>Yes</Active>
-   <ControlChannel>1</ControlChannel>
-   <Options>0x4</Options>
-
-   <Parameter>
-    <Index>0</Index>
-    <Name>Attack</Name>
-    <Symbol>att</Symbol>
-    <Value>0.100000001490116</Value>
-   </Parameter>
-
-   <Parameter>
-    <Index>1</Index>
-    <Name>Release</Name>
-    <Symbol>rel</Symbol>
-    <Value>214.976837158203</Value>
-   </Parameter>
-
-   <Parameter>
-    <Index>2</Index>
-    <Name>Threshold</Name>
-    <Symbol>thr</Symbol>
-    <Value>-31.2000846862793</Value>
-   </Parameter>
-
-   <Parameter>
-    <Index>3</Index>
-    <Name>Makeup</Name>
-    <Symbol>mak</Symbol>
-    <Value>11.7000036239624</Value>
-   </Parameter>
-
-   <Parameter>
-    <Index>4</Index>
-    <Name>Sidechain</Name>
-    <Symbol>sidechain</Symbol>
-    <Value>0</Value>
-   </Parameter>
-
-   <Parameter>
-    <Index>5</Index>
-    <Name>Max gate close</Name>
-    <Symbol>close</Symbol>
-    <Value>-50</Value>
-   </Parameter>
-
-   <Parameter>
-    <Index>6</Index>
-    <Name>Mode open/shut</Name>
-    <Symbol>mode</Symbol>
-    <Value>0</Value>
-   </Parameter>
-  </Data>
- </Plugin>
-
  <!-- x42-comp - Dynamic Compressor Mono -->
  <Plugin>
   <Info>
@@ -167,7 +103,7 @@
     <Index>1</Index>
     <Name>Filter Channel</Name>
     <Symbol>channelf</Symbol>
-    <Value>0</Value>
+    <Value>1</Value>
    </Parameter>
 
    <Parameter>
@@ -315,19 +251,15 @@
 
   <Data>
    <Active>Yes</Active>
-   <ControlChannel>1</ControlChannel>
+   <Volume>1.27</Volume>
+   <ControlChannel>9</ControlChannel>
    <Options>0x0</Options>
 
    <Parameter>
     <Index>0</Index>
     <Name>Freq</Name>
     <Symbol>freq</Symbol>
-    <MidiChannel>1</MidiChannel>
-    <MappedControlIndex>87</MappedControlIndex>
-    <MappedMinimum>0</MappedMinimum>
-    <MappedMaximum>1</MappedMaximum>
-    <MidiCC>87</MidiCC>
-    <Value>0</Value>
+    <Value>0.509999990463257</Value>
    </Parameter>
 
    <Parameter>
@@ -341,12 +273,7 @@
     <Index>2</Index>
     <Name>Feedback</Name>
     <Symbol>feedback</Symbol>
-    <MidiChannel>1</MidiChannel>
-    <MappedControlIndex>86</MappedControlIndex>
-    <MappedMinimum>0</MappedMinimum>
-    <MappedMaximum>1</MappedMaximum>
-    <MidiCC>86</MidiCC>
-    <Value>0</Value>
+    <Value>0.310000002384186</Value>
    </Parameter>
   </Data>
  </Plugin>
@@ -438,7 +365,7 @@
     <Index>11</Index>
     <Name>Lowshelf Frequency</Name>
     <Symbol>LSfreq</Symbol>
-    <Value>80</Value>
+    <Value>53.9362869262695</Value>
    </Parameter>
 
    <Parameter>
@@ -452,7 +379,7 @@
     <Index>13</Index>
     <Name>Lowshelf Gain</Name>
     <Symbol>LSgain</Symbol>
-    <Value>3.00000023841858</Value>
+    <Value>-18</Value>
    </Parameter>
 
    <Parameter>
@@ -466,7 +393,7 @@
     <Index>15</Index>
     <Name>Frequency 1</Name>
     <Symbol>freq1</Symbol>
-    <Value>160</Value>
+    <Value>166.94465637207</Value>
    </Parameter>
 
    <Parameter>
@@ -480,7 +407,7 @@
     <Index>17</Index>
     <Name>Gain 1</Name>
     <Symbol>gain1</Symbol>
-    <Value>-2.79999971389771</Value>
+    <Value>-6.79999971389771</Value>
    </Parameter>
 
    <Parameter>
@@ -494,7 +421,7 @@
     <Index>19</Index>
     <Name>Frequency 2</Name>
     <Symbol>freq2</Symbol>
-    <Value>397</Value>
+    <Value>502.685089111328</Value>
    </Parameter>
 
    <Parameter>
@@ -508,7 +435,7 @@
     <Index>21</Index>
     <Name>Gain 2</Name>
     <Symbol>gain2</Symbol>
-    <Value>-3.19999980926514</Value>
+    <Value>18</Value>
    </Parameter>
 
    <Parameter>
@@ -522,7 +449,7 @@
     <Index>23</Index>
     <Name>Frequency 3</Name>
     <Symbol>freq3</Symbol>
-    <Value>1250</Value>
+    <Value>561.265380859375</Value>
    </Parameter>
 
    <Parameter>
@@ -536,7 +463,7 @@
     <Index>25</Index>
     <Name>Gain 3</Name>
     <Symbol>gain3</Symbol>
-    <Value>4.00000047683716</Value>
+    <Value>2.40000033378601</Value>
    </Parameter>
 
    <Parameter>
@@ -550,7 +477,7 @@
     <Index>27</Index>
     <Name>Frequency 4</Name>
     <Symbol>freq4</Symbol>
-    <Value>2500</Value>
+    <Value>2462.94995117188</Value>
    </Parameter>
 
    <Parameter>
@@ -564,7 +491,7 @@
     <Index>29</Index>
     <Name>Gain 4</Name>
     <Symbol>gain4</Symbol>
-    <Value>1.80000030994415</Value>
+    <Value>-13</Value>
    </Parameter>
 
    <Parameter>
@@ -578,7 +505,7 @@
     <Index>31</Index>
     <Name>Highshelf Frequency</Name>
     <Symbol>HSfreq</Symbol>
-    <Value>8000</Value>
+    <Value>7148.6083984375</Value>
    </Parameter>
 
    <Parameter>
@@ -592,7 +519,7 @@
     <Index>33</Index>
     <Name>Highshelf Gain</Name>
     <Symbol>HSgain</Symbol>
-    <Value>-5</Value>
+    <Value>-18</Value>
    </Parameter>
 
    <CustomData>
@@ -659,7 +586,7 @@
     <Index>3</Index>
     <Name>HARMONICS</Name>
     <Symbol>harmonics</Symbol>
-    <Value>0</Value>
+    <Value>1</Value>
    </Parameter>
 
    <Parameter>
@@ -680,14 +607,14 @@
     <Index>6</Index>
     <Name>SAWVOLUME</Name>
     <Symbol>sawvolume</Symbol>
-    <Value>0.976000070571899</Value>
+    <Value>1</Value>
    </Parameter>
 
    <Parameter>
     <Index>7</Index>
     <Name>SUBOSCVOLUME</Name>
     <Symbol>suboscvolume</Symbol>
-    <Value>0</Value>
+    <Value>0.476000010967255</Value>
    </Parameter>
 
    <Parameter>
@@ -699,7 +626,7 @@
     <MappedMinimum>0</MappedMinimum>
     <MappedMaximum>1</MappedMaximum>
     <MidiCC>90</MidiCC>
-    <Value>0</Value>
+    <Value>0.284000009298325</Value>
    </Parameter>
 
    <Parameter>
@@ -748,7 +675,7 @@
     <Index>15</Index>
     <Name>ESSERINTENSITY</Name>
     <Symbol>esserintensity</Symbol>
-    <Value>0.587999999523163</Value>
+    <Value>1</Value>
    </Parameter>
 
    <Parameter>
@@ -809,77 +736,77 @@
     <Index>23</Index>
     <Name>VOCODERBAND00</Name>
     <Symbol>vocoderband00</Symbol>
-    <Value>0.468000024557114</Value>
+    <Value>0.260000020265579</Value>
    </Parameter>
 
    <Parameter>
     <Index>24</Index>
     <Name>VOCODERBAND01</Name>
     <Symbol>vocoderband01</Symbol>
-    <Value>0.472000032663345</Value>
+    <Value>0.26800000667572</Value>
    </Parameter>
 
    <Parameter>
     <Index>25</Index>
     <Name>VOCODERBAND02</Name>
     <Symbol>vocoderband02</Symbol>
-    <Value>0.464000016450882</Value>
+    <Value>0.380000025033951</Value>
    </Parameter>
 
    <Parameter>
     <Index>26</Index>
     <Name>VOCODERBAND03</Name>
     <Symbol>vocoderband03</Symbol>
-    <Value>0.448000013828278</Value>
+    <Value>0.508000016212463</Value>
    </Parameter>
 
    <Parameter>
     <Index>27</Index>
     <Name>VOCODERBAND04</Name>
     <Symbol>vocoderband04</Symbol>
-    <Value>0.448000013828278</Value>
+    <Value>0.568000018596649</Value>
    </Parameter>
 
    <Parameter>
     <Index>28</Index>
     <Name>VOCODERBAND05</Name>
     <Symbol>vocoderband05</Symbol>
-    <Value>0.464000016450882</Value>
+    <Value>0.708000004291534</Value>
    </Parameter>
 
    <Parameter>
     <Index>29</Index>
     <Name>VOCODERBAND06</Name>
     <Symbol>vocoderband06</Symbol>
-    <Value>0.476000010967255</Value>
+    <Value>0.520000040531158</Value>
    </Parameter>
 
    <Parameter>
     <Index>30</Index>
     <Name>VOCODERBAND07</Name>
     <Symbol>vocoderband07</Symbol>
-    <Value>0.492000013589859</Value>
+    <Value>0.436000019311905</Value>
    </Parameter>
 
    <Parameter>
     <Index>31</Index>
     <Name>VOCODERBAND08</Name>
     <Symbol>vocoderband08</Symbol>
-    <Value>0.48800003528595</Value>
+    <Value>0.396000027656555</Value>
    </Parameter>
 
    <Parameter>
     <Index>32</Index>
     <Name>VOCODERBAND09</Name>
     <Symbol>vocoderband09</Symbol>
-    <Value>0.464000016450882</Value>
+    <Value>0.196000009775162</Value>
    </Parameter>
 
    <Parameter>
     <Index>33</Index>
     <Name>VOCODERBAND10</Name>
     <Symbol>vocoderband10</Symbol>
-    <Value>0.480000019073486</Value>
+    <Value>0.068000003695488</Value>
    </Parameter>
 
    <CustomData>
@@ -891,17 +818,17 @@
 &lt;tal curprogram=&quot;0&quot; version=&quot;1&quot;&gt;
   &lt;programs&gt;
     &lt;program programname=&quot;A Voice Robot 1&quot; volume=&quot;0.50400000810623168945&quot;
-             harmonics=&quot;0&quot; noisevolume=&quot;0&quot; pulsevolume=&quot;0&quot; sawvolume=&quot;0.97600007057189941406&quot;
-             suboscvolume=&quot;0&quot; osctranspose=&quot;0&quot; polymode=&quot;1&quot; portamento=&quot;0&quot;
+             harmonics=&quot;1&quot; noisevolume=&quot;0&quot; pulsevolume=&quot;0&quot; sawvolume=&quot;1&quot; suboscvolume=&quot;0.47600001096725463867&quot;
+             osctranspose=&quot;0.28400000929832458496&quot; polymode=&quot;1&quot; portamento=&quot;0&quot;
              tune=&quot;0.50800001621246337891&quot; inputmode=&quot;0&quot; chorus=&quot;1&quot; enveloperelease=&quot;0&quot;
              oscsync=&quot;0&quot; pulsetune=&quot;0.50800001621246337891&quot; sawtune=&quot;0.54000002145767211914&quot;
              pulsefinetune=&quot;0.50800001621246337891&quot; sawfinetune=&quot;0.52400004863739013672&quot;
-             esserintensity=&quot;0.5879999995231628418&quot; vocoderband00=&quot;0.46800002455711364746&quot;
-             vocoderband01=&quot;0.47200003266334533691&quot; vocoderband02=&quot;0.46400001645088195801&quot;
-             vocoderband03=&quot;0.44800001382827758789&quot; vocoderband04=&quot;0.44800001382827758789&quot;
-             vocoderband05=&quot;0.46400001645088195801&quot; vocoderband06=&quot;0.47600001096725463867&quot;
-             vocoderband07=&quot;0.49200001358985900879&quot; vocoderband08=&quot;0.48800003528594970703&quot;
-             vocoderband09=&quot;0.46400001645088195801&quot; vocoderband10=&quot;0.48000001907348632812&quot;/&gt;
+             esserintensity=&quot;1&quot; vocoderband00=&quot;0.26000002026557922363&quot; vocoderband01=&quot;0.26800000667572021484&quot;
+             vocoderband02=&quot;0.38000002503395080566&quot; vocoderband03=&quot;0.50800001621246337891&quot;
+             vocoderband04=&quot;0.56800001859664916992&quot; vocoderband05=&quot;0.70800000429153442383&quot;
+             vocoderband06=&quot;0.52000004053115844727&quot; vocoderband07=&quot;0.43600001931190490723&quot;
+             vocoderband08=&quot;0.39600002765655517578&quot; vocoderband09=&quot;0.19600000977516174316&quot;
+             vocoderband10=&quot;0.068000003695487976074&quot;/&gt;
   &lt;/programs&gt;
 &lt;/tal&gt;
 
@@ -996,7 +923,7 @@
     <MappedMinimum>0</MappedMinimum>
     <MappedMaximum>1</MappedMaximum>
     <MidiCC>30</MidiCC>
-    <Value>0.251968502998352</Value>
+    <Value>0.015748031437397</Value>
    </Parameter>
   </Data>
  </Plugin>
@@ -1023,7 +950,7 @@
     <MappedMinimum>0</MappedMinimum>
     <MappedMaximum>1</MappedMaximum>
     <MidiCC>14</MidiCC>
-    <Value>0.842519700527191</Value>
+    <Value>0.976377964019775</Value>
    </Parameter>
   </Data>
  </Plugin>
@@ -1050,158 +977,8 @@
     <MappedMinimum>0</MappedMinimum>
     <MappedMaximum>1</MappedMaximum>
     <MidiCC>15</MidiCC>
-    <Value>0.535433053970337</Value>
+    <Value>0.283464550971985</Value>
    </Parameter>
   </Data>
  </Plugin>
-
- <Patchbay>
-  <Connection>
-   <Source>ZamGate:Audio Output 1</Source>
-   <Target>x42-comp - Dynamic Compressor Mono:In</Target>
-  </Connection>
-  <Connection>
-   <Source>x42-comp - Dynamic Compressor Mono:Out</Source>
-   <Target>x42-Autotune:Input</Target>
-  </Connection>
-  <Connection>
-   <Source>Midi Input:Capture 1</Source>
-   <Target>x42-Autotune:events-in</Target>
-  </Connection>
-  <Connection>
-   <Source>Audio Input:Left</Source>
-   <Target>Tal-Vocoder-II:Audio Input 1</Target>
-  </Connection>
-  <Connection>
-   <Source>Midi Input:Capture 1</Source>
-   <Target>Tal-Vocoder-II:events-in</Target>
-  </Connection>
-  <Connection>
-   <Source>Audio Input:Left</Source>
-   <Target>ZamGate:Audio Input 1</Target>
-  </Connection>
-  <Connection>
-   <Source>x42-Autotune:Output</Source>
-   <Target>MDA RingMod:Left In</Target>
-  </Connection>
-  <Connection>
-   <Source>x42-eq - Parametric Equalizer Mono:Out</Source>
-   <Target>reverb:In L</Target>
-  </Connection>
-  <Connection>
-   <Source>reverb:Out L</Source>
-   <Target>Audio Output:Left</Target>
-  </Connection>
-  <Connection>
-   <Source>MDA RingMod:Left Out</Source>
-   <Target>Audio Gain (Mono):Audio Input 1</Target>
-  </Connection>
-  <Connection>
-   <Source>Audio Gain (Mono):Audio Output 1</Source>
-   <Target>x42-eq - Parametric Equalizer Mono:In</Target>
-  </Connection>
-  <Connection>
-   <Source>Midi Input:Capture 1</Source>
-   <Target>Audio Gain (Mono):events-in</Target>
-  </Connection>
-  <Connection>
-   <Source>Tal-Vocoder-II:Audio Output 1</Source>
-   <Target>Audio Gain (Mono) (2):Audio Input 1</Target>
-  </Connection>
-  <Connection>
-   <Source>Audio Gain (Mono) (2):Audio Output 1</Source>
-   <Target>x42-eq - Parametric Equalizer Mono:In</Target>
-  </Connection>
-  <Connection>
-   <Source>Midi Input:Capture 1</Source>
-   <Target>Audio Gain (Mono) (2):events-in</Target>
-  </Connection>
-  <Connection>
-   <Source>Midi Input:Capture 1</Source>
-   <Target>reverb:events-in</Target>
-  </Connection>
-  <Connection>
-   <Source>Midi Input:Capture 1</Source>
-   <Target>MDA RingMod:events-in</Target>
-  </Connection>
-  <Positions>
-   <Position x1="2193" y1="1002" pluginId="8">
-    <Name>Audio Gain (Mono) (2)</Name>
-   </Position>
-   <Position x1="2188" y1="1188" pluginId="7">
-    <Name>Audio Gain (Mono)</Name>
-   </Position>
-   <Position x1="2695" y1="1131" pluginId="6">
-    <Name>reverb</Name>
-   </Position>
-   <Position x1="1497" y1="800" pluginId="5">
-    <Name>Tal-Vocoder-II</Name>
-   </Position>
-   <Position x1="2415" y1="1129" pluginId="4">
-    <Name>x42-eq - Parametric Equalizer Mono</Name>
-   </Position>
-   <Position x1="2020" y1="1110" pluginId="3">
-    <Name>MDA RingMod</Name>
-   </Position>
-   <Position x1="1825" y1="1059" pluginId="2">
-    <Name>x42-Autotune</Name>
-   </Position>
-   <Position x1="1613" y1="1261" pluginId="1">
-    <Name>x42-comp - Dynamic Compressor Mono</Name>
-   </Position>
-   <Position x1="1345" y1="1249" pluginId="0">
-    <Name>ZamGate</Name>
-   </Position>
-   <Position x1="1456" y1="1203" x2="2260" y2="1382">
-    <Name>Midi Output</Name>
-   </Position>
-   <Position x1="1130" y1="857">
-    <Name>Midi Input</Name>
-   </Position>
-   <Position x1="1373" y1="1290" x2="2829" y2="1044">
-    <Name>Audio Output</Name>
-   </Position>
-   <Position x1="1054" y1="1145">
-    <Name>Audio Input</Name>
-   </Position>
-  </Positions>
- </Patchbay>
-
- <ExternalPatchbay>
-  <Connection>
-   <Source>system:midi_capture_2</Source>
-   <Target>Carla:events-in</Target>
-  </Connection>
-  <Connection>
-   <Source>usb_mic:capture_1</Source>
-   <Target>Carla:audio-in1</Target>
-  </Connection>
-  <Connection>
-   <Source>Carla:audio-out1</Source>
-   <Target>system:playback_1</Target>
-  </Connection>
-  <Connection>
-   <Source>Carla:audio-out1</Source>
-   <Target>jack_capture:input1</Target>
-  </Connection>
-  <Connection>
-   <Source>Carla:audio-out2</Source>
-   <Target>system:playback_2</Target>
-  </Connection>
-  <Connection>
-   <Source>Carla:audio-out2</Source>
-   <Target>jack_capture:input2</Target>
-  </Connection>
-  <Positions>
-   <Position x1="1600" y1="1092">
-    <Name>Carla</Name>
-   </Position>
-   <Position x1="1373" y1="1290" x2="1951" y2="1001">
-    <Name>system</Name>
-   </Position>
-   <Position x1="1360" y1="957">
-    <Name>usb_mic</Name>
-   </Position>
-  </Positions>
- </ExternalPatchbay>
 </CARLA-PROJECT>
