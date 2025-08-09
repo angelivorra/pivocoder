@@ -981,24 +981,4 @@
    </Parameter>
   </Data>
  </Plugin>
-
- <Patchbay>
-  <Positions>
-   <Position x1="1550" y1="1418" x2="2057" y2="1449">
-    <Name>Midi Output</Name>
-   </Position>
-   <Position x1="892" y1="1420" x2="1943" y2="1355">
-    <Name>Midi Input</Name>
-   </Position>
-   <Position x1="1550" y1="1281" x2="2025" y2="1146">
-    <Name>Audio Output</Name>
-   </Position>
-   <Position x1="886" y1="1040" x2="1952" y2="1200">
-    <Name>Audio Input</Name>
-   </Position>
-  </Positions>
- </Patchbay>
-
- <ExternalPatchbay>
- </ExternalPatchbay>
 </CARLA-PROJECT>

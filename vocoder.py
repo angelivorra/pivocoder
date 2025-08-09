@@ -161,7 +161,7 @@ def flash_led(value):
 def start_carla():
     """Función para arrancar Carla en modo headless con un preset específico."""
     global carla_process, current_preset
-    preset_path = f"/home/patch/pivocoder/buenos/wearetherobots.carxp"
+    preset_path = f"/home/patch/pivocoder/take2/war.carxp"
     print(f"Arrancando Carla con preset: {preset_path}...")
 
     os.environ["QT_QPA_PLATFORM"] = "offscreen"
