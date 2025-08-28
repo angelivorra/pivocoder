@@ -401,31 +401,32 @@ if __name__ == "__main__":
         sys.exit(1)
 
     # Esperar un momento para que jackd se estabilice
-    time.sleep(2)
-
-    # Arrancar alsa_in
-    start_alsa_in()
     time.sleep(1)
 
-    # Arrancar servidor TCP
-    print("Main: Starting TCP server thread...")
-    tcp_server_thread = threading.Thread(target=start_tcp_server, args=(TCP_HOST, TCP_PORT), daemon=True)
-    tcp_server_thread.start()
+    # Arrancar alsa_in
+    # start_alsa_in()
+    # time.sleep(1)
 
-    # Esperar a que el servidor TCP confirme el arranque (bind exitoso)
-    if not tcp_server_started_event.wait(timeout=5): # Espera hasta 5 segundos
-        print("Main: TCP server failed to start (bind error or timeout). Saliendo...")
-        flash_led(LED_ERROR)
-        stop_processes() # Limpiar lo que ya se haya arrancado
-        sys.exit(1)
-    else:
-        print(f"Main: TCP server started successfully on port {TCP_PORT}.")
+    # Arrancar servidor TCP
+    
+    # print("Main: Starting TCP server thread...")
+    # tcp_server_thread = threading.Thread(target=start_tcp_server, args=(TCP_HOST, TCP_PORT), daemon=True)
+    # tcp_server_thread.start()
+
+    # # Esperar a que el servidor TCP confirme el arranque (bind exitoso)
+    # if not tcp_server_started_event.wait(timeout=5): # Espera hasta 5 segundos
+    #     print("Main: TCP server failed to start (bind error or timeout). Saliendo...")
+    #     flash_led(LED_ERROR)
+    #     stop_processes() # Limpiar lo que ya se haya arrancado
+    #     sys.exit(1)
+    # else:
+    #     print(f"Main: TCP server started successfully on port {TCP_PORT}.")
 
     if "graba" in [arg.lower() for arg in sys.argv]:
         start_recording()
 
-    if "carla" in [arg.lower() for arg in sys.argv]:
-        start_carla()
+    # if "carla" in [arg.lower() for arg in sys.argv]:
+    #     start_carla()
 
     # Mantener el script en ejecución
     try:

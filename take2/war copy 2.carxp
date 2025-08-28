@@ -804,7 +804,7 @@
     <Index>23</Index>
     <Name>VOCODERBAND00</Name>
     <Symbol>vocoderband00</Symbol>
-    <Value>0.352000027894974</Value>
+    <Value>0.468000024557114</Value>
    </Parameter>
 
    <Parameter>
@@ -890,7 +890,7 @@
              osctranspose=&quot;0.14173227548599243164&quot; polymode=&quot;1&quot; portamento=&quot;0&quot;
              tune=&quot;0.50800001621246337891&quot; inputmode=&quot;0&quot; chorus=&quot;1&quot; enveloperelease=&quot;0.39370077848434448242&quot;
              oscsync=&quot;0&quot; pulsetune=&quot;0.5&quot; sawtune=&quot;0.5&quot; pulsefinetune=&quot;0.5&quot;
-             sawfinetune=&quot;0.5&quot; esserintensity=&quot;0.20000000298023223877&quot; vocoderband00=&quot;0.35200002789497375488&quot;
+             sawfinetune=&quot;0.5&quot; esserintensity=&quot;0.20000000298023223877&quot; vocoderband00=&quot;0.46800002455711364746&quot;
              vocoderband01=&quot;0.47200003266334533691&quot; vocoderband02=&quot;0.46400001645088195801&quot;
              vocoderband03=&quot;0.44800001382827758789&quot; vocoderband04=&quot;0.44800001382827758789&quot;
              vocoderband05=&quot;0.46400001645088195801&quot; vocoderband06=&quot;0.47600001096725463867&quot;
@@ -990,7 +990,7 @@
     <MappedMinimum>0</MappedMinimum>
     <MappedMaximum>1</MappedMaximum>
     <MidiCC>30</MidiCC>
-    <Value>0.771653532981873</Value>
+    <Value>0.511811017990112</Value>
    </Parameter>
   </Data>
  </Plugin>
@@ -1044,44 +1044,12 @@
     <MappedMinimum>0</MappedMinimum>
     <MappedMaximum>1</MappedMaximum>
     <MidiCC>15</MidiCC>
-    <Value>0.88976377248764</Value>
+    <Value>0.708661437034607</Value>
    </Parameter>
   </Data>
  </Plugin>
 
  <Patchbay>
-  <Connection>
-   <Source>Audio Input:Left</Source>
-   <Target>ZamGate:Audio Input 1</Target>
-  </Connection>
-  <Connection>
-   <Source>Audio Input:Left</Source>
-   <Target>Tal-Vocoder-II:Audio Input 1</Target>
-  </Connection>
-  <Connection>
-   <Source>Midi Input:Capture 1</Source>
-   <Target>x42-Autotune:events-in</Target>
-  </Connection>
-  <Connection>
-   <Source>Midi Input:Capture 1</Source>
-   <Target>MDA RingMod:events-in</Target>
-  </Connection>
-  <Connection>
-   <Source>Midi Input:Capture 1</Source>
-   <Target>Tal-Vocoder-II:events-in</Target>
-  </Connection>
-  <Connection>
-   <Source>Midi Input:Capture 1</Source>
-   <Target>reverb:events-in</Target>
-  </Connection>
-  <Connection>
-   <Source>Midi Input:Capture 1</Source>
-   <Target>Audio Gain (Mono):events-in</Target>
-  </Connection>
-  <Connection>
-   <Source>Midi Input:Capture 1</Source>
-   <Target>Audio Gain (Mono) (2):events-in</Target>
-  </Connection>
   <Connection>
    <Source>ZamGate:Audio Output 1</Source>
    <Target>x42-comp - Dynamic Compressor Mono:In</Target>
@@ -1091,35 +1059,67 @@
    <Target>x42-Autotune:Input</Target>
   </Connection>
   <Connection>
-   <Source>x42-Autotune:Output</Source>
-   <Target>MDA RingMod:Left In</Target>
+   <Source>Midi Input:Capture 1</Source>
+   <Target>x42-Autotune:events-in</Target>
   </Connection>
   <Connection>
-   <Source>MDA RingMod:Left Out</Source>
-   <Target>Audio Gain (Mono):Audio Input 1</Target>
+   <Source>Audio Input:Left</Source>
+   <Target>Tal-Vocoder-II:Audio Input 1</Target>
+  </Connection>
+  <Connection>
+   <Source>Midi Input:Capture 1</Source>
+   <Target>Tal-Vocoder-II:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>Audio Input:Left</Source>
+   <Target>ZamGate:Audio Input 1</Target>
+  </Connection>
+  <Connection>
+   <Source>x42-Autotune:Output</Source>
+   <Target>MDA RingMod:Left In</Target>
   </Connection>
   <Connection>
    <Source>x42-eq - Parametric Equalizer Mono:Out</Source>
    <Target>reverb:In L</Target>
   </Connection>
   <Connection>
-   <Source>Tal-Vocoder-II:Audio Output 1</Source>
-   <Target>Audio Gain (Mono) (2):Audio Input 1</Target>
-  </Connection>
-  <Connection>
-   <Source>reverb:Out L</Source>
-   <Target>Audio Output:Left</Target>
+   <Source>MDA RingMod:Left Out</Source>
+   <Target>Audio Gain (Mono):Audio Input 1</Target>
   </Connection>
   <Connection>
    <Source>Audio Gain (Mono):Audio Output 1</Source>
    <Target>x42-eq - Parametric Equalizer Mono:In</Target>
   </Connection>
   <Connection>
+   <Source>Midi Input:Capture 1</Source>
+   <Target>Audio Gain (Mono):events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>Tal-Vocoder-II:Audio Output 1</Source>
+   <Target>Audio Gain (Mono) (2):Audio Input 1</Target>
+  </Connection>
+  <Connection>
    <Source>Audio Gain (Mono) (2):Audio Output 1</Source>
    <Target>x42-eq - Parametric Equalizer Mono:In</Target>
   </Connection>
+  <Connection>
+   <Source>Midi Input:Capture 1</Source>
+   <Target>Audio Gain (Mono) (2):events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>Midi Input:Capture 1</Source>
+   <Target>reverb:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>Midi Input:Capture 1</Source>
+   <Target>MDA RingMod:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>reverb:Out L</Source>
+   <Target>Audio Output:Left</Target>
+  </Connection>
   <Positions>
-   <Position x1="1859" y1="942" pluginId="8">
+   <Position x1="2193" y1="1002" pluginId="8">
     <Name>Audio Gain (Mono) (2)</Name>
    </Position>
    <Position x1="2198" y1="1153" pluginId="7">
@@ -1134,10 +1134,10 @@
    <Position x1="2415" y1="1129" pluginId="4">
     <Name>x42-eq - Parametric Equalizer Mono</Name>
    </Position>
-   <Position x1="1951" y1="1070" pluginId="3">
+   <Position x1="2020" y1="1110" pluginId="3">
     <Name>MDA RingMod</Name>
    </Position>
-   <Position x1="1690" y1="1046" pluginId="2">
+   <Position x1="1852" y1="1085" pluginId="2">
     <Name>x42-Autotune</Name>
    </Position>
    <Position x1="1613" y1="1261" pluginId="1">
@@ -1149,13 +1149,13 @@
    <Position x1="1456" y1="1203" x2="2260" y2="1382">
     <Name>Midi Output</Name>
    </Position>
-   <Position x1="1181" y1="1064">
+   <Position x1="1130" y1="857">
     <Name>Midi Input</Name>
    </Position>
    <Position x1="1373" y1="1290" x2="2715" y2="1290">
     <Name>Audio Output</Name>
    </Position>
-   <Position x1="1195" y1="927">
+   <Position x1="1154" y1="1105">
     <Name>Audio Input</Name>
    </Position>
   </Positions>
@@ -1163,31 +1163,38 @@
 
  <ExternalPatchbay>
   <Connection>
-   <Source>system:capture_1</Source>
-   <Target>Carla:audio-in1</Target>
-  </Connection>
-  <Connection>
-   <Source>system:capture_1</Source>
-   <Target>Carla:audio-in2</Target>
-  </Connection>
-  <Connection>
    <Source>system:midi_capture_2</Source>
    <Target>Carla:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>usb_mic:capture_1</Source>
+   <Target>Carla:audio-in1</Target>
   </Connection>
   <Connection>
    <Source>Carla:audio-out1</Source>
    <Target>system:playback_1</Target>
   </Connection>
   <Connection>
+   <Source>Carla:audio-out1</Source>
+   <Target>jack_capture:input1</Target>
+  </Connection>
+  <Connection>
    <Source>Carla:audio-out2</Source>
    <Target>system:playback_2</Target>
   </Connection>
+  <Connection>
+   <Source>Carla:audio-out2</Source>
+   <Target>jack_capture:input2</Target>
+  </Connection>
   <Positions>
-   <Position x1="1193" y1="1000">
+   <Position x1="1600" y1="1092">
     <Name>Carla</Name>
    </Position>
-   <Position x1="917" y1="1015" x2="1951" y2="1001">
+   <Position x1="1373" y1="1290" x2="1951" y2="1001">
     <Name>system</Name>
+   </Position>
+   <Position x1="1360" y1="957">
+    <Name>usb_mic</Name>
    </Position>
   </Positions>
  </ExternalPatchbay>
