@@ -1,0 +1,282 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE CARLA-PROJECT>
+<CARLA-PROJECT VERSION='2.5'>
+ <EngineSettings>
+  <ForceStereo>false</ForceStereo>
+  <PreferPluginBridges>false</PreferPluginBridges>
+  <PreferUiBridges>false</PreferUiBridges>
+  <UIsAlwaysOnTop>false</UIsAlwaysOnTop>
+  <MaxParameters>200</MaxParameters>
+  <UIBridgesTimeout>4000</UIBridgesTimeout>
+ </EngineSettings>
+
+ <Transport>
+  <BeatsPerMinute>120</BeatsPerMinute>
+ </Transport>
+
+ <!-- Calf Filter -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>Calf Filter</Name>
+   <URI>http://calf.sourceforge.net/plugins/Filter</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x3f1</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Frequency</Name>
+    <Symbol>freq</Symbol>
+    <Value>100</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Resonance</Name>
+    <Symbol>res</Symbol>
+    <Value>0.707000017166138</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>Mode</Name>
+    <Symbol>mode</Symbol>
+    <Value>3</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>3</Index>
+    <Name>Inertia</Name>
+    <Symbol>inertia</Symbol>
+    <Value>20</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>4</Index>
+    <Name>Bypass</Name>
+    <Symbol>bypass</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>5</Index>
+    <Name>Input Gain</Name>
+    <Symbol>level_in</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>6</Index>
+    <Name>Output Gain</Name>
+    <Symbol>level_out</Symbol>
+    <Value>1</Value>
+   </Parameter>
+  </Data>
+ </Plugin>
+
+ <!-- 1/3 Octave Spectrum Display Mono -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>1.3 Octave Spectrum Display Mono</Name>
+   <URI>http://gareus.org/oss/lv2/meters#spectr30mono</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x0</Options>
+  </Data>
+ </Plugin>
+
+ <!-- 1/3 Octave Spectrum Display Mono -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>1.3 Octave Spectrum Display Mono (2)</Name>
+   <URI>http://gareus.org/oss/lv2/meters#spectr30mono</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x0</Options>
+  </Data>
+ </Plugin>
+
+ <!-- Calf Gate -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>Calf Gate</Name>
+   <URI>http://calf.sourceforge.net/plugins/Gate</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x3f1</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Bypass</Name>
+    <Symbol>bypass</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Input</Name>
+    <Symbol>level_in</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>6</Index>
+    <Name>Max Gain Reduction</Name>
+    <Symbol>range</Symbol>
+    <Value>0.00781250093132257</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>7</Index>
+    <Name>Threshold</Name>
+    <Symbol>threshold</Symbol>
+    <Value>0.125</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>8</Index>
+    <Name>Ratio</Name>
+    <Symbol>ratio</Symbol>
+    <Value>2</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>9</Index>
+    <Name>Attack</Name>
+    <Symbol>attack</Symbol>
+    <Value>5.05272006988525</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>10</Index>
+    <Name>Release</Name>
+    <Symbol>release</Symbol>
+    <Value>174.110107421875</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>11</Index>
+    <Name>Makeup Gain</Name>
+    <Symbol>makeup</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>12</Index>
+    <Name>Knee</Name>
+    <Symbol>knee</Symbol>
+    <Value>2.82842993736267</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>13</Index>
+    <Name>Detection</Name>
+    <Symbol>detection</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>14</Index>
+    <Name>Stereo Link</Name>
+    <Symbol>stereo_link</Symbol>
+    <Value>0</Value>
+   </Parameter>
+  </Data>
+ </Plugin>
+
+ <Patchbay>
+  <Connection>
+   <Source>Audio Input:Left</Source>
+   <Target>Calf Filter:In L</Target>
+  </Connection>
+  <Connection>
+   <Source>Audio Input:Left</Source>
+   <Target>1.3 Octave Spectrum Display Mono (2):In</Target>
+  </Connection>
+  <Connection>
+   <Source>Calf Filter:Out L</Source>
+   <Target>Calf Gate:In L</Target>
+  </Connection>
+  <Connection>
+   <Source>Calf Gate:Out L</Source>
+   <Target>1.3 Octave Spectrum Display Mono:In</Target>
+  </Connection>
+  <Connection>
+   <Source>1.3 Octave Spectrum Display Mono:Out</Source>
+   <Target>Audio Output:Left</Target>
+  </Connection>
+  <Positions>
+   <Position x1="1653" y1="860" pluginId="3">
+    <Name>Calf Gate</Name>
+   </Position>
+   <Position x1="2360" y1="1141" pluginId="2">
+    <Name>1.3 Octave Spectrum Display Mono (2)</Name>
+   </Position>
+   <Position x1="2016" y1="839" pluginId="1">
+    <Name>1.3 Octave Spectrum Display Mono</Name>
+   </Position>
+   <Position x1="1379" y1="924" pluginId="0">
+    <Name>Calf Filter</Name>
+   </Position>
+   <Position x1="1440" y1="1221" x2="2074" y2="1335">
+    <Name>Midi Output</Name>
+   </Position>
+   <Position x1="1204" y1="1290" x2="1832" y2="1158">
+    <Name>Midi Input</Name>
+   </Position>
+   <Position x1="1275" y1="1054" x2="2432" y2="933">
+    <Name>Audio Output</Name>
+   </Position>
+   <Position x1="1069" y1="927">
+    <Name>Audio Input</Name>
+   </Position>
+  </Positions>
+ </Patchbay>
+
+ <ExternalPatchbay>
+  <Connection>
+   <Source>system:capture_1</Source>
+   <Target>Carla:audio-in1</Target>
+  </Connection>
+  <Connection>
+   <Source>system:capture_1</Source>
+   <Target>Carla:audio-in2</Target>
+  </Connection>
+  <Connection>
+   <Source>system:midi_capture_2</Source>
+   <Target>Carla:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla:audio-out1</Source>
+   <Target>system:playback_1</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla:audio-out2</Source>
+   <Target>system:playback_2</Target>
+  </Connection>
+  <Positions>
+   <Position x1="1552" y1="1024">
+    <Name>Carla</Name>
+   </Position>
+   <Position x1="1275" y1="1054" x2="2017" y2="928">
+    <Name>system</Name>
+   </Position>
+  </Positions>
+ </ExternalPatchbay>
+</CARLA-PROJECT>

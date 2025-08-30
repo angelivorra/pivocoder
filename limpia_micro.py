@@ -28,15 +28,19 @@ def split_audio(
         trim_db (float): Nivel de recorte en dB para eliminar silencio al principio de cada sample.
     """
     try:
-        audio, sr = librosa.load(input_file, sr=None)
+        # Cargar sin forzar a mono para conservar canales originales
+        audio, sr = librosa.load(input_file, sr=None, mono=False)
     except Exception as e:
         print(f"Error al cargar {input_file}: {e}")
         return
+    # audio puede ser (n,) o (canales, n)
+    if audio.ndim == 1:
+        audio_mono = audio
+    else:
+        # Crear mezcla mono solo para VAD / segmentación
+        audio_mono = librosa.to_mono(audio)
 
-    if len(audio.shape) > 1:
-        audio = librosa.to_mono(audio)
-
-    audio_int16 = np.int16(audio * 32768)
+    audio_mono_int16 = np.int16(audio_mono * 32768)
     vad = webrtcvad.Vad(vad_aggressiveness)
 
     frame_duration = 30  # ms
@@ -47,7 +51,7 @@ def split_audio(
         for start in range(0, len(audio_int16), frame_samples):
             yield audio_int16[start:start + frame_samples]
 
-    frames = list(frame_generator(audio_int16, frame_samples))
+    frames = list(frame_generator(audio_mono_int16, frame_samples))
 
     segments = []
     segment_start = None
@@ -69,40 +73,79 @@ def split_audio(
             segments.append((segment_start, segment_end))
 
     for i, (start, end) in enumerate(segments):
-        segment = audio[int(start * sr):int(end * sr)]
-        # Eliminar silencio al principio y final del segmento
-        segment, _ = librosa.effects.trim(segment, top_db=trim_db)
-        if len(segment) == 0:
+        start_idx = int(start * sr)
+        end_idx = int(end * sr)
+
+        # Extraer segmento original (puede ser multi-canal)
+        if audio.ndim == 1:
+            seg_full = audio[start_idx:end_idx]
+        else:
+            seg_full = audio[:, start_idx:end_idx]  # (canales, n)
+
+        # Usar mezcla mono para trimming y obtener índices
+        seg_mono = audio_mono[start_idx:end_idx]
+        seg_mono_trim, trim_idx = librosa.effects.trim(seg_mono, top_db=trim_db)
+        trim_start_rel, trim_end_rel = trim_idx
+        if seg_mono_trim.size == 0:
             continue
-        # Normalizar el sample a -1.0 ... 1.0 (peak normalization)
-        peak = np.max(np.abs(segment))
+        if audio.ndim == 1:
+            seg_full = seg_full[trim_start_rel:trim_end_rel]
+        else:
+            seg_full = seg_full[:, trim_start_rel:trim_end_rel]
+
+        if seg_full.size == 0:
+            continue
+
+        # Normalización peak común a todos los canales
+        peak = np.max(np.abs(seg_full))
         if peak > 0:
-            segment = segment / peak
-        # Aumentar volumen (post-normalización)
+            seg_full = seg_full / peak
+        # Ganancia
         if gain_factor and gain_factor != 1.0:
-            segment = segment * float(gain_factor)
-        # Soft clip/tanh para más loudness sin distorsión dura
+            seg_full = seg_full * float(gain_factor)
+        # Soft clip
         if softclip:
             drive = max(0.1, float(softclip_drive))
-            segment = np.tanh(segment * drive) / np.tanh(drive)
-        # Normalización final para asegurar peak <= 0.999
-        peak2 = np.max(np.abs(segment))
+            seg_full = np.tanh(seg_full * drive) / np.tanh(drive)
+        # Normalización final
+        peak2 = np.max(np.abs(seg_full))
         if peak2 > 0:
-            segment = (segment / peak2) * 0.999
-        output_file = os.path.join(output_dir, f"{i+1:02d}.wav")
-        sf.write(output_file, segment, sr)
-        print(f"Guardado WAV: {output_file}")
+            seg_full = (seg_full / peak2) * 0.999
 
-        # Intentar generar MP3 paralelo usando ffmpeg (libmp3lame)
+        # Preparar forma (n_frames, n_channels) para escribir si es multi-canal
+        # Preparar datos mono y estéreo
+        if audio.ndim == 1:
+            mono_data = seg_full  # ya mono (n,)
+            stereo_data = np.stack([mono_data, mono_data], axis=1)  # duplicar
+        else:
+            # seg_full shape (canales, n)
+            mono_data = np.mean(seg_full, axis=0)
+            # Limitar a 2 canales para estéreo: si hay más, tomar los dos primeros
+            if seg_full.shape[0] >= 2:
+                stereo_data = seg_full[:2, :].T  # (n,2)
+            else:
+                stereo_data = np.stack([mono_data, mono_data], axis=1)
+
+        # Guardar mono WAV
+        mono_file = os.path.join(output_dir, f"{i+1:02d}.wav")
+        sf.write(mono_file, mono_data, sr)
+        print(f"Guardado WAV mono: {mono_file}")
+
+        # Guardar estéreo WAV
+        stereo_file = os.path.join(output_dir, f"{i+1:02d}.stereo.wav")
+        sf.write(stereo_file, stereo_data, sr)
+        print(f"Guardado WAV estéreo: {stereo_file}")
+
+        # MP3 desde la versión mono
         ffmpeg = shutil.which('ffmpeg')
         if ffmpeg:
-            mp3_file = os.path.splitext(output_file)[0] + '.mp3'
-            cmd = [ffmpeg, '-y', '-i', output_file, '-codec:a', 'libmp3lame', '-b:a', '192k', mp3_file]
+            mp3_file = os.path.join(output_dir, f"{i+1:02d}.mp3")
+            cmd = [ffmpeg, '-y', '-i', mono_file, '-codec:a', 'libmp3lame', '-b:a', '192k', mp3_file]
             try:
                 subprocess.check_call(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
                 print(f"Guardado MP3: {mp3_file}")
             except subprocess.CalledProcessError:
-                print(f"Error al convertir a MP3: {output_file}")
+                print(f"Error al convertir a MP3: {mono_file}")
         else:
             print("ffmpeg no encontrado; omitiendo conversión a MP3.")
 

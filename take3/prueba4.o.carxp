@@ -1,0 +1,711 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE CARLA-PROJECT>
+<CARLA-PROJECT VERSION='2.5'>
+ <EngineSettings>
+  <ForceStereo>false</ForceStereo>
+  <PreferPluginBridges>false</PreferPluginBridges>
+  <PreferUiBridges>true</PreferUiBridges>
+  <UIsAlwaysOnTop>false</UIsAlwaysOnTop>
+  <MaxParameters>200</MaxParameters>
+  <UIBridgesTimeout>4000</UIBridgesTimeout>
+ </EngineSettings>
+
+ <Transport>
+  <BeatsPerMinute>120</BeatsPerMinute>
+ </Transport>
+
+ <!-- AM pitchshifter -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>AM pitchshifter</Name>
+   <URI>http://plugin.org.uk/swh-plugins/amPitchshift</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x1</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Pitch shift</Name>
+    <Symbol>pitch</Symbol>
+    <Value>0.924999952316284</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Buffer size</Name>
+    <Symbol>size</Symbol>
+    <Value>2</Value>
+   </Parameter>
+  </Data>
+ </Plugin>
+
+ <!-- Calf Mono Compressor -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>Calf Mono Compressor</Name>
+   <URI>http://calf.sourceforge.net/plugins/MonoCompressor</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x3f1</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Bypass</Name>
+    <Symbol>bypass</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Input</Name>
+    <Symbol>level_in</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>6</Index>
+    <Name>Threshold</Name>
+    <Symbol>threshold</Symbol>
+    <Value>0.125</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>7</Index>
+    <Name>Ratio</Name>
+    <Symbol>ratio</Symbol>
+    <Value>2</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>8</Index>
+    <Name>Attack</Name>
+    <Symbol>attack</Symbol>
+    <Value>20</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>9</Index>
+    <Name>Release</Name>
+    <Symbol>release</Symbol>
+    <Value>250</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>10</Index>
+    <Name>Makeup Gain</Name>
+    <Symbol>makeup</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>11</Index>
+    <Name>Knee</Name>
+    <Symbol>knee</Symbol>
+    <Value>2.82842993736267</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>13</Index>
+    <Name>Mix</Name>
+    <Symbol>mix</Symbol>
+    <Value>1</Value>
+   </Parameter>
+  </Data>
+ </Plugin>
+
+ <!-- x42-Autotune -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>x42-Autotune</Name>
+   <URI>http://gareus.org/oss/lv2/fat1</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x1</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Mode</Name>
+    <Symbol>mode</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Filter Channel</Name>
+    <Symbol>channelf</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>Tuning</Name>
+    <Symbol>tuning</Symbol>
+    <Value>440</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>3</Index>
+    <Name>Bias</Name>
+    <Symbol>bias</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>4</Index>
+    <Name>Filter</Name>
+    <Symbol>filter</Symbol>
+    <Value>0.100000001490116</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>5</Index>
+    <Name>Correction</Name>
+    <Symbol>corr</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>6</Index>
+    <Name>Offset</Name>
+    <Symbol>offset</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>7</Index>
+    <Name>Pitch Bend Range</Name>
+    <Symbol>bendrange</Symbol>
+    <Value>2</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>8</Index>
+    <Name>Fast Correction</Name>
+    <Symbol>fastmode</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>9</Index>
+    <Name>C</Name>
+    <Symbol>m00</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>10</Index>
+    <Name>C#</Name>
+    <Symbol>m01</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>11</Index>
+    <Name>D</Name>
+    <Symbol>m02</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>12</Index>
+    <Name>D#</Name>
+    <Symbol>m03</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>13</Index>
+    <Name>E</Name>
+    <Symbol>m04</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>14</Index>
+    <Name>F</Name>
+    <Symbol>m05</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>15</Index>
+    <Name>F#</Name>
+    <Symbol>m06</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>16</Index>
+    <Name>G</Name>
+    <Symbol>m07</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>17</Index>
+    <Name>G#</Name>
+    <Symbol>m08</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>18</Index>
+    <Name>A</Name>
+    <Symbol>m09</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>19</Index>
+    <Name>A#</Name>
+    <Symbol>m10</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>20</Index>
+    <Name>B</Name>
+    <Symbol>m11</Symbol>
+    <Value>1</Value>
+   </Parameter>
+  </Data>
+ </Plugin>
+
+ <!-- Tal-Vocoder-II -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>Tal-Vocoder-II</Name>
+   <URI>http://kunz.corrupt.ch/products/tal-vocoder</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x0</Options>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>unused</Name>
+    <Symbol>unused</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>TAL_VOLUME</Name>
+    <Symbol>tal_volume</Symbol>
+    <Value>0.504000008106232</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>3</Index>
+    <Name>HARMONICS</Name>
+    <Symbol>harmonics</Symbol>
+    <Value>0.75600004196167</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>4</Index>
+    <Name>NOISEVOLUME</Name>
+    <Symbol>noisevolume</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>5</Index>
+    <Name>PULSEVOLUME</Name>
+    <Symbol>pulsevolume</Symbol>
+    <Value>0.34400001168251</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>6</Index>
+    <Name>SAWVOLUME</Name>
+    <Symbol>sawvolume</Symbol>
+    <Value>0.976000070571899</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>7</Index>
+    <Name>SUBOSCVOLUME</Name>
+    <Symbol>suboscvolume</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>8</Index>
+    <Name>OSCTRANSPOSE</Name>
+    <Symbol>osctranspose</Symbol>
+    <Value>0.64000004529953</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>9</Index>
+    <Name>SUBOSCOCTAVE</Name>
+    <Symbol>suboscoctave</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>10</Index>
+    <Name>OSCSYNC</Name>
+    <Symbol>oscsync</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>11</Index>
+    <Name>PULSETUNE</Name>
+    <Symbol>pulsetune</Symbol>
+    <Value>0.508000016212463</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>12</Index>
+    <Name>SAWTUNE</Name>
+    <Symbol>sawtune</Symbol>
+    <Value>0.540000021457672</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>13</Index>
+    <Name>PULSEFINETUNE</Name>
+    <Symbol>pulsefinetune</Symbol>
+    <Value>0.52400004863739</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>14</Index>
+    <Name>SAWFINETUNE</Name>
+    <Symbol>sawfinetune</Symbol>
+    <Value>0.520000040531158</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>15</Index>
+    <Name>ESSERINTENSITY</Name>
+    <Symbol>esserintensity</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>16</Index>
+    <Name>POLYMODE</Name>
+    <Symbol>polymode</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>17</Index>
+    <Name>PORTAMENTO</Name>
+    <Symbol>portamento</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>18</Index>
+    <Name>TAL_TUNE</Name>
+    <Symbol>tal_tune</Symbol>
+    <Value>0.508000016212463</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>19</Index>
+    <Name>PANIC</Name>
+    <Symbol>panic</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>20</Index>
+    <Name>INPUTMODE</Name>
+    <Symbol>inputmode</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>21</Index>
+    <Name>CHORUS</Name>
+    <Symbol>chorus</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>22</Index>
+    <Name>ENVELOPERELEASE</Name>
+    <Symbol>enveloperelease</Symbol>
+    <Value>0.828000068664551</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>23</Index>
+    <Name>VOCODERBAND00</Name>
+    <Symbol>vocoderband00</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>24</Index>
+    <Name>VOCODERBAND01</Name>
+    <Symbol>vocoderband01</Symbol>
+    <Value>0.260000020265579</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>25</Index>
+    <Name>VOCODERBAND02</Name>
+    <Symbol>vocoderband02</Symbol>
+    <Value>0.464000016450882</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>26</Index>
+    <Name>VOCODERBAND03</Name>
+    <Symbol>vocoderband03</Symbol>
+    <Value>0.448000013828278</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>27</Index>
+    <Name>VOCODERBAND04</Name>
+    <Symbol>vocoderband04</Symbol>
+    <Value>0.448000013828278</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>28</Index>
+    <Name>VOCODERBAND05</Name>
+    <Symbol>vocoderband05</Symbol>
+    <Value>0.464000016450882</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>29</Index>
+    <Name>VOCODERBAND06</Name>
+    <Symbol>vocoderband06</Symbol>
+    <Value>0.476000010967255</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>30</Index>
+    <Name>VOCODERBAND07</Name>
+    <Symbol>vocoderband07</Symbol>
+    <Value>0.41200003027916</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>31</Index>
+    <Name>VOCODERBAND08</Name>
+    <Symbol>vocoderband08</Symbol>
+    <Value>0.224000006914139</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>32</Index>
+    <Name>VOCODERBAND09</Name>
+    <Symbol>vocoderband09</Symbol>
+    <Value>0.100000001490116</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>33</Index>
+    <Name>VOCODERBAND10</Name>
+    <Symbol>vocoderband10</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:juce:stateString</Key>
+    <Value>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+
+&lt;tal curprogram=&quot;0&quot; version=&quot;1&quot;&gt;
+  &lt;programs&gt;
+    &lt;program programname=&quot;A Voice Robot 1&quot; volume=&quot;0.50400000810623168945&quot;
+             harmonics=&quot;0.75600004196166992188&quot; noisevolume=&quot;0&quot; pulsevolume=&quot;0.34400001168251037598&quot;
+             sawvolume=&quot;0.97600007057189941406&quot; suboscvolume=&quot;1&quot; osctranspose=&quot;0.6400000452995300293&quot;
+             polymode=&quot;1&quot; portamento=&quot;0&quot; tune=&quot;0.50800001621246337891&quot; inputmode=&quot;0&quot;
+             chorus=&quot;1&quot; enveloperelease=&quot;0.82800006866455078125&quot; oscsync=&quot;0&quot;
+             pulsetune=&quot;0.50800001621246337891&quot; sawtune=&quot;0.54000002145767211914&quot;
+             pulsefinetune=&quot;0.52400004863739013672&quot; sawfinetune=&quot;0.52000004053115844727&quot;
+             esserintensity=&quot;1&quot; vocoderband00=&quot;0&quot; vocoderband01=&quot;0.26000002026557922363&quot;
+             vocoderband02=&quot;0.46400001645088195801&quot; vocoderband03=&quot;0.44800001382827758789&quot;
+             vocoderband04=&quot;0.44800001382827758789&quot; vocoderband05=&quot;0.46400001645088195801&quot;
+             vocoderband06=&quot;0.47600001096725463867&quot; vocoderband07=&quot;0.4120000302791595459&quot;
+             vocoderband08=&quot;0.22400000691413879395&quot; vocoderband09=&quot;0.10000000149011611938&quot;
+             vocoderband10=&quot;0&quot;/&gt;
+  &lt;/programs&gt;
+&lt;/tal&gt;
+
+    </Value>
+   </CustomData>
+  </Data>
+ </Plugin>
+
+ <!-- x42-eq - Parametric Equalizer Mo -->
+ <Plugin>
+  <Info>
+   <Type>VST2</Type>
+   <Name>x42-eq - Parametric Equalizer Mo</Name>
+   <Binary>/usr/lib/vst/fil4.lv2.so</Binary>
+   <UniqueID>1265243977</UniqueID>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x9</Options>
+
+   <Chunk>
+AAAABgAAACEAAAAmaHR0cDovL2dhcmV1cy5vcmcvb3NzL2x2Mi9maWw0I2Ric2NhbGUAAAAjaHR0cDovL2x2MnBsdWcuaW4vbnMvZXh0L2F0b20jRmxvYXQA
+AAADAAAABAAA8EEAAAAmaHR0cDovL2dhcmV1cy5vcmcvb3NzL2x2Mi9maWw0I2ZmdGdhaW4AAAAjaHR0cDovL2x2MnBsdWcuaW4vbnMvZXh0L2F0b20jRmxv
+YXQAAAADAAAABAAAAAAAAAAmaHR0cDovL2dhcmV1cy5vcmcvb3NzL2x2Mi9maWw0I3Vpc2NhbGUAAAAjaHR0cDovL2x2MnBsdWcuaW4vbnMvZXh0L2F0b20j
+RmxvYXQAAAADAAAABAAAgD8AAAAmaHR0cDovL2dhcmV1cy5vcmcvb3NzL2x2Mi9maWw0I3Vpc2NhbGUAAAAjaHR0cDovL2x2MnBsdWcuaW4vbnMvZXh0L2F0
+b20jRmxvYXQAAAADAAAABAAAgD8AAAAmaHR0cDovL2dhcmV1cy5vcmcvb3NzL2x2Mi9maWw0I2ZmdG1vZGUAAAAhaHR0cDovL2x2MnBsdWcuaW4vbnMvZXh0
+L2F0b20jSW50AAAAAwAAAAQHEgAAAAAAKWh0dHA6Ly9nYXJldXMub3JnL29zcy9sdjIvZmlsNCNmZnRjaGFubmVsAAAAIWh0dHA6Ly9sdjJwbHVnLmluL25z
+L2V4dC9hdG9tI0ludAAAAAMAAAAE/////wAAgD8AAAAGZW5hYmxlAAAAAAAAAARnYWluAACAPwAAAAlwZWFrcmVzZXQAAAAAAAAACEhpZ2hQYXNz3A2fQQAA
+AAZIUGZyZXEzMzM/AAAAA0hQUQAAAAAAAAAHTG93UGFzcwBAnEYAAAAGTFBmcmVxAACAPwAAAANMUFEAAIA/AAAABUxTc2VjJja9QgAAAAZMU2ZyZXEAAIA/
+AAAAA0xTcbgejcEAAAAGTFNnYWluAACAPwAAAARzZWMxm90eQwAAAAVmcmVxMZqZGT8AAAACcTEAAAAAAAAABWdhaW4xAACAPwAAAARzZWMyn/++QwAAAAVm
+cmVxMpqZGT8AAAACcTKPwpXAAAAABWdhaW4yAACAPwAAAARzZWMzN8ikRAAAAAVmcmVxM5qZGT8AAAACcTMJ18PAAAAABWdhaW4zAACAPwAAAARzZWM0nV0d
+RQAAAAVmcmVxNJqZGT8AAAACcTQAAAAAAAAABWdhaW40AACAPwAAAAVIU3NlY6BtoEUAAAAGSFNmcmVxAACAPwAAAANIU3EAAJDBAAAABkhTZ2Fpbg==
+   </Chunk>
+  </Data>
+ </Plugin>
+
+ <!-- Audio Gain (Mono) -->
+ <Plugin>
+  <Info>
+   <Type>INTERNAL</Type>
+   <Name>Audio Gain (Mono)</Name>
+   <Label>audiogain</Label>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x0</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Gain</Name>
+    <Value>0.319999992847443</Value>
+   </Parameter>
+  </Data>
+ </Plugin>
+
+ <Patchbay>
+  <Connection>
+   <Source>AM pitchshifter:Output</Source>
+   <Target>Calf Mono Compressor:In L</Target>
+  </Connection>
+  <Connection>
+   <Source>Midi Input:Capture 1</Source>
+   <Target>x42-Autotune:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>Midi Input:Capture 1</Source>
+   <Target>Tal-Vocoder-II:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>Calf Mono Compressor:Out L</Source>
+   <Target>x42-eq - Parametric Equalizer Mo:input</Target>
+  </Connection>
+  <Connection>
+   <Source>x42-eq - Parametric Equalizer Mo:output</Source>
+   <Target>x42-Autotune:Input</Target>
+  </Connection>
+  <Connection>
+   <Source>Audio Input:Left</Source>
+   <Target>AM pitchshifter:Input</Target>
+  </Connection>
+  <Connection>
+   <Source>Audio Input:Left</Source>
+   <Target>Tal-Vocoder-II:Audio Input 1</Target>
+  </Connection>
+  <Connection>
+   <Source>x42-Autotune:Output</Source>
+   <Target>Audio Gain (Mono):input</Target>
+  </Connection>
+  <Connection>
+   <Source>Midi Input:Capture 1</Source>
+   <Target>Audio Gain (Mono):events-in</Target>
+  </Connection>
+  <Positions>
+   <Position x1="2114" y1="986" pluginId="5">
+    <Name>Audio Gain (Mono)</Name>
+   </Position>
+   <Position x1="1602" y1="835" pluginId="4">
+    <Name>x42-eq - Parametric Equalizer Mo</Name>
+   </Position>
+   <Position x1="1659" y1="1310" pluginId="3">
+    <Name>Tal-Vocoder-II</Name>
+   </Position>
+   <Position x1="1886" y1="889" pluginId="2">
+    <Name>x42-Autotune</Name>
+   </Position>
+   <Position x1="1411" y1="905" pluginId="1">
+    <Name>Calf Mono Compressor</Name>
+   </Position>
+   <Position x1="1231" y1="942" pluginId="0">
+    <Name>AM pitchshifter</Name>
+   </Position>
+   <Position x1="1440" y1="1221" x2="2192" y2="1450">
+    <Name>Midi Output</Name>
+   </Position>
+   <Position x1="1284" y1="1205" x2="1832" y2="1158">
+    <Name>Midi Input</Name>
+   </Position>
+   <Position x1="1275" y1="1054" x2="2601" y2="1103">
+    <Name>Audio Output</Name>
+   </Position>
+   <Position x1="993" y1="1034">
+    <Name>Audio Input</Name>
+   </Position>
+  </Positions>
+ </Patchbay>
+
+ <ExternalPatchbay>
+  <Connection>
+   <Source>system:capture_1</Source>
+   <Target>Carla:audio-in1</Target>
+  </Connection>
+  <Connection>
+   <Source>system:capture_1</Source>
+   <Target>Carla:audio-in2</Target>
+  </Connection>
+  <Connection>
+   <Source>system:midi_capture_2</Source>
+   <Target>Carla:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla:audio-out1</Source>
+   <Target>system:playback_1</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla:audio-out2</Source>
+   <Target>system:playback_2</Target>
+  </Connection>
+  <Positions>
+   <Position x1="1517" y1="1034">
+    <Name>Carla</Name>
+   </Position>
+   <Position x1="1275" y1="1054" x2="2017" y2="928">
+    <Name>system</Name>
+   </Position>
+  </Positions>
+ </ExternalPatchbay>
+</CARLA-PROJECT>

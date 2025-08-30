@@ -1,0 +1,2464 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE CARLA-PROJECT>
+<CARLA-PROJECT VERSION='2.5'>
+ <EngineSettings>
+  <ForceStereo>false</ForceStereo>
+  <PreferPluginBridges>false</PreferPluginBridges>
+  <PreferUiBridges>false</PreferUiBridges>
+  <UIsAlwaysOnTop>false</UIsAlwaysOnTop>
+  <MaxParameters>200</MaxParameters>
+  <UIBridgesTimeout>4000</UIBridgesTimeout>
+ </EngineSettings>
+
+ <Transport>
+  <BeatsPerMinute>120</BeatsPerMinute>
+ </Transport>
+
+ <!-- Calf Filter -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>Calf Filter</Name>
+   <URI>http://calf.sourceforge.net/plugins/Filter</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x3f1</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Frequency</Name>
+    <Symbol>freq</Symbol>
+    <Value>100</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Resonance</Name>
+    <Symbol>res</Symbol>
+    <Value>0.707000017166138</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>Mode</Name>
+    <Symbol>mode</Symbol>
+    <Value>3</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>3</Index>
+    <Name>Inertia</Name>
+    <Symbol>inertia</Symbol>
+    <Value>20</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>4</Index>
+    <Name>Bypass</Name>
+    <Symbol>bypass</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>5</Index>
+    <Name>Input Gain</Name>
+    <Symbol>level_in</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>6</Index>
+    <Name>Output Gain</Name>
+    <Symbol>level_out</Symbol>
+    <Value>1</Value>
+   </Parameter>
+  </Data>
+ </Plugin>
+
+ <!-- 1/3 Octave Spectrum Display Mono -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>1.3 Octave Spectrum Display Mono</Name>
+   <URI>http://gareus.org/oss/lv2/meters#spectr30mono</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x0</Options>
+  </Data>
+ </Plugin>
+
+ <!-- 1/3 Octave Spectrum Display Mono -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>1.3 Octave Spectrum Display Mono (2)</Name>
+   <URI>http://gareus.org/oss/lv2/meters#spectr30mono</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x0</Options>
+  </Data>
+ </Plugin>
+
+ <!-- Calf Gate -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>Calf Gate</Name>
+   <URI>http://calf.sourceforge.net/plugins/Gate</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x3f1</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Bypass</Name>
+    <Symbol>bypass</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Input</Name>
+    <Symbol>level_in</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>6</Index>
+    <Name>Max Gain Reduction</Name>
+    <Symbol>range</Symbol>
+    <Value>0.00781250093132257</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>7</Index>
+    <Name>Threshold</Name>
+    <Symbol>threshold</Symbol>
+    <Value>0.125</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>8</Index>
+    <Name>Ratio</Name>
+    <Symbol>ratio</Symbol>
+    <Value>2</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>9</Index>
+    <Name>Attack</Name>
+    <Symbol>attack</Symbol>
+    <Value>5.05272006988525</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>10</Index>
+    <Name>Release</Name>
+    <Symbol>release</Symbol>
+    <Value>174.110107421875</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>11</Index>
+    <Name>Makeup Gain</Name>
+    <Symbol>makeup</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>12</Index>
+    <Name>Knee</Name>
+    <Symbol>knee</Symbol>
+    <Value>2.82842993736267</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>13</Index>
+    <Name>Detection</Name>
+    <Symbol>detection</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>14</Index>
+    <Name>Stereo Link</Name>
+    <Symbol>stereo_link</Symbol>
+    <Value>0</Value>
+   </Parameter>
+  </Data>
+ </Plugin>
+
+ <!-- Calf Vocoder -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>Calf Vocoder</Name>
+   <URI>http://calf.sourceforge.net/plugins/Vocoder</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x3f1</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Bypass</Name>
+    <Symbol>bypass</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Link</Name>
+    <Symbol>link</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>Detectors</Name>
+    <Symbol>detectors</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>3</Index>
+    <Name>Carrier In</Name>
+    <Symbol>carrier_in</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>8</Index>
+    <Name>Modulator In</Name>
+    <Symbol>mod_in</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>13</Index>
+    <Name>Out</Name>
+    <Symbol>out</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>18</Index>
+    <Name>Carrier</Name>
+    <Symbol>carrier</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>19</Index>
+    <Name>Modulator</Name>
+    <Symbol>modulator</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>20</Index>
+    <Name>Processed</Name>
+    <Symbol>processed</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>21</Index>
+    <Name>Isolation</Name>
+    <Symbol>order</Symbol>
+    <Value>4</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>22</Index>
+    <Name>Bands</Name>
+    <Symbol>bands</Symbol>
+    <Value>2</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>23</Index>
+    <Name>High-Q</Name>
+    <Symbol>hiq</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>24</Index>
+    <Name>Attack</Name>
+    <Symbol>attack</Symbol>
+    <Value>5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>25</Index>
+    <Name>Release</Name>
+    <Symbol>release</Symbol>
+    <Value>50</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>26</Index>
+    <Name>Analyzer</Name>
+    <Symbol>analyzer</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>27</Index>
+    <Name>Vol 1</Name>
+    <Symbol>volume1</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>28</Index>
+    <Name>Pan 1</Name>
+    <Symbol>pan1</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>29</Index>
+    <Name>Noise 1</Name>
+    <Symbol>noise1</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>30</Index>
+    <Name>Dry 1</Name>
+    <Symbol>mod1</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>31</Index>
+    <Name>Solo 1</Name>
+    <Symbol>solo1</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>33</Index>
+    <Name>Q 1</Name>
+    <Symbol>q1</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>34</Index>
+    <Name>Vol 2</Name>
+    <Symbol>volume2</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>35</Index>
+    <Name>Pan 2</Name>
+    <Symbol>pan2</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>36</Index>
+    <Name>Noise 2</Name>
+    <Symbol>noise2</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>37</Index>
+    <Name>Dry 2</Name>
+    <Symbol>mod2</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>38</Index>
+    <Name>Solo 2</Name>
+    <Symbol>solo2</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>40</Index>
+    <Name>Q 2</Name>
+    <Symbol>q2</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>41</Index>
+    <Name>Vol 3</Name>
+    <Symbol>volume3</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>42</Index>
+    <Name>Pan 3</Name>
+    <Symbol>pan3</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>43</Index>
+    <Name>Noise 3</Name>
+    <Symbol>noise3</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>44</Index>
+    <Name>Dry 3</Name>
+    <Symbol>mod3</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>45</Index>
+    <Name>Solo 3</Name>
+    <Symbol>solo3</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>47</Index>
+    <Name>Q 3</Name>
+    <Symbol>q3</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>48</Index>
+    <Name>Vol 4</Name>
+    <Symbol>volume4</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>49</Index>
+    <Name>Pan 4</Name>
+    <Symbol>pan4</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>50</Index>
+    <Name>Noise 4</Name>
+    <Symbol>noise4</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>51</Index>
+    <Name>Dry 4</Name>
+    <Symbol>mod4</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>52</Index>
+    <Name>Solo 4</Name>
+    <Symbol>solo4</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>54</Index>
+    <Name>Q 4</Name>
+    <Symbol>q4</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>55</Index>
+    <Name>Vol 5</Name>
+    <Symbol>volume5</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>56</Index>
+    <Name>Pan 5</Name>
+    <Symbol>pan5</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>57</Index>
+    <Name>Noise 5</Name>
+    <Symbol>noise5</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>58</Index>
+    <Name>Dry 5</Name>
+    <Symbol>mod5</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>59</Index>
+    <Name>Solo 5</Name>
+    <Symbol>solo5</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>61</Index>
+    <Name>Q 5</Name>
+    <Symbol>q5</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>62</Index>
+    <Name>Vol 6</Name>
+    <Symbol>volume6</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>63</Index>
+    <Name>Pan 6</Name>
+    <Symbol>pan6</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>64</Index>
+    <Name>Noise 6</Name>
+    <Symbol>noise6</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>65</Index>
+    <Name>Dry 6</Name>
+    <Symbol>mod6</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>66</Index>
+    <Name>Solo 6</Name>
+    <Symbol>solo6</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>68</Index>
+    <Name>Q 6</Name>
+    <Symbol>q6</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>69</Index>
+    <Name>Vol 7</Name>
+    <Symbol>volume7</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>70</Index>
+    <Name>Pan 7</Name>
+    <Symbol>pan7</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>71</Index>
+    <Name>Noise 7</Name>
+    <Symbol>noise7</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>72</Index>
+    <Name>Dry 7</Name>
+    <Symbol>mod7</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>73</Index>
+    <Name>Solo 7</Name>
+    <Symbol>solo7</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>75</Index>
+    <Name>Q 7</Name>
+    <Symbol>q7</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>76</Index>
+    <Name>Vol 8</Name>
+    <Symbol>volume8</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>77</Index>
+    <Name>Pan 8</Name>
+    <Symbol>pan8</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>78</Index>
+    <Name>Noise 8</Name>
+    <Symbol>noise8</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>79</Index>
+    <Name>Dry 8</Name>
+    <Symbol>mod8</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>80</Index>
+    <Name>Solo 8</Name>
+    <Symbol>solo8</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>82</Index>
+    <Name>Q 8</Name>
+    <Symbol>q8</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>83</Index>
+    <Name>Vol 9</Name>
+    <Symbol>volume9</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>84</Index>
+    <Name>Pan 9</Name>
+    <Symbol>pan9</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>85</Index>
+    <Name>Noise 9</Name>
+    <Symbol>noise9</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>86</Index>
+    <Name>Dry 9</Name>
+    <Symbol>mod9</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>87</Index>
+    <Name>Solo 9</Name>
+    <Symbol>solo9</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>89</Index>
+    <Name>Q 9</Name>
+    <Symbol>q9</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>90</Index>
+    <Name>Vol 10</Name>
+    <Symbol>volume10</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>91</Index>
+    <Name>Pan 10</Name>
+    <Symbol>pan10</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>92</Index>
+    <Name>Noise 10</Name>
+    <Symbol>noise10</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>93</Index>
+    <Name>Dry 10</Name>
+    <Symbol>mod10</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>94</Index>
+    <Name>Solo 10</Name>
+    <Symbol>solo10</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>96</Index>
+    <Name>Q 10</Name>
+    <Symbol>q10</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>97</Index>
+    <Name>Vol 11</Name>
+    <Symbol>volume11</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>98</Index>
+    <Name>Pan 11</Name>
+    <Symbol>pan11</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>99</Index>
+    <Name>Noise 11</Name>
+    <Symbol>noise11</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>100</Index>
+    <Name>Dry 11</Name>
+    <Symbol>mod11</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>101</Index>
+    <Name>Solo 11</Name>
+    <Symbol>solo11</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>103</Index>
+    <Name>Q 11</Name>
+    <Symbol>q11</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>104</Index>
+    <Name>Vol 12</Name>
+    <Symbol>volume12</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>105</Index>
+    <Name>Pan 12</Name>
+    <Symbol>pan12</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>106</Index>
+    <Name>Noise 12</Name>
+    <Symbol>noise12</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>107</Index>
+    <Name>Dry 12</Name>
+    <Symbol>mod12</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>108</Index>
+    <Name>Solo 12</Name>
+    <Symbol>solo12</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>110</Index>
+    <Name>Q 12</Name>
+    <Symbol>q12</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>111</Index>
+    <Name>Vol 13</Name>
+    <Symbol>volume13</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>112</Index>
+    <Name>Pan 13</Name>
+    <Symbol>pan13</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>113</Index>
+    <Name>Noise 13</Name>
+    <Symbol>noise13</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>114</Index>
+    <Name>Dry 13</Name>
+    <Symbol>mod13</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>115</Index>
+    <Name>Solo 13</Name>
+    <Symbol>solo13</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>117</Index>
+    <Name>Q 13</Name>
+    <Symbol>q13</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>118</Index>
+    <Name>Vol 14</Name>
+    <Symbol>volume14</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>119</Index>
+    <Name>Pan 14</Name>
+    <Symbol>pan14</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>120</Index>
+    <Name>Noise 14</Name>
+    <Symbol>noise14</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>121</Index>
+    <Name>Dry 14</Name>
+    <Symbol>mod14</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>122</Index>
+    <Name>Solo 14</Name>
+    <Symbol>solo14</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>124</Index>
+    <Name>Q 14</Name>
+    <Symbol>q14</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>125</Index>
+    <Name>Vol 15</Name>
+    <Symbol>volume15</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>126</Index>
+    <Name>Pan 15</Name>
+    <Symbol>pan15</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>127</Index>
+    <Name>Noise 15</Name>
+    <Symbol>noise15</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>128</Index>
+    <Name>Dry 15</Name>
+    <Symbol>mod15</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>129</Index>
+    <Name>Solo 15</Name>
+    <Symbol>solo15</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>131</Index>
+    <Name>Q 15</Name>
+    <Symbol>q15</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>132</Index>
+    <Name>Vol 16</Name>
+    <Symbol>volume16</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>133</Index>
+    <Name>Pan 16</Name>
+    <Symbol>pan16</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>134</Index>
+    <Name>Noise 16</Name>
+    <Symbol>noise16</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>135</Index>
+    <Name>Dry 16</Name>
+    <Symbol>mod16</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>136</Index>
+    <Name>Solo 16</Name>
+    <Symbol>solo16</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>138</Index>
+    <Name>Q 16</Name>
+    <Symbol>q16</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>139</Index>
+    <Name>Vol 17</Name>
+    <Symbol>volume17</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>140</Index>
+    <Name>Pan 17</Name>
+    <Symbol>pan17</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>141</Index>
+    <Name>Noise 17</Name>
+    <Symbol>noise17</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>142</Index>
+    <Name>Dry 17</Name>
+    <Symbol>mod17</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>143</Index>
+    <Name>Solo 17</Name>
+    <Symbol>solo17</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>145</Index>
+    <Name>Q 17</Name>
+    <Symbol>q17</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>146</Index>
+    <Name>Vol 18</Name>
+    <Symbol>volume18</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>147</Index>
+    <Name>Pan 18</Name>
+    <Symbol>pan18</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>148</Index>
+    <Name>Noise 18</Name>
+    <Symbol>noise18</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>149</Index>
+    <Name>Dry 18</Name>
+    <Symbol>mod18</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>150</Index>
+    <Name>Solo 18</Name>
+    <Symbol>solo18</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>152</Index>
+    <Name>Q 18</Name>
+    <Symbol>q18</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>153</Index>
+    <Name>Vol 19</Name>
+    <Symbol>volume19</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>154</Index>
+    <Name>Pan 19</Name>
+    <Symbol>pan19</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>155</Index>
+    <Name>Noise 19</Name>
+    <Symbol>noise19</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>156</Index>
+    <Name>Dry 19</Name>
+    <Symbol>mod19</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>157</Index>
+    <Name>Solo 19</Name>
+    <Symbol>solo19</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>159</Index>
+    <Name>Q 19</Name>
+    <Symbol>q19</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>160</Index>
+    <Name>Vol 20</Name>
+    <Symbol>volume20</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>161</Index>
+    <Name>Pan 20</Name>
+    <Symbol>pan20</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>162</Index>
+    <Name>Noise 20</Name>
+    <Symbol>noise20</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>163</Index>
+    <Name>Dry 20</Name>
+    <Symbol>mod20</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>164</Index>
+    <Name>Solo 20</Name>
+    <Symbol>solo20</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>166</Index>
+    <Name>Q 20</Name>
+    <Symbol>q20</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>167</Index>
+    <Name>Vol 21</Name>
+    <Symbol>volume21</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>168</Index>
+    <Name>Pan 21</Name>
+    <Symbol>pan21</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>169</Index>
+    <Name>Noise 21</Name>
+    <Symbol>noise21</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>170</Index>
+    <Name>Dry 21</Name>
+    <Symbol>mod21</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>171</Index>
+    <Name>Solo 21</Name>
+    <Symbol>solo21</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>173</Index>
+    <Name>Q 21</Name>
+    <Symbol>q21</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>174</Index>
+    <Name>Vol 22</Name>
+    <Symbol>volume22</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>175</Index>
+    <Name>Pan 22</Name>
+    <Symbol>pan22</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>176</Index>
+    <Name>Noise 22</Name>
+    <Symbol>noise22</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>177</Index>
+    <Name>Dry 22</Name>
+    <Symbol>mod22</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>178</Index>
+    <Name>Solo 22</Name>
+    <Symbol>solo22</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>180</Index>
+    <Name>Q 22</Name>
+    <Symbol>q22</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>181</Index>
+    <Name>Vol 23</Name>
+    <Symbol>volume23</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>182</Index>
+    <Name>Pan 23</Name>
+    <Symbol>pan23</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>183</Index>
+    <Name>Noise 23</Name>
+    <Symbol>noise23</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>184</Index>
+    <Name>Dry 23</Name>
+    <Symbol>mod23</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>185</Index>
+    <Name>Solo 23</Name>
+    <Symbol>solo23</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>187</Index>
+    <Name>Q 23</Name>
+    <Symbol>q23</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>188</Index>
+    <Name>Vol 24</Name>
+    <Symbol>volume24</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>189</Index>
+    <Name>Pan 24</Name>
+    <Symbol>pan24</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>190</Index>
+    <Name>Noise 24</Name>
+    <Symbol>noise24</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>191</Index>
+    <Name>Dry 24</Name>
+    <Symbol>mod24</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>192</Index>
+    <Name>Solo 24</Name>
+    <Symbol>solo24</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>194</Index>
+    <Name>Q 24</Name>
+    <Symbol>q24</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>195</Index>
+    <Name>Vol 25</Name>
+    <Symbol>volume25</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>196</Index>
+    <Name>Pan 25</Name>
+    <Symbol>pan25</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>197</Index>
+    <Name>Noise 25</Name>
+    <Symbol>noise25</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>198</Index>
+    <Name>Dry 25</Name>
+    <Symbol>mod25</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>199</Index>
+    <Name>Solo 25</Name>
+    <Symbol>solo25</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>201</Index>
+    <Name>Q 25</Name>
+    <Symbol>q25</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>202</Index>
+    <Name>Vol 26</Name>
+    <Symbol>volume26</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>203</Index>
+    <Name>Pan 26</Name>
+    <Symbol>pan26</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>204</Index>
+    <Name>Noise 26</Name>
+    <Symbol>noise26</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>205</Index>
+    <Name>Dry 26</Name>
+    <Symbol>mod26</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>206</Index>
+    <Name>Solo 26</Name>
+    <Symbol>solo26</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>208</Index>
+    <Name>Q 26</Name>
+    <Symbol>q26</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>209</Index>
+    <Name>Vol 27</Name>
+    <Symbol>volume27</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>210</Index>
+    <Name>Pan 27</Name>
+    <Symbol>pan27</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>211</Index>
+    <Name>Noise 27</Name>
+    <Symbol>noise27</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>212</Index>
+    <Name>Dry 27</Name>
+    <Symbol>mod27</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>213</Index>
+    <Name>Solo 27</Name>
+    <Symbol>solo27</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>215</Index>
+    <Name>Q 27</Name>
+    <Symbol>q27</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>216</Index>
+    <Name>Vol 28</Name>
+    <Symbol>volume28</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>217</Index>
+    <Name>Pan 28</Name>
+    <Symbol>pan28</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>218</Index>
+    <Name>Noise 28</Name>
+    <Symbol>noise28</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>219</Index>
+    <Name>Dry 28</Name>
+    <Symbol>mod28</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>220</Index>
+    <Name>Solo 28</Name>
+    <Symbol>solo28</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>222</Index>
+    <Name>Q 28</Name>
+    <Symbol>q28</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>223</Index>
+    <Name>Vol 29</Name>
+    <Symbol>volume29</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>224</Index>
+    <Name>Pan 29</Name>
+    <Symbol>pan29</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>225</Index>
+    <Name>Noise 29</Name>
+    <Symbol>noise29</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>226</Index>
+    <Name>Dry 29</Name>
+    <Symbol>mod29</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>227</Index>
+    <Name>Solo 29</Name>
+    <Symbol>solo29</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>229</Index>
+    <Name>Q 29</Name>
+    <Symbol>q29</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>230</Index>
+    <Name>Vol 30</Name>
+    <Symbol>volume30</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>231</Index>
+    <Name>Pan 30</Name>
+    <Symbol>pan30</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>232</Index>
+    <Name>Noise 30</Name>
+    <Symbol>noise30</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>233</Index>
+    <Name>Dry 30</Name>
+    <Symbol>mod30</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>234</Index>
+    <Name>Solo 30</Name>
+    <Symbol>solo30</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>236</Index>
+    <Name>Q 30</Name>
+    <Symbol>q30</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>237</Index>
+    <Name>Vol 31</Name>
+    <Symbol>volume31</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>238</Index>
+    <Name>Pan 31</Name>
+    <Symbol>pan31</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>239</Index>
+    <Name>Noise 31</Name>
+    <Symbol>noise31</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>240</Index>
+    <Name>Dry 31</Name>
+    <Symbol>mod31</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>241</Index>
+    <Name>Solo 31</Name>
+    <Symbol>solo31</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>243</Index>
+    <Name>Q 31</Name>
+    <Symbol>q31</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>244</Index>
+    <Name>Vol 32</Name>
+    <Symbol>volume32</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>245</Index>
+    <Name>Pan 32</Name>
+    <Symbol>pan32</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>246</Index>
+    <Name>Noise 32</Name>
+    <Symbol>noise32</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>247</Index>
+    <Name>Dry 32</Name>
+    <Symbol>mod32</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>248</Index>
+    <Name>Solo 32</Name>
+    <Symbol>solo32</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>250</Index>
+    <Name>Q 32</Name>
+    <Symbol>q32</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>251</Index>
+    <Name>Lower</Name>
+    <Symbol>lower</Symbol>
+    <Value>20</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>252</Index>
+    <Name>Upper</Name>
+    <Symbol>upper</Symbol>
+    <Value>20000</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>253</Index>
+    <Name>Tilt</Name>
+    <Symbol>tilt</Symbol>
+    <Value>0</Value>
+   </Parameter>
+  </Data>
+ </Plugin>
+
+ <!-- Calf Monosynth -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>Calf Monosynth</Name>
+   <URI>http://calf.sourceforge.net/plugins/Monosynth</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x3f1</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Osc1 Wave</Name>
+    <Symbol>o1_wave</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Osc2 Wave</Name>
+    <Symbol>o2_wave</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>Osc1 PW</Name>
+    <Symbol>o1_pw</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>3</Index>
+    <Name>Osc2 PW</Name>
+    <Symbol>o2_pw</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>4</Index>
+    <Name>O1&lt;&gt;2 Detune</Name>
+    <Symbol>o12_detune</Symbol>
+    <Value>10</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>5</Index>
+    <Name>Osc2 Transpose</Name>
+    <Symbol>o2_xpose</Symbol>
+    <Value>12</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>6</Index>
+    <Name>Phase mode</Name>
+    <Symbol>phase_mode</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>7</Index>
+    <Name>O1&lt;&gt;2 Mix</Name>
+    <Symbol>o12_mix</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>8</Index>
+    <Name>Filter</Name>
+    <Symbol>filter</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>9</Index>
+    <Name>Cutoff</Name>
+    <Symbol>cutoff</Symbol>
+    <Value>33</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>10</Index>
+    <Name>Resonance</Name>
+    <Symbol>res</Symbol>
+    <Value>3</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>11</Index>
+    <Name>Separation</Name>
+    <Symbol>filter_sep</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>12</Index>
+    <Name>Env-&gt;Cutoff</Name>
+    <Symbol>env2cutoff</Symbol>
+    <Value>8000</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>13</Index>
+    <Name>Env-&gt;Res</Name>
+    <Symbol>env2res</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>14</Index>
+    <Name>Env-&gt;Amp</Name>
+    <Symbol>env2amp</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>15</Index>
+    <Name>EG1 Attack</Name>
+    <Symbol>adsr_a</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>16</Index>
+    <Name>EG1 Decay</Name>
+    <Symbol>adsr_d</Symbol>
+    <Value>535.933532714844</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>17</Index>
+    <Name>EG1 Sustain</Name>
+    <Symbol>adsr_s</Symbol>
+    <Value>0.761904776096344</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>18</Index>
+    <Name>EG1 Fade</Name>
+    <Symbol>adsr_f</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>19</Index>
+    <Name>EG1 Release</Name>
+    <Symbol>adsr_r</Symbol>
+    <Value>2495.60888671875</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>20</Index>
+    <Name>Key Follow</Name>
+    <Symbol>key_follow</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>21</Index>
+    <Name>Legato Mode</Name>
+    <Symbol>legato</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>22</Index>
+    <Name>Portamento</Name>
+    <Symbol>portamento</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>23</Index>
+    <Name>Vel-&gt;Filter</Name>
+    <Symbol>vel2filter</Symbol>
+    <Value>0.476000010967255</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>24</Index>
+    <Name>Vel-&gt;Amp</Name>
+    <Symbol>vel2amp</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>25</Index>
+    <Name>Volume</Name>
+    <Symbol>master</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>26</Index>
+    <Name>PBend Range</Name>
+    <Symbol>pbend_range</Symbol>
+    <Value>123.199996948242</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>27</Index>
+    <Name>LFO1 Rate</Name>
+    <Symbol>lfo_rate</Symbol>
+    <Value>5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>28</Index>
+    <Name>LFO1 Delay</Name>
+    <Symbol>lfo_delay</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>29</Index>
+    <Name>LFO1-&gt;Filter</Name>
+    <Symbol>lfo2filter</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>30</Index>
+    <Name>LFO1-&gt;Pitch</Name>
+    <Symbol>lfo2pitch</Symbol>
+    <Value>100</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>31</Index>
+    <Name>LFO1-&gt;PW</Name>
+    <Symbol>lfo2pw</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>32</Index>
+    <Name>ModWheel-&gt;LFO1</Name>
+    <Symbol>mwhl2lfo</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>33</Index>
+    <Name>Scale Detune</Name>
+    <Symbol>scale_detune</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>34</Index>
+    <Name>EG2-&gt;Cutoff</Name>
+    <Symbol>adsr2_cutoff</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>35</Index>
+    <Name>EG2-&gt;Res</Name>
+    <Symbol>adsr2_res</Symbol>
+    <Value>0.300000011920929</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>36</Index>
+    <Name>EG2-&gt;Amp</Name>
+    <Symbol>adsr2_amp</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>37</Index>
+    <Name>EG2 Attack</Name>
+    <Symbol>adsr2_a</Symbol>
+    <Value>2185.86474609375</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>38</Index>
+    <Name>EG2 Decay</Name>
+    <Symbol>adsr2_d</Symbol>
+    <Value>13985.802734375</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>39</Index>
+    <Name>EG2 Sustain</Name>
+    <Symbol>adsr2_s</Symbol>
+    <Value>0.952941179275513</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>40</Index>
+    <Name>EG2 Fade</Name>
+    <Symbol>adsr2_f</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>41</Index>
+    <Name>Release</Name>
+    <Symbol>adsr2_r</Symbol>
+    <Value>50</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>42</Index>
+    <Name>Osc1 Stretch</Name>
+    <Symbol>o1_stretch</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>43</Index>
+    <Name>Osc1 Window</Name>
+    <Symbol>o1_window</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>44</Index>
+    <Name>LFO1 Trigger Mode</Name>
+    <Symbol>lfo1_trig</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>45</Index>
+    <Name>LFO2 Trigger Mode</Name>
+    <Symbol>lfo2_trig</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>46</Index>
+    <Name>LFO1 Rate</Name>
+    <Symbol>lfo2_rate</Symbol>
+    <Value>5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>47</Index>
+    <Name>LFO1 Delay</Name>
+    <Symbol>lfo2_delay</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>48</Index>
+    <Name>Osc2 Unison</Name>
+    <Symbol>o2_unison</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>49</Index>
+    <Name>Osc2 Unison Detune</Name>
+    <Symbol>o2_unisonfrq</Symbol>
+    <Value>2</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>50</Index>
+    <Name>Osc1 Transpose</Name>
+    <Symbol>o1_xpose</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>51</Index>
+    <Name>MIDI Channel</Name>
+    <Symbol>midi</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:0,0</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:0,1</Key>
+    <Value>0..1</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:0,2</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:0,3</Key>
+    <Value>0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:0,4</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:1,0</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:1,1</Key>
+    <Value>0..1</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:1,2</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:1,3</Key>
+    <Value>0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:1,4</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:2,0</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:2,1</Key>
+    <Value>0..1</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:2,2</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:2,3</Key>
+    <Value>0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:2,4</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:3,0</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:3,1</Key>
+    <Value>0..1</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:3,2</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:3,3</Key>
+    <Value>0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:3,4</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:4,0</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:4,1</Key>
+    <Value>0..1</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:4,2</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:4,3</Key>
+    <Value>0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:4,4</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:5,0</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:5,1</Key>
+    <Value>0..1</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:5,2</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:5,3</Key>
+    <Value>0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:5,4</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:6,0</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:6,1</Key>
+    <Value>0..1</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:6,2</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:6,3</Key>
+    <Value>0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:6,4</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:7,0</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:7,1</Key>
+    <Value>0..1</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:7,2</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:7,3</Key>
+    <Value>0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:7,4</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:8,0</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:8,1</Key>
+    <Value>0..1</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:8,2</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:8,3</Key>
+    <Value>0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:8,4</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:9,0</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:9,1</Key>
+    <Value>0..1</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:9,2</Key>
+    <Value>None</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:9,3</Key>
+    <Value>0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:mod_matrix:9,4</Key>
+    <Value>None</Value>
+   </CustomData>
+  </Data>
+ </Plugin>
+
+ <Patchbay>
+  <Connection>
+   <Source>Audio Input:Left</Source>
+   <Target>Calf Filter:In L</Target>
+  </Connection>
+  <Connection>
+   <Source>Audio Input:Left</Source>
+   <Target>1.3 Octave Spectrum Display Mono (2):In</Target>
+  </Connection>
+  <Connection>
+   <Source>Calf Filter:Out L</Source>
+   <Target>Calf Gate:In L</Target>
+  </Connection>
+  <Connection>
+   <Source>1.3 Octave Spectrum Display Mono:Out</Source>
+   <Target>Audio Output:Left</Target>
+  </Connection>
+  <Connection>
+   <Source>Calf Gate:Out L</Source>
+   <Target>Calf Vocoder:In L</Target>
+  </Connection>
+  <Connection>
+   <Source>Calf Gate:Out L</Source>
+   <Target>Calf Vocoder:In R</Target>
+  </Connection>
+  <Connection>
+   <Source>Midi Input:Capture 1</Source>
+   <Target>Calf Monosynth:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>Calf Monosynth:Out L</Source>
+   <Target>1.3 Octave Spectrum Display Mono:In</Target>
+  </Connection>
+  <Positions>
+   <Position x1="988" y1="1102" pluginId="5">
+    <Name>Calf Monosynth</Name>
+   </Position>
+   <Position x1="1512" y1="850" pluginId="4">
+    <Name>Calf Vocoder</Name>
+   </Position>
+   <Position x1="1108" y1="839" pluginId="3">
+    <Name>Calf Gate</Name>
+   </Position>
+   <Position x1="2360" y1="1141" pluginId="2">
+    <Name>1.3 Octave Spectrum Display Mono (2)</Name>
+   </Position>
+   <Position x1="2042" y1="849" pluginId="1">
+    <Name>1.3 Octave Spectrum Display Mono</Name>
+   </Position>
+   <Position x1="897" y1="839" pluginId="0">
+    <Name>Calf Filter</Name>
+   </Position>
+   <Position x1="1440" y1="1221" x2="2074" y2="1335">
+    <Name>Midi Output</Name>
+   </Position>
+   <Position x1="671" y1="1288" x2="1832" y2="1158">
+    <Name>Midi Input</Name>
+   </Position>
+   <Position x1="1275" y1="1054" x2="2562" y2="852">
+    <Name>Audio Output</Name>
+   </Position>
+   <Position x1="629" y1="1035">
+    <Name>Audio Input</Name>
+   </Position>
+  </Positions>
+ </Patchbay>
+
+ <ExternalPatchbay>
+  <Connection>
+   <Source>system:capture_1</Source>
+   <Target>Carla:audio-in1</Target>
+  </Connection>
+  <Connection>
+   <Source>system:capture_1</Source>
+   <Target>Carla:audio-in2</Target>
+  </Connection>
+  <Connection>
+   <Source>system:midi_capture_2</Source>
+   <Target>Carla:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla:audio-out1</Source>
+   <Target>system:playback_1</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla:audio-out2</Source>
+   <Target>system:playback_2</Target>
+  </Connection>
+  <Positions>
+   <Position x1="1552" y1="1024">
+    <Name>Carla</Name>
+   </Position>
+   <Position x1="1275" y1="1054" x2="2017" y2="928">
+    <Name>system</Name>
+   </Position>
+  </Positions>
+ </ExternalPatchbay>
+</CARLA-PROJECT>
