@@ -200,7 +200,7 @@
     <MappedMinimum>0</MappedMinimum>
     <MappedMaximum>1</MappedMaximum>
     <MidiCC>14</MidiCC>
-    <Value>0.401574790477753</Value>
+    <Value>0.677165329456329</Value>
    </Parameter>
 
    <Parameter>
@@ -247,7 +247,7 @@
     <MappedMinimum>0</MappedMinimum>
     <MappedMaximum>1</MappedMaximum>
     <MidiCC>110</MidiCC>
-    <Value>0.716535449028015</Value>
+    <Value>0.661417305469513</Value>
    </Parameter>
 
    <Parameter>
@@ -433,10 +433,10 @@
 
 &lt;tal curprogram=&quot;0&quot; version=&quot;1&quot;&gt;
   &lt;programs&gt;
-    &lt;program programname=&quot;A Voice Robot 1&quot; volume=&quot;0.40157479047775268555&quot;
+    &lt;program programname=&quot;A Voice Robot 1&quot; volume=&quot;0.6771653294563293457&quot;
              harmonics=&quot;0.88800007104873657227&quot; noisevolume=&quot;0&quot; pulsevolume=&quot;0&quot;
              sawvolume=&quot;0.97600007057189941406&quot; suboscvolume=&quot;0.48000001907348632812&quot;
-             osctranspose=&quot;0.71653544902801513672&quot; polymode=&quot;1&quot; portamento=&quot;0.8240000605583190918&quot;
+             osctranspose=&quot;0.66141730546951293945&quot; polymode=&quot;1&quot; portamento=&quot;0.8240000605583190918&quot;
              tune=&quot;0.50800001621246337891&quot; inputmode=&quot;0&quot; chorus=&quot;1&quot; enveloperelease=&quot;0&quot;
              oscsync=&quot;0&quot; pulsetune=&quot;0.50800001621246337891&quot; sawtune=&quot;0.54000002145767211914&quot;
              pulsefinetune=&quot;0.52400004863739013672&quot; sawfinetune=&quot;0.52000004053115844727&quot;
@@ -660,7 +660,7 @@
     <MappedMinimum>10</MappedMinimum>
     <MappedMaximum>20000</MappedMaximum>
     <MidiCC>15</MidiCC>
-    <Value>585.437561035156</Value>
+    <Value>944.973388671875</Value>
    </Parameter>
 
    <Parameter>
