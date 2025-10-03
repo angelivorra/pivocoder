@@ -166,7 +166,7 @@ def main():
     # Parámetros configurables
     vad_aggressiveness = 3  # 0-3, 3 es más agresivo
     trim_db = 30  # dB para recorte de silencio
-    gain_factor = 1.6  # Más volumen (aprox +4 dB)
+    gain_factor = 1.8  # Más volumen (aprox +4 dB)
     softclip = True
     softclip_drive = 2.5  # Aumentar para más saturación
 
