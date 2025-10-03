@@ -200,7 +200,7 @@
     <MappedMinimum>0</MappedMinimum>
     <MappedMaximum>1</MappedMaximum>
     <MidiCC>14</MidiCC>
-    <Value>0.401574790477753</Value>
+    <Value>0.866141736507416</Value>
    </Parameter>
 
    <Parameter>
@@ -247,7 +247,7 @@
     <MappedMinimum>0</MappedMinimum>
     <MappedMaximum>1</MappedMaximum>
     <MidiCC>110</MidiCC>
-    <Value>0.716535449028015</Value>
+    <Value>0.307086616754532</Value>
    </Parameter>
 
    <Parameter>
@@ -433,10 +433,10 @@
 
 &lt;tal curprogram=&quot;0&quot; version=&quot;1&quot;&gt;
   &lt;programs&gt;
-    &lt;program programname=&quot;A Voice Robot 1&quot; volume=&quot;0.40157479047775268555&quot;
+    &lt;program programname=&quot;A Voice Robot 1&quot; volume=&quot;0.86614173650741577148&quot;
              harmonics=&quot;0.88800007104873657227&quot; noisevolume=&quot;0&quot; pulsevolume=&quot;0&quot;
              sawvolume=&quot;0.97600007057189941406&quot; suboscvolume=&quot;0.48000001907348632812&quot;
-             osctranspose=&quot;0.71653544902801513672&quot; polymode=&quot;1&quot; portamento=&quot;0.8240000605583190918&quot;
+             osctranspose=&quot;0.30708661675453186035&quot; polymode=&quot;1&quot; portamento=&quot;0.8240000605583190918&quot;
              tune=&quot;0.50800001621246337891&quot; inputmode=&quot;0&quot; chorus=&quot;1&quot; enveloperelease=&quot;0&quot;
              oscsync=&quot;0&quot; pulsetune=&quot;0.50800001621246337891&quot; sawtune=&quot;0.54000002145767211914&quot;
              pulsefinetune=&quot;0.52400004863739013672&quot; sawfinetune=&quot;0.52000004053115844727&quot;
@@ -660,7 +660,7 @@
     <MappedMinimum>10</MappedMinimum>
     <MappedMaximum>20000</MappedMaximum>
     <MidiCC>15</MidiCC>
-    <Value>585.437561035156</Value>
+    <Value>17743.74609375</Value>
    </Parameter>
 
    <Parameter>
@@ -778,7 +778,7 @@
     <Index>3</Index>
     <Name>Decay time</Name>
     <Symbol>decay_time</Symbol>
-    <Value>0.666052281856537</Value>
+    <Value>0.505687177181244</Value>
    </Parameter>
 
    <Parameter>
@@ -792,7 +792,7 @@
     <Index>5</Index>
     <Name>Room size</Name>
     <Symbol>room_size</Symbol>
-    <Value>1</Value>
+    <Value>3</Value>
    </Parameter>
 
    <Parameter>
@@ -820,7 +820,7 @@
     <Index>9</Index>
     <Name>Pre Delay</Name>
     <Symbol>predelay</Symbol>
-    <Value>80</Value>
+    <Value>0</Value>
    </Parameter>
 
    <Parameter>
@@ -915,42 +915,12 @@
   </Data>
  </Plugin>
 
- <!-- AM pitchshifter -->
- <Plugin>
-  <Info>
-   <Type>LADSPA</Type>
-   <Name>AM pitchshifter</Name>
-   <Binary>/usr/lib/ladspa/am_pitchshift_1433.so</Binary>
-   <Label>amPitchshift</Label>
-   <UniqueID>1433</UniqueID>
-  </Info>
-
-  <Data>
-   <Active>Yes</Active>
-   <Volume>1.27</Volume>
-   <ControlChannel>1</ControlChannel>
-   <Options>0x1</Options>
-
-   <Parameter>
-    <Index>0</Index>
-    <Name>Pitch shift</Name>
-    <Value>1.97499990463257</Value>
-   </Parameter>
-
-   <Parameter>
-    <Index>1</Index>
-    <Name>Buffer size</Name>
-    <Value>2</Value>
-   </Parameter>
-  </Data>
- </Plugin>
-
- <!-- Calf Filter -->
+ <!-- Calf Emphasis -->
  <Plugin>
   <Info>
    <Type>LV2</Type>
-   <Name>Calf Filter (3)</Name>
-   <URI>http://calf.sourceforge.net/plugins/Filter</URI>
+   <Name>Calf Emphasis</Name>
+   <URI>http://calf.sourceforge.net/plugins/Emphasis</URI>
   </Info>
 
   <Data>
@@ -960,56 +930,37 @@
 
    <Parameter>
     <Index>0</Index>
-    <Name>Frequency</Name>
-    <Symbol>freq</Symbol>
-    <MidiChannel>1</MidiChannel>
-    <MappedControlIndex>30</MappedControlIndex>
-    <MappedMinimum>10</MappedMinimum>
-    <MappedMaximum>20000</MappedMaximum>
-    <MidiCC>30</MidiCC>
-    <Value>20000</Value>
-   </Parameter>
-
-   <Parameter>
-    <Index>1</Index>
-    <Name>Resonance</Name>
-    <Symbol>res</Symbol>
-    <Value>0.707000017166138</Value>
-   </Parameter>
-
-   <Parameter>
-    <Index>2</Index>
-    <Name>Mode</Name>
-    <Symbol>mode</Symbol>
-    <Value>2</Value>
-   </Parameter>
-
-   <Parameter>
-    <Index>3</Index>
-    <Name>Inertia</Name>
-    <Symbol>inertia</Symbol>
-    <Value>6.68439722061157</Value>
-   </Parameter>
-
-   <Parameter>
-    <Index>4</Index>
     <Name>Bypass</Name>
     <Symbol>bypass</Symbol>
     <Value>0</Value>
    </Parameter>
 
    <Parameter>
-    <Index>5</Index>
+    <Index>1</Index>
     <Name>Input Gain</Name>
     <Symbol>level_in</Symbol>
     <Value>1</Value>
    </Parameter>
 
    <Parameter>
-    <Index>6</Index>
+    <Index>2</Index>
     <Name>Output Gain</Name>
     <Symbol>level_out</Symbol>
     <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>11</Index>
+    <Name>Filter Mode</Name>
+    <Symbol>mode</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>12</Index>
+    <Name>Filter Type</Name>
+    <Symbol>type</Symbol>
+    <Value>3</Value>
    </Parameter>
   </Data>
  </Plugin>
@@ -1076,33 +1027,18 @@
    <Target>Invada Tube Distortion (mono):events-in</Target>
   </Connection>
   <Connection>
-   <Source>AM pitchshifter:Output</Source>
-   <Target>Audio Output:Left</Target>
+   <Source>Invada Tube Distortion (mono):Out</Source>
+   <Target>Calf Emphasis:In L</Target>
   </Connection>
   <Connection>
-   <Source>Invada Tube Distortion (mono):Out</Source>
+   <Source>Calf Emphasis:Out L</Source>
    <Target>Calf Reverb:In L</Target>
   </Connection>
-  <Connection>
-   <Source>Midi Input:Capture 1</Source>
-   <Target>Calf Filter (3):events-in</Target>
-  </Connection>
-  <Connection>
-   <Source>x42-Autotune:Output</Source>
-   <Target>Calf Filter (3):In L</Target>
-  </Connection>
-  <Connection>
-   <Source>Calf Filter (3):Out L</Source>
-   <Target>AM pitchshifter:Input</Target>
-  </Connection>
   <Positions>
-   <Position x1="1621" y1="1313" pluginId="10">
-    <Name>Calf Filter (3)</Name>
+   <Position x1="2242" y1="1085" pluginId="9">
+    <Name>Calf Emphasis</Name>
    </Position>
-   <Position x1="1899" y1="1280" pluginId="9">
-    <Name>AM pitchshifter</Name>
-   </Position>
-   <Position x1="1896" y1="1089" pluginId="8">
+   <Position x1="1896" y1="1082" pluginId="8">
     <Name>Invada Tube Distortion (mono)</Name>
    </Position>
    <Position x1="2232" y1="843" pluginId="7">
@@ -1129,13 +1065,13 @@
    <Position x1="682" y1="852" pluginId="0">
     <Name>Calf Filter</Name>
    </Position>
-   <Position x1="1440" y1="1221" x2="2382" y2="1249">
+   <Position x1="1440" y1="1221" x2="2068" y2="1249">
     <Name>Midi Output</Name>
    </Position>
    <Position x1="646" y1="1204" x2="1832" y2="1158">
     <Name>Midi Input</Name>
    </Position>
-   <Position x1="1275" y1="1054" x2="2463" y2="962">
+   <Position x1="1275" y1="1054" x2="2432" y2="832">
     <Name>Audio Output</Name>
    </Position>
    <Position x1="538" y1="987">
