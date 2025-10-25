@@ -1,0 +1,13 @@
+[Unit]
+Description=Vocoder Service (user)
+
+[Service]
+# No uses User=/Group= en servicios de usuario
+LimitRTPRIO=95
+LimitMEMLOCK=infinity
+Environment="JACK_NO_AUDIO_RESERVATION=1"
+ExecStart=/home/patch/venv/bin/python3 /home/patch/pivocoder/vocoder.py
+Restart=on-failure
+
+[Install]
+WantedBy=default.target

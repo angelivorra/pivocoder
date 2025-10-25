@@ -1,0 +1,11 @@
+[Unit]
+Description=Carla headless supervisor
+After=network.target sound.target sonido.service
+[Service]
+ExecStart=/usr/bin/env python3 /home/patch/pivocoder/carla_service.py
+Restart=on-failure
+RestartSec=2
+Environment=QT_QPA_PLATFORM=offscreen
+
+[Install]
+WantedBy=default.target

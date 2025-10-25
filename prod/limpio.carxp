@@ -1,0 +1,1279 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE CARLA-PROJECT>
+<CARLA-PROJECT VERSION='2.5'>
+ <EngineSettings>
+  <ForceStereo>false</ForceStereo>
+  <PreferPluginBridges>false</PreferPluginBridges>
+  <PreferUiBridges>true</PreferUiBridges>
+  <UIsAlwaysOnTop>false</UIsAlwaysOnTop>
+  <MaxParameters>200</MaxParameters>
+  <UIBridgesTimeout>4000</UIBridgesTimeout>
+ </EngineSettings>
+
+ <Transport>
+  <BeatsPerMinute>120</BeatsPerMinute>
+ </Transport>
+
+ <!-- Vocoder -->
+ <Plugin>
+  <Info>
+   <Type>LADSPA</Type>
+   <Name>Vocoder</Name>
+   <Binary>/usr/lib/ladspa/vocoder_1337.so</Binary>
+   <Label>vocoder</Label>
+   <UniqueID>1337</UniqueID>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <Volume>1.27</Volume>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x0</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Number of bands</Name>
+    <Value>14</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Left/Right</Name>
+    <Symbol>ctrl_band_count</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>Band 1 Level</Name>
+    <Symbol>ctrl_pan</Symbol>
+    <Value>0.579999983310699</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>3</Index>
+    <Name>Band 2 Level</Name>
+    <Symbol>band1</Symbol>
+    <Value>0.509999990463257</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>4</Index>
+    <Name>Band 3 Level</Name>
+    <Symbol>band2</Symbol>
+    <Value>0.324894517660141</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>5</Index>
+    <Name>Band 4 Level</Name>
+    <Symbol>band3</Symbol>
+    <Value>0.299999982118607</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>6</Index>
+    <Name>Band 5 Level</Name>
+    <Symbol>band4</Symbol>
+    <Value>0.310000002384186</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>7</Index>
+    <Name>Band 6 Level</Name>
+    <Symbol>band5</Symbol>
+    <Value>0.319999992847443</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>8</Index>
+    <Name>Band 7 Level</Name>
+    <Symbol>band6</Symbol>
+    <Value>0.389999985694885</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>9</Index>
+    <Name>Band 8 Level</Name>
+    <Symbol>band7</Symbol>
+    <Value>0.459999978542328</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>10</Index>
+    <Name>Band 9 Level</Name>
+    <Symbol>band8</Symbol>
+    <Value>0.719999969005585</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>11</Index>
+    <Name>Band 10 Level</Name>
+    <Symbol>band9</Symbol>
+    <Value>0.719999969005585</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>12</Index>
+    <Name>Band 11 Level</Name>
+    <Symbol>band10</Symbol>
+    <Value>0.649999976158142</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>13</Index>
+    <Name>Band 12 Level</Name>
+    <Symbol>band11</Symbol>
+    <Value>0.579999983310699</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>14</Index>
+    <Name>Band 13 Level</Name>
+    <Value>0.497890293598175</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>15</Index>
+    <Name>Band 14 Level</Name>
+    <Value>0.469999998807907</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>16</Index>
+    <Name>Band 15 Level</Name>
+    <Value>0.259999990463257</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>17</Index>
+    <Name>Band 16 Level</Name>
+    <Value>0.514767944812775</Value>
+   </Parameter>
+  </Data>
+ </Plugin>
+
+ <!-- synthv1 -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>synthv1</Name>
+   <URI>http://synthv1.sourceforge.net/lv2</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x3f0</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>DCO1 Wave Shape 1</Name>
+    <Symbol>DCO1_SHAPE1</Symbol>
+    <Value>2</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>DCO1 Wave Width 1</Name>
+    <Symbol>DCO1_WIDTH1</Symbol>
+    <Value>0.949999988079071</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>DCO1 Wave Bandlimit 1</Name>
+    <Symbol>DCO1_BANDL1</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>3</Index>
+    <Name>DCO1 Wave Sync 1</Name>
+    <Symbol>DCO1_SYNC1</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>4</Index>
+    <Name>DCO1 Wave Shape 2</Name>
+    <Symbol>DCO1_SHAPE2</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>5</Index>
+    <Name>DCO1 Width 2</Name>
+    <Symbol>DCO1_WIDTH2</Symbol>
+    <Value>0.209999993443489</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>6</Index>
+    <Name>DCO1 Wave Bandlimit 2</Name>
+    <Symbol>DCO1_BANDL2</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>7</Index>
+    <Name>DCO1 Wave Sync 2</Name>
+    <Symbol>DCO1_SYNC2</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>8</Index>
+    <Name>DCO1 Balance</Name>
+    <Symbol>DCO1_BALANCE</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>9</Index>
+    <Name>DCO1 Detune</Name>
+    <Symbol>DCO1_DETUNE</Symbol>
+    <Value>0.0599999986588955</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>10</Index>
+    <Name>DCO1 Phase</Name>
+    <Symbol>DCO1_PHASE</Symbol>
+    <Value>0.129999995231628</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>11</Index>
+    <Name>DCO1 Ring Mod</Name>
+    <Symbol>DCO1_RINGMOD</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>12</Index>
+    <Name>DCO1 Octave</Name>
+    <Symbol>DCO1_OCTAVE</Symbol>
+    <Value>0.00999999977648258</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>13</Index>
+    <Name>DCO1 Tuning</Name>
+    <Symbol>DCO1_TUNING</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>14</Index>
+    <Name>DCO1 Glide</Name>
+    <Symbol>DCO1_GLIDE</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>15</Index>
+    <Name>DCO1 Env.Time</Name>
+    <Symbol>DCO1_ENVTIME</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>16</Index>
+    <Name>DCF1 Enabled</Name>
+    <Symbol>DCF1_ENABLED</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>17</Index>
+    <Name>DCF1 Cutoff</Name>
+    <Symbol>DCF1_CUTOFF</Symbol>
+    <Value>0.870000004768372</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>18</Index>
+    <Name>DCF1 Resonance</Name>
+    <Symbol>DCF1_RESO</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>19</Index>
+    <Name>DCF1 Type</Name>
+    <Symbol>DCF1_TYPE</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>20</Index>
+    <Name>DCF1 Slope</Name>
+    <Symbol>DCF1_SLOPE</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>21</Index>
+    <Name>DCF1 Envelope</Name>
+    <Symbol>DCF1_ENVELOPE</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>22</Index>
+    <Name>DCF1 Attack</Name>
+    <Symbol>DCF1_ATTACK</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>23</Index>
+    <Name>DCF1 Decay</Name>
+    <Symbol>DCF1_DECAY</Symbol>
+    <Value>0.449999988079071</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>24</Index>
+    <Name>DCF1 Sustain</Name>
+    <Symbol>DCF1_SUSTAIN</Symbol>
+    <Value>0.879999995231628</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>25</Index>
+    <Name>DCF1 Release</Name>
+    <Symbol>DCF1_RELEASE</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>26</Index>
+    <Name>LFO1 Enabled</Name>
+    <Symbol>LFO1_ENABLED</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>27</Index>
+    <Name>LFO1 Wave Shape</Name>
+    <Symbol>LFO1_SHAPE</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>28</Index>
+    <Name>LFO1 Wave Width</Name>
+    <Symbol>LFO1_WIDTH</Symbol>
+    <Value>0.870000004768372</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>29</Index>
+    <Name>LFO1 BPM</Name>
+    <Symbol>LFO1_BPM</Symbol>
+    <Value>180</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>30</Index>
+    <Name>LFO1 Rate</Name>
+    <Symbol>LFO1_RATE</Symbol>
+    <Value>0.610000014305115</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>31</Index>
+    <Name>LFO1 Sync</Name>
+    <Symbol>LFO1_SYNC</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>32</Index>
+    <Name>LFO1 Sweep</Name>
+    <Symbol>LFO1_SWEEP</Symbol>
+    <Value>0.0500000007450581</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>33</Index>
+    <Name>LFO1 Pitch</Name>
+    <Symbol>LFO1_PITCH</Symbol>
+    <Value>-0.0500000007450581</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>34</Index>
+    <Name>LFO1 Balance</Name>
+    <Symbol>LFO1_BALANCE</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>35</Index>
+    <Name>LFO1 Ring Mod</Name>
+    <Symbol>LFO1_RINGMOD</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>36</Index>
+    <Name>LFO1 Cutoff</Name>
+    <Symbol>LFO1_CUTOFF</Symbol>
+    <Value>-0.899999976158142</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>37</Index>
+    <Name>LFO1 Resonance</Name>
+    <Symbol>LFO1_RESO</Symbol>
+    <Value>-0.850000023841858</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>38</Index>
+    <Name>LFO1 Panning</Name>
+    <Symbol>LFO1_PANNING</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>39</Index>
+    <Name>LFO1 Volume</Name>
+    <Symbol>LFO1_VOLUME</Symbol>
+    <Value>0.280000001192093</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>40</Index>
+    <Name>LFO1 Attack</Name>
+    <Symbol>LFO1_ATTACK</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>41</Index>
+    <Name>LFO1 Decay</Name>
+    <Symbol>LFO1_DECAY</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>42</Index>
+    <Name>LFO1 Sustain</Name>
+    <Symbol>LFO1_SUSTAIN</Symbol>
+    <Value>0.25</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>43</Index>
+    <Name>LFO1 Release</Name>
+    <Symbol>LFO1_RELEASE</Symbol>
+    <Value>0.449999988079071</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>44</Index>
+    <Name>DCA1 Volume</Name>
+    <Symbol>DCA1_VOLUME</Symbol>
+    <Value>0.689999997615814</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>45</Index>
+    <Name>DCA1 Attack</Name>
+    <Symbol>DCA1_ATTACK</Symbol>
+    <Value>0.0399999991059303</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>46</Index>
+    <Name>DCA1 Decay</Name>
+    <Symbol>DCA1_DECAY</Symbol>
+    <Value>0.389999985694885</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>47</Index>
+    <Name>DCA1 Sustain</Name>
+    <Symbol>DCA1_SUSTAIN</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>48</Index>
+    <Name>DCA1 Release</Name>
+    <Symbol>DCA1_RELEASE</Symbol>
+    <Value>0.150000005960464</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>49</Index>
+    <Name>OUT1 Stereo Width</Name>
+    <Symbol>OUT1_WIDTH</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>50</Index>
+    <Name>OUT1 Panning</Name>
+    <Symbol>OUT1_PANNING</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>51</Index>
+    <Name>OUT1 FX Send</Name>
+    <Symbol>OUT1_FXSEND</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>52</Index>
+    <Name>OUT1 Volume</Name>
+    <Symbol>OUT1_VOLUME</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>53</Index>
+    <Name>DEF1 Pitchbend</Name>
+    <Symbol>DEF1_PITCHBEND</Symbol>
+    <Value>0.100000001490116</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>54</Index>
+    <Name>DEF1 Modwheel</Name>
+    <Symbol>DEF1_MODWHEEL</Symbol>
+    <Value>0.200000002980232</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>55</Index>
+    <Name>DEF1 Pressure</Name>
+    <Symbol>DEF1_PRESSURE</Symbol>
+    <Value>0.0799999982118607</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>56</Index>
+    <Name>DEF1 Velocity</Name>
+    <Symbol>DEF1_VELOCITY</Symbol>
+    <Value>0.0199999995529652</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>57</Index>
+    <Name>DEF1 Channel</Name>
+    <Symbol>DEF1_CHANNEL</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>58</Index>
+    <Name>DEF1 Mono</Name>
+    <Symbol>DEF1_MONO</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>59</Index>
+    <Name>DCO2 Wave Shape 1</Name>
+    <Symbol>DCO2_SHAPE1</Symbol>
+    <Value>3</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>60</Index>
+    <Name>DCO2 Wave Width 1</Name>
+    <Symbol>DCO2_WIDTH1</Symbol>
+    <Value>0.189999997615814</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>61</Index>
+    <Name>DCO2 Wave Bandlimit 1</Name>
+    <Symbol>DCO2_BANDL1</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>62</Index>
+    <Name>DCO2 Wave Sync 1</Name>
+    <Symbol>DCO2_SYNC1</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>63</Index>
+    <Name>DCO2 Wave Shape 2</Name>
+    <Symbol>DCO2_SHAPE2</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>64</Index>
+    <Name>DCO2 Wave Width 2</Name>
+    <Symbol>DCO2_WIDTH2</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>65</Index>
+    <Name>DCO2 Wave Bandlimit 2</Name>
+    <Symbol>DCO2_BANDL2</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>66</Index>
+    <Name>DCO2 Wave Sync 2</Name>
+    <Symbol>DCO2_SYNC2</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>67</Index>
+    <Name>DCO2 Balance</Name>
+    <Symbol>DCO2_BALANCE</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>68</Index>
+    <Name>DCO2 Detune</Name>
+    <Symbol>DCO2_DETUNE</Symbol>
+    <Value>0.0599999986588955</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>69</Index>
+    <Name>DCO2 Phase</Name>
+    <Symbol>DCO2_PHASE</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>70</Index>
+    <Name>DCO2 Ring Mod</Name>
+    <Symbol>DCO2_RINGMOD</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>71</Index>
+    <Name>DCO2 Octave</Name>
+    <Symbol>DCO2_OCTAVE</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>72</Index>
+    <Name>DCO2 Tuning</Name>
+    <Symbol>DCO2_TUNING</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>73</Index>
+    <Name>DCO2 Glide</Name>
+    <Symbol>DCO2_GLIDE</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>74</Index>
+    <Name>DCO2 Env.Time</Name>
+    <Symbol>DCO2_ENVTIME</Symbol>
+    <Value>0.649999976158142</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>75</Index>
+    <Name>DCF2 Enabled</Name>
+    <Symbol>DCF2_ENABLED</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>76</Index>
+    <Name>DCF2 Cutoff</Name>
+    <Symbol>DCF2_CUTOFF</Symbol>
+    <Value>0.349999994039536</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>77</Index>
+    <Name>DCF2 Resonance</Name>
+    <Symbol>DCF2_RESO</Symbol>
+    <Value>0.0799999982118607</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>78</Index>
+    <Name>DCF2 Type</Name>
+    <Symbol>DCF2_TYPE</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>79</Index>
+    <Name>DCF2 Slope</Name>
+    <Symbol>DCF2_SLOPE</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>80</Index>
+    <Name>DCF2 Envelope</Name>
+    <Symbol>DCF2_ENVELOPE</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>81</Index>
+    <Name>DCF2 Attack</Name>
+    <Symbol>DCF2_ATTACK</Symbol>
+    <Value>0.00999999977648258</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>82</Index>
+    <Name>DCF2 Decay</Name>
+    <Symbol>DCF2_DECAY</Symbol>
+    <Value>0.829999983310699</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>83</Index>
+    <Name>DCF2 Sustain</Name>
+    <Symbol>DCF2_SUSTAIN</Symbol>
+    <Value>0.219999998807907</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>84</Index>
+    <Name>DCF2 Release</Name>
+    <Symbol>DCF2_RELEASE</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>85</Index>
+    <Name>LFO2 Enabled</Name>
+    <Symbol>LFO2_ENABLED</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>86</Index>
+    <Name>LFO2 Wave Shape</Name>
+    <Symbol>LFO2_SHAPE</Symbol>
+    <Value>3</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>87</Index>
+    <Name>LFO2 Wave Width</Name>
+    <Symbol>LFO2_WIDTH</Symbol>
+    <Value>0.920000016689301</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>88</Index>
+    <Name>LFO2 BPM</Name>
+    <Symbol>LFO2_BPM</Symbol>
+    <Value>180</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>89</Index>
+    <Name>LFO2 Rate</Name>
+    <Symbol>LFO2_RATE</Symbol>
+    <Value>0.569999992847443</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>90</Index>
+    <Name>LFO2 Sync</Name>
+    <Symbol>LFO2_SYNC</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>91</Index>
+    <Name>LFO2 Sweep</Name>
+    <Symbol>LFO2_SWEEP</Symbol>
+    <Value>0.610000014305115</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>92</Index>
+    <Name>LFO2 Pitch</Name>
+    <Symbol>LFO2_PITCH</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>93</Index>
+    <Name>LFO2 Balance</Name>
+    <Symbol>LFO2_BALANCE</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>94</Index>
+    <Name>LFO2 Ring Mod</Name>
+    <Symbol>LFO2_RINGMOD</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>95</Index>
+    <Name>LFO2 Cutoff</Name>
+    <Symbol>LFO2_CUTOFF</Symbol>
+    <Value>0.0299999993294477</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>96</Index>
+    <Name>LFO2 Resonance</Name>
+    <Symbol>LFO2_RESO</Symbol>
+    <Value>0.0299999993294477</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>97</Index>
+    <Name>LFO2 Panning</Name>
+    <Symbol>LFO2_PANNING</Symbol>
+    <Value>0.610000014305115</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>98</Index>
+    <Name>LFO2 Volume</Name>
+    <Symbol>LFO2_VOLUME</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>99</Index>
+    <Name>LFO2 Attack</Name>
+    <Symbol>LFO2_ATTACK</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>100</Index>
+    <Name>LFO2 Decay</Name>
+    <Symbol>LFO2_DECAY</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>101</Index>
+    <Name>LFO2 Sustain</Name>
+    <Symbol>LFO2_SUSTAIN</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>102</Index>
+    <Name>LFO2 Release</Name>
+    <Symbol>LFO2_RELEASE</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>103</Index>
+    <Name>DCA2 Volume</Name>
+    <Symbol>DCA2_VOLUME</Symbol>
+    <Value>0.589999973773956</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>104</Index>
+    <Name>DCA2 Attack</Name>
+    <Symbol>DCA2_ATTACK</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>105</Index>
+    <Name>DCA2 Decay</Name>
+    <Symbol>DCA2_DECAY</Symbol>
+    <Value>0.340000003576279</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>106</Index>
+    <Name>DCA2 Sustain</Name>
+    <Symbol>DCA2_SUSTAIN</Symbol>
+    <Value>0.889999985694885</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>107</Index>
+    <Name>DCA2 Release</Name>
+    <Symbol>DCA2_RELEASE</Symbol>
+    <Value>0.0399999991059303</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>108</Index>
+    <Name>OUT2 Stereo Width</Name>
+    <Symbol>OUT2_WIDTH</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>109</Index>
+    <Name>OUT2 Panning</Name>
+    <Symbol>OUT2_PANNING</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>110</Index>
+    <Name>OUT2 FX Send</Name>
+    <Symbol>OUT2_FXSEND</Symbol>
+    <Value>0.600000023841858</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>111</Index>
+    <Name>OUT2 Volume</Name>
+    <Symbol>OUT2_VOLUME</Symbol>
+    <Value>0.439999997615814</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>112</Index>
+    <Name>DEF2 Pitchbend</Name>
+    <Symbol>DEF2_PITCHBEND</Symbol>
+    <Value>0.200000002980232</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>113</Index>
+    <Name>DEF2 Modwheel</Name>
+    <Symbol>DEF2_MODWHEEL</Symbol>
+    <Value>0.200000002980232</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>114</Index>
+    <Name>DEF2 Pressure</Name>
+    <Symbol>DEF2_PRESSURE</Symbol>
+    <Value>0.140000000596046</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>115</Index>
+    <Name>DEF2 Velocity</Name>
+    <Symbol>DEF2_VELOCITY</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>116</Index>
+    <Name>DEF2 Channel</Name>
+    <Symbol>DEF2_CHANNEL</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>117</Index>
+    <Name>DEF2 Mono</Name>
+    <Symbol>DEF2_MONO</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>118</Index>
+    <Name>Chorus Wet</Name>
+    <Symbol>CHO1_WET</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>119</Index>
+    <Name>Chorus Delay</Name>
+    <Symbol>CHO1_DELAY</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>120</Index>
+    <Name>Chorus Feedback</Name>
+    <Symbol>CHO1_FEEDB</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>121</Index>
+    <Name>Chorus Rate</Name>
+    <Symbol>CHO1_RATE</Symbol>
+    <Value>0.28999999165535</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>122</Index>
+    <Name>Chorus Modulation</Name>
+    <Symbol>CHO1_MOD</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>123</Index>
+    <Name>Flanger Wet</Name>
+    <Symbol>FLA1_WET</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>124</Index>
+    <Name>Flanger Delay</Name>
+    <Symbol>FLA1_DELAY</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>125</Index>
+    <Name>Flanger Feedback</Name>
+    <Symbol>FLA1_FEEDB</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>126</Index>
+    <Name>Flanger Daft</Name>
+    <Symbol>FLA1_DAFT</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>127</Index>
+    <Name>Phaser Wet</Name>
+    <Symbol>PHA1_WET</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>128</Index>
+    <Name>Phaser Rate</Name>
+    <Symbol>PHA1_RATE</Symbol>
+    <Value>0.810000002384186</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>129</Index>
+    <Name>Phaser Feedback</Name>
+    <Symbol>PHA1_FEEDB</Symbol>
+    <Value>0.970000028610229</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>130</Index>
+    <Name>Phaser Depth</Name>
+    <Symbol>PHA1_DEPTH</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>131</Index>
+    <Name>Phaser Daft</Name>
+    <Symbol>PHA1_DAFT</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>132</Index>
+    <Name>Delay Wet</Name>
+    <Symbol>DEL1_WET</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>133</Index>
+    <Name>Delay Delay</Name>
+    <Symbol>DEL1_DELAY</Symbol>
+    <Value>0.629999995231628</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>134</Index>
+    <Name>Delay Feedback</Name>
+    <Symbol>DEL1_FEEDB</Symbol>
+    <Value>0.219999998807907</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>135</Index>
+    <Name>Delay BPM</Name>
+    <Symbol>DEL1_BPM</Symbol>
+    <Value>80</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>136</Index>
+    <Name>Reverb Wet</Name>
+    <Symbol>REV1_WET</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>137</Index>
+    <Name>Reverb Room</Name>
+    <Symbol>REV1_ROOM</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>138</Index>
+    <Name>Reverb Damp</Name>
+    <Symbol>REV1_DAMP</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>139</Index>
+    <Name>Reverb Feedback</Name>
+    <Symbol>REV1_FEEDB</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>140</Index>
+    <Name>Reverb Width</Name>
+    <Symbol>REV1_WIDTH</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>141</Index>
+    <Name>Dynamic Compressor</Name>
+    <Symbol>DYN1_COMPRESS</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>142</Index>
+    <Name>Dynamic Limiter</Name>
+    <Symbol>DYN1_LIMITER</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>143</Index>
+    <Name>Keyboard Low</Name>
+    <Symbol>KEY1_LOW</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>144</Index>
+    <Name>Keyboard High</Name>
+    <Symbol>KEY1_HIGH</Symbol>
+    <Value>127</Value>
+   </Parameter>
+  </Data>
+ </Plugin>
+
+ <!-- Audio Gain (Mono) -->
+ <Plugin>
+  <Info>
+   <Type>INTERNAL</Type>
+   <Name>Audio Gain (Mono)</Name>
+   <Label>audiogain</Label>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x0</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Gain</Name>
+    <Value>1.27999997138977</Value>
+   </Parameter>
+  </Data>
+ </Plugin>
+
+ <Patchbay>
+  <Connection>
+   <Source>Midi Input:Capture 1</Source>
+   <Target>synthv1:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>synthv1:Audio Out L</Source>
+   <Target>Vocoder:Carrier-in</Target>
+  </Connection>
+  <Connection>
+   <Source>Audio Input:Left</Source>
+   <Target>Vocoder:Formant-in</Target>
+  </Connection>
+  <Connection>
+   <Source>Vocoder:Output-out</Source>
+   <Target>Audio Gain (Mono):input</Target>
+  </Connection>
+  <Connection>
+   <Source>Audio Gain (Mono):output</Source>
+   <Target>Audio Output:Left</Target>
+  </Connection>
+  <Positions>
+   <Position x1="1578" y1="847" pluginId="2">
+    <Name>Audio Gain (Mono)</Name>
+   </Position>
+   <Position x1="860" y1="868" pluginId="1">
+    <Name>synthv1</Name>
+   </Position>
+   <Position x1="1286" y1="892" pluginId="0">
+    <Name>Vocoder</Name>
+   </Position>
+   <Position x1="1086" y1="918" x2="1659" y2="1079">
+    <Name>Midi Output</Name>
+   </Position>
+   <Position x1="692" y1="1040" x2="1479" y2="999">
+    <Name>Midi Input</Name>
+   </Position>
+   <Position x1="1086" y1="844" x2="1912" y2="855">
+    <Name>Audio Output</Name>
+   </Position>
+   <Position x1="783" y1="680" x2="1488" y2="844">
+    <Name>Audio Input</Name>
+   </Position>
+  </Positions>
+ </Patchbay>
+
+ <ExternalPatchbay>
+  <Connection>
+   <Source>system:capture_1</Source>
+   <Target>Carla:audio-in1</Target>
+  </Connection>
+  <Connection>
+   <Source>system:midi_capture_2</Source>
+   <Target>Carla:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla:audio-out1</Source>
+   <Target>system:playback_1</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla:audio-out1</Source>
+   <Target>system:playback_2</Target>
+  </Connection>
+  <Positions>
+   <Position x1="1311" y1="980">
+    <Name>Carla</Name>
+   </Position>
+   <Position x1="943" y1="954" x2="1841" y2="1019">
+    <Name>system</Name>
+   </Position>
+  </Positions>
+ </ExternalPatchbay>
+</CARLA-PROJECT>
