@@ -363,7 +363,7 @@
     <MappedMinimum>0</MappedMinimum>
     <MappedMaximum>1</MappedMaximum>
     <MidiCC>15</MidiCC>
-    <Value>0</Value>
+    <Value>0.299212604761124</Value>
    </Parameter>
 
    <Parameter>
