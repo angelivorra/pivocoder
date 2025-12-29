@@ -18,8 +18,10 @@ systemctl --user stop sonido
 systemctl --user stop carla
 '''
 
+## Grabar audio
+
 '''
-/home/patch/venv/bin/python3 /home/patch/pivocoder/vocoder.py graba
+jack_capture -f wav
 '''
 
 

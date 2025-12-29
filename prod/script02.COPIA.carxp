@@ -363,7 +363,7 @@
     <MappedMinimum>0</MappedMinimum>
     <MappedMaximum>1</MappedMaximum>
     <MidiCC>15</MidiCC>
-    <Value>0</Value>
+    <Value>0.299212604761124</Value>
    </Parameter>
 
    <Parameter>
@@ -727,7 +727,7 @@
     <MappedMinimum>0</MappedMinimum>
     <MappedMaximum>1</MappedMaximum>
     <MidiCC>14</MidiCC>
-    <Value>0.220472440123558</Value>
+    <Value>0</Value>
    </Parameter>
 
    <Parameter>
@@ -1155,8 +1155,8 @@
              ampattack=&quot;0&quot; ampdecay=&quot;0&quot; ampsustain=&quot;1&quot; amprelease=&quot;0.26000002026557922363&quot;
              voices=&quot;0.20000000298023223877&quot; portamentomode=&quot;0&quot; lfo1waveform=&quot;0&quot;
              lfo2waveform=&quot;0&quot; lfo1rate=&quot;0&quot; lfo2rate=&quot;0&quot; lfo1amount=&quot;0&quot; lfo2amount=&quot;0.92400002479553222656&quot;
-             lfo1destination=&quot;0&quot; lfo2destination=&quot;0.22047244012355804443&quot;
-             lfo1phase=&quot;1&quot; lfo2phase=&quot;0&quot; osc1pw=&quot;0.51600003242492675781&quot; osc2fm=&quot;0.32600000500679016113&quot;
+             lfo1destination=&quot;0&quot; lfo2destination=&quot;0&quot; lfo1phase=&quot;1&quot; lfo2phase=&quot;0&quot;
+             osc1pw=&quot;0.51600003242492675781&quot; osc2fm=&quot;0.32600000500679016113&quot;
              osc1phase=&quot;0.5&quot; osc2phase=&quot;0&quot; transpose=&quot;0.86400002241134643555&quot;
              freeadattack=&quot;0&quot; freeaddecay=&quot;0.80000001192092895508&quot; freeadamount=&quot;0.71600002050399780273&quot;
              freeaddestination=&quot;0.40000000596046447754&quot; lfo1sync=&quot;0&quot; lfo1keytrigger=&quot;0&quot;
@@ -1573,47 +1573,6 @@
   </Data>
  </Plugin>
 
- <!-- Plate reverb -->
- <Plugin>
-  <Info>
-   <Type>LV2</Type>
-   <Name>Plate reverb</Name>
-   <URI>http://plugin.org.uk/swh-plugins/plate</URI>
-  </Info>
-
-  <Data>
-   <Active>Yes</Active>
-   <ControlChannel>1</ControlChannel>
-   <Options>0x0</Options>
-
-   <Parameter>
-    <Index>0</Index>
-    <Name>Reverb time</Name>
-    <Symbol>time</Symbol>
-    <MidiChannel>1</MidiChannel>
-    <MappedControlIndex>30</MappedControlIndex>
-    <MappedMinimum>0.00999999977648258</MappedMinimum>
-    <MappedMaximum>8.5</MappedMaximum>
-    <MidiCC>30</MidiCC>
-    <Value>6.76188945770264</Value>
-   </Parameter>
-
-   <Parameter>
-    <Index>1</Index>
-    <Name>Damping</Name>
-    <Symbol>damping</Symbol>
-    <Value>0.229999989271164</Value>
-   </Parameter>
-
-   <Parameter>
-    <Index>2</Index>
-    <Name>Dry/wet mix</Name>
-    <Symbol>wet</Symbol>
-    <Value>0.265957444906235</Value>
-   </Parameter>
-  </Data>
- </Plugin>
-
  <Patchbay>
   <Connection>
    <Source>Calf Filter:Out L</Source>
@@ -1649,21 +1608,10 @@
   </Connection>
   <Connection>
    <Source>EQ10Q Mono:Output</Source>
-   <Target>Plate reverb:Input</Target>
-  </Connection>
-  <Connection>
-   <Source>Plate reverb:Left output</Source>
    <Target>Audio Output:Left</Target>
   </Connection>
-  <Connection>
-   <Source>Midi Input:Capture 1</Source>
-   <Target>Plate reverb:events-in</Target>
-  </Connection>
   <Positions>
-   <Position x1="2143" y1="851" pluginId="7">
-    <Name>Plate reverb</Name>
-   </Position>
-   <Position x1="1941" y1="900" pluginId="6">
+   <Position x1="1934" y1="878" pluginId="6">
     <Name>EQ10Q Mono</Name>
    </Position>
    <Position x1="910" y1="1134" pluginId="5">
@@ -1672,16 +1620,16 @@
    <Position x1="2240" y1="1137" pluginId="4">
     <Name>Calf Reverb</Name>
    </Position>
-   <Position x1="1721" y1="1117" pluginId="3">
+   <Position x1="1731" y1="991" pluginId="3">
     <Name>Temper</Name>
    </Position>
-   <Position x1="1303" y1="1088" pluginId="2">
+   <Position x1="1368" y1="1052" pluginId="2">
     <Name>Vocoder</Name>
    </Position>
-   <Position x1="1138" y1="967" pluginId="1">
+   <Position x1="1208" y1="953" pluginId="1">
     <Name>Calf Gate</Name>
    </Position>
-   <Position x1="919" y1="949" pluginId="0">
+   <Position x1="1013" y1="990" pluginId="0">
     <Name>Calf Filter</Name>
    </Position>
    <Position x1="1440" y1="1221" x2="2382" y2="1249">
@@ -1690,10 +1638,10 @@
    <Position x1="533" y1="1263" x2="1832" y2="1158">
     <Name>Midi Input</Name>
    </Position>
-   <Position x1="1275" y1="1054" x2="2370" y2="878">
+   <Position x1="1275" y1="1054" x2="2133" y2="982">
     <Name>Audio Output</Name>
    </Position>
-   <Position x1="700" y1="913">
+   <Position x1="821" y1="906">
     <Name>Audio Input</Name>
    </Position>
   </Positions>

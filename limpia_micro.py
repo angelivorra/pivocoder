@@ -6,6 +6,7 @@ import librosa
 import soundfile as sf
 import webrtcvad
 import numpy as np
+import argparse
 
 
 def split_audio(
@@ -16,6 +17,8 @@ def split_audio(
     gain_factor=1.6,
     softclip=True,
     softclip_drive=2.5,
+    mp3=False,
+    stereo=False,
 ):
     """
     Divide un archivo de audio en segmentos basados en la detección de silencio.
@@ -136,18 +139,28 @@ def split_audio(
         sf.write(stereo_file, stereo_data, sr)
         print(f"Guardado WAV estéreo: {stereo_file}")
 
-        # MP3 desde la versión mono
-        ffmpeg = shutil.which('ffmpeg')
-        if ffmpeg:
-            mp3_file = os.path.join(output_dir, f"{i+1:02d}.mp3")
-            cmd = [ffmpeg, '-y', '-i', mono_file, '-codec:a', 'libmp3lame', '-b:a', '192k', mp3_file]
-            try:
-                subprocess.check_call(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-                print(f"Guardado MP3: {mp3_file}")
-            except subprocess.CalledProcessError:
-                print(f"Error al convertir a MP3: {mono_file}")
-        else:
-            print("ffmpeg no encontrado; omitiendo conversión a MP3.")
+        # MP3 desde la versión mono o estéreo según flags
+        if mp3 and stereo:
+            ffmpeg = shutil.which('ffmpeg')
+            if ffmpeg:
+                mp3_data = stereo_data if stereo else mono_data
+                mp3_file = os.path.join(output_dir, f"{i+1:02d}.mp3")
+                cmd = [ffmpeg, '-y', '-i', 'pipe:0', '-f', 'wav', '-codec:a', 'libmp3lame', '-b:a', '192k', mp3_file]
+                # Since we have numpy array, need to write to pipe
+                # Actually, better to write temp wav and convert
+                temp_wav = os.path.join(output_dir, f"temp_{i+1:02d}.wav")
+                sf.write(temp_wav, mp3_data, sr)
+                cmd = [ffmpeg, '-y', '-i', temp_wav, '-codec:a', 'libmp3lame', '-b:a', '192k', mp3_file]
+                try:
+                    subprocess.check_call(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+                    print(f"Guardado MP3: {mp3_file}")
+                    os.remove(temp_wav)  # clean up
+                except subprocess.CalledProcessError:
+                    print(f"Error al convertir a MP3: {temp_wav}")
+                    if os.path.exists(temp_wav):
+                        os.remove(temp_wav)
+            else:
+                print("ffmpeg no encontrado; omitiendo conversión a MP3.")
 
 
 def main():
@@ -155,6 +168,11 @@ def main():
     Función principal para buscar archivos de audio y procesarlos.
     Borra el contenido de la carpeta rsamples antes de empezar.
     """
+    parser = argparse.ArgumentParser(description="Procesar archivos de audio y guardar segmentos.")
+    parser.add_argument('--mp3', action='store_true', help='Guardar archivos MP3')
+    parser.add_argument('--stereo', action='store_true', help='Usar versión estéreo para MP3')
+    args = parser.parse_args()
+
     home_dir = os.path.expanduser("~")
     rsamples_dir = os.path.join(home_dir, "rsamples")
 
@@ -166,7 +184,7 @@ def main():
     # Parámetros configurables
     vad_aggressiveness = 3  # 0-3, 3 es más agresivo
     trim_db = 30  # dB para recorte de silencio
-    gain_factor = 1.8  # Más volumen (aprox +4 dB)
+    gain_factor = 2.0  # Más volumen (aprox +4 dB)
     softclip = True
     softclip_drive = 2.5  # Aumentar para más saturación
 
@@ -184,6 +202,8 @@ def main():
                 gain_factor=gain_factor,
                 softclip=softclip,
                 softclip_drive=softclip_drive,
+                mp3=args.mp3,
+                stereo=args.stereo,
             )
 
 if __name__ == "__main__":
