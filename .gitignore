@@ -21,6 +21,7 @@ sdist/
 var/
 wheels/
 grabaciones/
+grabaciones_limpias/
 share/python-wheels/
 *.egg-info/
 .installed.cfg

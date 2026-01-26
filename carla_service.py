@@ -19,7 +19,7 @@ from typing import Optional
 # Configuración general -----------------------------------------------------
 
 # Ruta del preset que se desea cargar siempre. Ajusta según tu entorno.
-PRESET_PATH = Path("/home/patch/pivocoder/prod/vocoder.carxp")
+PRESET_PATH = Path("/home/patch/pivocoder/prod/template01.carxp")
 
 # Comando base para arrancar Carla en modo headless con el preset elegido.
 CARLA_CMD = [

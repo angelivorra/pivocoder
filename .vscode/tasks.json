@@ -12,6 +12,19 @@
             "type": "shell",
             "command": "systemctl --user start carla",
             "problemMatcher": []
+        },
+        {
+            "label": "Vaciar Grabaciones",
+            "type": "shell",
+            "command": "rm -f /home/patch/pivocoder/grabaciones/*",
+            "problemMatcher": []
+        },
+        {
+            "label": "Iniciar Grabación",
+            "type": "shell",
+            "command": "cd /home/patch/pivocoder/grabaciones && jack_capture -f wav",
+            "problemMatcher": [],
+            "isBackground": true
         }
     ]
 }
