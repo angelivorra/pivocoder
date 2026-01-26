@@ -19,7 +19,7 @@ from typing import Optional
 # Configuración general -----------------------------------------------------
 
 # Ruta del preset que se desea cargar siempre. Ajusta según tu entorno.
-PRESET_PATH = Path("/home/patch/pivocoder/prod/script02.carxp")
+PRESET_PATH = Path("/home/patch/pivocoder/prod/vocoder.carxp")
 
 # Comando base para arrancar Carla en modo headless con el preset elegido.
 CARLA_CMD = [
@@ -59,7 +59,21 @@ def launch_carla(stdout_target) -> subprocess.Popen:
     """Lanza Carla con el preset configurado y devuelve el proceso."""
     env = os.environ.copy()
     env.setdefault("QT_QPA_PLATFORM", "offscreen")
-    log(f"Iniciando Carla con preset '{PRESET_PATH}'...")
+    
+    # Mostrar información del preset
+    log(f"=" * 60)
+    log(f"Preset configurado: {PRESET_PATH}")
+    log(f"Preset existe: {PRESET_PATH.exists()}")
+    if PRESET_PATH.exists():
+        preset_size = PRESET_PATH.stat().st_size
+        log(f"Tamaño del preset: {preset_size} bytes")
+    
+    # Mostrar el comando completo que se va a ejecutar
+    cmd_str = " ".join(str(arg) for arg in CARLA_CMD)
+    log(f"Comando completo: {cmd_str}")
+    log(f"Variable QT_QPA_PLATFORM: {env.get('QT_QPA_PLATFORM')}")
+    log(f"=" * 60)
+    
     try:
         process = subprocess.Popen(
             CARLA_CMD,
@@ -73,23 +87,24 @@ def launch_carla(stdout_target) -> subprocess.Popen:
     except Exception as exc:  # pylint: disable=broad-except
         log(f"ERROR: Fallo al lanzar Carla: {exc}")
         raise
-    log(f"Carla arrancada (PID {process.pid}).")
+    log(f"✓ Carla arrancada exitosamente (PID {process.pid})")
     return process
 
 def terminate_process(process: subprocess.Popen) -> None:
     """Intenta terminar Carla cortésmente y, si no responde, la mata."""
     if process.poll() is not None:
+        log(f"El proceso Carla (PID {process.pid}) ya terminó.")
         return
-    log("Enviando SIGTERM a Carla...")
+    log(f"Enviando SIGTERM a Carla (PID {process.pid})...")
     process.terminate()
     try:
         process.wait(timeout=10)
-        log("Carla terminó correctamente tras SIGTERM.")
+        log("✓ Carla terminó correctamente tras SIGTERM.")
     except subprocess.TimeoutExpired:
-        log("Carla no respondió a SIGTERM. Enviando SIGKILL...")
+        log("⚠ Carla no respondió a SIGTERM. Enviando SIGKILL...")
         process.kill()
         process.wait(timeout=5)
-        log("Carla finalizada con SIGKILL.")
+        log("✓ Carla finalizada con SIGKILL.")
 
 def signal_handler(signum, _frame) -> None:
     global stop_requested
@@ -134,10 +149,18 @@ def supervise() -> None:
 
             run_seconds = time.monotonic() - start_time
             exit_code = exit_code if exit_code is not None else -1
+            
+            log(f"─" * 60)
+            log(f"Carla terminó (PID {current_process.pid})")
+            log(f"Código de salida: {exit_code}")
+            log(f"Tiempo de ejecución: {run_seconds:.1f}s")
+            
             if exit_code == 0:
-                log(f"Carla terminó con código 0 tras {run_seconds:.1f}s. Reiniciando en {RESTART_DELAY_SECONDS}s...")
+                log(f"→ Salida normal. Reiniciando en {RESTART_DELAY_SECONDS}s...")
             else:
-                log(f"Carla se cerró inesperadamente (código {exit_code}) tras {run_seconds:.1f}s.\nReintentando en {backoff}s...")
+                log(f"⚠ Salida inesperada. Reintentando en {backoff}s...")
+            log(f"─" * 60)
+            
             time.sleep(backoff)
             backoff = min(backoff * 2, MAX_BACKOFF_SECONDS) if run_seconds < 30 else RESTART_DELAY_SECONDS
 

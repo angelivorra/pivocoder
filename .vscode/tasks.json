@@ -1,0 +1,17 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Stop Carla Service",
+            "type": "shell",
+            "command": "systemctl --user stop carla",
+            "problemMatcher": []
+        },
+        {
+            "label": "Start Carla Service",
+            "type": "shell",
+            "command": "systemctl --user start carla",
+            "problemMatcher": []
+        }
+    ]
+}
