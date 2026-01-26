@@ -1415,14 +1415,14 @@
     <Index>7</Index>
     <Name>Wet Amount</Name>
     <Symbol>amount</Symbol>
-    <Value>0.291183412075043</Value>
+    <Value>0.113125808537006</Value>
    </Parameter>
 
    <Parameter>
     <Index>8</Index>
     <Name>Dry Amount</Name>
     <Symbol>dry</Symbol>
-    <Value>0.759962439537048</Value>
+    <Value>0.783497214317322</Value>
    </Parameter>
 
    <Parameter>
@@ -1507,13 +1507,13 @@
    <Target>Audio Output:Left</Target>
   </Connection>
   <Positions>
-   <Position x1="2137" y1="1021" pluginId="6">
+   <Position x1="2137" y1="1020" pluginId="6">
     <Name>Calf Reverb</Name>
    </Position>
-   <Position x1="1877" y1="904" pluginId="5">
+   <Position x1="1887" y1="945" pluginId="5">
     <Name>Calf Equalizer 8 Band</Name>
    </Position>
-   <Position x1="1612" y1="929" pluginId="4">
+   <Position x1="1581" y1="1152" pluginId="4">
     <Name>ZamTube</Name>
    </Position>
    <Position x1="908" y1="1122" pluginId="3">
@@ -1534,10 +1534,10 @@
    <Position x1="533" y1="1263" x2="1832" y2="1158">
     <Name>Midi Input</Name>
    </Position>
-   <Position x1="766" y1="897" x2="2384" y2="938">
+   <Position x1="766" y1="897" x2="2488" y2="985">
     <Name>Audio Output</Name>
    </Position>
-   <Position x1="379" y1="845">
+   <Position x1="1110" y1="771">
     <Name>Audio Input</Name>
    </Position>
   </Positions>
