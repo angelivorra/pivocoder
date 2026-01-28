@@ -171,12 +171,16 @@ def main():
     parser = argparse.ArgumentParser(description="Procesar archivos de audio y guardar segmentos.")
     parser.add_argument('--mp3', action='store_true', help='Guardar archivos MP3')
     parser.add_argument('--stereo', action='store_true', help='Usar versión estéreo para MP3')
+    parser.add_argument('--origen', type=str, default=os.path.expanduser("~"), 
+                        help='Carpeta de origen con archivos WAV')
+    parser.add_argument('--destino', type=str, default=os.path.join(os.path.expanduser("~"), "rsamples"),
+                        help='Carpeta de destino para los segmentos')
     args = parser.parse_args()
 
-    home_dir = os.path.expanduser("~")
-    rsamples_dir = os.path.join(home_dir, "rsamples")
+    origen_dir = args.origen
+    rsamples_dir = args.destino
 
-    # Borrar carpeta rsamples si existe
+    # Borrar carpeta destino si existe
     if os.path.exists(rsamples_dir):
         shutil.rmtree(rsamples_dir)
     os.makedirs(rsamples_dir, exist_ok=True)
@@ -188,9 +192,9 @@ def main():
     softclip = True
     softclip_drive = 2.5  # Aumentar para más saturación
 
-    for filename in os.listdir(home_dir):
+    for filename in os.listdir(origen_dir):
         if filename.startswith("jack_capture_") and filename.endswith(".wav"):
-            input_file = os.path.join(home_dir, filename)
+            input_file = os.path.join(origen_dir, filename)
             output_dir = os.path.join(rsamples_dir, os.path.splitext(filename)[0])
             os.makedirs(output_dir, exist_ok=True)
             print(f"Procesando: {input_file}")

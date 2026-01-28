@@ -25,6 +25,12 @@
             "command": "cd /home/patch/pivocoder/grabaciones && jack_capture -f wav",
             "problemMatcher": [],
             "isBackground": true
+        },
+        {
+            "label": "Recortar Grabaciones de voz",
+            "type": "shell",
+            "command": "/home/patch/venv/bin/python /home/patch/pivocoder/limpia_micro.py --origen /home/patch/pivocoder/grabaciones --destino /home/patch/pivocoder/grabaciones_limpias",
+            "problemMatcher": []
         }
     ]
 }
