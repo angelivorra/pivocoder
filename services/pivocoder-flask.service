@@ -1,0 +1,20 @@
+[Unit]
+Description=Pivocoder Flask Web Interface
+Documentation=https://github.com/angelivorra/pivocoder
+After=network.target sound.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/patch/pivocoder/flask
+ExecStart=/home/patch/venv/bin/gunicorn \
+    --workers 1 \
+    --bind 0.0.0.0:8080 \
+    --timeout 30 \
+    --access-logfile - \
+    app:app
+Environment=QT_QPA_PLATFORM=offscreen
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target
