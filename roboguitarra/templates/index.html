@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+  <title>ROBOGUITARRA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"/>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #000;
+      color: #00cc33;
+      font-family: 'Press Start 2P', monospace;
+      font-size: 13px;
+      min-height: 100vh;
+      padding: 16px 12px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 18px;
+      color: #00ff41;
+      text-shadow: 0 0 12px #00ff41;
+      letter-spacing: 3px;
+      margin-bottom: 6px;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-size: 8px;
+      color: #006618;
+      margin-bottom: 24px;
+    }
+
+    /* Status bar */
+    .status {
+      background: #030f05;
+      border: 2px solid #006618;
+      padding: 12px 14px;
+      margin-bottom: 20px;
+      font-size: 10px;
+      line-height: 2.2;
+    }
+    .status span { color: #006618; }
+    .status strong { color: #00ff41; word-break: break-all; }
+    .status strong.off { color: #333; }
+
+    /* Section */
+    .section { margin-bottom: 24px; }
+
+    .section-title {
+      font-size: 11px;
+      color: #ffb000;
+      text-shadow: 0 0 6px #ffb000;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #1a1a00;
+    }
+
+    /* List */
+    .list { list-style: none; }
+    .list li {
+      padding: 16px 14px;
+      border: 2px solid #111;
+      margin-bottom: 6px;
+      font-size: 11px;
+      color: #009922;
+      cursor: pointer;
+      word-break: break-all;
+      line-height: 1.6;
+      border-radius: 2px;
+    }
+    .list li:active { background: #001a05; }
+    .list li.selected {
+      border-color: #00ff41;
+      color: #00ff41;
+      background: #001a05;
+      text-shadow: 0 0 6px #00ff41;
+    }
+    .list li.selected::before { content: '> '; color: #ffb000; }
+
+    /* Button */
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 18px;
+      margin-top: 10px;
+      background: #000;
+      border: 3px solid #00ff41;
+      color: #00ff41;
+      font-family: 'Press Start 2P', monospace;
+      font-size: 13px;
+      text-align: center;
+      cursor: pointer;
+      letter-spacing: 2px;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .btn:active { background: #00ff41; color: #000; }
+    .btn.amber { border-color: #ffb000; color: #ffb000; }
+    .btn.amber:active { background: #ffb000; color: #000; }
+    .btn.red { border-color: #ff3333; color: #ff3333; }
+    .btn.red:active { background: #ff3333; color: #000; }
+
+    /* Screens */
+    .screen { display: none; }
+    .screen.active { display: block; }
+
+    /* MIDI log screen */
+    .log-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .log-header h2 {
+      font-size: 14px;
+      color: #00ff41;
+      text-shadow: 0 0 10px #00ff41;
+      flex: 1;
+    }
+    .event-list { list-style: none; }
+    .event-list li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 10px;
+      border-bottom: 1px solid #0a1a0a;
+      animation: fadein 0.15s ease;
+    }
+    @keyframes fadein { from { opacity: 0; transform: translateX(-6px); } to { opacity: 1; } }
+    .ev-ts { font-size: 8px; color: #006618; min-width: 56px; }
+    .ev-type {
+      font-size: 9px;
+      min-width: 72px;
+      padding: 3px 5px;
+      text-align: center;
+      border: 1px solid;
+    }
+    .ev-type.NOTE_ON  { color: #00ff41; border-color: #00ff41; }
+    .ev-type.NOTE_OFF { color: #333; border-color: #333; }
+    .ev-type.CC       { color: #ffb000; border-color: #ffb000; }
+    .ev-type.PROG_CHG { color: #00aaff; border-color: #00aaff; }
+    .ev-type.PITCH    { color: #ff66ff; border-color: #ff66ff; }
+    .ev-name { font-size: 12px; color: #00ff41; min-width: 36px; }
+    .ev-bar-wrap { flex: 1; background: #0a0a0a; height: 10px; border: 1px solid #111; }
+    .ev-bar { height: 100%; background: #00ff41; transition: width 0.1s; }
+    .ev-ch { font-size: 8px; color: #006618; min-width: 22px; text-align: right; }
+
+    .clear-btn {
+      font-size: 8px;
+      padding: 8px 10px;
+      background: #000;
+      border: 2px solid #333;
+      color: #333;
+      font-family: 'Press Start 2P', monospace;
+      cursor: pointer;
+    }
+    .clear-btn:active { border-color: #ff3333; color: #ff3333; }
+
+    /* Instrument select */
+    #inst-section { display: none; }
+    .inst-select {
+      display: block;
+      width: 100%;
+      padding: 14px 10px;
+      background: #000;
+      border: 2px solid #ffb000;
+      color: #ffb000;
+      font-family: 'Press Start 2P', monospace;
+      font-size: 11px;
+      appearance: none;
+      -webkit-appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpolygon points='0,0 12,0 6,8' fill='%23ffb000'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 12px center;
+      cursor: pointer;
+    }
+    .inst-select option {
+      background: #000;
+      color: #ffb000;
+      font-size: 11px;
+    }
+
+    /* Toast */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      left: 12px; right: 12px;
+      background: #001a05;
+      border: 2px solid #00ff41;
+      color: #00ff41;
+      font-size: 11px;
+      padding: 16px;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.2s;
+      pointer-events: none;
+      line-height: 1.8;
+      z-index: 100;
+    }
+    .toast.err { border-color: #ff3333; color: #ff3333; background: #1a0000; }
+    .toast.show { opacity: 1; }
+  </style>
+</head>
+<body>
+
+  <!-- PANTALLA PRINCIPAL -->
+  <div class="screen active" id="screen-main">
+
+    <h1>ROBOGUITARRA</h1>
+    <div class="subtitle">// FLUIDSYNTH 8-BIT //</div>
+
+    <div class="status">
+      <div><span>SYNTH: </span><strong id="st-synth" class="off">OFFLINE</strong></div>
+      <div><span>SF2: </span><strong id="st-sf2" class="off">--</strong></div>
+      <div><span>MIDI: </span><strong id="st-midi" class="off">--</strong></div>
+      <div><span>AUDIO: </span><strong id="st-audio" class="off">--</strong></div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">> SF2 SOUNDFONTS</div>
+      <ul class="list" id="sf2-list">
+        <li style="color:#333">Cargando...</li>
+      </ul>
+      <button class="btn amber" onclick="loadSf2()">LOAD SF2</button>
+      <button class="btn red" onclick="restartService()">REINICIAR SERVICIO</button>
+    </div>
+
+    <div class="section">
+      <div class="section-title">> MIDI INTERFACES</div>
+      <ul class="list" id="midi-list">
+        <li style="color:#333">Cargando...</li>
+      </ul>
+      <button class="btn" onclick="connectMidi()">CONECTAR MIDI</button>
+    </div>
+
+    <div class="section">
+      <div class="section-title">> SALIDA DE AUDIO</div>
+      <select class="inst-select" id="audio-select"></select>
+      <button class="btn" onclick="applyAudio()">APLICAR AUDIO</button>
+    </div>
+
+    <div class="section" id="inst-section">
+      <div class="section-title">> INSTRUMENTO</div>
+      <select class="inst-select" id="inst-select" onchange="selectInstrument()"></select>
+    </div>
+
+    <button class="btn" style="margin-top:8px" onclick="goLog()">▶ MIDI EVENT LOG</button>
+
+  </div>
+
+  <!-- PANTALLA LOG MIDI -->
+  <div class="screen" id="screen-log">
+
+    <div class="log-header">
+      <button class="btn" style="width:auto;padding:10px 14px" onclick="goMain()">◀ BACK</button>
+      <h2>MIDI LOG</h2>
+      <button class="clear-btn" onclick="clearLog()">CLR</button>
+    </div>
+
+    <ul class="event-list" id="event-list"></ul>
+
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+<script>
+  let selSf2 = null, selMidi = null, selInst = null;
+  let evtSource = null;
+  const MAX_EVENTS = 60;
+
+  // ---- Navegación ----
+  function goLog() {
+    document.getElementById('screen-main').classList.remove('active');
+    document.getElementById('screen-log').classList.add('active');
+    startMidiStream();
+  }
+  function goMain() {
+    stopMidiStream();
+    document.getElementById('screen-log').classList.remove('active');
+    document.getElementById('screen-main').classList.add('active');
+  }
+  function clearLog() {
+    document.getElementById('event-list').innerHTML = '';
+  }
+
+  // ---- SSE MIDI stream ----
+  function startMidiStream() {
+    if (evtSource) return;
+    clearLog();
+    evtSource = new EventSource('/api/midi-stream');
+    evtSource.onmessage = e => {
+      const ev = JSON.parse(e.data);
+      addEvent(ev);
+    };
+    evtSource.onerror = () => {};
+  }
+
+  function stopMidiStream() {
+    if (evtSource) {
+      evtSource.close();
+      evtSource = null;
+    }
+    clearLog();
+  }
+
+  function addEvent(ev) {
+    const ul = document.getElementById('event-list');
+    const li = document.createElement('li');
+    const barPct = Math.round((ev.vel / 127) * 100);
+    li.innerHTML = `
+      <span class="ev-ts">${ev.ts}</span>
+      <span class="ev-type ${ev.type}">${ev.type.replace('_',' ')}</span>
+      <span class="ev-name">${ev.name}</span>
+      <div class="ev-bar-wrap"><div class="ev-bar" style="width:${barPct}%"></div></div>
+      <span class="ev-ch">ch${ev.ch}</span>
+    `;
+    ul.prepend(li);
+    // Limitar a MAX_EVENTS
+    while (ul.children.length > MAX_EVENTS) ul.removeChild(ul.lastChild);
+  }
+
+  function toast(msg, type='ok') {
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.className = `toast show${type==='err'?' err':''}`;
+    clearTimeout(t._tid);
+    t._tid = setTimeout(() => t.classList.remove('show'), 2800);
+  }
+
+  async function api(path, method='GET', body=null) {
+    const opts = { method, headers: {'Content-Type':'application/json'} };
+    if (body) opts.body = JSON.stringify(body);
+    const r = await fetch(path, opts);
+    return r.json();
+  }
+
+  // Status
+  async function pollStatus() {
+    try {
+      const s = await api('/api/status');
+      const el = (id, val, on) => {
+        const e = document.getElementById(id);
+        e.textContent = val;
+        e.className = on ? '' : 'off';
+      };
+      el('st-synth', s.running ? 'ONLINE' : 'OFFLINE', s.running);
+      el('st-sf2', s.loaded_sf2 || '--', !!s.loaded_sf2);
+      el('st-midi', s.midi_port ? s.midi_port.split(':')[0] : '--', !!s.midi_port);
+      const audioLabel = s.audio_driver
+        ? (s.audio_device ? `${s.audio_driver} / ${s.audio_device}` : s.audio_driver)
+        : '--';
+      el('st-audio', audioLabel, !!s.audio_driver);
+    } catch(e) {}
+  }
+  setInterval(pollStatus, 3000);
+  pollStatus();
+
+  // Audio
+  async function loadAudioList() {
+    const info = await api('/api/audio-info');
+    const sel = document.getElementById('audio-select');
+    sel.innerHTML = '';
+    info.drivers.forEach(d => {
+      const opt = document.createElement('option');
+      opt.value = JSON.stringify({driver: d.driver, device: d.device});
+      opt.textContent = d.label;
+      if (d.driver === info.current_driver &&
+          (d.device || null) === (info.current_device || null)) {
+        opt.selected = true;
+      }
+      sel.appendChild(opt);
+    });
+  }
+  loadAudioList();
+
+  async function applyAudio() {
+    const sel = document.getElementById('audio-select');
+    const val = JSON.parse(sel.value);
+    toast(`Cambiando audio a ${val.driver}...`);
+    const r = await api('/api/set-audio', 'POST', val);
+    r.ok ? toast(`Audio: ${val.driver}${val.device ? ' / '+val.device : ''}`) : toast(`ERROR: ${r.error}`, 'err');
+    pollStatus();
+  }
+
+  // SF2
+  async function loadSf2List() {
+    const [d, s] = await Promise.all([api('/api/sf2files'), api('/api/status')]);
+    const ul = document.getElementById('sf2-list');
+    ul.innerHTML = '';
+    if (!d.files.length) { ul.innerHTML = '<li style="color:#333">Sin archivos SF2</li>'; return; }
+    d.files.forEach(f => {
+      const li = document.createElement('li');
+      li.textContent = f;
+      li.onclick = () => {
+        ul.querySelectorAll('li').forEach(x => x.classList.remove('selected'));
+        li.classList.add('selected');
+        selSf2 = f;
+      };
+      if (f === s.loaded_sf2) { li.classList.add('selected'); selSf2 = f; }
+      ul.appendChild(li);
+    });
+    // Si ya hay SF2 cargado, recuperar presets e instrumento guardado
+    if (s.loaded_sf2) {
+      const pr = await api('/api/presets');
+      populateInstruments(pr.presets, s.instrument);
+    }
+  }
+  loadSf2List();
+
+  async function loadSf2() {
+    if (!selSf2) { toast('Selecciona un SF2', 'err'); return; }
+    toast(`Cargando ${selSf2}...`);
+    const r = await api('/api/load-sf2', 'POST', {file: selSf2});
+    if (!r.ok) { toast(`ERROR: ${r.error}`, 'err'); return; }
+    toast(`OK: ${r.sf2}`);
+    populateInstruments(r.presets, r.selected);
+    pollStatus();
+  }
+
+  function populateInstruments(presets, selected) {
+    const sec = document.getElementById('inst-section');
+    const sel = document.getElementById('inst-select');
+    sel.innerHTML = '';
+    if (!presets || !presets.length) { sec.style.display = 'none'; return; }
+    presets.forEach(p => {
+      const opt = document.createElement('option');
+      opt.value = JSON.stringify(p);
+      opt.textContent = `[${p.bank}:${p.preset}] ${p.name}`;
+      if (selected && p.bank === selected.bank && p.preset === selected.preset) {
+        opt.selected = true;
+      }
+      sel.appendChild(opt);
+    });
+    sec.style.display = 'block';
+  }
+
+  async function selectInstrument() {
+    const sel = document.getElementById('inst-select');
+    const p = JSON.parse(sel.value);
+    const r = await api('/api/select-instrument', 'POST', p);
+    r.ok ? toast(`♪ ${p.name}`) : toast(`ERROR`, 'err');
+  }
+
+  // MIDI
+  async function loadMidiList() {
+    const [d, s] = await Promise.all([api('/api/midi-ports'), api('/api/status')]);
+    const ul = document.getElementById('midi-list');
+    ul.innerHTML = '';
+    if (!d.ports.length) { ul.innerHTML = '<li style="color:#333">Sin puertos MIDI</li>'; return; }
+    d.ports.forEach(p => {
+      const li = document.createElement('li');
+      li.textContent = p.name;
+      li.onclick = () => {
+        ul.querySelectorAll('li').forEach(x => x.classList.remove('selected'));
+        li.classList.add('selected');
+        selMidi = p;
+      };
+      if (p.name === s.midi_port) { li.classList.add('selected'); selMidi = p; }
+      ul.appendChild(li);
+    });
+  }
+  loadMidiList();
+
+  async function connectMidi() {
+    if (!selMidi) { toast('Selecciona un puerto MIDI', 'err'); return; }
+    const r = await api('/api/midi-connect', 'POST', selMidi);
+    r.ok ? toast(`MIDI: ${r.port}`) : toast(`ERROR: ${r.error}`, 'err');
+    pollStatus();
+  }
+
+  async function restartService() {
+    toast('Reiniciando servicio...');
+    await api('/api/restart-service', 'POST');
+    // Esperar y reconectar
+    setTimeout(() => { window.location.reload(); }, 4000);
+  }
+</script>
+</body>
+</html>

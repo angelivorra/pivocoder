@@ -53,9 +53,27 @@
         }
         ,
         {
-            "label": "Arrancar Flask App (puerto 5000)",
+            "label": "Arrancar PiVocoder",
             "type": "shell",
             "command": "/home/patch/venv/bin/python /home/patch/pivocoder/flask/app.py",
+            "options": {
+                "env": {
+                    "PORT": "5000",
+                    "QT_QPA_PLATFORM": "offscreen"
+                }
+            },
+            "problemMatcher": [],
+            "isBackground": true,
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "focus": true
+            }
+        },
+        {
+            "label": "Arrancar Roboguitarra",
+            "type": "shell",
+            "command": "/home/patch/venv/bin/python /home/patch/pivocoder/roboguitarra/app.py",
             "options": {
                 "env": {
                     "PORT": "5000",
