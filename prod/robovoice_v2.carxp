@@ -1,0 +1,3083 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE CARLA-PROJECT>
+<CARLA-PROJECT VERSION='2.5'>
+ <EngineSettings>
+  <ForceStereo>false</ForceStereo>
+  <PreferPluginBridges>false</PreferPluginBridges>
+  <PreferUiBridges>false</PreferUiBridges>
+  <UIsAlwaysOnTop>false</UIsAlwaysOnTop>
+  <MaxParameters>200</MaxParameters>
+  <UIBridgesTimeout>4000</UIBridgesTimeout>
+ </EngineSettings>
+
+ <Transport>
+  <BeatsPerMinute>120</BeatsPerMinute>
+ </Transport>
+
+ <!-- Calf Gate -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>Calf Gate</Name>
+   <URI>http://calf.sourceforge.net/plugins/Gate</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x3f1</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Bypass</Name>
+    <Symbol>bypass</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Input</Name>
+    <Symbol>level_in</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>6</Index>
+    <Name>Max Gain Reduction</Name>
+    <Symbol>range</Symbol>
+    <Value>0.00781250093132257</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>7</Index>
+    <Name>Threshold</Name>
+    <Symbol>threshold</Symbol>
+    <Value>0.100000001490116</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>8</Index>
+    <Name>Ratio</Name>
+    <Symbol>ratio</Symbol>
+    <Value>4</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>9</Index>
+    <Name>Attack</Name>
+    <Symbol>attack</Symbol>
+    <Value>3</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>10</Index>
+    <Name>Release</Name>
+    <Symbol>release</Symbol>
+    <Value>120</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>11</Index>
+    <Name>Makeup Gain</Name>
+    <Symbol>makeup</Symbol>
+    <Value>1.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>12</Index>
+    <Name>Knee</Name>
+    <Symbol>knee</Symbol>
+    <Value>2.82842993736267</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>13</Index>
+    <Name>Detection</Name>
+    <Symbol>detection</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>14</Index>
+    <Name>Stereo Link</Name>
+    <Symbol>stereo_link</Symbol>
+    <Value>0</Value>
+   </Parameter>
+  </Data>
+ </Plugin>
+
+ <!-- Calf Vocoder -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>Calf Vocoder</Name>
+   <URI>http://calf.sourceforge.net/plugins/Vocoder</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x3f1</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Bypass</Name>
+    <Symbol>bypass</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Link</Name>
+    <Symbol>link</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>Detectors</Name>
+    <Symbol>detectors</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>3</Index>
+    <Name>Carrier In</Name>
+    <Symbol>carrier_in</Symbol>
+    <Value>2</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>8</Index>
+    <Name>Modulator In</Name>
+    <Symbol>mod_in</Symbol>
+    <Value>1.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>13</Index>
+    <Name>Out</Name>
+    <Symbol>out</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>18</Index>
+    <Name>Carrier</Name>
+    <Symbol>carrier</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>19</Index>
+    <Name>Modulator</Name>
+    <Symbol>modulator</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>20</Index>
+    <Name>Processed</Name>
+    <Symbol>processed</Symbol>
+    <Value>2</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>21</Index>
+    <Name>Isolation</Name>
+    <Symbol>order</Symbol>
+    <Value>7</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>22</Index>
+    <Name>Bands</Name>
+    <Symbol>bands</Symbol>
+    <Value>3</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>23</Index>
+    <Name>High-Q</Name>
+    <Symbol>hiq</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>24</Index>
+    <Name>Attack</Name>
+    <Symbol>attack</Symbol>
+    <Value>3</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>25</Index>
+    <Name>Release</Name>
+    <Symbol>release</Symbol>
+    <Value>60</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>26</Index>
+    <Name>Analyzer</Name>
+    <Symbol>analyzer</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>27</Index>
+    <Name>Vol 1</Name>
+    <Symbol>volume1</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>28</Index>
+    <Name>Pan 1</Name>
+    <Symbol>pan1</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>29</Index>
+    <Name>Noise 1</Name>
+    <Symbol>noise1</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>30</Index>
+    <Name>Dry 1</Name>
+    <Symbol>mod1</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>31</Index>
+    <Name>Solo 1</Name>
+    <Symbol>solo1</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>33</Index>
+    <Name>Q 1</Name>
+    <Symbol>q1</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>34</Index>
+    <Name>Vol 2</Name>
+    <Symbol>volume2</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>35</Index>
+    <Name>Pan 2</Name>
+    <Symbol>pan2</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>36</Index>
+    <Name>Noise 2</Name>
+    <Symbol>noise2</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>37</Index>
+    <Name>Dry 2</Name>
+    <Symbol>mod2</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>38</Index>
+    <Name>Solo 2</Name>
+    <Symbol>solo2</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>40</Index>
+    <Name>Q 2</Name>
+    <Symbol>q2</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>41</Index>
+    <Name>Vol 3</Name>
+    <Symbol>volume3</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>42</Index>
+    <Name>Pan 3</Name>
+    <Symbol>pan3</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>43</Index>
+    <Name>Noise 3</Name>
+    <Symbol>noise3</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>44</Index>
+    <Name>Dry 3</Name>
+    <Symbol>mod3</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>45</Index>
+    <Name>Solo 3</Name>
+    <Symbol>solo3</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>47</Index>
+    <Name>Q 3</Name>
+    <Symbol>q3</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>48</Index>
+    <Name>Vol 4</Name>
+    <Symbol>volume4</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>49</Index>
+    <Name>Pan 4</Name>
+    <Symbol>pan4</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>50</Index>
+    <Name>Noise 4</Name>
+    <Symbol>noise4</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>51</Index>
+    <Name>Dry 4</Name>
+    <Symbol>mod4</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>52</Index>
+    <Name>Solo 4</Name>
+    <Symbol>solo4</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>54</Index>
+    <Name>Q 4</Name>
+    <Symbol>q4</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>55</Index>
+    <Name>Vol 5</Name>
+    <Symbol>volume5</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>56</Index>
+    <Name>Pan 5</Name>
+    <Symbol>pan5</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>57</Index>
+    <Name>Noise 5</Name>
+    <Symbol>noise5</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>58</Index>
+    <Name>Dry 5</Name>
+    <Symbol>mod5</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>59</Index>
+    <Name>Solo 5</Name>
+    <Symbol>solo5</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>61</Index>
+    <Name>Q 5</Name>
+    <Symbol>q5</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>62</Index>
+    <Name>Vol 6</Name>
+    <Symbol>volume6</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>63</Index>
+    <Name>Pan 6</Name>
+    <Symbol>pan6</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>64</Index>
+    <Name>Noise 6</Name>
+    <Symbol>noise6</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>65</Index>
+    <Name>Dry 6</Name>
+    <Symbol>mod6</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>66</Index>
+    <Name>Solo 6</Name>
+    <Symbol>solo6</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>68</Index>
+    <Name>Q 6</Name>
+    <Symbol>q6</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>69</Index>
+    <Name>Vol 7</Name>
+    <Symbol>volume7</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>70</Index>
+    <Name>Pan 7</Name>
+    <Symbol>pan7</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>71</Index>
+    <Name>Noise 7</Name>
+    <Symbol>noise7</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>72</Index>
+    <Name>Dry 7</Name>
+    <Symbol>mod7</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>73</Index>
+    <Name>Solo 7</Name>
+    <Symbol>solo7</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>75</Index>
+    <Name>Q 7</Name>
+    <Symbol>q7</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>76</Index>
+    <Name>Vol 8</Name>
+    <Symbol>volume8</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>77</Index>
+    <Name>Pan 8</Name>
+    <Symbol>pan8</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>78</Index>
+    <Name>Noise 8</Name>
+    <Symbol>noise8</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>79</Index>
+    <Name>Dry 8</Name>
+    <Symbol>mod8</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>80</Index>
+    <Name>Solo 8</Name>
+    <Symbol>solo8</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>82</Index>
+    <Name>Q 8</Name>
+    <Symbol>q8</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>83</Index>
+    <Name>Vol 9</Name>
+    <Symbol>volume9</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>84</Index>
+    <Name>Pan 9</Name>
+    <Symbol>pan9</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>85</Index>
+    <Name>Noise 9</Name>
+    <Symbol>noise9</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>86</Index>
+    <Name>Dry 9</Name>
+    <Symbol>mod9</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>87</Index>
+    <Name>Solo 9</Name>
+    <Symbol>solo9</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>89</Index>
+    <Name>Q 9</Name>
+    <Symbol>q9</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>90</Index>
+    <Name>Vol 10</Name>
+    <Symbol>volume10</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>91</Index>
+    <Name>Pan 10</Name>
+    <Symbol>pan10</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>92</Index>
+    <Name>Noise 10</Name>
+    <Symbol>noise10</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>93</Index>
+    <Name>Dry 10</Name>
+    <Symbol>mod10</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>94</Index>
+    <Name>Solo 10</Name>
+    <Symbol>solo10</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>96</Index>
+    <Name>Q 10</Name>
+    <Symbol>q10</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>97</Index>
+    <Name>Vol 11</Name>
+    <Symbol>volume11</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>98</Index>
+    <Name>Pan 11</Name>
+    <Symbol>pan11</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>99</Index>
+    <Name>Noise 11</Name>
+    <Symbol>noise11</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>100</Index>
+    <Name>Dry 11</Name>
+    <Symbol>mod11</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>101</Index>
+    <Name>Solo 11</Name>
+    <Symbol>solo11</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>103</Index>
+    <Name>Q 11</Name>
+    <Symbol>q11</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>104</Index>
+    <Name>Vol 12</Name>
+    <Symbol>volume12</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>105</Index>
+    <Name>Pan 12</Name>
+    <Symbol>pan12</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>106</Index>
+    <Name>Noise 12</Name>
+    <Symbol>noise12</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>107</Index>
+    <Name>Dry 12</Name>
+    <Symbol>mod12</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>108</Index>
+    <Name>Solo 12</Name>
+    <Symbol>solo12</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>110</Index>
+    <Name>Q 12</Name>
+    <Symbol>q12</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>111</Index>
+    <Name>Vol 13</Name>
+    <Symbol>volume13</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>112</Index>
+    <Name>Pan 13</Name>
+    <Symbol>pan13</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>113</Index>
+    <Name>Noise 13</Name>
+    <Symbol>noise13</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>114</Index>
+    <Name>Dry 13</Name>
+    <Symbol>mod13</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>115</Index>
+    <Name>Solo 13</Name>
+    <Symbol>solo13</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>117</Index>
+    <Name>Q 13</Name>
+    <Symbol>q13</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>118</Index>
+    <Name>Vol 14</Name>
+    <Symbol>volume14</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>119</Index>
+    <Name>Pan 14</Name>
+    <Symbol>pan14</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>120</Index>
+    <Name>Noise 14</Name>
+    <Symbol>noise14</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>121</Index>
+    <Name>Dry 14</Name>
+    <Symbol>mod14</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>122</Index>
+    <Name>Solo 14</Name>
+    <Symbol>solo14</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>124</Index>
+    <Name>Q 14</Name>
+    <Symbol>q14</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>125</Index>
+    <Name>Vol 15</Name>
+    <Symbol>volume15</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>126</Index>
+    <Name>Pan 15</Name>
+    <Symbol>pan15</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>127</Index>
+    <Name>Noise 15</Name>
+    <Symbol>noise15</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>128</Index>
+    <Name>Dry 15</Name>
+    <Symbol>mod15</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>129</Index>
+    <Name>Solo 15</Name>
+    <Symbol>solo15</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>131</Index>
+    <Name>Q 15</Name>
+    <Symbol>q15</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>132</Index>
+    <Name>Vol 16</Name>
+    <Symbol>volume16</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>133</Index>
+    <Name>Pan 16</Name>
+    <Symbol>pan16</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>134</Index>
+    <Name>Noise 16</Name>
+    <Symbol>noise16</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>135</Index>
+    <Name>Dry 16</Name>
+    <Symbol>mod16</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>136</Index>
+    <Name>Solo 16</Name>
+    <Symbol>solo16</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>138</Index>
+    <Name>Q 16</Name>
+    <Symbol>q16</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>139</Index>
+    <Name>Vol 17</Name>
+    <Symbol>volume17</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>140</Index>
+    <Name>Pan 17</Name>
+    <Symbol>pan17</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>141</Index>
+    <Name>Noise 17</Name>
+    <Symbol>noise17</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>142</Index>
+    <Name>Dry 17</Name>
+    <Symbol>mod17</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>143</Index>
+    <Name>Solo 17</Name>
+    <Symbol>solo17</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>145</Index>
+    <Name>Q 17</Name>
+    <Symbol>q17</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>146</Index>
+    <Name>Vol 18</Name>
+    <Symbol>volume18</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>147</Index>
+    <Name>Pan 18</Name>
+    <Symbol>pan18</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>148</Index>
+    <Name>Noise 18</Name>
+    <Symbol>noise18</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>149</Index>
+    <Name>Dry 18</Name>
+    <Symbol>mod18</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>150</Index>
+    <Name>Solo 18</Name>
+    <Symbol>solo18</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>152</Index>
+    <Name>Q 18</Name>
+    <Symbol>q18</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>153</Index>
+    <Name>Vol 19</Name>
+    <Symbol>volume19</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>154</Index>
+    <Name>Pan 19</Name>
+    <Symbol>pan19</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>155</Index>
+    <Name>Noise 19</Name>
+    <Symbol>noise19</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>156</Index>
+    <Name>Dry 19</Name>
+    <Symbol>mod19</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>157</Index>
+    <Name>Solo 19</Name>
+    <Symbol>solo19</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>159</Index>
+    <Name>Q 19</Name>
+    <Symbol>q19</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>160</Index>
+    <Name>Vol 20</Name>
+    <Symbol>volume20</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>161</Index>
+    <Name>Pan 20</Name>
+    <Symbol>pan20</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>162</Index>
+    <Name>Noise 20</Name>
+    <Symbol>noise20</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>163</Index>
+    <Name>Dry 20</Name>
+    <Symbol>mod20</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>164</Index>
+    <Name>Solo 20</Name>
+    <Symbol>solo20</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>166</Index>
+    <Name>Q 20</Name>
+    <Symbol>q20</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>167</Index>
+    <Name>Vol 21</Name>
+    <Symbol>volume21</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>168</Index>
+    <Name>Pan 21</Name>
+    <Symbol>pan21</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>169</Index>
+    <Name>Noise 21</Name>
+    <Symbol>noise21</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>170</Index>
+    <Name>Dry 21</Name>
+    <Symbol>mod21</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>171</Index>
+    <Name>Solo 21</Name>
+    <Symbol>solo21</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>173</Index>
+    <Name>Q 21</Name>
+    <Symbol>q21</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>174</Index>
+    <Name>Vol 22</Name>
+    <Symbol>volume22</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>175</Index>
+    <Name>Pan 22</Name>
+    <Symbol>pan22</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>176</Index>
+    <Name>Noise 22</Name>
+    <Symbol>noise22</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>177</Index>
+    <Name>Dry 22</Name>
+    <Symbol>mod22</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>178</Index>
+    <Name>Solo 22</Name>
+    <Symbol>solo22</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>180</Index>
+    <Name>Q 22</Name>
+    <Symbol>q22</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>181</Index>
+    <Name>Vol 23</Name>
+    <Symbol>volume23</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>182</Index>
+    <Name>Pan 23</Name>
+    <Symbol>pan23</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>183</Index>
+    <Name>Noise 23</Name>
+    <Symbol>noise23</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>184</Index>
+    <Name>Dry 23</Name>
+    <Symbol>mod23</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>185</Index>
+    <Name>Solo 23</Name>
+    <Symbol>solo23</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>187</Index>
+    <Name>Q 23</Name>
+    <Symbol>q23</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>188</Index>
+    <Name>Vol 24</Name>
+    <Symbol>volume24</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>189</Index>
+    <Name>Pan 24</Name>
+    <Symbol>pan24</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>190</Index>
+    <Name>Noise 24</Name>
+    <Symbol>noise24</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>191</Index>
+    <Name>Dry 24</Name>
+    <Symbol>mod24</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>192</Index>
+    <Name>Solo 24</Name>
+    <Symbol>solo24</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>194</Index>
+    <Name>Q 24</Name>
+    <Symbol>q24</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>195</Index>
+    <Name>Vol 25</Name>
+    <Symbol>volume25</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>196</Index>
+    <Name>Pan 25</Name>
+    <Symbol>pan25</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>197</Index>
+    <Name>Noise 25</Name>
+    <Symbol>noise25</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>198</Index>
+    <Name>Dry 25</Name>
+    <Symbol>mod25</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>199</Index>
+    <Name>Solo 25</Name>
+    <Symbol>solo25</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>201</Index>
+    <Name>Q 25</Name>
+    <Symbol>q25</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>202</Index>
+    <Name>Vol 26</Name>
+    <Symbol>volume26</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>203</Index>
+    <Name>Pan 26</Name>
+    <Symbol>pan26</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>204</Index>
+    <Name>Noise 26</Name>
+    <Symbol>noise26</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>205</Index>
+    <Name>Dry 26</Name>
+    <Symbol>mod26</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>206</Index>
+    <Name>Solo 26</Name>
+    <Symbol>solo26</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>208</Index>
+    <Name>Q 26</Name>
+    <Symbol>q26</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>209</Index>
+    <Name>Vol 27</Name>
+    <Symbol>volume27</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>210</Index>
+    <Name>Pan 27</Name>
+    <Symbol>pan27</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>211</Index>
+    <Name>Noise 27</Name>
+    <Symbol>noise27</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>212</Index>
+    <Name>Dry 27</Name>
+    <Symbol>mod27</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>213</Index>
+    <Name>Solo 27</Name>
+    <Symbol>solo27</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>215</Index>
+    <Name>Q 27</Name>
+    <Symbol>q27</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>216</Index>
+    <Name>Vol 28</Name>
+    <Symbol>volume28</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>217</Index>
+    <Name>Pan 28</Name>
+    <Symbol>pan28</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>218</Index>
+    <Name>Noise 28</Name>
+    <Symbol>noise28</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>219</Index>
+    <Name>Dry 28</Name>
+    <Symbol>mod28</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>220</Index>
+    <Name>Solo 28</Name>
+    <Symbol>solo28</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>222</Index>
+    <Name>Q 28</Name>
+    <Symbol>q28</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>223</Index>
+    <Name>Vol 29</Name>
+    <Symbol>volume29</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>224</Index>
+    <Name>Pan 29</Name>
+    <Symbol>pan29</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>225</Index>
+    <Name>Noise 29</Name>
+    <Symbol>noise29</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>226</Index>
+    <Name>Dry 29</Name>
+    <Symbol>mod29</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>227</Index>
+    <Name>Solo 29</Name>
+    <Symbol>solo29</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>229</Index>
+    <Name>Q 29</Name>
+    <Symbol>q29</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>230</Index>
+    <Name>Vol 30</Name>
+    <Symbol>volume30</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>231</Index>
+    <Name>Pan 30</Name>
+    <Symbol>pan30</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>232</Index>
+    <Name>Noise 30</Name>
+    <Symbol>noise30</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>233</Index>
+    <Name>Dry 30</Name>
+    <Symbol>mod30</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>234</Index>
+    <Name>Solo 30</Name>
+    <Symbol>solo30</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>236</Index>
+    <Name>Q 30</Name>
+    <Symbol>q30</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>237</Index>
+    <Name>Vol 31</Name>
+    <Symbol>volume31</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>238</Index>
+    <Name>Pan 31</Name>
+    <Symbol>pan31</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>239</Index>
+    <Name>Noise 31</Name>
+    <Symbol>noise31</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>240</Index>
+    <Name>Dry 31</Name>
+    <Symbol>mod31</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>241</Index>
+    <Name>Solo 31</Name>
+    <Symbol>solo31</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>243</Index>
+    <Name>Q 31</Name>
+    <Symbol>q31</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>244</Index>
+    <Name>Vol 32</Name>
+    <Symbol>volume32</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>245</Index>
+    <Name>Pan 32</Name>
+    <Symbol>pan32</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>246</Index>
+    <Name>Noise 32</Name>
+    <Symbol>noise32</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>247</Index>
+    <Name>Dry 32</Name>
+    <Symbol>mod32</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>248</Index>
+    <Name>Solo 32</Name>
+    <Symbol>solo32</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>250</Index>
+    <Name>Q 32</Name>
+    <Symbol>q32</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>251</Index>
+    <Name>Lower</Name>
+    <Symbol>lower</Symbol>
+    <Value>20</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>252</Index>
+    <Name>Upper</Name>
+    <Symbol>upper</Symbol>
+    <Value>20000</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>253</Index>
+    <Name>Tilt</Name>
+    <Symbol>tilt</Symbol>
+    <Value>0</Value>
+   </Parameter>
+  </Data>
+ </Plugin>
+
+ <!-- Helm -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>Helm</Name>
+   <URI>http://tytel.org/helm</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x3f1</Options>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>amp_attack</Name>
+    <Symbol>amp_attack</Symbol>
+    <Value>0.00100000004749745</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>3</Index>
+    <Name>amp_decay</Name>
+    <Symbol>amp_decay</Symbol>
+    <Value>0.100000001490116</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>4</Index>
+    <Name>amp_release</Name>
+    <Symbol>amp_release</Symbol>
+    <Value>0.0399999991059303</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>5</Index>
+    <Name>amp_sustain</Name>
+    <Symbol>amp_sustain</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>6</Index>
+    <Name>arp_frequency</Name>
+    <Symbol>arp_frequency</Symbol>
+    <Value>0.600000023841858</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>7</Index>
+    <Name>arp_gate</Name>
+    <Symbol>arp_gate</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>8</Index>
+    <Name>arp_octaves</Name>
+    <Symbol>arp_octaves</Symbol>
+    <Value>0.333333343267441</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>9</Index>
+    <Name>arp_on</Name>
+    <Symbol>arp_on</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>10</Index>
+    <Name>arp_pattern</Name>
+    <Symbol>arp_pattern</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>11</Index>
+    <Name>arp_sync</Name>
+    <Symbol>arp_sync</Symbol>
+    <Value>0.333333343267441</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>12</Index>
+    <Name>arp_tempo</Name>
+    <Symbol>arp_tempo</Symbol>
+    <Value>0.818181812763214</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>13</Index>
+    <Name>beats_per_minute</Name>
+    <Symbol>beats_per_minute</Symbol>
+    <Value>0.428571432828903</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>14</Index>
+    <Name>cross_modulation</Name>
+    <Symbol>cross_modulation</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>15</Index>
+    <Name>cutoff</Name>
+    <Symbol>cutoff</Symbol>
+    <Value>0.663865625858307</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>16</Index>
+    <Name>delay_dry_wet</Name>
+    <Symbol>delay_dry_wet</Symbol>
+    <Value>0.0182555802166462</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>17</Index>
+    <Name>delay_feedback</Name>
+    <Symbol>delay_feedback</Symbol>
+    <Value>0.699999988079071</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>18</Index>
+    <Name>delay_frequency</Name>
+    <Symbol>delay_frequency</Symbol>
+    <Value>0.571428596973419</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>19</Index>
+    <Name>delay_on</Name>
+    <Symbol>delay_on</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>20</Index>
+    <Name>delay_sync</Name>
+    <Symbol>delay_sync</Symbol>
+    <Value>0.666666686534882</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>21</Index>
+    <Name>delay_tempo</Name>
+    <Symbol>delay_tempo</Symbol>
+    <Value>0.818181812763214</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>22</Index>
+    <Name>distortion_drive</Name>
+    <Symbol>distortion_drive</Symbol>
+    <Value>0.699999988079071</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>23</Index>
+    <Name>distortion_mix</Name>
+    <Symbol>distortion_mix</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>24</Index>
+    <Name>distortion_on</Name>
+    <Symbol>distortion_on</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>25</Index>
+    <Name>distortion_type</Name>
+    <Symbol>distortion_type</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>26</Index>
+    <Name>fil_attack</Name>
+    <Symbol>fil_attack</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>27</Index>
+    <Name>fil_decay</Name>
+    <Symbol>fil_decay</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>28</Index>
+    <Name>fil_env_depth</Name>
+    <Symbol>fil_env_depth</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>29</Index>
+    <Name>fil_release</Name>
+    <Symbol>fil_release</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>30</Index>
+    <Name>fil_sustain</Name>
+    <Symbol>fil_sustain</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>31</Index>
+    <Name>filter_blend</Name>
+    <Symbol>filter_blend</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>32</Index>
+    <Name>filter_drive</Name>
+    <Symbol>filter_drive</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>33</Index>
+    <Name>filter_on</Name>
+    <Symbol>filter_on</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>34</Index>
+    <Name>filter_shelf</Name>
+    <Symbol>filter_shelf</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>35</Index>
+    <Name>filter_style</Name>
+    <Symbol>filter_style</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>36</Index>
+    <Name>formant_on</Name>
+    <Symbol>formant_on</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>37</Index>
+    <Name>formant_x</Name>
+    <Symbol>formant_x</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>38</Index>
+    <Name>formant_y</Name>
+    <Symbol>formant_y</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>39</Index>
+    <Name>keytrack</Name>
+    <Symbol>keytrack</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>40</Index>
+    <Name>legato</Name>
+    <Symbol>legato</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>41</Index>
+    <Name>mod_attack</Name>
+    <Symbol>mod_attack</Symbol>
+    <Value>0.025000000372529</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>42</Index>
+    <Name>mod_decay</Name>
+    <Symbol>mod_decay</Symbol>
+    <Value>0.375</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>43</Index>
+    <Name>mod_release</Name>
+    <Symbol>mod_release</Symbol>
+    <Value>0.375</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>44</Index>
+    <Name>mod_sustain</Name>
+    <Symbol>mod_sustain</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>45</Index>
+    <Name>mono_lfo_1_amplitude</Name>
+    <Symbol>mono_lfo_1_amplitude</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>46</Index>
+    <Name>mono_lfo_1_frequency</Name>
+    <Symbol>mono_lfo_1_frequency</Symbol>
+    <Value>0.615384638309479</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>47</Index>
+    <Name>mono_lfo_1_retrigger</Name>
+    <Symbol>mono_lfo_1_retrigger</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>48</Index>
+    <Name>mono_lfo_1_sync</Name>
+    <Symbol>mono_lfo_1_sync</Symbol>
+    <Value>0.333333343267441</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>49</Index>
+    <Name>mono_lfo_1_tempo</Name>
+    <Symbol>mono_lfo_1_tempo</Symbol>
+    <Value>0.545454561710358</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>50</Index>
+    <Name>mono_lfo_1_waveform</Name>
+    <Symbol>mono_lfo_1_waveform</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>51</Index>
+    <Name>mono_lfo_2_amplitude</Name>
+    <Symbol>mono_lfo_2_amplitude</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>52</Index>
+    <Name>mono_lfo_2_frequency</Name>
+    <Symbol>mono_lfo_2_frequency</Symbol>
+    <Value>0.615384638309479</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>53</Index>
+    <Name>mono_lfo_2_retrigger</Name>
+    <Symbol>mono_lfo_2_retrigger</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>54</Index>
+    <Name>mono_lfo_2_sync</Name>
+    <Symbol>mono_lfo_2_sync</Symbol>
+    <Value>0.333333343267441</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>55</Index>
+    <Name>mono_lfo_2_tempo</Name>
+    <Symbol>mono_lfo_2_tempo</Symbol>
+    <Value>0.636363625526428</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>56</Index>
+    <Name>mono_lfo_2_waveform</Name>
+    <Symbol>mono_lfo_2_waveform</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>57</Index>
+    <Name>noise_volume</Name>
+    <Symbol>noise_volume</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>58</Index>
+    <Name>num_steps</Name>
+    <Symbol>num_steps</Symbol>
+    <Value>0.225806444883347</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>59</Index>
+    <Name>osc_1_transpose</Name>
+    <Symbol>osc_1_transpose</Symbol>
+    <Value>0.375</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>60</Index>
+    <Name>osc_1_tune</Name>
+    <Symbol>osc_1_tune</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>61</Index>
+    <Name>osc_1_unison_detune</Name>
+    <Symbol>osc_1_unison_detune</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>62</Index>
+    <Name>osc_1_unison_voices</Name>
+    <Symbol>osc_1_unison_voices</Symbol>
+    <Value>0.142857149243355</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>63</Index>
+    <Name>osc_1_volume</Name>
+    <Symbol>osc_1_volume</Symbol>
+    <Value>0.800000011920929</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>64</Index>
+    <Name>osc_1_waveform</Name>
+    <Symbol>osc_1_waveform</Symbol>
+    <Value>0.600000023841858</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>65</Index>
+    <Name>osc_2_transpose</Name>
+    <Symbol>osc_2_transpose</Symbol>
+    <Value>0.625</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>66</Index>
+    <Name>osc_2_tune</Name>
+    <Symbol>osc_2_tune</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>67</Index>
+    <Name>osc_2_unison_detune</Name>
+    <Symbol>osc_2_unison_detune</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>68</Index>
+    <Name>osc_2_unison_voices</Name>
+    <Symbol>osc_2_unison_voices</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>69</Index>
+    <Name>osc_2_volume</Name>
+    <Symbol>osc_2_volume</Symbol>
+    <Value>0.400000005960464</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>70</Index>
+    <Name>osc_2_waveform</Name>
+    <Symbol>osc_2_waveform</Symbol>
+    <Value>0.200000002980232</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>71</Index>
+    <Name>osc_feedback_amount</Name>
+    <Symbol>osc_feedback_amount</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>72</Index>
+    <Name>osc_feedback_transpose</Name>
+    <Symbol>osc_feedback_transpose</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>73</Index>
+    <Name>osc_feedback_tune</Name>
+    <Symbol>osc_feedback_tune</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>74</Index>
+    <Name>pitch_bend_range</Name>
+    <Symbol>pitch_bend_range</Symbol>
+    <Value>0.0416666679084301</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>75</Index>
+    <Name>poly_lfo_amplitude</Name>
+    <Symbol>poly_lfo_amplitude</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>76</Index>
+    <Name>poly_lfo_frequency</Name>
+    <Symbol>poly_lfo_frequency</Symbol>
+    <Value>0.615384638309479</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>77</Index>
+    <Name>poly_lfo_sync</Name>
+    <Symbol>poly_lfo_sync</Symbol>
+    <Value>0.333333343267441</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>78</Index>
+    <Name>poly_lfo_tempo</Name>
+    <Symbol>poly_lfo_tempo</Symbol>
+    <Value>0.636363625526428</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>79</Index>
+    <Name>poly_lfo_waveform</Name>
+    <Symbol>poly_lfo_waveform</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>80</Index>
+    <Name>polyphony</Name>
+    <Symbol>polyphony</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>81</Index>
+    <Name>portamento</Name>
+    <Symbol>portamento</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>82</Index>
+    <Name>portamento_type</Name>
+    <Symbol>portamento_type</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>83</Index>
+    <Name>resonance</Name>
+    <Symbol>resonance</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>84</Index>
+    <Name>reverb_damping</Name>
+    <Symbol>reverb_damping</Symbol>
+    <Value>0.159999996423721</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>85</Index>
+    <Name>reverb_dry_wet</Name>
+    <Symbol>reverb_dry_wet</Symbol>
+    <Value>0.131367295980453</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>86</Index>
+    <Name>reverb_feedback</Name>
+    <Symbol>reverb_feedback</Symbol>
+    <Value>0.747999906539917</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>87</Index>
+    <Name>reverb_on</Name>
+    <Symbol>reverb_on</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>88</Index>
+    <Name>step_frequency</Name>
+    <Symbol>step_frequency</Symbol>
+    <Value>0.636363625526428</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>89</Index>
+    <Name>step_seq_00</Name>
+    <Symbol>step_seq_00</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>90</Index>
+    <Name>step_seq_01</Name>
+    <Symbol>step_seq_01</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>91</Index>
+    <Name>step_seq_02</Name>
+    <Symbol>step_seq_02</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>92</Index>
+    <Name>step_seq_03</Name>
+    <Symbol>step_seq_03</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>93</Index>
+    <Name>step_seq_04</Name>
+    <Symbol>step_seq_04</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>94</Index>
+    <Name>step_seq_05</Name>
+    <Symbol>step_seq_05</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>95</Index>
+    <Name>step_seq_06</Name>
+    <Symbol>step_seq_06</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>96</Index>
+    <Name>step_seq_07</Name>
+    <Symbol>step_seq_07</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>97</Index>
+    <Name>step_seq_08</Name>
+    <Symbol>step_seq_08</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>98</Index>
+    <Name>step_seq_09</Name>
+    <Symbol>step_seq_09</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>99</Index>
+    <Name>step_seq_10</Name>
+    <Symbol>step_seq_10</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>100</Index>
+    <Name>step_seq_11</Name>
+    <Symbol>step_seq_11</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>101</Index>
+    <Name>step_seq_12</Name>
+    <Symbol>step_seq_12</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>102</Index>
+    <Name>step_seq_13</Name>
+    <Symbol>step_seq_13</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>103</Index>
+    <Name>step_seq_14</Name>
+    <Symbol>step_seq_14</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>104</Index>
+    <Name>step_seq_15</Name>
+    <Symbol>step_seq_15</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>105</Index>
+    <Name>step_seq_16</Name>
+    <Symbol>step_seq_16</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>106</Index>
+    <Name>step_seq_17</Name>
+    <Symbol>step_seq_17</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>107</Index>
+    <Name>step_seq_18</Name>
+    <Symbol>step_seq_18</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>108</Index>
+    <Name>step_seq_19</Name>
+    <Symbol>step_seq_19</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>109</Index>
+    <Name>step_seq_20</Name>
+    <Symbol>step_seq_20</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>110</Index>
+    <Name>step_seq_21</Name>
+    <Symbol>step_seq_21</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>111</Index>
+    <Name>step_seq_22</Name>
+    <Symbol>step_seq_22</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>112</Index>
+    <Name>step_seq_23</Name>
+    <Symbol>step_seq_23</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>113</Index>
+    <Name>step_seq_24</Name>
+    <Symbol>step_seq_24</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>114</Index>
+    <Name>step_seq_25</Name>
+    <Symbol>step_seq_25</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>115</Index>
+    <Name>step_seq_26</Name>
+    <Symbol>step_seq_26</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>116</Index>
+    <Name>step_seq_27</Name>
+    <Symbol>step_seq_27</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>117</Index>
+    <Name>step_seq_28</Name>
+    <Symbol>step_seq_28</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>118</Index>
+    <Name>step_seq_29</Name>
+    <Symbol>step_seq_29</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>119</Index>
+    <Name>step_seq_30</Name>
+    <Symbol>step_seq_30</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>120</Index>
+    <Name>step_seq_31</Name>
+    <Symbol>step_seq_31</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>121</Index>
+    <Name>step_sequencer_retrigger</Name>
+    <Symbol>step_sequencer_retrigger</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>122</Index>
+    <Name>step_sequencer_sync</Name>
+    <Symbol>step_sequencer_sync</Symbol>
+    <Value>0.333333343267441</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>123</Index>
+    <Name>step_sequencer_tempo</Name>
+    <Symbol>step_sequencer_tempo</Symbol>
+    <Value>0.636363625526428</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>124</Index>
+    <Name>step_smoothing</Name>
+    <Symbol>step_smoothing</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>125</Index>
+    <Name>stutter_frequency</Name>
+    <Symbol>stutter_frequency</Symbol>
+    <Value>0.428571462631226</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>126</Index>
+    <Name>stutter_on</Name>
+    <Symbol>stutter_on</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>127</Index>
+    <Name>stutter_resample_frequency</Name>
+    <Symbol>stutter_resample_frequency</Symbol>
+    <Value>0.727272748947144</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>128</Index>
+    <Name>stutter_resample_sync</Name>
+    <Symbol>stutter_resample_sync</Symbol>
+    <Value>0.333333343267441</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>129</Index>
+    <Name>stutter_resample_tempo</Name>
+    <Symbol>stutter_resample_tempo</Symbol>
+    <Value>0.545454561710358</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>130</Index>
+    <Name>stutter_softness</Name>
+    <Symbol>stutter_softness</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>131</Index>
+    <Name>stutter_sync</Name>
+    <Symbol>stutter_sync</Symbol>
+    <Value>0.333333343267441</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>132</Index>
+    <Name>stutter_tempo</Name>
+    <Symbol>stutter_tempo</Symbol>
+    <Value>0.400000005960464</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>133</Index>
+    <Name>sub_octave</Name>
+    <Symbol>sub_octave</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>134</Index>
+    <Name>sub_shuffle</Name>
+    <Symbol>sub_shuffle</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>135</Index>
+    <Name>sub_volume</Name>
+    <Symbol>sub_volume</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>136</Index>
+    <Name>sub_waveform</Name>
+    <Symbol>sub_waveform</Symbol>
+    <Value>0.200000002980232</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>137</Index>
+    <Name>unison_1_harmonize</Name>
+    <Symbol>unison_1_harmonize</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>138</Index>
+    <Name>unison_2_harmonize</Name>
+    <Symbol>unison_2_harmonize</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>139</Index>
+    <Name>velocity_track</Name>
+    <Symbol>velocity_track</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>140</Index>
+    <Name>volume</Name>
+    <Symbol>volume</Symbol>
+    <Value>0.649999976158142</Value>
+   </Parameter>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#Chunk</Type>
+    <Key>urn:juce:stateBinary</Key>
+    <Value>
+ew0KICAibGljZW5zZSI6ICJQYXRjaCAoYykgYnkgTWlrb2xpcy4gIFRoaXMgcGF0Y2ggaXMgbGljZW5zZWQgdW5kZXIgYSBDcmVhdGl2ZSBDb21tb25zIEF0dHJpYnV0aW9uIDQuMCBJbnRlcm5hdGlvbmFsIExpY2Vuc2UuICBZb3Ugc2hvdWxkIGhhdmUgcmVjZWl2ZWQgYSBjb3B5IG9mIHRoZSBsaWNlbnNlIGFsb25nIHdpdGggdGhpcyB3b3JrLiAgSWYgbm90LCBzZWUgPGh0dHA6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LzQuMC8+LiIsDQogICJzeW50aF92ZXJzaW9uIjogIjAuOS4wIiwNCiAgInBhdGNoX25hbWUiOiAiQ00gS2xlZXIgQXJwIiwNCiAgImZvbGRlcl9uYW1lIjogIkFycCIsDQogICJhdXRob3IiOiAiTWlrb2xpcyIsDQogICJzZXR0aW5ncyI6IHsNCiAgICAiYW1wX2F0dGFjayI6IDAuMDA0MDAwMDAwMTg5OTg5ODA1MjIxNiwNCiAgICAiYW1wX2RlY2F5IjogMC40MDAwMDAwMDU5NjA0NjQ0Nzc1NCwNCiAgICAiYW1wX3JlbGVhc2UiOiAwLjE1OTk5OTk5NjQyMzcyMTMxMzQ4LA0KICAgICJhbXBfc3VzdGFpbiI6IDEsDQogICAgImFycF9mcmVxdWVuY3kiOiAyLA0KICAgICJhcnBfZ2F0ZSI6IDAuNSwNCiAgICAiYXJwX29jdGF2ZXMiOiAyLA0KICAgICJhcnBfb24iOiAxLA0KICAgICJhcnBfcGF0dGVybiI6IDQsDQogICAgImFycF9zeW5jIjogMSwNCiAgICAiYXJwX3RlbXBvIjogOSwNCiAgICAiYmVhdHNfcGVyX21pbnV0ZSI6IDIsDQogICAgImNyb3NzX21vZHVsYXRpb24iOiAwLA0KICAgICJjdXRvZmYiOiA5My43MjI2OTQzOTY5NzI2NTYyNSwNCiAgICAiZGVsYXlfZHJ5X3dldCI6IDAuMDE4MjU1NTc5NzExODcxNTI3OTQ4LA0KICAgICJkZWxheV9mZWVkYmFjayI6IDAuMzk5OTk5OTc2MTU4MTQyMDg5ODQsDQogICAgImRlbGF5X2ZyZXF1ZW5jeSI6IDIuMDAwMDAwMjM4NDE4NTc5MTAxNiwNCiAgICAiZGVsYXlfb24iOiAxLA0KICAgICJkZWxheV9zeW5jIjogMiwNCiAgICAiZGVsYXlfdGVtcG8iOiA5LA0KICAgICJkaXN0b3J0aW9uX2RyaXZlIjogMTIsDQogICAgImRpc3RvcnRpb25fbWl4IjogMSwNCiAgICAiZGlzdG9ydGlvbl9vbiI6IDEsDQogICAgImRpc3RvcnRpb25fdHlwZSI6IDAsDQogICAgImZpbF9hdHRhY2siOiAwLA0KICAgICJmaWxfZGVjYXkiOiA0LA0KICAgICJmaWxfZW52X2RlcHRoIjogMCwNCiAgICAiZmlsX3JlbGVhc2UiOiAwLA0KICAgICJmaWxfc3VzdGFpbiI6IDAsDQogICAgImZpbHRlcl9ibGVuZCI6IDAsDQogICAgImZpbHRlcl9kcml2ZSI6IC0xMiwNCiAgICAiZmlsdGVyX29uIjogMCwNCiAgICAiZmlsdGVyX3NoZWxmIjogMCwNCiAgICAiZmlsdGVyX3N0eWxlIjogMiwNCiAgICAiZm9ybWFudF9vbiI6IDAsDQogICAgImZvcm1hbnRfeCI6IDAuNSwNCiAgICAiZm9ybWFudF95IjogMC41LA0KICAgICJrZXl0cmFjayI6IDAsDQogICAgImxlZ2F0byI6IDAsDQogICAgIm1vZF9hdHRhY2siOiAwLjEwMDAwMDAwMTQ5MDExNjExOTM4LA0KICAgICJtb2RfZGVjYXkiOiAxLjUsDQogICAgIm1vZF9yZWxlYXNlIjogMS41LA0KICAgICJtb2Rfc3VzdGFpbiI6IDAuNSwNCiAgICAibW9ub19sZm9fMV9hbXBsaXR1ZGUiOiAxLA0KICAgICJtb25vX2xmb18xX2ZyZXF1ZW5jeSI6IDEuMDAwMDAwMjM4NDE4NTc5MTAxNiwNCiAgICAibW9ub19sZm9fMV9yZXRyaWdnZXIiOiAwLA0KICAgICJtb25vX2xmb18xX3N5bmMiOiAxLA0KICAgICJtb25vX2xmb18xX3RlbXBvIjogNiwNCiAgICAibW9ub19sZm9fMV93YXZlZm9ybSI6IDAsDQogICAgIm1vbm9fbGZvXzJfYW1wbGl0dWRlIjogMSwNCiAgICAibW9ub19sZm9fMl9mcmVxdWVuY3kiOiAxLjAwMDAwMDIzODQxODU3OTEwMTYsDQogICAgIm1vbm9fbGZvXzJfcmV0cmlnZ2VyIjogMCwNCiAgICAibW9ub19sZm9fMl9zeW5jIjogMSwNCiAgICAibW9ub19sZm9fMl90ZW1wbyI6IDcsDQogICAgIm1vbm9fbGZvXzJfd2F2ZWZvcm0iOiAwLA0KICAgICJub2lzZV92b2x1bWUiOiAwLA0KICAgICJudW1fc3RlcHMiOiA4LA0KICAgICJvc2NfMV90cmFuc3Bvc2UiOiAtMTIsDQogICAgIm9zY18xX3R1bmUiOiAwLA0KICAgICJvc2NfMV91bmlzb25fZGV0dW5lIjogMCwNCiAgICAib3NjXzFfdW5pc29uX3ZvaWNlcyI6IDMsDQogICAgIm9zY18xX3ZvbHVtZSI6IDAuODAwMDAwMDExOTIwOTI4OTU1MDgsDQogICAgIm9zY18xX3dhdmVmb3JtIjogNiwNCiAgICAib3NjXzJfdHJhbnNwb3NlIjogMTIsDQogICAgIm9zY18yX3R1bmUiOiAwLA0KICAgICJvc2NfMl91bmlzb25fZGV0dW5lIjogMCwNCiAgICAib3NjXzJfdW5pc29uX3ZvaWNlcyI6IDEsDQogICAgIm9zY18yX3ZvbHVtZSI6IDAuNDAwMDAwMDA1OTYwNDY0NDc3NTQsDQogICAgIm9zY18yX3dhdmVmb3JtIjogMiwNCiAgICAib3NjX2ZlZWRiYWNrX2Ftb3VudCI6IDAsDQogICAgIm9zY19mZWVkYmFja190cmFuc3Bvc2UiOiAwLA0KICAgICJvc2NfZmVlZGJhY2tfdHVuZSI6IDAsDQogICAgInBpdGNoX2JlbmRfcmFuZ2UiOiAyLA0KICAgICJwb2x5X2xmb19hbXBsaXR1ZGUiOiAxLA0KICAgICJwb2x5X2xmb19mcmVxdWVuY3kiOiAxLjAwMDAwMDIzODQxODU3OTEwMTYsDQogICAgInBvbHlfbGZvX3N5bmMiOiAxLA0KICAgICJwb2x5X2xmb190ZW1wbyI6IDcsDQogICAgInBvbHlfbGZvX3dhdmVmb3JtIjogMCwNCiAgICAicG9seXBob255IjogMSwNCiAgICAicG9ydGFtZW50byI6IC05LA0KICAgICJwb3J0YW1lbnRvX3R5cGUiOiAwLA0KICAgICJyZXNvbmFuY2UiOiAwLA0KICAgICJyZXZlcmJfZGFtcGluZyI6IDAuMTU5OTk5OTk2NDIzNzIxMzEzNDgsDQogICAgInJldmVyYl9kcnlfd2V0IjogMC4xMzEzNjcyOTM1NzQ3MDE0NDkxOSwNCiAgICAicmV2ZXJiX2ZlZWRiYWNrIjogMC45NDk1OTk5ODEzMDc5ODMzOTg0NCwNCiAgICAicmV2ZXJiX29uIjogMSwNCiAgICAic3RlcF9mcmVxdWVuY3kiOiAxLjk5OTk5OTg4MDc5MDcxMDQ0OTIsDQogICAgInN0ZXBfc2VxXzAwIjogMCwNCiAgICAic3RlcF9zZXFfMDEiOiAwLA0KICAgICJzdGVwX3NlcV8wMiI6IDAsDQogICAgInN0ZXBfc2VxXzAzIjogMCwNCiAgICAic3RlcF9zZXFfMDQiOiAwLA0KICAgICJzdGVwX3NlcV8wNSI6IDAsDQogICAgInN0ZXBfc2VxXzA2IjogMCwNCiAgICAic3RlcF9zZXFfMDciOiAwLA0KICAgICJzdGVwX3NlcV8wOCI6IDAsDQogICAgInN0ZXBfc2VxXzA5IjogMCwNCiAgICAic3RlcF9zZXFfMTAiOiAwLA0KICAgICJzdGVwX3NlcV8xMSI6IDAsDQogICAgInN0ZXBfc2VxXzEyIjogMCwNCiAgICAic3RlcF9zZXFfMTMiOiAwLA0KICAgICJzdGVwX3NlcV8xNCI6IDAsDQogICAgInN0ZXBfc2VxXzE1IjogMCwNCiAgICAic3RlcF9zZXFfMTYiOiAwLA0KICAgICJzdGVwX3NlcV8xNyI6IDAsDQogICAgInN0ZXBfc2VxXzE4IjogMCwNCiAgICAic3RlcF9zZXFfMTkiOiAwLA0KICAgICJzdGVwX3NlcV8yMCI6IDAsDQogICAgInN0ZXBfc2VxXzIxIjogMCwNCiAgICAic3RlcF9zZXFfMjIiOiAwLA0KICAgICJzdGVwX3NlcV8yMyI6IDAsDQogICAgInN0ZXBfc2VxXzI0IjogMCwNCiAgICAic3RlcF9zZXFfMjUiOiAwLA0KICAgICJzdGVwX3NlcV8yNiI6IDAsDQogICAgInN0ZXBfc2VxXzI3IjogMCwNCiAgICAic3RlcF9zZXFfMjgiOiAwLA0KICAgICJzdGVwX3NlcV8yOSI6IDAsDQogICAgInN0ZXBfc2VxXzMwIjogMCwNCiAgICAic3RlcF9zZXFfMzEiOiAwLA0KICAgICJzdGVwX3NlcXVlbmNlcl9yZXRyaWdnZXIiOiAwLA0KICAgICJzdGVwX3NlcXVlbmNlcl9zeW5jIjogMSwNCiAgICAic3RlcF9zZXF1ZW5jZXJfdGVtcG8iOiA3LA0KICAgICJzdGVwX3Ntb290aGluZyI6IDAsDQogICAgInN0dXR0ZXJfZnJlcXVlbmN5IjogMy4wMDAwMDAyMzg0MTg1NzkxMDE2LA0KICAgICJzdHV0dGVyX29uIjogMCwNCiAgICAic3R1dHRlcl9yZXNhbXBsZV9mcmVxdWVuY3kiOiAxLjAwMDAwMDIzODQxODU3OTEwMTYsDQogICAgInN0dXR0ZXJfcmVzYW1wbGVfc3luYyI6IDEsDQogICAgInN0dXR0ZXJfcmVzYW1wbGVfdGVtcG8iOiA2LA0KICAgICJzdHV0dGVyX3NvZnRuZXNzIjogMCwNCiAgICAic3R1dHRlcl9zeW5jIjogMSwNCiAgICAic3R1dHRlcl90ZW1wbyI6IDgsDQogICAgInN1Yl9vY3RhdmUiOiAwLA0KICAgICJzdWJfc2h1ZmZsZSI6IDAsDQogICAgInN1Yl92b2x1bWUiOiAwLA0KICAgICJzdWJfd2F2ZWZvcm0iOiAyLA0KICAgICJ1bmlzb25fMV9oYXJtb25pemUiOiAwLA0KICAgICJ1bmlzb25fMl9oYXJtb25pemUiOiAwLA0KICAgICJ2ZWxvY2l0eV90cmFjayI6IDAsDQogICAgInZvbHVtZSI6IDAuOTE5Mjk0OTUzMzQ2MjUyNDQxNDEsDQogICAgIm1vZHVsYXRpb25zIjogWw0KICAgICAgew0KICAgICAgICAic291cmNlIjogImZpbF9lbnZlbG9wZSIsDQogICAgICAgICJkZXN0aW5hdGlvbiI6ICJjdXRvZmYiLA0KICAgICAgICAiYW1vdW50IjogLTM5LjQxNTMyODY0ODY3MTcxNzgxNQ0KICAgICAgfQ0KICAgIF0NCiAgfQ0KfQA=
+    </Value>
+   </CustomData>
+  </Data>
+ </Plugin>
+
+ <!-- Calf Crusher -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>Calf Crusher</Name>
+   <URI>http://calf.sourceforge.net/plugins/Crusher</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x3f1</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Bypass</Name>
+    <Symbol>bypass</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Input Gain</Name>
+    <Symbol>level_in</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>Output Gain</Name>
+    <Symbol>level_out</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>11</Index>
+    <Name>Bit Reduction</Name>
+    <Symbol>bits</Symbol>
+    <Value>8</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>12</Index>
+    <Name>Morph</Name>
+    <Symbol>morph</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>13</Index>
+    <Name>Mode</Name>
+    <Symbol>mode</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>14</Index>
+    <Name>DC</Name>
+    <Symbol>dc</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>15</Index>
+    <Name>Anti-Aliasing</Name>
+    <Symbol>anti_aliasing</Symbol>
+    <Value>0.400000005960464</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>16</Index>
+    <Name>Sample Reduction</Name>
+    <Symbol>samples</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>17</Index>
+    <Name>LFO Active</Name>
+    <Symbol>lfo</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>18</Index>
+    <Name>LFO Depth</Name>
+    <Symbol>lforange</Symbol>
+    <Value>20</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>19</Index>
+    <Name>LFO Rate</Name>
+    <Symbol>lforate</Symbol>
+    <Value>0.300000011920929</Value>
+   </Parameter>
+  </Data>
+ </Plugin>
+
+ <!-- Calf Ring Modulator -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>Calf Ring Modulator</Name>
+   <URI>http://calf.sourceforge.net/plugins/RingModulator</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x3f1</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Bypass</Name>
+    <Symbol>bypass</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Input Gain</Name>
+    <Symbol>level_in</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>Output Gain</Name>
+    <Symbol>level_out</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>11</Index>
+    <Name>Modulator</Name>
+    <Symbol>mod_mode</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>12</Index>
+    <Name>Mod Freq</Name>
+    <Symbol>mod_freq</Symbol>
+    <Value>60</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>13</Index>
+    <Name>Mod Amount</Name>
+    <Symbol>mod_amount</Symbol>
+    <Value>0.280000001192093</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>14</Index>
+    <Name>Mod Phase</Name>
+    <Symbol>mod_phase</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>15</Index>
+    <Name>Mod Detune</Name>
+    <Symbol>mod_detune</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>16</Index>
+    <Name>Listen</Name>
+    <Symbol>mod_listen</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>17</Index>
+    <Name>LFO 1</Name>
+    <Symbol>lfo1_mode</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>18</Index>
+    <Name>LFO 1 Freq</Name>
+    <Symbol>lfo1_freq</Symbol>
+    <Value>0.100000001490116</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>19</Index>
+    <Name>Reset 1</Name>
+    <Symbol>lfo1_reset</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>20</Index>
+    <Name>Mod Freq LO</Name>
+    <Symbol>lfo1_mod_freq_lo</Symbol>
+    <Value>100</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>21</Index>
+    <Name>Mod Freq HI</Name>
+    <Symbol>lfo1_mod_freq_hi</Symbol>
+    <Value>10000</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>22</Index>
+    <Name>Mod Freq Active</Name>
+    <Symbol>lfo1_mod_freq_active</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>23</Index>
+    <Name>Mod Detune LO</Name>
+    <Symbol>lfo1_mod_detune_lo</Symbol>
+    <Value>-100</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>24</Index>
+    <Name>Mod Detune HI</Name>
+    <Symbol>lfo1_mod_detune_hi</Symbol>
+    <Value>100</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>25</Index>
+    <Name>Mod Detune Active</Name>
+    <Symbol>lfo1_mod_detune_active</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>27</Index>
+    <Name>LFO 2</Name>
+    <Symbol>lfo2_mode</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>28</Index>
+    <Name>LFO 2 Freq</Name>
+    <Symbol>lfo2_freq</Symbol>
+    <Value>0.200000002980232</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>29</Index>
+    <Name>Reset 2</Name>
+    <Symbol>lfo2_reset</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>30</Index>
+    <Name>LFO Freq LO</Name>
+    <Symbol>lfo2_lfo1_freq_lo</Symbol>
+    <Value>0.0500000007450581</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>31</Index>
+    <Name>LFO Freq HI</Name>
+    <Symbol>lfo2_lfo1_freq_hi</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>32</Index>
+    <Name>LFO 1 Freq Active</Name>
+    <Symbol>lfo2_lfo1_freq_active</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>33</Index>
+    <Name>Mod Amount LO</Name>
+    <Symbol>lfo2_mod_amount_lo</Symbol>
+    <Value>0.300000011920929</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>34</Index>
+    <Name>Mod Amount HI</Name>
+    <Symbol>lfo2_mod_amount_hi</Symbol>
+    <Value>0.600000023841858</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>35</Index>
+    <Name>Mod Amount Active</Name>
+    <Symbol>lfo2_mod_amount_active</Symbol>
+    <Value>0</Value>
+   </Parameter>
+  </Data>
+ </Plugin>
+
+ <!-- Calf Reverb -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>Calf Reverb</Name>
+   <URI>http://calf.sourceforge.net/plugins/Reverb</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x3f1</Options>
+
+   <Parameter>
+    <Index>3</Index>
+    <Name>Decay time</Name>
+    <Symbol>decay_time</Symbol>
+    <Value>1.79999995231628</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>4</Index>
+    <Name>High Frq Damp</Name>
+    <Symbol>hf_damp</Symbol>
+    <Value>3500</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>5</Index>
+    <Name>Room size</Name>
+    <Symbol>room_size</Symbol>
+    <Value>5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>6</Index>
+    <Name>Diffusion</Name>
+    <Symbol>diffusion</Symbol>
+    <Value>0.649999976158142</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>7</Index>
+    <Name>Wet Amount</Name>
+    <Symbol>amount</Symbol>
+    <Value>0.200000002980232</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>8</Index>
+    <Name>Dry Amount</Name>
+    <Symbol>dry</Symbol>
+    <Value>1.10000002384186</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>9</Index>
+    <Name>Pre Delay</Name>
+    <Symbol>predelay</Symbol>
+    <Value>15</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>10</Index>
+    <Name>Bass Cut</Name>
+    <Symbol>bass_cut</Symbol>
+    <Value>180</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>11</Index>
+    <Name>Treble Cut</Name>
+    <Symbol>treble_cut</Symbol>
+    <Value>5500</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>12</Index>
+    <Name>Active</Name>
+    <Symbol>on</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>13</Index>
+    <Name>Input Gain</Name>
+    <Symbol>level_in</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>14</Index>
+    <Name>Output Gain</Name>
+    <Symbol>level_out</Symbol>
+    <Value>1</Value>
+   </Parameter>
+  </Data>
+ </Plugin>
+
+ <Patchbay>
+  <Connection>
+   <Source>Audio Input:Left</Source>
+   <Target>Calf Gate:In L</Target>
+  </Connection>
+  <Connection>
+   <Source>Calf Gate:Out L</Source>
+   <Target>Calf Vocoder:In L</Target>
+  </Connection>
+  <Connection>
+   <Source>Helm:Audio Output 1</Source>
+   <Target>Calf Vocoder:Sidechain</Target>
+  </Connection>
+  <Connection>
+   <Source>Calf Vocoder:Out L</Source>
+   <Target>Calf Crusher:In L</Target>
+  </Connection>
+  <Connection>
+   <Source>Calf Crusher:Out L</Source>
+   <Target>Calf Ring Modulator:In L</Target>
+  </Connection>
+  <Connection>
+   <Source>Calf Ring Modulator:Out L</Source>
+   <Target>Calf Reverb:In L</Target>
+  </Connection>
+  <Connection>
+   <Source>Calf Reverb:Out L</Source>
+   <Target>Audio Output:Left</Target>
+  </Connection>
+  <Connection>
+   <Source>Midi Input:Capture 1</Source>
+   <Target>Helm:events-in</Target>
+  </Connection>
+  <Positions>
+   <Position x1="1970" y1="870" pluginId="5">
+    <Name>Calf Reverb</Name>
+   </Position>
+   <Position x1="1700" y1="870" pluginId="4">
+    <Name>Calf Ring Modulator</Name>
+   </Position>
+   <Position x1="1480" y1="868" pluginId="3">
+    <Name>Calf Crusher</Name>
+   </Position>
+   <Position x1="959" y1="1133" pluginId="2">
+    <Name>Helm</Name>
+   </Position>
+   <Position x1="1220" y1="869" pluginId="1">
+    <Name>Calf Vocoder</Name>
+   </Position>
+   <Position x1="820" y1="949" pluginId="0">
+    <Name>Calf Gate</Name>
+   </Position>
+   <Position x1="500" y1="1130" x2="1832" y2="1158">
+    <Name>Midi Input</Name>
+   </Position>
+   <Position x1="2230" y1="950" x2="2496" y2="924">
+    <Name>Audio Output</Name>
+   </Position>
+   <Position x1="600" y1="949">
+    <Name>Audio Input</Name>
+   </Position>
+  </Positions>
+ </Patchbay>
+
+ <ExternalPatchbay>
+  <Connection>
+   <Source>system:capture_1</Source>
+   <Target>Carla:audio-in1</Target>
+  </Connection>
+  <Connection>
+   <Source>system:capture_1</Source>
+   <Target>Carla:audio-in2</Target>
+  </Connection>
+  <Connection>
+   <Source>system:midi_capture_2</Source>
+   <Target>Carla:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla:audio-out1</Source>
+   <Target>system:playback_1</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla:audio-out2</Source>
+   <Target>system:playback_2</Target>
+  </Connection>
+  <Positions>
+   <Position x1="1275" y1="1054" x2="2017" y2="928">
+    <Name>system</Name>
+   </Position>
+  </Positions>
+ </ExternalPatchbay>
+</CARLA-PROJECT>
