@@ -129,6 +129,10 @@ threading.Thread(target=init_carla, daemon=True).start()
 def index():
     return render_template("index.html")
 
+@app.route("/robot")
+def index_robot():
+    return render_template("index.html")
+
 
 @app.route("/api/status")
 def api_status():

@@ -381,6 +381,10 @@ def index():
     return render_template("index.html")
 
 
+@app.route("/robot")
+def index_robot():
+    return render_template("index.html")
+
 @app.route("/api/status")
 def api_status():
     sf2 = engine.loaded_sf2

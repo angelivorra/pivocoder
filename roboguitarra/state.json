@@ -1,5 +1,5 @@
 {
-  "sf2": "13.sf2",
+  "sf2": "03.sf2",
   "midi_port": "pisound:pisound MIDI PS-1HPT6W6 28:0",
   "audio_driver": "jack",
   "audio_device": null
