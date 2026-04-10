@@ -521,6 +521,36 @@ Los bundles VST3 se encuentran en `/usr/lib/vst3/`.
 
 ---
 
+## Convenciones críticas del patchbay de Carla (.carxp)
+
+Estas reglas son obligatorias al escribir conexiones XML en archivos `.carxp`. Errores aquí hacen que las conexiones no se establezcan silenciosamente.
+
+### Nombres de puertos MIDI internos
+- El nodo MIDI de entrada interno se llama **`Midi Input:Capture 1`** (NO `Midi Input:playback`)
+- El puerto MIDI de un plugin LV2 usa el **`lv2:symbol`** del TTL, NO el `lv2:name`
+  - Correcto: `TAL-Vocoder-2:events-in` (symbol del TTL)
+  - Incorrecto: `TAL-Vocoder-2:Events Input` (name del TTL)
+
+### Patchbay externo (ExternalPatchbay)
+- El micro mono se conecta solo a `Carla:audio-in1` (no duplicar en audio-in2)
+- La salida mono se duplica desde un solo canal: `Carla:audio-out1 → system:playback_1` Y `Carla:audio-out1 → system:playback_2`
+
+### Índices de parámetros de plugins LV2
+- Los índices en el XML de Carla son secuenciales sobre los **puertos de control** solamente, empezando en 0 (o 1 si el primer control es `freewheel` o similar interno)
+- **NO coindicen** con los `lv2:index` del TTL, que numeran todos los puertos (audio + MIDI + control juntos)
+- Si hay duda, dejar que Carla cargue y resguarde el archivo — corrige los índices automáticamente
+
+### Patches disponibles y su estructura
+| Archivo | Vocoder/Efecto | Carrier | Funcional |
+|---------|---------------|---------|-----------|
+| `prod/template01.carxp` | `vocoder.lv2` | TAL-NoiseMaker (externo) | ✓ Validado |
+| `prod/template03.carxp` | — (solo limpieza de micro) | — | ✓ Validado |
+| `prod/daft_punk.carxp` | TAL-Vocoder-2 | Interno (SAW+SUB+PULSE) | ✓ Corregido |
+
+**Uso de daft_punk.carxp**: mantener pulsada una nota MIDI en el controlador mientras se habla al micro. El tono de la nota define el pitch de la voz robótica.
+
+---
+
 ## Notas de uso
 
 - **Para Carla**: los plugins LV2, LADSPA y VST2/VST3 se pueden cargar directamente como plugins en racks/patchbays de Carla.

@@ -59,7 +59,9 @@
       "Bash(grep -v \"^--$\")",
       "Bash(python3 -c \" import re with open\\('/usr/lib/lv2/vocoder.lv2/lv2vocoder.ttl'\\) as f: content = f.read\\(\\) ports = re.findall\\(r'lv2:symbol\\\\s+\\\\\"\\([^\\\\\"]+\\)\\\\\"', content\\) for i, p in enumerate\\(ports\\): print\\(i, p\\) \")",
       "Bash(grep -rl \"Helm\\\\|helm\\\\|tytel.org\" /home/patch/pivocoder/*.carxp /home/patch/pivocoder/prod/*.carxp)",
-      "Bash(xmllint --noout /home/patch/pivocoder/prod/robovoice_v2.carxp)"
+      "Bash(xmllint --noout /home/patch/pivocoder/prod/robovoice_v2.carxp)",
+      "Bash(grep -a \"lv2:name\\\\|lv2:symbol\\\\|lv2:AudioPort\\\\|lv2:InputPort\\\\|lv2:OutputPort\\\\|a lv2:\" /usr/lib/lv2/TAL-Vocoder-2.lv2/*.ttl)",
+      "Bash(grep -a \"lv2:name\\\\|lv2:symbol\\\\|lv2:AudioPort\\\\|lv2:InputPort\\\\|lv2:OutputPort\\\\|a lv2:\" /usr/lib/lv2/TAL-NoiseMaker.lv2/*.ttl)"
     ]
   }
 }

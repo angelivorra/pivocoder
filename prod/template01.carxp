@@ -1575,24 +1575,20 @@
 
  <Patchbay>
   <Connection>
-   <Source>Calf Filter:Out L</Source>
-   <Target>Calf Gate:In L</Target>
-  </Connection>
-  <Connection>
    <Source>Audio Input:Left</Source>
    <Target>Calf Filter:In L</Target>
-  </Connection>
-  <Connection>
-   <Source>Calf Gate:Out L</Source>
-   <Target>Vocoder:Formant audio input</Target>
   </Connection>
   <Connection>
    <Source>Midi Input:Capture 1</Source>
    <Target>Noize Mak3r:events-in</Target>
   </Connection>
   <Connection>
-   <Source>Noize Mak3r:Audio Output 1</Source>
-   <Target>Vocoder:Carrier audio input</Target>
+   <Source>Calf Filter:Out L</Source>
+   <Target>Calf Gate:In L</Target>
+  </Connection>
+  <Connection>
+   <Source>Calf Gate:Out L</Source>
+   <Target>Vocoder:Formant audio input</Target>
   </Connection>
   <Connection>
    <Source>Vocoder:Vocoder audio output</Source>
@@ -1603,12 +1599,16 @@
    <Target>EQ10Q Mono:Input</Target>
   </Connection>
   <Connection>
-   <Source>EQ10Q Mono:Output</Source>
-   <Target>Calf Reverb:In L</Target>
-  </Connection>
-  <Connection>
    <Source>Calf Reverb:Out L</Source>
    <Target>Audio Output:Left</Target>
+  </Connection>
+  <Connection>
+   <Source>Noize Mak3r:Audio Output 1</Source>
+   <Target>Vocoder:Carrier audio input</Target>
+  </Connection>
+  <Connection>
+   <Source>EQ10Q Mono:Output</Source>
+   <Target>Calf Reverb:In L</Target>
   </Connection>
   <Positions>
    <Position x1="1925" y1="1032" pluginId="6">
@@ -1641,7 +1641,7 @@
    <Position x1="1275" y1="1054" x2="2496" y2="924">
     <Name>Audio Output</Name>
    </Position>
-   <Position x1="700" y1="913">
+   <Position x1="929" y1="851">
     <Name>Audio Input</Name>
    </Position>
   </Positions>
@@ -1665,22 +1665,14 @@
    <Target>system:playback_1</Target>
   </Connection>
   <Connection>
-   <Source>Carla:audio-out1</Source>
-   <Target>jack_capture:input1</Target>
-  </Connection>
-  <Connection>
    <Source>Carla:audio-out2</Source>
    <Target>system:playback_2</Target>
-  </Connection>
-  <Connection>
-   <Source>Carla:audio-out2</Source>
-   <Target>jack_capture:input2</Target>
   </Connection>
   <Positions>
    <Position x1="1552" y1="1024">
     <Name>Carla</Name>
    </Position>
-   <Position x1="1275" y1="1054" x2="2017" y2="928">
+   <Position x1="648" y1="870" x2="2017" y2="928">
     <Name>system</Name>
    </Position>
   </Positions>
