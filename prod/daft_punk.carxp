@@ -441,6 +441,136 @@
   </Data>
  </Plugin>
 
+ <!-- Plugin 3: Temper - distorsión con waveshaper + filtro resonante
+      Entrada: stereo desde TAL-Vocoder-2
+      Parámetros de modulación: ver CLAUDE.md -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>Temper</Name>
+   <URI>https://github.com/creativeintent/temper</URI>
+  </Info>
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x4</Options>
+   <!-- curve: 0.75 — forma de la curva waveshaper (0=suave, 1=hard clip) -->
+   <Parameter>
+    <Index>1</Index>
+    <Name>Curve</Name>
+    <Symbol>curve</Symbol>
+    <Value>0.75</Value>
+   </Parameter>
+   <!-- cutoff: 0.82 — filtro paso-bajo post-distorsión (bajar = más oscuro/telefónico) -->
+   <Parameter>
+    <Index>2</Index>
+    <Name>Cutoff</Name>
+    <Symbol>cutoff</Symbol>
+    <Value>0.82</Value>
+   </Parameter>
+   <!-- drive: 0.85 — ganancia antes de la distorsión (más = más sucio) -->
+   <Parameter>
+    <Index>3</Index>
+    <Name>Drive</Name>
+    <Symbol>drive</Symbol>
+    <Value>0.85</Value>
+   </Parameter>
+   <!-- feedback: 0.35 — retroalimentación interna (añade buzz/zumbido robótico) -->
+   <Parameter>
+    <Index>4</Index>
+    <Name>Feedback</Name>
+    <Symbol>feedback</Symbol>
+    <Value>0.35</Value>
+   </Parameter>
+   <!-- level: 0.55 — volumen de salida de Temper -->
+   <Parameter>
+    <Index>5</Index>
+    <Name>Level</Name>
+    <Symbol>level</Symbol>
+    <Value>0.55</Value>
+   </Parameter>
+   <!-- resonance: 0.42 — resonancia del filtro (más = más "wah"/pico) -->
+   <Parameter>
+    <Index>6</Index>
+    <Name>Resonance</Name>
+    <Symbol>resonance</Symbol>
+    <Value>0.42</Value>
+   </Parameter>
+   <!-- saturation: 0.90 — cantidad de saturación armónica -->
+   <Parameter>
+    <Index>7</Index>
+    <Name>Saturation</Name>
+    <Symbol>saturation</Symbol>
+    <Value>0.90</Value>
+   </Parameter>
+  </Data>
+ </Plugin>
+
+ <!-- Plugin 4: ZamTube - saturación de tubo posterior (mono)
+      Añade calidez/grit analógico encima de la distorsión de Temper
+      Parámetros de modulación: ver CLAUDE.md -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>ZamTube</Name>
+   <URI>http://www.zamaudio.com/ZamTube</URI>
+  </Info>
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x1</Options>
+   <!-- tubedrive: 3.5 — intensidad del tubo (0.1=limpio, 11=máximo) -->
+   <Parameter>
+    <Index>0</Index>
+    <Name>Tube Drive</Name>
+    <Symbol>tubedrive</Symbol>
+    <Value>3.5</Value>
+   </Parameter>
+   <!-- bass: 6 — graves del tonestack (0-10) -->
+   <Parameter>
+    <Index>1</Index>
+    <Name>Bass</Name>
+    <Symbol>bass</Symbol>
+    <Value>6</Value>
+   </Parameter>
+   <!-- mids: 7 — medios del tonestack, subir mejora inteligibilidad -->
+   <Parameter>
+    <Index>2</Index>
+    <Name>Mids</Name>
+    <Symbol>mids</Symbol>
+    <Value>7</Value>
+   </Parameter>
+   <!-- treb: 5 — agudos del tonestack (neutro) -->
+   <Parameter>
+    <Index>3</Index>
+    <Name>Treble</Name>
+    <Symbol>treb</Symbol>
+    <Value>5</Value>
+   </Parameter>
+   <!-- tonestack: 0 — modelo de amp (0-24, cambiar para diferente carácter) -->
+   <Parameter>
+    <Index>4</Index>
+    <Name>Tone Stack Model</Name>
+    <Symbol>tonestack</Symbol>
+    <Value>0</Value>
+   </Parameter>
+   <!-- gain: 6 dB — nivel de entrada al tubo -->
+   <Parameter>
+    <Index>5</Index>
+    <Name>Input level</Name>
+    <Symbol>gain</Symbol>
+    <Value>6</Value>
+   </Parameter>
+   <!-- insane: 0 — boost extremo (0=off, 1=on) -->
+   <Parameter>
+    <Index>6</Index>
+    <Name>Insane Boost</Name>
+    <Symbol>insane</Symbol>
+    <Value>0</Value>
+   </Parameter>
+  </Data>
+ </Plugin>
+
  <Patchbay>
   <Connection>
    <Source>Audio Input:Left</Source>
@@ -459,38 +589,59 @@
    <Target>TAL-Vocoder-2:Audio Input 2</Target>
   </Connection>
   <Connection>
-   <Source>TAL-Vocoder-2:Audio Output 1</Source>
-   <Target>Audio Output:Left</Target>
-  </Connection>
-  <Connection>
-   <Source>TAL-Vocoder-2:Audio Output 2</Source>
-   <Target>Audio Output:Right</Target>
-  </Connection>
-  <Connection>
    <Source>Midi Input:Capture 1</Source>
    <Target>TAL-Vocoder-2:events-in</Target>
   </Connection>
+  <!-- Vocoder → Temper (stereo) -->
+  <Connection>
+   <Source>TAL-Vocoder-2:Audio Output 1</Source>
+   <Target>Temper:Audio Input 1</Target>
+  </Connection>
+  <Connection>
+   <Source>TAL-Vocoder-2:Audio Output 2</Source>
+   <Target>Temper:Audio Input 2</Target>
+  </Connection>
+  <!-- Temper → ZamTube (mono: canal 1 del Temper) -->
+  <Connection>
+   <Source>Temper:Audio Output 1</Source>
+   <Target>ZamTube:Audio Input 1</Target>
+  </Connection>
+  <!-- ZamTube (mono) → salida duplicada en L y R -->
+  <Connection>
+   <Source>ZamTube:Audio Output 1</Source>
+   <Target>Audio Output:Left</Target>
+  </Connection>
+  <Connection>
+   <Source>ZamTube:Audio Output 1</Source>
+   <Target>Audio Output:Right</Target>
+  </Connection>
   <Positions>
-   <Position x1="1396" y1="896" pluginId="2">
-    <Name>TAL-Vocoder-2</Name>
-   </Position>
-   <Position x1="952" y1="791" pluginId="1">
-    <Name>Calf Gate</Name>
+   <Position x1="412" y1="867">
+    <Name>Audio Input</Name>
    </Position>
    <Position x1="588" y1="868" pluginId="0">
     <Name>Calf Filter</Name>
    </Position>
-   <Position x1="1440" y1="1221" x2="2382" y2="1249">
-    <Name>Midi Output</Name>
+   <Position x1="952" y1="791" pluginId="1">
+    <Name>Calf Gate</Name>
+   </Position>
+   <Position x1="1200" y1="850" pluginId="2">
+    <Name>TAL-Vocoder-2</Name>
+   </Position>
+   <Position x1="1500" y1="850" pluginId="3">
+    <Name>Temper</Name>
+   </Position>
+   <Position x1="1800" y1="850" pluginId="4">
+    <Name>ZamTube</Name>
+   </Position>
+   <Position x1="2100" y1="924" x2="2496" y2="924">
+    <Name>Audio Output</Name>
    </Position>
    <Position x1="653" y1="1153" x2="1832" y2="1158">
     <Name>Midi Input</Name>
    </Position>
-   <Position x1="1700" y1="924" x2="2496" y2="924">
-    <Name>Audio Output</Name>
-   </Position>
-   <Position x1="412" y1="867">
-    <Name>Audio Input</Name>
+   <Position x1="1440" y1="1221" x2="2382" y2="1249">
+    <Name>Midi Output</Name>
    </Position>
   </Positions>
  </Patchbay>

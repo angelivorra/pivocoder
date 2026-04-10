@@ -61,7 +61,9 @@
       "Bash(grep -rl \"Helm\\\\|helm\\\\|tytel.org\" /home/patch/pivocoder/*.carxp /home/patch/pivocoder/prod/*.carxp)",
       "Bash(xmllint --noout /home/patch/pivocoder/prod/robovoice_v2.carxp)",
       "Bash(grep -a \"lv2:name\\\\|lv2:symbol\\\\|lv2:AudioPort\\\\|lv2:InputPort\\\\|lv2:OutputPort\\\\|a lv2:\" /usr/lib/lv2/TAL-Vocoder-2.lv2/*.ttl)",
-      "Bash(grep -a \"lv2:name\\\\|lv2:symbol\\\\|lv2:AudioPort\\\\|lv2:InputPort\\\\|lv2:OutputPort\\\\|a lv2:\" /usr/lib/lv2/TAL-NoiseMaker.lv2/*.ttl)"
+      "Bash(grep -a \"lv2:name\\\\|lv2:symbol\\\\|lv2:AudioPort\\\\|lv2:InputPort\\\\|lv2:OutputPort\\\\|a lv2:\" /usr/lib/lv2/TAL-NoiseMaker.lv2/*.ttl)",
+      "Bash(grep -a \"lv2:name\\\\|lv2:symbol\\\\|lv2:AudioPort\\\\|lv2:InputPort\\\\|lv2:OutputPort\\\\|lv2:minimum\\\\|lv2:maximum\\\\|lv2:default\" /usr/lib/lv2/Temper.lv2/*.ttl)",
+      "Bash(grep -a \"lv2:name\\\\|lv2:symbol\\\\|lv2:AudioPort\\\\|lv2:InputPort\\\\|lv2:OutputPort\\\\|lv2:minimum\\\\|lv2:maximum\\\\|lv2:default\" /usr/lib/lv2/ZamTube.lv2/*.ttl)"
     ]
   }
 }
