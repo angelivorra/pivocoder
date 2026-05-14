@@ -8,6 +8,7 @@ el vocoder: cambio de presets, estado de JACK/Carla y reinicio del sistema.
 from __future__ import annotations
 
 import os
+import shutil
 import subprocess
 import threading
 import time
@@ -15,6 +16,8 @@ from pathlib import Path
 from typing import Optional
 
 from flask import Flask, jsonify, render_template, request
+
+from tcp_client import start_tcp_client
 
 # ---------------------------------------------------------------------------
 # Configuración
@@ -76,19 +79,10 @@ def get_sorted_presets() -> list[str]:
 
 
 def is_jack_running() -> bool:
-    """Comprueba si jackd está activo."""
+    """Comprueba si jackd está activo usando jack_lsp (más fiable que jack_control)."""
     try:
         result = subprocess.run(
-            ["jack_control", "status"],
-            capture_output=True,
-            timeout=2,
-        )
-        return result.returncode == 0
-    except (FileNotFoundError, subprocess.TimeoutExpired):
-        pass
-    try:
-        result = subprocess.run(
-            ["pgrep", "-x", "jackd"],
+            ["jack_lsp"],
             capture_output=True,
             timeout=2,
         )
@@ -120,6 +114,9 @@ def init_carla() -> None:
 # Lanzar Carla en segundo plano al importar el módulo
 threading.Thread(target=init_carla, daemon=True).start()
 
+# Iniciar cliente TCP para recibir eventos BPM
+_bpm_state = start_tcp_client()
+
 
 # ---------------------------------------------------------------------------
 # Rutas
@@ -130,8 +127,8 @@ def index():
     return render_template("index.html")
 
 @app.route("/robot")
-def index_robot():
-    return render_template("index.html")
+def robot():
+    return render_template("robot.html", name="vocoder")
 
 
 @app.route("/api/status")
@@ -169,6 +166,63 @@ def api_load_preset():
             return jsonify({"ok": True, "preset": preset_name})
         except FileNotFoundError as exc:
             return jsonify({"error": str(exc)}), 404
+        except Exception as exc:
+            return jsonify({"error": str(exc)}), 500
+
+
+@app.route("/api/health")
+def api_health():
+    return jsonify({"ok": True})
+
+
+@app.route("/robot_data")
+def robot_data():
+    usage = shutil.disk_usage("/")
+    used_gb = usage.used / (1024 ** 3)
+    total_gb = usage.total / (1024 ** 3)
+    pct = usage.used / usage.total * 100
+    bpm_snap = _bpm_state.snapshot()
+    return jsonify({
+        "disk_usage_percent": round(pct, 1),
+        "disk_usage_string": f"{used_gb:.1f} GB / {total_gb:.1f} GB",
+        "bpm": bpm_snap["bpm"],
+        "tcp_connected": bpm_snap["connected"],
+        "last_sync_ms": bpm_snap["last_sync_ms"],
+    })
+
+
+@app.route("/api/client-errors")
+def api_client_errors():
+    active = is_carla_running()
+    try:
+        result = subprocess.run(
+            ["journalctl", "--user", "-u", "carla", "--no-pager", "-n", "30", "--output=cat"],
+            capture_output=True,
+            text=True,
+            timeout=3,
+        )
+        lines = [
+            ln for ln in result.stdout.splitlines()
+            if any(k in ln.lower() for k in ("error", "warning", "critical", "fatal"))
+        ]
+        errors = "\n".join(lines[-20:])
+    except Exception:
+        errors = ""
+    return jsonify({"is_active": active, "errors": errors})
+
+
+@app.route("/restart-cliente", methods=["POST"])
+def restart_cliente():
+    with _carla_lock:
+        try:
+            preset = _current_preset
+            if preset:
+                _start_carla(preset)
+            else:
+                presets = get_sorted_presets()
+                if presets:
+                    _start_carla(presets[0])
+            return jsonify({"ok": True})
         except Exception as exc:
             return jsonify({"error": str(exc)}), 500
 

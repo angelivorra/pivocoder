@@ -63,7 +63,14 @@
       "Bash(grep -a \"lv2:name\\\\|lv2:symbol\\\\|lv2:AudioPort\\\\|lv2:InputPort\\\\|lv2:OutputPort\\\\|a lv2:\" /usr/lib/lv2/TAL-Vocoder-2.lv2/*.ttl)",
       "Bash(grep -a \"lv2:name\\\\|lv2:symbol\\\\|lv2:AudioPort\\\\|lv2:InputPort\\\\|lv2:OutputPort\\\\|a lv2:\" /usr/lib/lv2/TAL-NoiseMaker.lv2/*.ttl)",
       "Bash(grep -a \"lv2:name\\\\|lv2:symbol\\\\|lv2:AudioPort\\\\|lv2:InputPort\\\\|lv2:OutputPort\\\\|lv2:minimum\\\\|lv2:maximum\\\\|lv2:default\" /usr/lib/lv2/Temper.lv2/*.ttl)",
-      "Bash(grep -a \"lv2:name\\\\|lv2:symbol\\\\|lv2:AudioPort\\\\|lv2:InputPort\\\\|lv2:OutputPort\\\\|lv2:minimum\\\\|lv2:maximum\\\\|lv2:default\" /usr/lib/lv2/ZamTube.lv2/*.ttl)"
+      "Bash(grep -a \"lv2:name\\\\|lv2:symbol\\\\|lv2:AudioPort\\\\|lv2:InputPort\\\\|lv2:OutputPort\\\\|lv2:minimum\\\\|lv2:maximum\\\\|lv2:default\" /usr/lib/lv2/ZamTube.lv2/*.ttl)",
+      "Bash(xargs ls -lh)",
+      "Bash(git -C /home/patch/pivocoder log --oneline -10)",
+      "Bash(gh api *)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:api.github.com)",
+      "Bash(systemctl --user status pivocoder-flask --no-pager -l)",
+      "Bash(journalctl --user -u pivocoder-flask --no-pager -n 30 --output=cat)"
     ]
   }
 }

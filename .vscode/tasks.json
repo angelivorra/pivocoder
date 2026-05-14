@@ -1,59 +1,40 @@
 {
     "version": "2.0.0",
     "tasks": [
+
+        // ── UI (pivocoder-flask) ─────────────────────────────────────────
         {
-            "label": "Stop Service",
+            "label": "UI · Reiniciar servicio",
             "type": "shell",
-            "command": "systemctl --user stop pivocoder-flask",
+            "command": "systemctl --user restart pivocoder-flask",
             "problemMatcher": []
         },
         {
-            "label": "Start Service",
+            "label": "UI · Iniciar servicio",
             "type": "shell",
             "command": "systemctl --user start pivocoder-flask",
             "problemMatcher": []
         },
         {
-            "label": "Vaciar Grabaciones",
+            "label": "UI · Detener servicio",
             "type": "shell",
-            "command": "rm -f /home/patch/pivocoder/grabaciones/*",
+            "command": "systemctl --user stop pivocoder-flask",
             "problemMatcher": []
         },
         {
-            "label": "Iniciar Grabación",
-            "type": "shell",
-            "command": "cd /home/patch/pivocoder/grabaciones && jack_capture -f wav",
-            "problemMatcher": [],
-            "isBackground": true
-        },
-        {
-            "label": "Recortar Grabaciones de voz",
-            "type": "shell",
-            "command": "/home/patch/venv/bin/python /home/patch/pivocoder/limpia_micro.py --origen /home/patch/pivocoder/grabaciones --destino /home/patch/pivocoder/grabaciones_limpias",
-            "problemMatcher": []
-        }
-        ,
-        {
-            "label": "Logs",
+            "label": "UI · Logs en vivo",
             "type": "shell",
             "command": "journalctl --user -u pivocoder-flask -f",
             "problemMatcher": [],
             "presentation": {
-                "echo": true,
                 "reveal": "always",
-                "focus": false,
                 "panel": "new",
-                "showReuseMessage": false,
+                "focus": false,
                 "clear": true
-            },
-            "runOptions": {
-                "runOn": "default"
-            },
-            "group": "none"
-        }
-        ,
+            }
+        },
         {
-            "label": "Arrancar PiVocoder",
+            "label": "UI · Dev (Flask directo, puerto 5000)",
             "type": "shell",
             "command": "/home/patch/venv/bin/python /home/patch/pivocoder/flask/app.py",
             "options": {
@@ -70,13 +51,114 @@
                 "focus": true
             }
         },
+
+        // ── Carla ────────────────────────────────────────────────────────
         {
-            "label": "Arrancar Roboguitarra",
+            "label": "Carla · Reiniciar servicio",
+            "type": "shell",
+            "command": "systemctl --user restart carla",
+            "problemMatcher": []
+        },
+        {
+            "label": "Carla · Iniciar servicio",
+            "type": "shell",
+            "command": "systemctl --user start carla",
+            "problemMatcher": []
+        },
+        {
+            "label": "Carla · Detener servicio",
+            "type": "shell",
+            "command": "systemctl --user stop carla",
+            "problemMatcher": []
+        },
+        {
+            "label": "Carla · Logs en vivo",
+            "type": "shell",
+            "command": "journalctl --user -u carla -f",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "focus": false,
+                "clear": true
+            }
+        },
+
+        // ── JACK (sonido) ────────────────────────────────────────────────
+        {
+            "label": "JACK · Reiniciar servicio",
+            "type": "shell",
+            "command": "systemctl --user restart sonido",
+            "problemMatcher": []
+        },
+        {
+            "label": "JACK · Iniciar servicio",
+            "type": "shell",
+            "command": "systemctl --user start sonido",
+            "problemMatcher": []
+        },
+        {
+            "label": "JACK · Detener servicio",
+            "type": "shell",
+            "command": "systemctl --user stop sonido",
+            "problemMatcher": []
+        },
+
+        // ── Todo el stack ────────────────────────────────────────────────
+        {
+            "label": "Stack · Reiniciar todo (JACK + Carla + UI)",
+            "type": "shell",
+            "command": "systemctl --user restart sonido && sleep 2 && systemctl --user restart carla && sleep 2 && systemctl --user restart pivocoder-flask",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "focus": true,
+                "clear": true
+            }
+        },
+        {
+            "label": "Stack · Estado de todos los servicios",
+            "type": "shell",
+            "command": "systemctl --user status sonido carla pivocoder-flask --no-pager",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "focus": true,
+                "clear": true
+            }
+        },
+
+        // ── Grabaciones ──────────────────────────────────────────────────
+        {
+            "label": "Grabación · Iniciar",
+            "type": "shell",
+            "command": "cd /home/patch/pivocoder/grabaciones && jack_capture -f wav",
+            "problemMatcher": [],
+            "isBackground": true
+        },
+        {
+            "label": "Grabación · Recortar voz",
+            "type": "shell",
+            "command": "/home/patch/venv/bin/python /home/patch/pivocoder/limpia_micro.py --origen /home/patch/pivocoder/grabaciones --destino /home/patch/pivocoder/grabaciones_limpias",
+            "problemMatcher": []
+        },
+        {
+            "label": "Grabación · Vaciar carpeta",
+            "type": "shell",
+            "command": "rm -f /home/patch/pivocoder/grabaciones/*",
+            "problemMatcher": []
+        },
+
+        // ── Roboguitarra ─────────────────────────────────────────────────
+        {
+            "label": "Roboguitarra · Dev (Flask directo, puerto 5001)",
             "type": "shell",
             "command": "/home/patch/venv/bin/python /home/patch/pivocoder/roboguitarra/app.py",
             "options": {
                 "env": {
-                    "PORT": "5000",
+                    "PORT": "5001",
                     "QT_QPA_PLATFORM": "offscreen"
                 }
             },
