@@ -425,7 +425,7 @@
     <MappedMinimum>0</MappedMinimum>
     <MappedMaximum>1</MappedMaximum>
     <MidiCC>30</MidiCC>
-    <Value>0.181102365255356</Value>
+    <Value>0</Value>
    </Parameter>
 
    <Parameter>
@@ -1595,7 +1595,12 @@
     <Index>0</Index>
     <Name>Active</Name>
     <Symbol>on</Symbol>
-    <Value>1</Value>
+    <MidiChannel>1</MidiChannel>
+    <MappedControlIndex>31</MappedControlIndex>
+    <MappedMinimum>0</MappedMinimum>
+    <MappedMaximum>1</MappedMaximum>
+    <MidiCC>31</MidiCC>
+    <Value>0</Value>
    </Parameter>
 
    <Parameter>
@@ -1628,7 +1633,7 @@
     <MappedMinimum>1</MappedMinimum>
     <MappedMaximum>4</MappedMaximum>
     <MidiCC>31</MidiCC>
-    <Value>4</Value>
+    <Value>1</Value>
    </Parameter>
 
    <Parameter>
@@ -1811,7 +1816,7 @@
    <Position x1="533" y1="1263" x2="1832" y2="1158">
     <Name>Midi Input</Name>
    </Position>
-   <Position x1="648" y1="870" x2="2424" y2="857">
+   <Position x1="648" y1="870" x2="2480" y2="945">
     <Name>Audio Output</Name>
    </Position>
    <Position x1="583" y1="817">
