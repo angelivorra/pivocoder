@@ -1596,10 +1596,10 @@
     <Name>Active</Name>
     <Symbol>on</Symbol>
     <MidiChannel>1</MidiChannel>
-    <MappedControlIndex>31</MappedControlIndex>
+    <MappedControlIndex>90</MappedControlIndex>
     <MappedMinimum>0</MappedMinimum>
     <MappedMaximum>1</MappedMaximum>
-    <MidiCC>31</MidiCC>
+    <MidiCC>90</MidiCC>
     <Value>0</Value>
    </Parameter>
 
@@ -1631,7 +1631,7 @@
     <MidiChannel>1</MidiChannel>
     <MappedControlIndex>31</MappedControlIndex>
     <MappedMinimum>1</MappedMinimum>
-    <MappedMaximum>4</MappedMaximum>
+    <MappedMaximum>6</MappedMaximum>
     <MidiCC>31</MidiCC>
     <Value>1</Value>
    </Parameter>
@@ -1786,7 +1786,7 @@
    <Target>Calf Reverb:In L</Target>
   </Connection>
   <Positions>
-   <Position x1="2123" y1="968" pluginId="7">
+   <Position x1="2068" y1="1301" pluginId="7">
     <Name>Calf Vintage Delay</Name>
    </Position>
    <Position x1="1907" y1="994" pluginId="6">
