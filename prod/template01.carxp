@@ -323,7 +323,7 @@
     <Index>1</Index>
     <Name>Curve</Name>
     <Symbol>curve</Symbol>
-    <Value>0.89876925945282</Value>
+    <Value>1</Value>
    </Parameter>
 
    <Parameter>
@@ -344,14 +344,14 @@
     <Index>4</Index>
     <Name>Feedback</Name>
     <Symbol>feedback</Symbol>
-    <Value>0.543999969959259</Value>
+    <Value>1</Value>
    </Parameter>
 
    <Parameter>
     <Index>5</Index>
     <Name>Level</Name>
     <Symbol>level</Symbol>
-    <Value>0.665499925613403</Value>
+    <Value>0.879999995231628</Value>
    </Parameter>
 
    <Parameter>
@@ -363,14 +363,19 @@
     <MappedMinimum>0</MappedMinimum>
     <MappedMaximum>1</MappedMaximum>
     <MidiCC>15</MidiCC>
-    <Value>0.755999982357025</Value>
+    <Value>0.448818892240524</Value>
    </Parameter>
 
    <Parameter>
     <Index>7</Index>
     <Name>Saturation</Name>
     <Symbol>saturation</Symbol>
-    <Value>0.967999994754791</Value>
+    <MidiChannel>1</MidiChannel>
+    <MappedControlIndex>16</MappedControlIndex>
+    <MappedMinimum>0</MappedMinimum>
+    <MappedMaximum>1</MappedMaximum>
+    <MidiCC>16</MidiCC>
+    <Value>1</Value>
    </Parameter>
   </Data>
  </Plugin>
@@ -732,7 +737,7 @@
     <MappedMinimum>0</MappedMinimum>
     <MappedMaximum>1</MappedMaximum>
     <MidiCC>14</MidiCC>
-    <Value>0.165354326367378</Value>
+    <Value>0</Value>
    </Parameter>
 
    <Parameter>
@@ -1160,8 +1165,8 @@
              ampattack=&quot;0&quot; ampdecay=&quot;0&quot; ampsustain=&quot;1&quot; amprelease=&quot;0.26000002026557922363&quot;
              voices=&quot;0.20000000298023223877&quot; portamentomode=&quot;0&quot; lfo1waveform=&quot;0&quot;
              lfo2waveform=&quot;0&quot; lfo1rate=&quot;0&quot; lfo2rate=&quot;0&quot; lfo1amount=&quot;0&quot; lfo2amount=&quot;0.92400002479553222656&quot;
-             lfo1destination=&quot;0&quot; lfo2destination=&quot;0.16535432636737823486&quot;
-             lfo1phase=&quot;1&quot; lfo2phase=&quot;0&quot; osc1pw=&quot;0.51600003242492675781&quot; osc2fm=&quot;0.32600000500679016113&quot;
+             lfo1destination=&quot;0&quot; lfo2destination=&quot;0&quot; lfo1phase=&quot;1&quot; lfo2phase=&quot;0&quot;
+             osc1pw=&quot;0.51600003242492675781&quot; osc2fm=&quot;0.32600000500679016113&quot;
              osc1phase=&quot;0.5&quot; osc2phase=&quot;0&quot; transpose=&quot;0.86400002241134643555&quot;
              freeadattack=&quot;0&quot; freeaddecay=&quot;0.80000001192092895508&quot; freeadamount=&quot;0.71600002050399780273&quot;
              freeaddestination=&quot;0.40000000596046447754&quot; lfo1sync=&quot;0&quot; lfo1keytrigger=&quot;0&quot;
@@ -1785,8 +1790,12 @@
    <Source>Calf Vintage Delay:Out L</Source>
    <Target>Calf Reverb:In L</Target>
   </Connection>
+  <Connection>
+   <Source>Midi Input:Capture 1</Source>
+   <Target>Temper:events-in</Target>
+  </Connection>
   <Positions>
-   <Position x1="2068" y1="1301" pluginId="7">
+   <Position x1="1995" y1="1256" pluginId="7">
     <Name>Calf Vintage Delay</Name>
    </Position>
    <Position x1="1907" y1="994" pluginId="6">
@@ -1798,7 +1807,7 @@
    <Position x1="2255" y1="1067" pluginId="4">
     <Name>Calf Reverb</Name>
    </Position>
-   <Position x1="1721" y1="1117" pluginId="3">
+   <Position x1="1685" y1="1207" pluginId="3">
     <Name>Temper</Name>
    </Position>
    <Position x1="1303" y1="1088" pluginId="2">
@@ -1816,7 +1825,7 @@
    <Position x1="533" y1="1263" x2="1832" y2="1158">
     <Name>Midi Input</Name>
    </Position>
-   <Position x1="648" y1="870" x2="2480" y2="945">
+   <Position x1="648" y1="870" x2="2483" y2="985">
     <Name>Audio Output</Name>
    </Position>
    <Position x1="583" y1="817">
