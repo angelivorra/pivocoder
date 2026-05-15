@@ -70,7 +70,13 @@
       "WebFetch(domain:raw.githubusercontent.com)",
       "WebFetch(domain:api.github.com)",
       "Bash(systemctl --user status pivocoder-flask --no-pager -l)",
-      "Bash(journalctl --user -u pivocoder-flask --no-pager -n 30 --output=cat)"
+      "Bash(journalctl --user -u pivocoder-flask --no-pager -n 30 --output=cat)",
+      "Bash(systemctl --user list-units)",
+      "Bash(systemctl --user status carla.service)",
+      "Bash(systemctl --user status roboguitarra.service sonido.service pivocoder-flask.service)",
+      "Bash(systemctl --user list-units --type=service --state=active,running)",
+      "Bash(systemctl --user list-unit-files --type=service)",
+      "Bash(xargs cat)"
     ]
   }
 }

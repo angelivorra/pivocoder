@@ -420,14 +420,19 @@
     <Index>7</Index>
     <Name>Wet Amount</Name>
     <Symbol>amount</Symbol>
-    <Value>0.085971362888813</Value>
+    <MidiChannel>1</MidiChannel>
+    <MappedControlIndex>30</MappedControlIndex>
+    <MappedMinimum>0</MappedMinimum>
+    <MappedMaximum>1</MappedMaximum>
+    <MidiCC>30</MidiCC>
+    <Value>0.181102365255356</Value>
    </Parameter>
 
    <Parameter>
     <Index>8</Index>
     <Name>Dry Amount</Name>
     <Symbol>dry</Symbol>
-    <Value>1.35660433769226</Value>
+    <Value>0.877821803092957</Value>
    </Parameter>
 
    <Parameter>
@@ -462,7 +467,7 @@
     <Index>13</Index>
     <Name>Input Gain</Name>
     <Symbol>level_in</Symbol>
-    <Value>1</Value>
+    <Value>0.846745252609253</Value>
    </Parameter>
 
    <Parameter>
@@ -727,7 +732,7 @@
     <MappedMinimum>0</MappedMinimum>
     <MappedMaximum>1</MappedMaximum>
     <MidiCC>14</MidiCC>
-    <Value>0</Value>
+    <Value>0.165354326367378</Value>
    </Parameter>
 
    <Parameter>
@@ -1155,8 +1160,8 @@
              ampattack=&quot;0&quot; ampdecay=&quot;0&quot; ampsustain=&quot;1&quot; amprelease=&quot;0.26000002026557922363&quot;
              voices=&quot;0.20000000298023223877&quot; portamentomode=&quot;0&quot; lfo1waveform=&quot;0&quot;
              lfo2waveform=&quot;0&quot; lfo1rate=&quot;0&quot; lfo2rate=&quot;0&quot; lfo1amount=&quot;0&quot; lfo2amount=&quot;0.92400002479553222656&quot;
-             lfo1destination=&quot;0&quot; lfo2destination=&quot;0&quot; lfo1phase=&quot;1&quot; lfo2phase=&quot;0&quot;
-             osc1pw=&quot;0.51600003242492675781&quot; osc2fm=&quot;0.32600000500679016113&quot;
+             lfo1destination=&quot;0&quot; lfo2destination=&quot;0.16535432636737823486&quot;
+             lfo1phase=&quot;1&quot; lfo2phase=&quot;0&quot; osc1pw=&quot;0.51600003242492675781&quot; osc2fm=&quot;0.32600000500679016113&quot;
              osc1phase=&quot;0.5&quot; osc2phase=&quot;0&quot; transpose=&quot;0.86400002241134643555&quot;
              freeadattack=&quot;0&quot; freeaddecay=&quot;0.80000001192092895508&quot; freeadamount=&quot;0.71600002050399780273&quot;
              freeaddestination=&quot;0.40000000596046447754&quot; lfo1sync=&quot;0&quot; lfo1keytrigger=&quot;0&quot;
@@ -1573,6 +1578,159 @@
   </Data>
  </Plugin>
 
+ <!-- Calf Vintage Delay -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>Calf Vintage Delay</Name>
+   <URI>http://calf.sourceforge.net/plugins/VintageDelay</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x3f1</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Active</Name>
+    <Symbol>on</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Input Gain</Name>
+    <Symbol>level_in</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>Output Gain</Name>
+    <Symbol>level_out</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>11</Index>
+    <Name>Subdivide</Name>
+    <Symbol>subdiv</Symbol>
+    <Value>4</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>12</Index>
+    <Name>Time L</Name>
+    <Symbol>time_l</Symbol>
+    <MidiChannel>1</MidiChannel>
+    <MappedControlIndex>31</MappedControlIndex>
+    <MappedMinimum>1</MappedMinimum>
+    <MappedMaximum>4</MappedMaximum>
+    <MidiCC>31</MidiCC>
+    <Value>4</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>13</Index>
+    <Name>Time R</Name>
+    <Symbol>time_r</Symbol>
+    <Value>4</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>14</Index>
+    <Name>Feedback</Name>
+    <Symbol>feedback</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>15</Index>
+    <Name>Wet</Name>
+    <Symbol>amount</Symbol>
+    <Value>0.25</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>16</Index>
+    <Name>Mix mode</Name>
+    <Symbol>mix_mode</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>17</Index>
+    <Name>Medium</Name>
+    <Symbol>medium</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>18</Index>
+    <Name>Dry</Name>
+    <Symbol>dry</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>19</Index>
+    <Name>Stereo Width</Name>
+    <Symbol>width</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>20</Index>
+    <Name>Fragmentation</Name>
+    <Symbol>fragmentation</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>21</Index>
+    <Name>Pattern Beats</Name>
+    <Symbol>pbeats</Symbol>
+    <Value>4</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>22</Index>
+    <Name>Pattern Fragmentation</Name>
+    <Symbol>pfrag</Symbol>
+    <Value>4</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>23</Index>
+    <Name>Timing</Name>
+    <Symbol>timing</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>24</Index>
+    <Name>BPM</Name>
+    <Symbol>bpm</Symbol>
+    <Value>125.22225189209</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>25</Index>
+    <Name>ms</Name>
+    <Symbol>ms</Symbol>
+    <Value>500</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>26</Index>
+    <Name>Frequency</Name>
+    <Symbol>hz</Symbol>
+    <Value>2</Value>
+   </Parameter>
+  </Data>
+ </Plugin>
+
  <Patchbay>
   <Connection>
    <Source>Audio Input:Left</Source>
@@ -1607,17 +1765,32 @@
    <Target>Vocoder:Carrier audio input</Target>
   </Connection>
   <Connection>
+   <Source>Midi Input:Capture 1</Source>
+   <Target>Calf Reverb:events-in</Target>
+  </Connection>
+  <Connection>
    <Source>EQ10Q Mono:Output</Source>
+   <Target>Calf Vintage Delay:In L</Target>
+  </Connection>
+  <Connection>
+   <Source>Midi Input:Capture 1</Source>
+   <Target>Calf Vintage Delay:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>Calf Vintage Delay:Out L</Source>
    <Target>Calf Reverb:In L</Target>
   </Connection>
   <Positions>
-   <Position x1="1925" y1="1032" pluginId="6">
+   <Position x1="2123" y1="968" pluginId="7">
+    <Name>Calf Vintage Delay</Name>
+   </Position>
+   <Position x1="1907" y1="994" pluginId="6">
     <Name>EQ10Q Mono</Name>
    </Position>
    <Position x1="910" y1="1134" pluginId="5">
     <Name>Noize Mak3r</Name>
    </Position>
-   <Position x1="2155" y1="877" pluginId="4">
+   <Position x1="2255" y1="1067" pluginId="4">
     <Name>Calf Reverb</Name>
    </Position>
    <Position x1="1721" y1="1117" pluginId="3">
@@ -1629,7 +1802,7 @@
    <Position x1="1138" y1="967" pluginId="1">
     <Name>Calf Gate</Name>
    </Position>
-   <Position x1="919" y1="949" pluginId="0">
+   <Position x1="832" y1="873" pluginId="0">
     <Name>Calf Filter</Name>
    </Position>
    <Position x1="1440" y1="1221" x2="2382" y2="1249">
@@ -1638,10 +1811,10 @@
    <Position x1="533" y1="1263" x2="1832" y2="1158">
     <Name>Midi Input</Name>
    </Position>
-   <Position x1="1275" y1="1054" x2="2496" y2="924">
+   <Position x1="648" y1="870" x2="2424" y2="857">
     <Name>Audio Output</Name>
    </Position>
-   <Position x1="929" y1="851">
+   <Position x1="583" y1="817">
     <Name>Audio Input</Name>
    </Position>
   </Positions>
