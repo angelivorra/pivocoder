@@ -363,7 +363,7 @@
     <MappedMinimum>0</MappedMinimum>
     <MappedMaximum>1</MappedMaximum>
     <MidiCC>15</MidiCC>
-    <Value>1</Value>
+    <Value>0.653543293476105</Value>
    </Parameter>
 
    <Parameter>
@@ -375,7 +375,7 @@
     <MappedMinimum>0</MappedMinimum>
     <MappedMaximum>1</MappedMaximum>
     <MidiCC>15</MidiCC>
-    <Value>1</Value>
+    <Value>0.653543293476105</Value>
    </Parameter>
   </Data>
  </Plugin>
@@ -1748,7 +1748,19 @@
   </Connection>
   <Connection>
    <Source>Midi Input:Capture 1</Source>
+   <Target>Temper:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>Midi Input:Capture 1</Source>
+   <Target>Calf Reverb:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>Midi Input:Capture 1</Source>
    <Target>Noize Mak3r:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>Midi Input:Capture 1</Source>
+   <Target>Calf Vintage Delay:events-in</Target>
   </Connection>
   <Connection>
    <Source>Calf Filter:Out L</Source>
@@ -1759,64 +1771,44 @@
    <Target>Vocoder:Formant audio input</Target>
   </Connection>
   <Connection>
-   <Source>Vocoder:Vocoder audio output</Source>
-   <Target>Temper:Audio Input 1</Target>
-  </Connection>
-  <Connection>
    <Source>Temper:Audio Output 1</Source>
    <Target>EQ10Q Mono:Input</Target>
-  </Connection>
-  <Connection>
-   <Source>Calf Reverb:Out L</Source>
-   <Target>Audio Output:Left</Target>
-  </Connection>
-  <Connection>
-   <Source>Noize Mak3r:Audio Output 1</Source>
-   <Target>Vocoder:Carrier audio input</Target>
-  </Connection>
-  <Connection>
-   <Source>Midi Input:Capture 1</Source>
-   <Target>Calf Reverb:events-in</Target>
   </Connection>
   <Connection>
    <Source>EQ10Q Mono:Output</Source>
    <Target>Calf Vintage Delay:In L</Target>
   </Connection>
   <Connection>
-   <Source>Midi Input:Capture 1</Source>
-   <Target>Calf Vintage Delay:events-in</Target>
-  </Connection>
-  <Connection>
    <Source>Calf Vintage Delay:Out L</Source>
    <Target>Calf Reverb:In L</Target>
   </Connection>
   <Connection>
-   <Source>Midi Input:Capture 1</Source>
-   <Target>Temper:events-in</Target>
+   <Source>Noize Mak3r:Audio Output 1</Source>
+   <Target>Audio Output:Left</Target>
   </Connection>
   <Positions>
-   <Position x1="1995" y1="1256" pluginId="7">
+   <Position x1="2032" y1="1113" pluginId="7">
     <Name>Calf Vintage Delay</Name>
    </Position>
    <Position x1="1907" y1="994" pluginId="6">
     <Name>EQ10Q Mono</Name>
    </Position>
-   <Position x1="910" y1="1134" pluginId="5">
+   <Position x1="861" y1="1361" pluginId="5">
     <Name>Noize Mak3r</Name>
    </Position>
-   <Position x1="2255" y1="1067" pluginId="4">
+   <Position x1="2463" y1="980" pluginId="4">
     <Name>Calf Reverb</Name>
    </Position>
-   <Position x1="1685" y1="1207" pluginId="3">
+   <Position x1="1655" y1="1074" pluginId="3">
     <Name>Temper</Name>
    </Position>
-   <Position x1="1303" y1="1088" pluginId="2">
+   <Position x1="1182" y1="1274" pluginId="2">
     <Name>Vocoder</Name>
    </Position>
    <Position x1="1138" y1="967" pluginId="1">
     <Name>Calf Gate</Name>
    </Position>
-   <Position x1="832" y1="873" pluginId="0">
+   <Position x1="832" y1="964" pluginId="0">
     <Name>Calf Filter</Name>
    </Position>
    <Position x1="1440" y1="1221" x2="2382" y2="1249">
@@ -1825,10 +1817,10 @@
    <Position x1="533" y1="1263" x2="1832" y2="1158">
     <Name>Midi Input</Name>
    </Position>
-   <Position x1="648" y1="870" x2="2483" y2="985">
+   <Position x1="648" y1="870" x2="1657" y2="1432">
     <Name>Audio Output</Name>
    </Position>
-   <Position x1="583" y1="817">
+   <Position x1="617" y1="981">
     <Name>Audio Input</Name>
    </Position>
   </Positions>
@@ -1859,7 +1851,7 @@
    <Position x1="1552" y1="1024">
     <Name>Carla</Name>
    </Position>
-   <Position x1="648" y1="870" x2="2017" y2="928">
+   <Position x1="836" y1="1000" x2="2017" y2="928">
     <Name>system</Name>
    </Position>
   </Positions>
