@@ -84,6 +84,32 @@
             }
         },
 
+        // ── Carla (VNC / GUI) ────────────────────────────────────────────
+        // Editar el patch con interfaz, sin monitor en la Pi. El script para
+        // el servicio headless mientras editas y lo reanuda al cerrar Carla.
+        // Conexión: túnel SSH al puerto 5901 y visor VNC -> localhost:5901
+        // (o reenvía el puerto 5901 desde el panel «Ports» de VS Code).
+        {
+            "label": "Carla · GUI en VNC (editar prod/template01)",
+            "detail": "Abre Carla con interfaz en un VNC efímero (127.0.0.1:5901). Al cerrar, limpia todo y reanuda el servicio.",
+            "type": "shell",
+            "command": "/home/patch/pivocoder/scripts/carla-vnc.sh",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "focus": true,
+                "clear": true
+            }
+        },
+        {
+            "label": "Carla · Limpiar sesión VNC (forzar)",
+            "detail": "Mata cualquier resto de VNC/openbox si una sesión se quedó colgada.",
+            "type": "shell",
+            "command": "pkill -u $(id -u) -f 'Xvnc.*:1'; pkill -u $(id -u) -f 'Xvnc -rootHelper'; pkill -u $(id -u) vncserverui; pkill -u $(id -u) openbox; echo 'sesión VNC limpiada'",
+            "problemMatcher": []
+        },
+
         // ── JACK (sonido) ────────────────────────────────────────────────
         {
             "label": "JACK · Reiniciar servicio",
