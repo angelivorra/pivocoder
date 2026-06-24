@@ -15,7 +15,7 @@ import time
 from pathlib import Path
 from typing import Optional
 
-from flask import Flask, jsonify, render_template, request
+from flask import Flask, jsonify, render_template
 
 from tcp_client import start_tcp_client
 
@@ -24,6 +24,7 @@ from tcp_client import start_tcp_client
 # ---------------------------------------------------------------------------
 
 PRESET_DIR = Path("/home/patch/pivocoder/prod")
+FIXED_PRESET = "template01.carxp"
 CARLA_ENV = {**os.environ, "QT_QPA_PLATFORM": "offscreen"}
 
 app = Flask(__name__)
@@ -73,11 +74,6 @@ def _start_carla(preset_name: str) -> None:
     _current_preset = preset_name
 
 
-def get_sorted_presets() -> list[str]:
-    """Devuelve los archivos .carxp de PRESET_DIR ordenados alfabéticamente."""
-    return sorted(p.name for p in PRESET_DIR.glob("*.carxp"))
-
-
 def is_jack_running() -> bool:
     """Comprueba si jackd está activo usando jack_lsp (más fiable que jack_control)."""
     try:
@@ -97,16 +93,12 @@ def is_carla_running() -> bool:
 
 
 def init_carla() -> None:
-    """Arranca Carla con el primer preset disponible al iniciar la app."""
+    """Arranca Carla con el preset fijo al iniciar la app."""
     time.sleep(1)  # pequeña espera para que Flask esté listo
-    presets = get_sorted_presets()
-    if not presets:
-        print("[pivocoder] No se encontraron presets en", PRESET_DIR)
-        return
     with _carla_lock:
         try:
-            _start_carla(presets[0])
-            print(f"[pivocoder] Carla arrancada con '{presets[0]}'")
+            _start_carla(FIXED_PRESET)
+            print(f"[pivocoder] Carla arrancada con '{FIXED_PRESET}'")
         except Exception as exc:
             print(f"[pivocoder] Error al arrancar Carla: {exc}")
 
@@ -138,36 +130,16 @@ def api_status():
         if _carla_process is not None and _carla_process.poll() is None
         else None
     )
+    bpm_snap = _bpm_state.snapshot()
     return jsonify({
         "jack": is_jack_running(),
         "carla": is_carla_running(),
         "preset": _current_preset,
         "carla_pid": carla_pid,
+        "tcp_connected": bpm_snap["connected"],
+        "bpm": bpm_snap["bpm"],
+        "playing": bpm_snap["playing"],
     })
-
-
-@app.route("/api/presets")
-def api_presets():
-    return jsonify({
-        "presets": get_sorted_presets(),
-        "current": _current_preset,
-    })
-
-
-@app.route("/api/preset", methods=["POST"])
-def api_load_preset():
-    data = request.get_json(silent=True) or {}
-    preset_name = data.get("preset", "").strip()
-    if not preset_name:
-        return jsonify({"error": "Falta el campo 'preset'"}), 400
-    with _carla_lock:
-        try:
-            _start_carla(preset_name)
-            return jsonify({"ok": True, "preset": preset_name})
-        except FileNotFoundError as exc:
-            return jsonify({"error": str(exc)}), 404
-        except Exception as exc:
-            return jsonify({"error": str(exc)}), 500
 
 
 @app.route("/api/health")
@@ -187,6 +159,7 @@ def robot_data():
         "disk_usage_string": f"{used_gb:.1f} GB / {total_gb:.1f} GB",
         "bpm": bpm_snap["bpm"],
         "tcp_connected": bpm_snap["connected"],
+        "playing": bpm_snap["playing"],
         "last_sync_ms": bpm_snap["last_sync_ms"],
     })
 
@@ -215,13 +188,7 @@ def api_client_errors():
 def restart_cliente():
     with _carla_lock:
         try:
-            preset = _current_preset
-            if preset:
-                _start_carla(preset)
-            else:
-                presets = get_sorted_presets()
-                if presets:
-                    _start_carla(presets[0])
+            _start_carla(FIXED_PRESET)
             return jsonify({"ok": True})
         except Exception as exc:
             return jsonify({"error": str(exc)}), 500
@@ -230,15 +197,8 @@ def restart_cliente():
 @app.route("/api/restart", methods=["POST"])
 def api_restart():
     with _carla_lock:
-        preset = _current_preset
         try:
-            if preset:
-                _start_carla(preset)
-            else:
-                presets = get_sorted_presets()
-                if not presets:
-                    return jsonify({"error": "Sin presets disponibles"}), 500
-                _start_carla(presets[0])
+            _start_carla(FIXED_PRESET)
             return jsonify({"ok": True, "preset": _current_preset})
         except Exception as exc:
             return jsonify({"error": str(exc)}), 500

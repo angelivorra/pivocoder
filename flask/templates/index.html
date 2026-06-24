@@ -175,50 +175,6 @@
       white-space: nowrap;
     }
 
-    /* ── Preset list ───────────────────────────────────────────────────── */
-    .preset-list {
-      display: flex;
-      flex-direction: column;
-      gap: 7px;
-      max-height: 45vh;
-      overflow-y: auto;
-      padding-right: 2px;
-    }
-
-    .preset-btn {
-      display: block;
-      width: 100%;
-      background: transparent;
-      border: 1px solid var(--line);
-      color: var(--g);
-      font-family: var(--font);
-      font-size: 0.78rem;
-      letter-spacing: 0.08em;
-      padding: 13px 14px;
-      text-align: left;
-      cursor: pointer;
-      border-radius: 2px;
-      transition: background 0.12s, border-color 0.12s, color 0.12s;
-      -webkit-tap-highlight-color: transparent;
-      user-select: none;
-    }
-    .preset-btn:hover  { background: rgba(0,255,136,0.05); border-color: var(--g-mid); }
-    .preset-btn:active { background: rgba(0,255,136,0.12); }
-
-    .preset-btn.active {
-      background: rgba(0,255,136,0.1);
-      border-color: var(--g);
-      color: #fff;
-      box-shadow: inset 0 0 14px rgba(0,255,136,0.08), 0 0 6px rgba(0,255,136,0.15);
-    }
-    .preset-btn.active::before { content: '▶  '; }
-
-    .preset-empty {
-      font-size: 0.72rem;
-      color: var(--g-dim);
-      padding: 8px 4px;
-    }
-
     /* ── Restart button ────────────────────────────────────────────────── */
     .restart-btn {
       display: block;
@@ -307,16 +263,14 @@
     </div>
 
     <div class="status-row">
+      <div class="led led-unknown" id="led-tcp"></div>
+      <span class="s-label">TCP SYNC</span>
+      <span class="s-value" id="val-tcp">—</span>
+    </div>
+
+    <div class="status-row">
       <span class="s-label">PRESET ACTIVO</span>
       <span class="s-value" id="val-preset">—</span>
-    </div>
-  </div>
-
-  <!-- PRESETS PANEL -->
-  <div class="panel">
-    <div class="panel-title">[ PRESETS // <span id="preset-dir">prod/</span> ]</div>
-    <div class="preset-list" id="preset-list">
-      <div class="preset-empty">Cargando presets...</div>
     </div>
   </div>
 
@@ -335,9 +289,7 @@
 <script>
   'use strict';
 
-  let _currentPreset = null;
-  let _knownPresets  = [];
-  let _toastTimer    = null;
+  let _toastTimer = null;
 
   // ── Toast ─────────────────────────────────────────────────────────────
   function toast(msg, isError = false, ms = 2200) {
@@ -354,20 +306,6 @@
     el.className = 'led ' + (state === true ? 'led-on' : state === false ? 'led-off' : 'led-unknown');
   }
 
-  // ── Render preset list ────────────────────────────────────────────────
-  function renderPresets(presets, current) {
-    const container = document.getElementById('preset-list');
-    if (!presets.length) {
-      container.innerHTML = '<div class="preset-empty">Sin presets en prod/</div>';
-      return;
-    }
-    container.innerHTML = presets.map(p => {
-      const label = p.replace(/\.carxp$/i, '');
-      const active = p === current ? ' active' : '';
-      return `<button class="preset-btn${active}" data-preset="${p}" onclick="loadPreset('${p}')">${label}</button>`;
-    }).join('');
-  }
-
   // ── Status poll ───────────────────────────────────────────────────────
   async function pollStatus() {
     try {
@@ -382,58 +320,19 @@
         ? (data.carla_pid ? `ONLINE  PID:${data.carla_pid}` : 'ONLINE')
         : 'OFFLINE';
 
+      setLed('led-tcp', data.tcp_connected);
+      if (!data.tcp_connected) {
+        document.getElementById('val-tcp').textContent = 'OFFLINE';
+      } else if (data.bpm != null) {
+        document.getElementById('val-tcp').textContent =
+          (data.playing ? '▶ ' : '') + data.bpm + ' BPM';
+      } else {
+        document.getElementById('val-tcp').textContent = 'ONLINE';
+      }
+
       document.getElementById('val-preset').textContent =
         data.preset ? data.preset.replace(/\.carxp$/i, '') : '—';
-
-      // Update active button if preset changed
-      if (data.preset !== _currentPreset) {
-        _currentPreset = data.preset;
-        document.querySelectorAll('.preset-btn').forEach(btn => {
-          const isActive = btn.dataset.preset === _currentPreset;
-          btn.classList.toggle('active', isActive);
-          btn.textContent = (isActive ? '' : '') + btn.dataset.preset.replace(/\.carxp$/i, '');
-          if (isActive) btn.textContent = '';  // replaced by ::before
-        });
-        renderPresets(_knownPresets, _currentPreset);
-      }
     } catch (_) { /* network hiccup – silently ignore */ }
-  }
-
-  // ── Load preset list ──────────────────────────────────────────────────
-  async function loadPresetList() {
-    try {
-      const res  = await fetch('/api/presets');
-      const data = await res.json();
-      _knownPresets  = data.presets;
-      _currentPreset = data.current;
-      renderPresets(_knownPresets, _currentPreset);
-    } catch (e) {
-      document.getElementById('preset-list').innerHTML =
-        '<div class="preset-empty">Error cargando presets</div>';
-    }
-  }
-
-  // ── Load a preset ─────────────────────────────────────────────────────
-  async function loadPreset(name) {
-    const label = name.replace(/\.carxp$/i, '');
-    toast(`CARGANDO: ${label}`);
-    try {
-      const res  = await fetch('/api/preset', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ preset: name }),
-      });
-      const data = await res.json();
-      if (data.ok) {
-        _currentPreset = name;
-        renderPresets(_knownPresets, _currentPreset);
-        toast(`OK: ${label}`);
-      } else {
-        toast('ERROR: ' + (data.error || 'fallo'), true, 3500);
-      }
-    } catch (_) {
-      toast('ERROR DE RED', true, 3500);
-    }
   }
 
   // ── Restart ───────────────────────────────────────────────────────────
@@ -444,7 +343,6 @@
       const data = await res.json();
       if (data.ok) {
         toast('SISTEMA REINICIADO');
-        await loadPresetList();
       } else {
         toast('ERROR: ' + (data.error || 'fallo'), true, 3500);
       }
@@ -454,7 +352,6 @@
   }
 
   // ── Init ──────────────────────────────────────────────────────────────
-  loadPresetList();
   pollStatus();
   setInterval(pollStatus, 3000);
 </script>

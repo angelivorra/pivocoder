@@ -17,18 +17,22 @@
   { "name": {{ name | tojson }} }
   </script>
 
-  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
-  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-  <script src="https://unpkg.com/@mui/material@5/umd/material-ui.development.js"></script>
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script crossorigin src="{{ url_for('static', filename='react.development.js') }}"></script>
+  <script crossorigin src="{{ url_for('static', filename='react-dom.development.js') }}"></script>
+  <script src="{{ url_for('static', filename='material-ui.development.js') }}"></script>
+  <script src="{{ url_for('static', filename='babel.min.js') }}"></script>
+  <script>
+    Babel.registerPreset('react-classic', {
+      presets: [[Babel.availablePresets['react'], { runtime: 'classic' }]]
+    });
+  </script>
 
-  <script type="text/babel">{% raw %}
+  <script type="text/babel" data-presets="react-classic">{% raw %}
   const {
     createTheme, ThemeProvider, CssBaseline,
     AppBar, Toolbar, Typography, Box,
     Card, CardContent, LinearProgress,
     IconButton, Stack, Chip, Skeleton, Button, CircularProgress,
-    List, ListItemButton, ListItemText
   } = MaterialUI;
 
   const theme = createTheme({
@@ -79,9 +83,7 @@
     const [status,     setStatus]     = React.useState(null);
     const [svcData,    setSvcData]    = React.useState(null);
     const [healthy,    setHealthy]    = React.useState(null);
-    const [presets,    setPresets]    = React.useState([]);
     const [restarting, setRestarting] = React.useState(false);
-    const [loadingPreset, setLoadingPreset] = React.useState(false);
     const [now, setNow] = React.useState(Date.now());
 
     React.useEffect(() => {
@@ -89,7 +91,6 @@
         fetch('/robot_data').then(r => r.json()).then(setSysData).catch(() => {});
         fetch('/api/status').then(r => r.json()).then(setStatus).catch(() => {});
         fetch('/api/client-errors').then(r => r.json()).then(setSvcData).catch(() => {});
-        fetch('/api/presets').then(r => r.json()).then(d => setPresets(d.presets || [])).catch(() => {});
       };
       fetchAll();
       const id = setInterval(fetchAll, 5000);
@@ -120,19 +121,6 @@
     const bpm          = sysData?.bpm;
     const tcpConnected = sysData?.tcp_connected ?? false;
     const lastSyncMs   = sysData?.last_sync_ms;
-    const currentPreset = status?.preset || null;
-
-    const handlePreset = (name) => {
-      setLoadingPreset(true);
-      fetch('/api/preset', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ preset: name }),
-      })
-        .then(r => r.json())
-        .then(() => fetch('/api/status').then(r => r.json()).then(setStatus))
-        .finally(() => setLoadingPreset(false));
-    };
 
     return (
       <ThemeProvider theme={theme}>
@@ -224,36 +212,6 @@
                 <Typography variant="caption" color="text.secondary" sx={{ mt: 0.5, display: 'block' }}>
                   Sincronizado {timeSince(lastSyncMs)}
                 </Typography>
-              )}
-            </CardContent>
-          </Card>
-
-          {/* ── Presets ──────────────────────────────────────────── */}
-          <Card>
-            <CardContent>
-              <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mb: 1 }}>
-                <span className="material-icons" style={{ fontSize: 18, color: '#5c6bc0' }}>tune</span>
-                <Typography variant="subtitle1" sx={{ fontWeight: 600 }}>Preset</Typography>
-                {loadingPreset && <CircularProgress size={14} sx={{ ml: 'auto' }} />}
-              </Box>
-              {presets.length === 0 ? (
-                <Skeleton variant="rounded" height={60} />
-              ) : (
-                <List dense disablePadding>
-                  {presets.map(p => (
-                    <ListItemButton
-                      key={p}
-                      selected={p === currentPreset}
-                      onClick={() => handlePreset(p)}
-                      sx={{ borderRadius: 1, mb: 0.25 }}
-                    >
-                      <ListItemText
-                        primary={p}
-                        primaryTypographyProps={{ variant: 'body2', fontFamily: 'monospace' }}
-                      />
-                    </ListItemButton>
-                  ))}
-                </List>
               )}
             </CardContent>
           </Card>
