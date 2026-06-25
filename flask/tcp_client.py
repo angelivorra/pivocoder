@@ -12,11 +12,49 @@ import socket
 import threading
 import time
 
+import liblo
+
 
 SERVER_HOST = "192.168.0.2"
 SERVER_PORT = 8888
 _BACKOFF_INITIAL = 2
 _BACKOFF_MAX = 30
+
+# OSC hacia Carla (lanzado por flask/app.py, escucha en 22752).
+# Cambia el parámetro BPM del Calf Vintage Delay (7º plugin del rack en
+# prod/template01.carxp, pluginId=6; control-port index 24 = "bpm").
+# El plugin ya está en modo "Timing=BPM" (Index 23 = 0), así que basta con
+# enviarle el nuevo BPM.
+_CARLA_OSC_HOST = "127.0.0.1"
+_CARLA_OSC_PORT = 22752
+_DELAY_PLUGIN_ID = 6
+_DELAY_BPM_PARAM_IDX = 24
+_DELAY_BPM_MIN = 30.0  # límites del puerto LV2 'bpm' del Calf Vintage Delay
+_DELAY_BPM_MAX = 300.0
+
+
+class _CarlaBpmSink:
+    """Envía el BPM al delay de Carla por OSC. Tolerante a Carla caído."""
+
+    def __init__(self) -> None:
+        self._addr = liblo.Address(_CARLA_OSC_HOST, _CARLA_OSC_PORT, liblo.TCP)
+        self._last_sent: float | None = None
+
+    def set_bpm(self, bpm: float) -> None:
+        clamped = max(_DELAY_BPM_MIN, min(_DELAY_BPM_MAX, float(bpm)))
+        if self._last_sent is not None and abs(clamped - self._last_sent) < 0.01:
+            return
+        try:
+            liblo.send(
+                self._addr,
+                f"/Carla/{_DELAY_PLUGIN_ID}/set_parameter_value",
+                _DELAY_BPM_PARAM_IDX,
+                clamped,
+            )
+            self._last_sent = clamped
+        except (OSError, IOError) as exc:
+            # Carla puede estar reiniciándose por el supervisor; no abortar.
+            print(f"[tcp] OSC a Carla falló (BPM={clamped}): {exc}", flush=True)
 
 
 class BpmState:
@@ -42,6 +80,7 @@ class BpmState:
 class _TCPClient:
     def __init__(self, state: BpmState) -> None:
         self._state = state
+        self._carla = _CarlaBpmSink()
 
     def _handle_line(self, line: str) -> None:
         if not line:
@@ -50,11 +89,13 @@ class _TCPClient:
         tag = parts[0]
         if tag == "BPM" and len(parts) >= 3:
             try:
-                bpm = round(float(parts[2]))
+                bpm_f = float(parts[2])
+                bpm = round(bpm_f)
                 ts = int(parts[1])
                 with self._state._lock:
                     self._state.bpm = bpm
                     self._state.last_sync_ms = ts
+                self._carla.set_bpm(bpm_f)
             except ValueError:
                 pass
         elif tag == "SYNC" and len(parts) >= 2:

@@ -10,6 +10,7 @@ from __future__ import annotations
 import os
 import shutil
 import subprocess
+import sys
 import threading
 import time
 from pathlib import Path
@@ -25,6 +26,7 @@ from tcp_client import start_tcp_client
 
 PRESET_DIR = Path("/home/patch/pivocoder/prod")
 FIXED_PRESET = "template01.carxp"
+CARLA_RUNNER = Path(__file__).resolve().parent / "carla_runner.py"
 CARLA_ENV = {**os.environ, "QT_QPA_PLATFORM": "offscreen"}
 
 app = Flask(__name__)
@@ -66,7 +68,7 @@ def _start_carla(preset_name: str) -> None:
         raise FileNotFoundError(f"Preset no encontrado: {preset_path}")
     _stop_carla()
     _carla_process = subprocess.Popen(
-        ["carla", "-n", str(preset_path)],
+        [sys.executable, str(CARLA_RUNNER), str(preset_path)],
         stdout=subprocess.DEVNULL,
         stderr=subprocess.DEVNULL,
         env=CARLA_ENV,
@@ -92,19 +94,59 @@ def is_carla_running() -> bool:
     return _carla_process is not None and _carla_process.poll() is None
 
 
-def init_carla() -> None:
-    """Arranca Carla con el preset fijo al iniciar la app."""
+_CARLA_BACKOFF_INITIAL = 2
+_CARLA_BACKOFF_MAX = 30
+
+
+def _carla_supervisor() -> None:
+    """Arranca Carla y la reinicia con backoff exponencial si muere."""
+    global _carla_process
     time.sleep(1)  # pequeña espera para que Flask esté listo
-    with _carla_lock:
+    backoff = _CARLA_BACKOFF_INITIAL
+    while True:
+        with _carla_lock:
+            running = _carla_process is not None and _carla_process.poll() is None
+            if not running:
+                try:
+                    _start_carla(FIXED_PRESET)
+                    print(f"[pivocoder] Carla arrancada con '{FIXED_PRESET}' (PID {_carla_process.pid})", flush=True)
+                except Exception as exc:
+                    print(f"[pivocoder] Error al arrancar Carla: {exc}", flush=True)
+                    proc = None
+                else:
+                    proc = _carla_process
+            else:
+                proc = _carla_process
+
+        if proc is None:
+            time.sleep(backoff)
+            backoff = min(backoff * 2, _CARLA_BACKOFF_MAX)
+            continue
+
+        t_start = time.monotonic()
         try:
-            _start_carla(FIXED_PRESET)
-            print(f"[pivocoder] Carla arrancada con '{FIXED_PRESET}'")
+            rc = proc.wait()
         except Exception as exc:
-            print(f"[pivocoder] Error al arrancar Carla: {exc}")
+            print(f"[pivocoder] Supervisor: error esperando Carla: {exc}", flush=True)
+            rc = -1
+        uptime = time.monotonic() - t_start
+
+        with _carla_lock:
+            if _carla_process is not proc:
+                # _start_carla (cambio de preset) ya gestionó el relevo; no tocar nada.
+                continue
+            _carla_process = None
+
+        print(f"[pivocoder] Carla terminó (rc={rc}, uptime={uptime:.1f}s). Reintento en {backoff}s.", flush=True)
+        if uptime > 10:
+            backoff = _CARLA_BACKOFF_INITIAL
+        time.sleep(backoff)
+        if uptime <= 10:
+            backoff = min(backoff * 2, _CARLA_BACKOFF_MAX)
 
 
-# Lanzar Carla en segundo plano al importar el módulo
-threading.Thread(target=init_carla, daemon=True).start()
+# Lanzar supervisor de Carla en segundo plano al importar el módulo
+threading.Thread(target=_carla_supervisor, daemon=True, name="carla-supervisor").start()
 
 # Iniciar cliente TCP para recibir eventos BPM
 _bpm_state = start_tcp_client()
